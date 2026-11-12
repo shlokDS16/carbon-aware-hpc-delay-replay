@@ -1,0 +1,13 @@
+Result ledgers, small result files and documentation
+Copyright (c) 2026 Shlok Kumar Goenka, Balaji N and Balaji G N
+
+The files under tables/, results/, research/ and paper/ in this repository, and the documentation files (README.md,
+CITATION.cff), are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The source code under src/ is licensed under the MIT License (see LICENSE).
+
+Input data are not included and keep their own licences: EIA-930 (U.S. Energy Information Administration, public domain);
+PM100 and F-DATA job traces (CC BY 4.0); KIT ForHLR II workload log (Parallel Workloads Archive, citation request).
+
+Archive: https://doi.org/10.5281/zenodo.24152932

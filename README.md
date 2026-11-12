@@ -12,3 +12,6 @@ The raw data are not included. Licences of the inputs: EIA-930 (U.S. Energy Info
 
 Reproduce: see `research/RUN_COMMANDS.md`; `src/rebuild_ledgers.py` rebuilds the frozen test ledgers from the saved results.
 Archive: Zenodo https://doi.org/10.5281/zenodo.24152932. Contact: Balaji N, n.balaji@vit.ac.in (corresponding author).
+
+## License
+Code (`src/`): MIT License (`LICENSE`). Result ledgers, small result files and documentation (`tables/`, `results/`, `research/`, `paper/`): CC BY 4.0 (`LICENSE-DATA`). Both licences are listed on the Zenodo record.

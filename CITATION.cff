@@ -15,5 +15,7 @@ authors:
 version: "1.0.0"
 date-released: "2026-11-12"
 doi: "10.5281/zenodo.24152932"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 repository-code: "https://github.com/shlokDS16/carbon-aware-hpc-delay-replay"
