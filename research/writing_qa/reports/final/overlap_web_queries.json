@@ -1,0 +1,212 @@
+[
+ {
+  "id": 1,
+  "section": "08_declarations.tmpl",
+  "line": 8,
+  "sentence": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.",
+  "query": "\"The authors declare that they have no known competing financial interests or\""
+ },
+ {
+  "id": 2,
+  "section": "08_declarations.tmpl",
+  "line": 11,
+  "sentence": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+  "query": "\"This research did not receive any specific grant from funding agencies in\""
+ },
+ {
+  "id": 3,
+  "section": "04_method.tmpl",
+  "line": 244,
+  "sentence": "The simulator and analysis commands were typed interactively, so the recorded commands were reconstructed from the logs, run files and parser defaults.",
+  "query": "\"The simulator and analysis commands were typed interactively, so the recorded commands\""
+ },
+ {
+  "id": 4,
+  "section": "08_declarations.tmpl",
+  "line": 14,
+  "sentence": "After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.",
+  "query": "\"After using this tool, the authors reviewed and edited the content as\""
+ },
+ {
+  "id": 5,
+  "section": "04_method.tmpl",
+  "line": 176,
+  "sentence": "Independent resampling lets weeks that are unusually clean in one BA be paired with weeks that are dirty in another.",
+  "query": "\"Independent resampling lets weeks that are unusually clean in one BA be\""
+ },
+ {
+  "id": 6,
+  "section": "08_declarations.tmpl",
+  "line": 14,
+  "sentence": "During the preparation of this work the authors used [AI-DECLARATION SCOPE: owner to confirm: Claude (Anthropic) to draft and edit the text, to write analysis and plotting code under the authors' direction, and to check that every reported number matches the result files].",
+  "query": "\"During the preparation of this work the authors used [AI-DECLARATION SCOPE: owner\""
+ },
+ {
+  "id": 7,
+  "section": "S_supplement.tmpl",
+  "line": 8,
+  "sentence": "A grid with a large daily swing offers more to a shift, and a solar-heavy grid has a sharp midday minimum that a wrong runtime estimate can miss; the replay does not test either reading.",
+  "query": "\"A grid with a large daily swing offers more to a shift,\""
+ },
+ {
+  "id": 8,
+  "section": "04_method.tmpl",
+  "line": 75,
+  "sentence": "Inputs repaired by interpolation or outlier replacement are replaced by the last earlier unflagged value, so repairs cannot leak the future.",
+  "query": "\"Inputs repaired by interpolation or outlier replacement are replaced by the last\""
+ },
+ {
+  "id": 9,
+  "section": "02_related.tmpl",
+  "line": 21,
+  "sentence": "They note that inaccurate estimates need not harm a backfilling scheduler, so the requested-walltime arm here is a loss of planning information, not a defect of the scheduler.",
+  "query": "\"They note that inaccurate estimates need not harm a backfilling scheduler, so\""
+ },
+ {
+  "id": 10,
+  "section": "06_discussion.tmpl",
+  "line": 33,
+  "sentence": "Each paragraph names one threat, says why the result may still hold, and points to the analysis that addresses it.",
+  "query": "\"Each paragraph names one threat, says why the result may still hold,\""
+ },
+ {
+  "id": 11,
+  "section": "02_related.tmpl",
+  "line": 12,
+  "sentence": "Their workloads are Azure Functions and Spark traces with synthetic arrival patterns, and the forecast is a noise-perturbed grid mix.",
+  "query": "\"Their workloads are Azure Functions and Spark traces with synthetic arrival patterns,\""
+ },
+ {
+  "id": 12,
+  "section": "S_supplement.tmpl",
+  "line": 79,
+  "sentence": "The number of iterations came from early stopping on the same window, and the model was then refit on the full training period.",
+  "query": "\"The number of iterations came from early stopping on the same window,\""
+ },
+ {
+  "id": 13,
+  "section": "04_method.tmpl",
+  "line": 92,
+  "sentence": "The generator is seeded from the base seed N, r and the BA and trace names.",
+  "query": "\"The generator is seeded from the base seed N, r and the\""
+ },
+ {
+  "id": 14,
+  "section": "04_method.tmpl",
+  "line": 75,
+  "sentence": "Early stopping uses the last six months of TRAIN, with a purged boundary so that no training target falls in the validation window.",
+  "query": "\"Early stopping uses the last six months of TRAIN, with a purged\""
+ },
+ {
+  "id": 15,
+  "section": "05_results.tmpl",
+  "line": 38,
+  "sentence": "Long jobs span many hours and average over the variation that a shift exploits, which is a plausible reason for their small saving.",
+  "query": "\"Long jobs span many hours and average over the variation that a\""
+ },
+ {
+  "id": 16,
+  "section": "06_discussion.tmpl",
+  "line": 25,
+  "sentence": "A planner that trusts such a request reserves a window many times the job and cannot place the job in a short low-carbon valley, so a forecast has little to refine.",
+  "query": "\"A planner that trusts such a request reserves a window many times\""
+ },
+ {
+  "id": 17,
+  "section": "S_supplement.tmpl",
+  "line": 409,
+  "sentence": "The signal is the intensity of fossil generation only (coal, natural gas and oil with the lifecycle factors of the frozen signal), cleaned with the frozen rules; the frozen forecasting pipeline was refitted unchanged on it.",
+  "query": "\"The signal is the intensity of fossil generation only (coal, natural gas\""
+ },
+ {
+  "id": 18,
+  "section": "04_method.tmpl",
+  "line": 77,
+  "sentence": "A lower error does not imply a higher saving, since the planner uses only the ranking of intensities inside a window, so saving is reported beside error rather than inferred from it.",
+  "query": "\"A lower error does not imply a higher saving, since the planner\""
+ },
+ {
+  "id": 19,
+  "section": "04_method.tmpl",
+  "line": 75,
+  "sentence": "A future-perturbation test replaced every value after the issue hour by noise at randomly chosen issue hours: N tests, of which N failed.",
+  "query": "\"A future-perturbation test replaced every value after the issue hour by noise\""
+ },
+ {
+  "id": 20,
+  "section": "06_discussion.tmpl",
+  "line": 25,
+  "sentence": "The replay suggests that the requested walltime is the bottleneck and that a forecast pays off only with useful runtime information.",
+  "query": "\"The replay suggests that the requested walltime is the bottleneck and that\""
+ },
+ {
+  "id": 21,
+  "section": "06_discussion.tmpl",
+  "line": 47,
+  "sentence": "The estimand is therefore the saving of the traces' job mix and weekly rhythm spread uniformly over the grid's seasons, and not the saving on the days the jobs ran.",
+  "query": "\"The estimand is therefore the saving of the traces' job mix and\""
+ },
+ {
+  "id": 22,
+  "section": "05_results.tmpl",
+  "line": 26,
+  "sentence": "A prediction from the user's past jobs narrows the distance between the believed and the actual runtime, which is the likely route to the recovery; the replay does not test the route directly.",
+  "query": "\"A prediction from the user's past jobs narrows the distance between the\""
+ },
+ {
+  "id": 23,
+  "section": "S_supplement.tmpl",
+  "line": 267,
+  "sentence": "The indicator shows concentration and not feasibility: the replay has no queue, node limit or capacity, and a shifted load may or may not fit a real system.",
+  "query": "\"The indicator shows concentration and not feasibility: the replay has no queue,\""
+ },
+ {
+  "id": 24,
+  "section": "S_supplement.tmpl",
+  "line": 79,
+  "sentence": "The profile rival was tuned on the same window; its selected look-back was N day, which makes it the seasonal naive day.",
+  "query": "\"The profile rival was tuned on the same window; its selected look-back\""
+ },
+ {
+  "id": 25,
+  "section": "02_related.tmpl",
+  "line": 8,
+  "sentence": "It is a forecasting method, not a savings study, and the present study instead trains a simpler forecaster on past data only.",
+  "query": "\"It is a forecasting method, not a savings study, and the present\""
+ },
+ {
+  "id": 26,
+  "section": "04_method.tmpl",
+  "line": 92,
+  "sentence": "Outcomes are summed per arrival day and per runtime class, and the replicates are added on a common calendar-day index.",
+  "query": "\"Outcomes are summed per arrival day and per runtime class, and the\""
+ },
+ {
+  "id": 27,
+  "section": "04_method.tmpl",
+  "line": 6,
+  "sentence": "This section states the planner, the arms, the runtime estimates, the estimands, the inference and the registration in enough detail to rebuild them.",
+  "query": "\"This section states the planner, the arms, the runtime estimates, the estimands,\""
+ },
+ {
+  "id": 28,
+  "section": "03_data.tmpl",
+  "line": 16,
+  "sentence": "In the test year, N %, N % and N % of hours are interpolated, outlier-replaced and week-filled.",
+  "query": "\"In the test year, N %, N % and N % of\""
+ },
+ {
+  "id": 29,
+  "section": "S_supplement.tmpl",
+  "line": 409,
+  "sentence": "The proxy is crude: it ignores imports and storage, treats every fossil hour alike and is an average over fossil sources.",
+  "query": "\"The proxy is crude: it ignores imports and storage, treats every fossil\""
+ },
+ {
+  "id": 30,
+  "section": "03_data.tmpl",
+  "line": 12,
+  "sentence": "For oil, other and unknown fuels, which have no matching row in that table, the factors are judgment values.",
+  "query": "\"For oil, other and unknown fuels, which have no matching row in\""
+ }
+]

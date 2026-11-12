@@ -1,0 +1,2 @@
+# keep every file byte for byte (frozen files are checked by md5)
+* -text

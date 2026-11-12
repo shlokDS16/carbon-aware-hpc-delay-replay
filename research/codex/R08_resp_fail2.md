@@ -1,0 +1,3 @@
+I can’t complete the requested evidence-based R08 review: the workspace shell failed to initialize on three attempts, so I could not read draft3, the audits, or the TEST sensitivity ledgers. The prior-round figures and limitations do not establish what the current draft and newly completed runs show. I won’t invent ledger keys or claim the owner’s acceptance risks are fixed without those files.
+
+**VERDICT: RISKY (current draft and sensitivity results unavailable for review); confidence 0.98.**

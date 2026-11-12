@@ -1,0 +1,51 @@
+rank,title,form,has_colon,words
+1,Trends in AI inference energy consumption: Beyond the performance-vs-parameter laws of deep learning,descriptive noun phrase,yes,13
+2,An integrated energy storage framework with significant energy management and absorption mechanism for machine learning assisted electric vehicle application,descriptive noun phrase,no,19
+3,A novel XGBoost-based featurization approach to forecast renewable energy consumption with deep learning models,descriptive noun phrase,no,14
+4,"A green, secure, and deep intelligent method for dynamic IoT-edge-cloud offloading scenarios",descriptive noun phrase,no,12
+5,An advanced deep reinforcement learning algorithm for three-layer D2D-edge-cloud computing architecture for efficient task offloading in the Internet of Things,descriptive noun phrase,no,20
+6,Federated learning at the edge in Industrial Internet of Things: A review,descriptive noun phrase,yes,12
+7,Rock-hyrax: An energy efficient job scheduling using cluster of resources in cloud computing environment,method-name with colon,yes,14
+8,An efficient edge computing management mechanism for sustainable smart cities,descriptive noun phrase,no,10
+9,A hybrid approach for latency and battery lifetime optimization in IoT devices through offloading and CNN learning,descriptive noun phrase,no,17
+10,DDNSAS: Deep reinforcement learning based deep Q-learning network for smart agriculture system,method-name with colon,yes,12
+11,Review of artificial intelligence techniques in green/smart buildings,descriptive noun phrase,no,8
+12,Machine learning optimization model for reducing the electricity loads in residential energy forecasting,descriptive noun phrase,no,13
+13,"Optimizing task offloading with metaheuristic algorithms across cloud, fog, and edge computing networks: A comprehensive survey and state-of-the-art schemes",descriptive noun phrase,yes,19
+14,IoT-digital twin-inspired smart irrigation approach for optimal water utilization,descriptive noun phrase,no,9
+15,IoT-based edge computing (IoTEC) for improved environmental monitoring,descriptive noun phrase,no,8
+16,An intelligent security mechanism in mobile Ad-Hoc networks using precision probability genetic algorithms (PPGA) and deep learning technique (Stacked LSTM),descriptive noun phrase,no,20
+17,Research on IoT-based hybrid electrical vehicles energy management systems using machine learning-based algorithm,descriptive noun phrase,no,13
+18,A CNN encoder decoder LSTM model for sustainable wind power predictive analytics,descriptive noun phrase,no,12
+19,"Agrivoltaic system for energy-food production: A symbiotic approach on strategy, modelling, and optimization",descriptive noun phrase,yes,13
+20,Improved Black Widow Optimization: An investigation into enhancing cloud task scheduling efficiency,method-name with colon,yes,12
+21,Enhanced NSGA-II for multi-objective energy-saving flexible job shop scheduling,descriptive noun phrase,no,9
+22,Data-efficient crop pest recognition based on KNN distance entropy,descriptive noun phrase,no,9
+23,Energy management of smart homes over fog-based IoT architecture,descriptive noun phrase,no,9
+24,Optimizing wind power forecasting with RNN-LSTM models through grid search cross-validation,descriptive noun phrase,no,11
+25,Dynamic capacitated facility location problem in mobile renewable energy charging stations under sustainability consideration,descriptive noun phrase,no,14
+26,SUSAN: A Deep Learning based anomaly detection framework for sustainable industry,method-name with colon,yes,11
+27,Integration of Internet of Things blockchain and artificial intelligence for scalable and secure precision environmental management,descriptive noun phrase,no,16
+28,Enhancing sustainable agriculture using attention convolutional bidirectional Gated recurrent based modified leaf in wind algorithm: Integrating AI and IoT for efficient farming,descriptive noun phrase,yes,22
+29,Real-time energy-efficient framework for multi-source harvesting and adaptive communication IIoT networks,descriptive noun phrase,no,11
+30,Load balancing in cloud computing via intelligent PSO-based feedback controller,descriptive noun phrase,no,10
+31,BFSF: A secure IoT based framework for smart farming using blockchain,method-name with colon,yes,11
+32,Development of an IoT smart energy meter with power quality features for a smart grid architecture,descriptive noun phrase,no,16
+33,A chameleon and remora search optimization algorithm for handling task scheduling uncertainty problem in cloud computing,descriptive noun phrase,no,16
+34,Artificial intelligence-powered visual internet of things in smart cities: A comprehensive review,descriptive noun phrase,yes,12
+35,Coordinating electric vehicle charging with multiagent deep Q-networks for smart grid load balancing,descriptive noun phrase,no,13
+36,Reducing the consumption of household systems using hybrid deep learning techniques,descriptive noun phrase,no,11
+37,Sustainable green supply chain and logistics management using adaptive fuzzy-based particle swarm optimization,descriptive noun phrase,no,13
+38,Optimizing risk mitigation: A simulation-based model for detecting fake IoT clients in smart city environments,descriptive noun phrase,yes,15
+39,ETFC: Energy-efficient and deadline-aware task scheduling in fog computing,method-name with colon,yes,9
+40,Multivariate time-series sensor vital sign forecasting of cardiovascular and chronic respiratory diseases,descriptive noun phrase,no,12
+41,Hybrid grey wolf and improved particle swarm optimization with adaptive intertial weight-based multi-dimensional learning strategy for load balancing in cloud environments,descriptive noun phrase,no,21
+42,An energy-efficient topology-aware virtual machine placement in Cloud Datacenters: A multi-objective discrete JAYA optimization,descriptive noun phrase,yes,14
+43,Power system monitoring for electrical disturbances in wide network using machine learning,descriptive noun phrase,no,12
+44,Priority based job scheduling technique that utilizes gaps to increase the efficiency of job distribution in cloud computing,descriptive noun phrase,no,18
+45,A cloud-based Bi-directional LSTM approach to grid-connected solar PV energy forecasting for multi-energy systems,descriptive noun phrase,no,14
+46,A hybrid learning technique for intrusion detection system for smart grid,descriptive noun phrase,no,11
+47,"A succinct state-of-the-art survey on green cloud computing: Challenges, strategies, and future directions",descriptive noun phrase,yes,13
+48,An optimal energy efficient routing in WSN using adaptive entropy bald eagle search optimization and density based adaptive soft clustering,descriptive noun phrase,no,20
+49,"Spatio-temporal management of renewable energy consumption, carbon emissions, and cost in data centers",descriptive noun phrase,no,13
+50,Hierarchical localization algorithm for sustainable ocean health in large-scale underwater wireless sensor networks,descriptive noun phrase,no,13

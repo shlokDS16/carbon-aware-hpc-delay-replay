@@ -1,0 +1,27 @@
+# Paywalled topic-close SUSCOM papers for the daytime pass (A10, 2026-11-12)
+
+Papers already in C:\Users\Shlok\Downloads\Sustainable Computing papers\_shared\PAYWALLED_SUSCOM_LANE_A.md (not repeated as new work; 100942, 100989 are there) are marked "in shared list". The controller's Part A DOIs (101216, 101470, 101407, 100950, 101429, 100592, 101398, 101333) are marked "Part A". The two Part A papers that were open (101498, 101106) were read in full and need nothing.
+
+Save PDFs to C:\Users\Shlok\Downloads (as the shared file asks). The owner opens each link in Chrome with VIT access.
+
+| Rank | DOI link | Why close | Status | What to extract |
+|---|---|---|---|---|
+| 1 | https://doi.org/10.1016/j.suscom.2026.101470 (ReBase; PII S2210537926001800) | Only topic-close paper with an Oracle benchmark and a forecast-quality study | Part A, PDF from owner pending | How the Oracle is built; how prediction quality is separated from scheduling; baselines; whether any interval or test is reported; figure and table counts; limitations text |
+| 2 | https://doi.org/10.1016/j.suscom.2023.100950 (Chen et al.) | Spatio-temporal carbon, renewables, cost in DCs; no abstract found anywhere | Part A, PDF from owner pending | Abstract; title form; whether delay-tolerant jobs, forecasts or an oracle are used; baselines; statistics |
+| 3 | https://doi.org/10.1016/j.suscom.2021.100592 (Sharma, Rao; solar load scheduling) | Job scheduling against a solar supply; its reference list holds SLURM, a parallel-job-scheduling report and ARIMA workload prediction (inference only) | Part A, PDF from owner pending | Whether job runtimes are real or estimated; how runtime error is handled; the forecast model; baselines |
+| 4 | https://doi.org/10.1016/j.suscom.2025.101216 (F2S-WSS; PII S2210537925001374) | Forecast-driven carbon-aware scheduling | Part A, PDF from owner pending | Forecast-versus-realised handling; second-stage correction; section list; figure and table counts; limitations |
+| 5 | https://doi.org/10.1016/j.suscom.2026.101407 (CARA) | Carbon-forecast scheduling prototype, 75.7% claim | Part A, PDF from owner pending | Baseline definitions; the 75.7% denominator; whether forecasts are scored; limitations |
+| 6 | https://doi.org/10.1016/j.suscom.2026.101429 (PV-BESS data centres) | Workload classes include long-running continuous jobs | Part A, PDF from owner pending | Job-class formulation; carbon metrics (CUE, CFE); whether runtime is known; limitations |
+| 7 | https://doi.org/10.1016/j.suscom.2026.101398 (federated orchestration; PII S2210537926001083) | Statistics reported (p<0.001); numbered gaps and contributions | Part A, PDF from owner pending | Test used and multiplicity handling; limitations section length; baselines; reference count |
+| 8 | https://doi.org/10.1016/j.suscom.2026.101333 (LLM serving forecasting) | Forecast-comparison paper on an operational HPC cluster | Part A, PDF from owner pending | Forecast metrics layout; horizon design; train and test split; data availability |
+| 9 | https://doi.org/10.1016/j.suscom.2023.100888 (carbon-aware VM placement; SSRN 4032444; PolyPublie 54700) | Carbon-aware placement, 13 citations (OpenAlex) | NOT in shared file | Abstract; baselines; carbon data used; whether a preprint full text is open at https://publications.polymtl.ca/54700/ |
+| 10 | https://doi.org/10.1016/j.suscom.2020.100461 | Geo-distributed DC energy-cost workload redistribution, 27 citations (OpenAlex) | NOT in shared file | Workload model; evaluation data; baselines |
+| 11 | https://doi.org/10.1016/j.suscom.2021.100590 (accepted manuscript link: https://www.sciencedirect.com/science/article/am/pii/S2210537921000792) | Scheduling independent tasks under a green-power envelope | NOT in shared file; OpenAlex marks it bronze, but the fetch returned HTTP 400, so try it in Chrome | Abstract; whether runtimes are known; baselines; trace or synthetic workloads |
+| 12 | https://doi.org/10.1016/j.suscom.2023.100903 | DC operations with onsite renewables and GHG | NOT in shared file | Abstract; emission accounting method |
+| 13 | https://doi.org/10.1016/j.suscom.2021.100627 (accepted manuscript link: https://www.sciencedirect.com/science/article/am/pii/S2210537921001116) | Standalone DC renewable supply | NOT in shared file; try the accepted manuscript link in Chrome | Abstract; forecasting use; optimisation baselines |
+| 14 | https://doi.org/10.1016/j.suscom.2021.100649 (LECC) | Carbon-cost VM placement; the abstract found was for a different paper | NOT in shared file | Real abstract; carbon data; baselines |
+| 15 | https://doi.org/10.1016/j.suscom.2024.100957 (accepted manuscript link: https://www.sciencedirect.com/science/article/am/pii/S2210537924000027) | DC and load-aggregator coordination, demand response | NOT in shared file; lower closeness | Abstract; carbon handling |
+
+Already in the shared file and relevant to Paper A: 10.1016/j.suscom.2023.100942 (priority job scheduling) and 10.1016/j.suscom.2024.100989 (systematic review, green-aware DC management; useful for related-work citations and for how the journal writes a review).
+
+Optional, hybrid open access but not analysed (lower closeness, can be read online without the owner): https://doi.org/10.1016/j.suscom.2025.101088 (edge-node energy and workload prediction) and https://doi.org/10.1016/j.suscom.2025.101286 (carbon versus performance, recommender benchmark).

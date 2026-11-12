@@ -1,0 +1,1728 @@
+{
+ "corpus": {
+  "abstract": {
+   "words": 2973,
+   "sentences": 118,
+   "paragraphs": 14,
+   "sent_len_mean": 25.2,
+   "sent_len_sd": 9.0,
+   "sent_len_gt35_pct": 8.5,
+   "sent_len_lt10_pct": 0.8,
+   "para_sents_mean": 8.4,
+   "para_words_mean": 212.0,
+   "passive_sent_pct": 16.9,
+   "hedge_per_1k": 0.0,
+   "booster_per_1k": 5.7,
+   "first_person_per_1k": 11.1,
+   "nominalisation_per_100w": 6.5,
+   "connector_per_1k": 11.4,
+   "citations_per_1k": 0.0,
+   "numbers_per_100w": 2.0,
+   "result_terms_per_1k": 17.2,
+   "limit_terms_per_1k": 1.7
+  },
+  "intro": {
+   "words": 21971,
+   "sentences": 979,
+   "paragraphs": 246,
+   "sent_len_mean": 22.4,
+   "sent_len_sd": 11.2,
+   "sent_len_gt35_pct": 9.4,
+   "sent_len_lt10_pct": 10.1,
+   "para_sents_mean": 4.0,
+   "para_words_mean": 89.0,
+   "passive_sent_pct": 21.1,
+   "hedge_per_1k": 2.3,
+   "booster_per_1k": 3.4,
+   "first_person_per_1k": 6.7,
+   "nominalisation_per_100w": 6.9,
+   "connector_per_1k": 15.5,
+   "citations_per_1k": 11.2,
+   "numbers_per_100w": 2.9,
+   "result_terms_per_1k": 7.6,
+   "limit_terms_per_1k": 3.2
+  },
+  "related": {
+   "words": 18747,
+   "sentences": 890,
+   "paragraphs": 177,
+   "sent_len_mean": 21.1,
+   "sent_len_sd": 9.8,
+   "sent_len_gt35_pct": 7.6,
+   "sent_len_lt10_pct": 9.4,
+   "para_sents_mean": 5.0,
+   "para_words_mean": 106.0,
+   "passive_sent_pct": 14.8,
+   "hedge_per_1k": 2.2,
+   "booster_per_1k": 1.4,
+   "first_person_per_1k": 10.8,
+   "nominalisation_per_100w": 6.5,
+   "connector_per_1k": 20.7,
+   "citations_per_1k": 14.2,
+   "numbers_per_100w": 3.0,
+   "result_terms_per_1k": 6.3,
+   "limit_terms_per_1k": 3.6
+  },
+  "methods": {
+   "words": 34789,
+   "sentences": 1719,
+   "paragraphs": 498,
+   "sent_len_mean": 20.2,
+   "sent_len_sd": 14.2,
+   "sent_len_gt35_pct": 6.4,
+   "sent_len_lt10_pct": 14.5,
+   "para_sents_mean": 3.5,
+   "para_words_mean": 70.0,
+   "passive_sent_pct": 35.1,
+   "hedge_per_1k": 1.8,
+   "booster_per_1k": 1.4,
+   "first_person_per_1k": 7.7,
+   "nominalisation_per_100w": 6.6,
+   "connector_per_1k": 11.6,
+   "citations_per_1k": 3.3,
+   "numbers_per_100w": 2.6,
+   "result_terms_per_1k": 4.4,
+   "limit_terms_per_1k": 2.5
+  },
+  "results": {
+   "words": 24326,
+   "sentences": 1198,
+   "paragraphs": 323,
+   "sent_len_mean": 20.3,
+   "sent_len_sd": 10.5,
+   "sent_len_gt35_pct": 6.9,
+   "sent_len_lt10_pct": 14.3,
+   "para_sents_mean": 3.7,
+   "para_words_mean": 75.0,
+   "passive_sent_pct": 23.3,
+   "hedge_per_1k": 3.5,
+   "booster_per_1k": 1.9,
+   "first_person_per_1k": 8.3,
+   "nominalisation_per_100w": 5.9,
+   "connector_per_1k": 17.7,
+   "citations_per_1k": 2.8,
+   "numbers_per_100w": 4.2,
+   "result_terms_per_1k": 16.4,
+   "limit_terms_per_1k": 3.7
+  },
+  "other": {
+   "words": 7366,
+   "sentences": 365,
+   "paragraphs": 107,
+   "sent_len_mean": 20.2,
+   "sent_len_sd": 9.9,
+   "sent_len_gt35_pct": 6.3,
+   "sent_len_lt10_pct": 14.0,
+   "para_sents_mean": 3.4,
+   "para_words_mean": 69.0,
+   "passive_sent_pct": 27.7,
+   "hedge_per_1k": 2.3,
+   "booster_per_1k": 1.4,
+   "first_person_per_1k": 5.4,
+   "nominalisation_per_100w": 6.8,
+   "connector_per_1k": 15.1,
+   "citations_per_1k": 3.3,
+   "numbers_per_100w": 3.5,
+   "result_terms_per_1k": 7.5,
+   "limit_terms_per_1k": 6.1
+  },
+  "conclusion": {
+   "words": 4189,
+   "sentences": 260,
+   "paragraphs": 63,
+   "sent_len_mean": 16.1,
+   "sent_len_sd": 10.2,
+   "sent_len_gt35_pct": 3.8,
+   "sent_len_lt10_pct": 25.8,
+   "para_sents_mean": 4.1,
+   "para_words_mean": 66.0,
+   "passive_sent_pct": 11.5,
+   "hedge_per_1k": 3.8,
+   "booster_per_1k": 2.9,
+   "first_person_per_1k": 9.8,
+   "nominalisation_per_100w": 7.1,
+   "connector_per_1k": 15.8,
+   "citations_per_1k": 6.4,
+   "numbers_per_100w": 3.7,
+   "result_terms_per_1k": 11.9,
+   "limit_terms_per_1k": 5.0
+  },
+  "discussion": {
+   "words": 4084,
+   "sentences": 200,
+   "paragraphs": 50,
+   "sent_len_mean": 20.4,
+   "sent_len_sd": 9.8,
+   "sent_len_gt35_pct": 7.0,
+   "sent_len_lt10_pct": 12.0,
+   "para_sents_mean": 4,
+   "para_words_mean": 82.0,
+   "passive_sent_pct": 25.5,
+   "hedge_per_1k": 6.1,
+   "booster_per_1k": 3.4,
+   "first_person_per_1k": 7.1,
+   "nominalisation_per_100w": 7.0,
+   "connector_per_1k": 17.9,
+   "citations_per_1k": 1.0,
+   "numbers_per_100w": 3.5,
+   "result_terms_per_1k": 10.5,
+   "limit_terms_per_1k": 3.9
+  }
+ },
+ "corpus_all": {
+  "words": 118445,
+  "sentences": 5729,
+  "paragraphs": 1478,
+  "sent_len_mean": 20.7,
+  "sent_len_sd": 11.8,
+  "sent_len_gt35_pct": 7.2,
+  "sent_len_lt10_pct": 13.0,
+  "para_sents_mean": 3.9,
+  "para_words_mean": 80.0,
+  "passive_sent_pct": 24.8,
+  "hedge_per_1k": 2.5,
+  "booster_per_1k": 2.1,
+  "first_person_per_1k": 8.1,
+  "nominalisation_per_100w": 6.6,
+  "connector_per_1k": 15.6,
+  "citations_per_1k": 6.3,
+  "numbers_per_100w": 3.1,
+  "result_terms_per_1k": 8.7,
+  "limit_terms_per_1k": 3.4
+ },
+ "ours": {
+  "abstract": {
+   "words": 315,
+   "sentences": 12,
+   "paragraphs": 6,
+   "sent_len_mean": 26.2,
+   "sent_len_sd": 12.6,
+   "sent_len_gt35_pct": 16.7,
+   "sent_len_lt10_pct": 0.0,
+   "para_sents_mean": 2,
+   "para_words_mean": 52.0,
+   "passive_sent_pct": 16.7,
+   "hedge_per_1k": 0.0,
+   "booster_per_1k": 0.0,
+   "first_person_per_1k": 3.2,
+   "nominalisation_per_100w": 4.4,
+   "connector_per_1k": 3.2,
+   "citations_per_1k": 0.0,
+   "numbers_per_100w": 3.2,
+   "result_terms_per_1k": 3.2,
+   "limit_terms_per_1k": 15.9
+  },
+  "intro": {
+   "words": 1271,
+   "sentences": 47,
+   "paragraphs": 11,
+   "sent_len_mean": 27.0,
+   "sent_len_sd": 12.8,
+   "sent_len_gt35_pct": 21.3,
+   "sent_len_lt10_pct": 10.6,
+   "para_sents_mean": 4.3,
+   "para_words_mean": 116.0,
+   "passive_sent_pct": 19.1,
+   "hedge_per_1k": 0.8,
+   "booster_per_1k": 0.0,
+   "first_person_per_1k": 6.3,
+   "nominalisation_per_100w": 5.6,
+   "connector_per_1k": 7.1,
+   "citations_per_1k": 9.4,
+   "numbers_per_100w": 2.7,
+   "result_terms_per_1k": 0.8,
+   "limit_terms_per_1k": 7.1
+  },
+  "related": {
+   "words": 1019,
+   "sentences": 45,
+   "paragraphs": 8,
+   "sent_len_mean": 22.6,
+   "sent_len_sd": 7.8,
+   "sent_len_gt35_pct": 2.2,
+   "sent_len_lt10_pct": 6.7,
+   "para_sents_mean": 5.6,
+   "para_words_mean": 127.0,
+   "passive_sent_pct": 15.6,
+   "hedge_per_1k": 2.9,
+   "booster_per_1k": 0.0,
+   "first_person_per_1k": 1.0,
+   "nominalisation_per_100w": 2.9,
+   "connector_per_1k": 7.9,
+   "citations_per_1k": 32.4,
+   "numbers_per_100w": 4.5,
+   "result_terms_per_1k": 1.0,
+   "limit_terms_per_1k": 7.9
+  },
+  "methods": {
+   "words": 4046,
+   "sentences": 192,
+   "paragraphs": 43,
+   "sent_len_mean": 21.1,
+   "sent_len_sd": 10.7,
+   "sent_len_gt35_pct": 8.3,
+   "sent_len_lt10_pct": 12.0,
+   "para_sents_mean": 4.5,
+   "para_words_mean": 94.0,
+   "passive_sent_pct": 27.1,
+   "hedge_per_1k": 1.5,
+   "booster_per_1k": 0.7,
+   "first_person_per_1k": 2.2,
+   "nominalisation_per_100w": 3.2,
+   "connector_per_1k": 8.7,
+   "citations_per_1k": 5.7,
+   "numbers_per_100w": 4.6,
+   "result_terms_per_1k": 0.7,
+   "limit_terms_per_1k": 4.9
+  },
+  "results": {
+   "words": 3166,
+   "sentences": 133,
+   "paragraphs": 23,
+   "sent_len_mean": 23.8,
+   "sent_len_sd": 11.9,
+   "sent_len_gt35_pct": 18.0,
+   "sent_len_lt10_pct": 10.5,
+   "para_sents_mean": 5.8,
+   "para_words_mean": 138.0,
+   "passive_sent_pct": 11.3,
+   "hedge_per_1k": 2.2,
+   "booster_per_1k": 0.3,
+   "first_person_per_1k": 0.0,
+   "nominalisation_per_100w": 3.0,
+   "connector_per_1k": 4.1,
+   "citations_per_1k": 0.3,
+   "numbers_per_100w": 4.2,
+   "result_terms_per_1k": 1.9,
+   "limit_terms_per_1k": 4.7
+  },
+  "discussion": {
+   "words": 2117,
+   "sentences": 91,
+   "paragraphs": 19,
+   "sent_len_mean": 23.3,
+   "sent_len_sd": 11.1,
+   "sent_len_gt35_pct": 15.4,
+   "sent_len_lt10_pct": 14.3,
+   "para_sents_mean": 4.8,
+   "para_words_mean": 111.0,
+   "passive_sent_pct": 13.2,
+   "hedge_per_1k": 7.1,
+   "booster_per_1k": 0.0,
+   "first_person_per_1k": 2.8,
+   "nominalisation_per_100w": 3.6,
+   "connector_per_1k": 6.6,
+   "citations_per_1k": 2.8,
+   "numbers_per_100w": 2.7,
+   "result_terms_per_1k": 1.4,
+   "limit_terms_per_1k": 10.4
+  },
+  "conclusion": {
+   "words": 443,
+   "sentences": 17,
+   "paragraphs": 3,
+   "sent_len_mean": 26.1,
+   "sent_len_sd": 10.3,
+   "sent_len_gt35_pct": 23.5,
+   "sent_len_lt10_pct": 5.9,
+   "para_sents_mean": 5.7,
+   "para_words_mean": 148.0,
+   "passive_sent_pct": 17.6,
+   "hedge_per_1k": 6.8,
+   "booster_per_1k": 0.0,
+   "first_person_per_1k": 0.0,
+   "nominalisation_per_100w": 2.9,
+   "connector_per_1k": 0.0,
+   "citations_per_1k": 0.0,
+   "numbers_per_100w": 2.0,
+   "result_terms_per_1k": 2.3,
+   "limit_terms_per_1k": 13.5
+  }
+ },
+ "ours_all": {
+  "words": 12377,
+  "sentences": 537,
+  "paragraphs": 113,
+  "sent_len_mean": 23.0,
+  "sent_len_sd": 11.3,
+  "sent_len_gt35_pct": 13.2,
+  "sent_len_lt10_pct": 11.0,
+  "para_sents_mean": 4.8,
+  "para_words_mean": 110.0,
+  "passive_sent_pct": 18.6,
+  "hedge_per_1k": 2.8,
+  "booster_per_1k": 0.3,
+  "first_person_per_1k": 2.0,
+  "nominalisation_per_100w": 3.5,
+  "connector_per_1k": 6.5,
+  "citations_per_1k": 6.1,
+  "numbers_per_100w": 3.8,
+  "result_terms_per_1k": 1.3,
+  "limit_terms_per_1k": 6.9
+ },
+ "per_paper_all": {
+  "EXEMPLAR_carboncast2022_buildsys": {
+   "words": 6665,
+   "sentences": 343,
+   "paragraphs": 61,
+   "sent_len_mean": 19.4,
+   "sent_len_sd": 9.3,
+   "sent_len_gt35_pct": 5.2,
+   "sent_len_lt10_pct": 14.0,
+   "para_sents_mean": 5.6,
+   "para_words_mean": 109.0,
+   "passive_sent_pct": 12.0,
+   "hedge_per_1k": 2.6,
+   "booster_per_1k": 1.2,
+   "first_person_per_1k": 23.9,
+   "nominalisation_per_100w": 5.8,
+   "connector_per_1k": 28.4,
+   "citations_per_1k": 8.7,
+   "numbers_per_100w": 4.0,
+   "result_terms_per_1k": 5.4,
+   "limit_terms_per_1k": 2.4
+  },
+  "EXEMPLAR_sukprasert2024_arxiv2306.06502": {
+   "words": 8241,
+   "sentences": 408,
+   "paragraphs": 85,
+   "sent_len_mean": 20.2,
+   "sent_len_sd": 11.1,
+   "sent_len_gt35_pct": 7.4,
+   "sent_len_lt10_pct": 17.6,
+   "para_sents_mean": 4.8,
+   "para_words_mean": 97.0,
+   "passive_sent_pct": 10.3,
+   "hedge_per_1k": 4.6,
+   "booster_per_1k": 1.5,
+   "first_person_per_1k": 17.4,
+   "nominalisation_per_100w": 7.1,
+   "connector_per_1k": 19.4,
+   "citations_per_1k": 5.7,
+   "numbers_per_100w": 4.1,
+   "result_terms_per_1k": 22.9,
+   "limit_terms_per_1k": 3.2
+  },
+  "EXEMPLAR_wiesner2021_arxiv2110.13234": {
+   "words": 8582,
+   "sentences": 456,
+   "paragraphs": 109,
+   "sent_len_mean": 18.8,
+   "sent_len_sd": 11.2,
+   "sent_len_gt35_pct": 6.6,
+   "sent_len_lt10_pct": 19.7,
+   "para_sents_mean": 4.2,
+   "para_words_mean": 79.0,
+   "passive_sent_pct": 22.8,
+   "hedge_per_1k": 3.5,
+   "booster_per_1k": 2.1,
+   "first_person_per_1k": 10.0,
+   "nominalisation_per_100w": 4.8,
+   "connector_per_1k": 17.2,
+   "citations_per_1k": 11.0,
+   "numbers_per_100w": 5.2,
+   "result_terms_per_1k": 4.8,
+   "limit_terms_per_1k": 6.2
+  },
+  "SUSCOM_S2210537921000810": {
+   "words": 7269,
+   "sentences": 332,
+   "paragraphs": 104,
+   "sent_len_mean": 21.9,
+   "sent_len_sd": 9.9,
+   "sent_len_gt35_pct": 7.2,
+   "sent_len_lt10_pct": 6.3,
+   "para_sents_mean": 3.2,
+   "para_words_mean": 70.0,
+   "passive_sent_pct": 27.4,
+   "hedge_per_1k": 2.3,
+   "booster_per_1k": 1.4,
+   "first_person_per_1k": 14.2,
+   "nominalisation_per_100w": 4.4,
+   "connector_per_1k": 14.6,
+   "citations_per_1k": 6.9,
+   "numbers_per_100w": 2.6,
+   "result_terms_per_1k": 11.0,
+   "limit_terms_per_1k": 2.5
+  },
+  "SUSCOM_S2210537923001051": {
+   "words": 5287,
+   "sentences": 216,
+   "paragraphs": 51,
+   "sent_len_mean": 24.5,
+   "sent_len_sd": 22.1,
+   "sent_len_gt35_pct": 11.6,
+   "sent_len_lt10_pct": 9.7,
+   "para_sents_mean": 4.2,
+   "para_words_mean": 104.0,
+   "passive_sent_pct": 25.0,
+   "hedge_per_1k": 1.1,
+   "booster_per_1k": 2.3,
+   "first_person_per_1k": 0.9,
+   "nominalisation_per_100w": 6.2,
+   "connector_per_1k": 12.9,
+   "citations_per_1k": 5.5,
+   "numbers_per_100w": 2.5,
+   "result_terms_per_1k": 6.4,
+   "limit_terms_per_1k": 1.9
+  },
+  "SUSCOM_S2210537924000301": {
+   "words": 5375,
+   "sentences": 322,
+   "paragraphs": 58,
+   "sent_len_mean": 16.7,
+   "sent_len_sd": 7.4,
+   "sent_len_gt35_pct": 1.2,
+   "sent_len_lt10_pct": 13.0,
+   "para_sents_mean": 5.6,
+   "para_words_mean": 93.0,
+   "passive_sent_pct": 32.9,
+   "hedge_per_1k": 2.4,
+   "booster_per_1k": 1.3,
+   "first_person_per_1k": 5.2,
+   "nominalisation_per_100w": 6.0,
+   "connector_per_1k": 14.3,
+   "citations_per_1k": 9.1,
+   "numbers_per_100w": 2.0,
+   "result_terms_per_1k": 12.1,
+   "limit_terms_per_1k": 1.3
+  },
+  "SUSCOM_S2210537924000337": {
+   "words": 11204,
+   "sentences": 560,
+   "paragraphs": 117,
+   "sent_len_mean": 20.0,
+   "sent_len_sd": 12.5,
+   "sent_len_gt35_pct": 5.5,
+   "sent_len_lt10_pct": 11.6,
+   "para_sents_mean": 4.8,
+   "para_words_mean": 96.0,
+   "passive_sent_pct": 36.6,
+   "hedge_per_1k": 3.1,
+   "booster_per_1k": 2.1,
+   "first_person_per_1k": 4.1,
+   "nominalisation_per_100w": 5.8,
+   "connector_per_1k": 9.6,
+   "citations_per_1k": 9.4,
+   "numbers_per_100w": 2.8,
+   "result_terms_per_1k": 6.9,
+   "limit_terms_per_1k": 3.4
+  },
+  "SUSCOM_S2210537924000374": {
+   "words": 5541,
+   "sentences": 256,
+   "paragraphs": 66,
+   "sent_len_mean": 21.6,
+   "sent_len_sd": 16.4,
+   "sent_len_gt35_pct": 6.6,
+   "sent_len_lt10_pct": 10.9,
+   "para_sents_mean": 3.9,
+   "para_words_mean": 84.0,
+   "passive_sent_pct": 16.0,
+   "hedge_per_1k": 4.2,
+   "booster_per_1k": 0.7,
+   "first_person_per_1k": 12.5,
+   "nominalisation_per_100w": 6.3,
+   "connector_per_1k": 8.8,
+   "citations_per_1k": 5.6,
+   "numbers_per_100w": 3.0,
+   "result_terms_per_1k": 7.0,
+   "limit_terms_per_1k": 2.2
+  },
+  "SUSCOM_S2210537925000265": {
+   "words": 5810,
+   "sentences": 310,
+   "paragraphs": 87,
+   "sent_len_mean": 18.7,
+   "sent_len_sd": 9.2,
+   "sent_len_gt35_pct": 4.2,
+   "sent_len_lt10_pct": 12.6,
+   "para_sents_mean": 3.6,
+   "para_words_mean": 67.0,
+   "passive_sent_pct": 23.2,
+   "hedge_per_1k": 0.7,
+   "booster_per_1k": 1.4,
+   "first_person_per_1k": 8.1,
+   "nominalisation_per_100w": 4.4,
+   "connector_per_1k": 15.1,
+   "citations_per_1k": 3.4,
+   "numbers_per_100w": 3.2,
+   "result_terms_per_1k": 4.8,
+   "limit_terms_per_1k": 7.6
+  },
+  "SUSCOM_S2210537925001374": {
+   "words": 7993,
+   "sentences": 413,
+   "paragraphs": 104,
+   "sent_len_mean": 19.4,
+   "sent_len_sd": 9.8,
+   "sent_len_gt35_pct": 6.1,
+   "sent_len_lt10_pct": 14.8,
+   "para_sents_mean": 4.0,
+   "para_words_mean": 77.0,
+   "passive_sent_pct": 25.2,
+   "hedge_per_1k": 0.9,
+   "booster_per_1k": 2.8,
+   "first_person_per_1k": 5.4,
+   "nominalisation_per_100w": 8.1,
+   "connector_per_1k": 18.6,
+   "citations_per_1k": 4.8,
+   "numbers_per_100w": 3.0,
+   "result_terms_per_1k": 9.8,
+   "limit_terms_per_1k": 3.3
+  },
+  "SUSCOM_S2210537926000430": {
+   "words": 9355,
+   "sentences": 387,
+   "paragraphs": 106,
+   "sent_len_mean": 24.2,
+   "sent_len_sd": 11.6,
+   "sent_len_gt35_pct": 11.9,
+   "sent_len_lt10_pct": 7.2,
+   "para_sents_mean": 3.7,
+   "para_words_mean": 88.0,
+   "passive_sent_pct": 24.8,
+   "hedge_per_1k": 1.7,
+   "booster_per_1k": 4.2,
+   "first_person_per_1k": 5.2,
+   "nominalisation_per_100w": 6.9,
+   "connector_per_1k": 14.4,
+   "citations_per_1k": 6.6,
+   "numbers_per_100w": 2.3,
+   "result_terms_per_1k": 3.8,
+   "limit_terms_per_1k": 3.0
+  },
+  "SUSCOM_S2210537926001083": {
+   "words": 10213,
+   "sentences": 431,
+   "paragraphs": 134,
+   "sent_len_mean": 23.7,
+   "sent_len_sd": 11.3,
+   "sent_len_gt35_pct": 11.4,
+   "sent_len_lt10_pct": 11.1,
+   "para_sents_mean": 3.2,
+   "para_words_mean": 76.0,
+   "passive_sent_pct": 19.7,
+   "hedge_per_1k": 2.0,
+   "booster_per_1k": 2.9,
+   "first_person_per_1k": 10.5,
+   "nominalisation_per_100w": 8.9,
+   "connector_per_1k": 14.6,
+   "citations_per_1k": 6.1,
+   "numbers_per_100w": 3.2,
+   "result_terms_per_1k": 8.4,
+   "limit_terms_per_1k": 4.0
+  },
+  "SUSCOM_S2210537926001174": {
+   "words": 4977,
+   "sentences": 226,
+   "paragraphs": 68,
+   "sent_len_mean": 22.0,
+   "sent_len_sd": 9.0,
+   "sent_len_gt35_pct": 6.2,
+   "sent_len_lt10_pct": 8.0,
+   "para_sents_mean": 3.3,
+   "para_words_mean": 73.0,
+   "passive_sent_pct": 19.5,
+   "hedge_per_1k": 2.4,
+   "booster_per_1k": 3.8,
+   "first_person_per_1k": 2.4,
+   "nominalisation_per_100w": 6.9,
+   "connector_per_1k": 12.3,
+   "citations_per_1k": 4.0,
+   "numbers_per_100w": 2.6,
+   "result_terms_per_1k": 6.2,
+   "limit_terms_per_1k": 1.8
+  },
+  "SUSCOM_S2210537926001393": {
+   "words": 13066,
+   "sentences": 630,
+   "paragraphs": 210,
+   "sent_len_mean": 20.7,
+   "sent_len_sd": 10.5,
+   "sent_len_gt35_pct": 7.1,
+   "sent_len_lt10_pct": 14.9,
+   "para_sents_mean": 3,
+   "para_words_mean": 62.0,
+   "passive_sent_pct": 26.7,
+   "hedge_per_1k": 1.2,
+   "booster_per_1k": 1.7,
+   "first_person_per_1k": 0.0,
+   "nominalisation_per_100w": 8.0,
+   "connector_per_1k": 15.1,
+   "citations_per_1k": 2.6,
+   "numbers_per_100w": 3.0,
+   "result_terms_per_1k": 10.4,
+   "limit_terms_per_1k": 2.0
+  },
+  "SUSCOM_S2210537926002088": {
+   "words": 8867,
+   "sentences": 439,
+   "paragraphs": 118,
+   "sent_len_mean": 20.2,
+   "sent_len_sd": 11.7,
+   "sent_len_gt35_pct": 8.9,
+   "sent_len_lt10_pct": 16.4,
+   "para_sents_mean": 3.7,
+   "para_words_mean": 75.0,
+   "passive_sent_pct": 38.7,
+   "hedge_per_1k": 4.7,
+   "booster_per_1k": 1.8,
+   "first_person_per_1k": 7.4,
+   "nominalisation_per_100w": 6.5,
+   "connector_per_1k": 18.7,
+   "citations_per_1k": 6.0,
+   "numbers_per_100w": 3.2,
+   "result_terms_per_1k": 9.0,
+   "limit_terms_per_1k": 5.6
+  }
+ },
+ "corpus_iqr": {
+  "abstract": {
+   "words": [
+    212,
+    223,
+    250,
+    13
+   ],
+   "sentences": [
+    8,
+    9,
+    9,
+    13
+   ],
+   "paragraphs": [
+    1,
+    1,
+    1,
+    13
+   ],
+   "sent_len_mean": [
+    22,
+    24.8,
+    30.6,
+    13
+   ],
+   "sent_len_sd": [
+    4.8,
+    5.3,
+    9.6,
+    13
+   ],
+   "sent_len_gt35_pct": [
+    0.0,
+    0.0,
+    22.2,
+    13
+   ],
+   "sent_len_lt10_pct": [
+    0.0,
+    0.0,
+    0.0,
+    13
+   ],
+   "para_sents_mean": [
+    7,
+    9,
+    9,
+    13
+   ],
+   "para_words_mean": [
+    212,
+    223,
+    250,
+    13
+   ],
+   "passive_sent_pct": [
+    11.1,
+    22.2,
+    28.6,
+    13
+   ],
+   "hedge_per_1k": [
+    0.0,
+    0.0,
+    0.0,
+    13
+   ],
+   "booster_per_1k": [
+    0.0,
+    4.3,
+    9.3,
+    13
+   ],
+   "first_person_per_1k": [
+    0.0,
+    14.2,
+    20.0,
+    13
+   ],
+   "nominalisation_per_100w": [
+    4.9,
+    5.8,
+    7.8,
+    13
+   ],
+   "connector_per_1k": [
+    4.5,
+    11.3,
+    15.8,
+    13
+   ],
+   "citations_per_1k": [
+    0.0,
+    0.0,
+    0.0,
+    13
+   ],
+   "numbers_per_100w": [
+    1.3,
+    1.6,
+    2.7,
+    13
+   ],
+   "result_terms_per_1k": [
+    11.3,
+    16.0,
+    23.6,
+    13
+   ],
+   "limit_terms_per_1k": [
+    0.0,
+    0.0,
+    0.0,
+    13
+   ]
+  },
+  "intro": {
+   "words": [
+    612,
+    882,
+    1238,
+    15
+   ],
+   "sentences": [
+    27,
+    37,
+    62,
+    15
+   ],
+   "paragraphs": [
+    8,
+    8,
+    12,
+    15
+   ],
+   "sent_len_mean": [
+    19.1,
+    22.7,
+    24.2,
+    15
+   ],
+   "sent_len_sd": [
+    9.0,
+    10.4,
+    11.6,
+    15
+   ],
+   "sent_len_gt35_pct": [
+    4.8,
+    8.1,
+    12.5,
+    15
+   ],
+   "sent_len_lt10_pct": [
+    7.2,
+    12.3,
+    14.3,
+    15
+   ],
+   "para_sents_mean": [
+    3.3,
+    3.7,
+    4.4,
+    15
+   ],
+   "para_words_mean": [
+    73.0,
+    82.0,
+    104.0,
+    15
+   ],
+   "passive_sent_pct": [
+    14.6,
+    19.2,
+    21.4,
+    15
+   ],
+   "hedge_per_1k": [
+    1.1,
+    1.7,
+    3.6,
+    15
+   ],
+   "booster_per_1k": [
+    1.5,
+    2.8,
+    4.2,
+    15
+   ],
+   "first_person_per_1k": [
+    1.7,
+    6.5,
+    9.9,
+    15
+   ],
+   "nominalisation_per_100w": [
+    6.0,
+    7.4,
+    8.3,
+    15
+   ],
+   "connector_per_1k": [
+    12.1,
+    16.5,
+    18.9,
+    15
+   ],
+   "citations_per_1k": [
+    9.3,
+    12.0,
+    13.8,
+    15
+   ],
+   "numbers_per_100w": [
+    2.4,
+    3.4,
+    4.3,
+    15
+   ],
+   "result_terms_per_1k": [
+    4.7,
+    7.7,
+    11.6,
+    15
+   ],
+   "limit_terms_per_1k": [
+    0.8,
+    2.2,
+    4.3,
+    15
+   ]
+  },
+  "related": {
+   "words": [
+    823,
+    1000,
+    1588,
+    13
+   ],
+   "sentences": [
+    40,
+    51,
+    69,
+    13
+   ],
+   "paragraphs": [
+    9,
+    9,
+    14,
+    13
+   ],
+   "sent_len_mean": [
+    19.3,
+    20.6,
+    23.4,
+    13
+   ],
+   "sent_len_sd": [
+    7.9,
+    8.5,
+    9.3,
+    13
+   ],
+   "sent_len_gt35_pct": [
+    2.5,
+    7.4,
+    10.4,
+    13
+   ],
+   "sent_len_lt10_pct": [
+    4.7,
+    7.5,
+    11.1,
+    13
+   ],
+   "para_sents_mean": [
+    4.4,
+    5.2,
+    7.2,
+    13
+   ],
+   "para_words_mean": [
+    97.0,
+    102.0,
+    138.0,
+    13
+   ],
+   "passive_sent_pct": [
+    9.8,
+    17.2,
+    21.7,
+    13
+   ],
+   "hedge_per_1k": [
+    0.6,
+    1.2,
+    2.9,
+    13
+   ],
+   "booster_per_1k": [
+    0.0,
+    1.4,
+    1.9,
+    13
+   ],
+   "first_person_per_1k": [
+    0.0,
+    4.5,
+    8.8,
+    13
+   ],
+   "nominalisation_per_100w": [
+    5.6,
+    6.6,
+    8.0,
+    13
+   ],
+   "connector_per_1k": [
+    13.4,
+    17.5,
+    21.8,
+    13
+   ],
+   "citations_per_1k": [
+    12.0,
+    13.5,
+    19.6,
+    13
+   ],
+   "numbers_per_100w": [
+    1.6,
+    2.5,
+    3.3,
+    13
+   ],
+   "result_terms_per_1k": [
+    4.4,
+    6.9,
+    9.8,
+    13
+   ],
+   "limit_terms_per_1k": [
+    1.8,
+    2.5,
+    5.9,
+    13
+   ]
+  },
+  "methods": {
+   "words": [
+    2026,
+    2294,
+    3708,
+    12
+   ],
+   "sentences": [
+    90,
+    120,
+    180,
+    12
+   ],
+   "paragraphs": [
+    22,
+    35,
+    56,
+    12
+   ],
+   "sent_len_mean": [
+    18,
+    19.7,
+    21.6,
+    12
+   ],
+   "sent_len_sd": [
+    9.5,
+    11.5,
+    12.6,
+    12
+   ],
+   "sent_len_gt35_pct": [
+    3.3,
+    5.6,
+    8.9,
+    12
+   ],
+   "sent_len_lt10_pct": [
+    12.9,
+    14.6,
+    17.8,
+    12
+   ],
+   "para_sents_mean": [
+    3,
+    3.7,
+    4.2,
+    12
+   ],
+   "para_words_mean": [
+    66.0,
+    70.0,
+    82.0,
+    12
+   ],
+   "passive_sent_pct": [
+    26.7,
+    35.9,
+    44.7,
+    12
+   ],
+   "hedge_per_1k": [
+    0.5,
+    2.0,
+    2.2,
+    12
+   ],
+   "booster_per_1k": [
+    0.0,
+    1.2,
+    1.2,
+    12
+   ],
+   "first_person_per_1k": [
+    3.5,
+    6.9,
+    12.2,
+    12
+   ],
+   "nominalisation_per_100w": [
+    5.3,
+    6.3,
+    7.0,
+    12
+   ],
+   "connector_per_1k": [
+    7.7,
+    12.7,
+    14.5,
+    12
+   ],
+   "citations_per_1k": [
+    1.6,
+    2.3,
+    3.2,
+    12
+   ],
+   "numbers_per_100w": [
+    2.0,
+    2.6,
+    3.4,
+    12
+   ],
+   "result_terms_per_1k": [
+    2.3,
+    3.5,
+    6.3,
+    12
+   ],
+   "limit_terms_per_1k": [
+    1.0,
+    1.5,
+    2.9,
+    12
+   ]
+  },
+  "results": {
+   "words": [
+    1518,
+    1931,
+    3522,
+    10
+   ],
+   "sentences": [
+    66,
+    95,
+    174,
+    10
+   ],
+   "paragraphs": [
+    18,
+    25,
+    50,
+    10
+   ],
+   "sent_len_mean": [
+    19.5,
+    20.5,
+    21.4,
+    10
+   ],
+   "sent_len_sd": [
+    9.5,
+    10.3,
+    11.3,
+    10
+   ],
+   "sent_len_gt35_pct": [
+    5.3,
+    6.2,
+    9.7,
+    10
+   ],
+   "sent_len_lt10_pct": [
+    7.6,
+    11.7,
+    17.0,
+    10
+   ],
+   "para_sents_mean": [
+    3.3,
+    3.7,
+    4.5,
+    10
+   ],
+   "para_words_mean": [
+    65.0,
+    75.0,
+    88.0,
+    10
+   ],
+   "passive_sent_pct": [
+    19.2,
+    26.9,
+    31.9,
+    10
+   ],
+   "hedge_per_1k": [
+    1.3,
+    1.3,
+    4.2,
+    10
+   ],
+   "booster_per_1k": [
+    1.3,
+    2.0,
+    3.1,
+    10
+   ],
+   "first_person_per_1k": [
+    1.3,
+    3.0,
+    12.4,
+    10
+   ],
+   "nominalisation_per_100w": [
+    4.3,
+    5.9,
+    6.8,
+    10
+   ],
+   "connector_per_1k": [
+    12.2,
+    15.9,
+    20.1,
+    10
+   ],
+   "citations_per_1k": [
+    1.3,
+    2.8,
+    4.1,
+    10
+   ],
+   "numbers_per_100w": [
+    3.0,
+    3.8,
+    4.8,
+    10
+   ],
+   "result_terms_per_1k": [
+    11.9,
+    14.1,
+    21.8,
+    10
+   ],
+   "limit_terms_per_1k": [
+    1.3,
+    2.6,
+    5.4,
+    10
+   ]
+  },
+  "other": {
+   "words": [
+    1670,
+    2089,
+    2089,
+    4
+   ],
+   "sentences": [
+    83,
+    99,
+    99,
+    4
+   ],
+   "paragraphs": [
+    21,
+    24,
+    24,
+    4
+   ],
+   "sent_len_mean": [
+    19.8,
+    20.1,
+    20.1,
+    4
+   ],
+   "sent_len_sd": [
+    9.5,
+    10.5,
+    10.5,
+    4
+   ],
+   "sent_len_gt35_pct": [
+    4.8,
+    8.1,
+    8.1,
+    4
+   ],
+   "sent_len_lt10_pct": [
+    11.1,
+    16.1,
+    16.1,
+    4
+   ],
+   "para_sents_mean": [
+    3.5,
+    4.0,
+    4.0,
+    4
+   ],
+   "para_words_mean": [
+    68,
+    80.0,
+    80.0,
+    4
+   ],
+   "passive_sent_pct": [
+    21.4,
+    27.6,
+    27.6,
+    4
+   ],
+   "hedge_per_1k": [
+    1.2,
+    3.2,
+    3.2,
+    4
+   ],
+   "booster_per_1k": [
+    1.2,
+    1.4,
+    1.4,
+    4
+   ],
+   "first_person_per_1k": [
+    0.9,
+    7.8,
+    7.8,
+    4
+   ],
+   "nominalisation_per_100w": [
+    5.1,
+    6.2,
+    6.2,
+    4
+   ],
+   "connector_per_1k": [
+    10.8,
+    16.3,
+    16.3,
+    4
+   ],
+   "citations_per_1k": [
+    0.8,
+    0.9,
+    0.9,
+    4
+   ],
+   "numbers_per_100w": [
+    3.5,
+    3.8,
+    3.8,
+    4
+   ],
+   "result_terms_per_1k": [
+    2.8,
+    5.4,
+    5.4,
+    4
+   ],
+   "limit_terms_per_1k": [
+    2.0,
+    8.1,
+    8.1,
+    4
+   ]
+  },
+  "conclusion": {
+   "words": [
+    277,
+    320,
+    472,
+    10
+   ],
+   "sentences": [
+    12,
+    15,
+    24,
+    10
+   ],
+   "paragraphs": [
+    3,
+    4,
+    6,
+    10
+   ],
+   "sent_len_mean": [
+    17.5,
+    20.6,
+    24.6,
+    10
+   ],
+   "sent_len_sd": [
+    7.8,
+    8.5,
+    10.1,
+    10
+   ],
+   "sent_len_gt35_pct": [
+    0.9,
+    5.0,
+    11.1,
+    10
+   ],
+   "sent_len_lt10_pct": [
+    0.0,
+    6.7,
+    16.7,
+    10
+   ],
+   "para_sents_mean": [
+    3.3,
+    3.5,
+    4.5,
+    10
+   ],
+   "para_words_mean": [
+    59,
+    69.0,
+    102,
+    10
+   ],
+   "passive_sent_pct": [
+    5.0,
+    20.0,
+    33.3,
+    10
+   ],
+   "hedge_per_1k": [
+    0.0,
+    0.0,
+    6.5,
+    10
+   ],
+   "booster_per_1k": [
+    0.0,
+    2.1,
+    5.3,
+    10
+   ],
+   "first_person_per_1k": [
+    2.1,
+    6.5,
+    21.2,
+    10
+   ],
+   "nominalisation_per_100w": [
+    5.3,
+    6.5,
+    9.7,
+    10
+   ],
+   "connector_per_1k": [
+    12.5,
+    18.1,
+    29.4,
+    10
+   ],
+   "citations_per_1k": [
+    0.0,
+    0.0,
+    0.0,
+    10
+   ],
+   "numbers_per_100w": [
+    0.0,
+    1.0,
+    2.7,
+    10
+   ],
+   "result_terms_per_1k": [
+    5.5,
+    14.7,
+    21.2,
+    10
+   ],
+   "limit_terms_per_1k": [
+    0.8,
+    3.1,
+    12.6,
+    10
+   ]
+  },
+  "discussion": {
+   "words": [
+    1167,
+    1223,
+    1694,
+    3
+   ],
+   "sentences": [
+    56,
+    62,
+    82,
+    3
+   ],
+   "paragraphs": [
+    13,
+    18,
+    19,
+    3
+   ],
+   "sent_len_mean": [
+    18.8,
+    20.7,
+    21.8,
+    3
+   ],
+   "sent_len_sd": [
+    7.1,
+    10.3,
+    10.7,
+    3
+   ],
+   "sent_len_gt35_pct": [
+    1.8,
+    6.5,
+    11.0,
+    3
+   ],
+   "sent_len_lt10_pct": [
+    1.8,
+    12.2,
+    21.0,
+    3
+   ],
+   "para_sents_mean": [
+    2.9,
+    4.6,
+    4.8,
+    3
+   ],
+   "para_words_mean": [
+    64.0,
+    90.0,
+    94.0,
+    3
+   ],
+   "passive_sent_pct": [
+    16.1,
+    21.4,
+    35.4,
+    3
+   ],
+   "hedge_per_1k": [
+    4.3,
+    4.9,
+    8.3,
+    3
+   ],
+   "booster_per_1k": [
+    1.7,
+    2.4,
+    6.5,
+    3
+   ],
+   "first_person_per_1k": [
+    4.1,
+    4.3,
+    11.2,
+    3
+   ],
+   "nominalisation_per_100w": [
+    5.7,
+    7.3,
+    7.8,
+    3
+   ],
+   "connector_per_1k": [
+    12.0,
+    12.3,
+    26.0,
+    3
+   ],
+   "citations_per_1k": [
+    0.0,
+    0.8,
+    1.8,
+    3
+   ],
+   "numbers_per_100w": [
+    0.7,
+    3.4,
+    7.7,
+    3
+   ],
+   "result_terms_per_1k": [
+    7.4,
+    8.9,
+    16.3,
+    3
+   ],
+   "limit_terms_per_1k": [
+    0.9,
+    1.6,
+    7.7,
+    3
+   ]
+  }
+ },
+ "corpus_iqr_all": {
+  "words": [
+   5810,
+   7993,
+   8867,
+   15
+  ],
+  "sentences": [
+   322,
+   387,
+   431,
+   15
+  ],
+  "paragraphs": [
+   68,
+   104,
+   109,
+   15
+  ],
+  "sent_len_mean": [
+   19.4,
+   20.2,
+   21.9,
+   15
+  ],
+  "sent_len_sd": [
+   9.8,
+   11.1,
+   11.6,
+   15
+  ],
+  "sent_len_gt35_pct": [
+   6.1,
+   6.6,
+   7.4,
+   15
+  ],
+  "sent_len_lt10_pct": [
+   10.9,
+   12.6,
+   14.8,
+   15
+  ],
+  "para_sents_mean": [
+   3.6,
+   3.9,
+   4.2,
+   15
+  ],
+  "para_words_mean": [
+   75.0,
+   79.0,
+   93.0,
+   15
+  ],
+  "passive_sent_pct": [
+   19.7,
+   24.8,
+   26.7,
+   15
+  ],
+  "hedge_per_1k": [
+   1.7,
+   2.4,
+   3.1,
+   15
+  ],
+  "booster_per_1k": [
+   1.4,
+   1.8,
+   2.3,
+   15
+  ],
+  "first_person_per_1k": [
+   5.2,
+   7.4,
+   10.5,
+   15
+  ],
+  "nominalisation_per_100w": [
+   5.8,
+   6.3,
+   6.9,
+   15
+  ],
+  "connector_per_1k": [
+   14.3,
+   14.6,
+   17.2,
+   15
+  ],
+  "citations_per_1k": [
+   5.5,
+   6.0,
+   6.9,
+   15
+  ],
+  "numbers_per_100w": [
+   2.6,
+   3.0,
+   3.2,
+   15
+  ],
+  "result_terms_per_1k": [
+   6.2,
+   7.0,
+   9.8,
+   15
+  ],
+  "limit_terms_per_1k": [
+   2.2,
+   3.0,
+   3.4,
+   15
+  ]
+ },
+ "n_papers": 15,
+ "note": "iqr entries are [q1, median, q3, n_papers] of per-paper values; 'ours' is the manuscript template prose."
+}

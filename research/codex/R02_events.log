@@ -1,0 +1,300 @@
+﻿codex : OpenAI Codex v0.162.1
+At line:1 char:428
++ ... t.md -Raw | codex exec resume 01a1c984-6168-7730-8ae5-b2171a72333b -- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (OpenAI Codex v0.162.1:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+--------
+workdir: C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a1c984-6168-7730-8ae5-b2171a72333b
+--------
+user
+# Paper A, Codex round 2: cross-critique of the refined topic C8 (same roles E1/E3/E6; at most 1000 words)
+
+## New evidence since round 1 (from our novelty scout, abstracts only; DOIs verified by the scout)
+- Average vs marginal signals: Hanafy et al., e-Energy 2024, 65 regions, doi 10.1145/3632775.3661953 (signals weakly
+  correlated; optimising one can raise the other). So C1 is pre-empted; marginal factors stay at most a sensitivity.
+- Forecast error: Sukprasert et al., EuroSys 2024, 123 regions, Electricity Maps (login-gated), includes prediction
+  error, doi 10.1145/3627703.3650079; LiteCast arXiv 2511.06187 (forecast accuracy gains do not give proportional
+  savings); HotCarbon 2024 algorithm selection (synthetic 0-20 % error); e-Energy 2026 signal-aware shifting with
+  uncertainty-quantified predictors, doi 10.1145/3744255.3798123.
+- Runtime knowledge: LACS arXiv 2404.15211 (synthetic symmetric job-length error, within 1.2 % of perfect length);
+  COAST arXiv 2609.05443 (CEA-Curie trace, known runtimes, actual carbon, 15.4 % saving; lists forecast error as
+  future work); CarbonScaler SIGMETRICS 2024 assumes known length. No paper seen uses real requested-vs-actual
+  runtimes (Parallel Workloads Archive SWF fields 3/4 vs 8/9) for carbon-aware scheduling.
+- Data open without login: EIA-930 six-month BALANCE files 2018 H2 to 2026 H1 (downloading now, about 50 US balancing
+  authorities with hourly generation by fuel: coal, gas, nuclear, oil, hydro, solar, wind, other); Parallel Workloads
+  Archive; checking now PM100 (Marconi100, per-job power, requested time limit), F-DATA (Fugaku), LANL Atlas.
+
+## Refined candidate C8
+For non-interruptible batch jobs that may be delayed within a slack window, how much of the perfect-information carbon
+saving survives when (a) the carbon signal is a past-only forecast and (b) the job length is the user's requested
+walltime (or a history-based prediction) instead of the actual runtime? Decompose the oracle-to-realised gap into
+forecast, runtime and interaction terms (Shapley over the 2x2 information design), and model how the retained share
+depends on grid mix, slack and job length. Average production-based intensity with fixed per-fuel factors; the final 12
+months held out and pre-registered; job calendars randomly aligned to grid years (sensitivity tested).
+Baselines: run-now; fixed night window; historical clean-hour profile; persistence and seasonal-naive forecasts;
+gradient-boosting past-only forecast; oracle.
+
+## Our position (Claude controller) to attack
+1. The headline should be the runtime term, since it is the unexplored input; the forecast term is the backbone and a
+   replication across about 50 BAs with a held-out year.
+2. Users overestimate walltime by large factors (often 2-5x in HPC logs); a scheduler that plans on requested
+   walltime averages carbon over a too-long window, so it chooses start times that are wrong for the true short job.
+   We expect the loss to be large for short jobs and small for long ones, and a simple history-based predictor
+   (mean of the user's last two runtimes, Tsafrir et al. style) to recover most of it.
+3. Secondary: whether forecast MAE predicts realised savings, or whether within-window ranking skill does.
+4. Capacity limits ignored in the main design (each job shifted independently); a capacity-constrained cluster replay
+   as robustness, reporting peak load created by shifting.
+
+## Asked
+1. E1: would SUSCOM's editor send C8 to review? Main risk now.
+2. E6: strongest attack on C8, and on our claim 2. What would make the runtime result trivial or an artefact
+   (for example: jobs killed at the walltime limit, failed jobs, job arrays, the old-log/new-grid pairing)?
+3. E3: the exact estimands and at most 4 confirmatory hypotheses with tests (block bootstrap over days and balancing
+   authorities; Holm). The scheduler definition you would defend (objective, slack definition, what the planner sees).
+   Which forecasters are the minimum credible set at hourly resolution for 1-48 h ahead.
+4. Is the Shapley 2x2 decomposition the right attribution, or would you use something else?
+5. Anything that should be cut to finish in 4 days. Your confidence (0-1) that C8 is the best choice.
+
+
+warning: clamping SessionEnd hook timeout to 3s in 
+C:\Users\Shlok\.codex\plugins\cache\openai-codex\codex\1.0.6\hooks\hooks.json
+2026-11-11T07:57:50.155067Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer 
+resource_metadata=\"https://mcp.supabase.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T07:57:50.253205Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer realm=\"OAuth\", 
+resource_metadata=\"https://mcp.canva.com/.well-known/oauth-protected-resource/mcp\", error=\"invalid_token\", 
+error_description=\"Missing or invalid access token\"" })
+2026-11-11T07:57:50.520191Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.figma.com/.well-known
+/oauth-protected-resource\",scope=\"mcp:connect\",authorization_uri=\"https://api.figma.com/.well-known/oauth-authoriza
+tion-server\"" })
+2026-11-11T07:57:50.520553Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+UnexpectedServerResponse("HTTP 404: \n<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta 
+name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>404 - No instance here</title>\n    
+<link\n      href=\"https://fonts.googleapis.com/css?family=Open Sans\"\n      rel=\"stylesheet\"\n    />\n    
+<style>\n      html {\n        width: 100%;\n        height: 100%;\n      }\n\n      body {\n        height: 100%;\n   
+     width: 100%;\n        background-color: #fbfcfe;\n        font-family: \"Open Sans\";\n        font-style: 
+normal;\n        text-align: center;\n        color: #555555;\n        display: flex;\n        flex-direction: 
+column;\n        align-items: center;\n        font-weight: 400;\n      }\n\n      body * {\n        
+margin-block-start: 0;\n        margin-block-end: 5px;\n      }\n\n      .container {\n        display: flex;\n        
+flex-direction: column;\n        align-items: center;\n        height: 100%;\n        max-width: 350px;\n        
+margin-top: 48px;\n      }\n\n      h1 {\n        font-weight: 400;\n        font-size: 28px;\n        line-height: 
+35px;\n        color: #555555;\n        margin-top: 64px;\n      }\n\n      h2 {\n        font-weight: 400;\n        
+font-size: 20px;\n        line-height: 26px;\n      }\n\n      p {\n        font-size: 14px;\n        line-height: 
+normal;\n        color: #7d7d87;\n      }\n\n      a {\n        color: #fd4d21;\n        text-decoration: none;\n      
+  text-align: center;\n        font-weight: 400px;\n      }\n\n      .subheading {\n        margin-top: 24px;\n      
+}\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <svg\n        
+xmlns=\"http://www.w3.org/2000/svg\"\n        width=\"120\"\n        height=\"32\"\n        viewBox=\"0 0 120 32\"\n   
+     fill=\"none\"\n      >\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n         
+ d=\"M55.1998 12.8C52.2177 12.8 49.7119 10.7604 49.0014 8H41.666C40.1017 8 38.7667 9.13092 38.5096 10.6739L38.2465 
+12.2522C37.9968 13.7506 37.2388 15.0548 36.1668 16C37.2388 16.9452 37.9968 18.2494 38.2465 19.7478L38.5096 
+21.3261C38.7667 22.8691 40.1017 24 41.666 24H42.6014C43.3119 21.2396 45.8177 19.2 48.7998 19.2C52.3344 19.2 55.1998 
+22.0654 55.1998 25.6C55.1998 29.1346 52.3344 32 48.7998 32C45.8177 32 43.3119 29.9604 42.6014 27.2H41.666C38.5374 27.2 
+35.8674 24.9382 35.3531 21.8522L35.0901 20.2739C34.8329 18.7309 33.4979 17.6 31.9336 17.6H29.3982C28.6877 20.3604 
+26.1819 22.4 23.1998 22.4C20.2177 22.4 17.7119 20.3604 17.0014 17.6H13.3982C12.6877 20.3604 10.1819 22.4 7.1998 
+22.4C3.66518 22.4 0.799805 19.5346 0.799805 16C0.799805 12.4654 3.66518 9.6 7.1998 9.6C10.1819 9.6 12.6877 11.6396 
+13.3982 14.4H17.0014C17.7119 11.6396 20.2177 9.6 23.1998 9.6C26.1819 9.6 28.6877 11.6396 29.3982 14.4H31.9336C33.4979 
+14.4 34.8329 13.2691 35.0901 11.7261L35.3531 10.1478C35.8674 7.06184 38.5374 4.8 41.666 4.8L49.0014 4.8C49.7119 
+2.03964 52.2177 0 55.1998 0C58.7344 0 61.5998 2.86538 61.5998 6.4C61.5998 9.93462 58.7344 12.8 55.1998 12.8ZM55.1998 
+9.6C56.9671 9.6 58.3998 8.16731 58.3998 6.4C58.3998 4.63269 56.9671 3.2 55.1998 3.2C53.4325 3.2 51.9998 4.63269 
+51.9998 6.4C51.9998 8.16731 53.4325 9.6 55.1998 9.6ZM7.1998 19.2C8.96712 19.2 10.3998 17.7673 10.3998 16C10.3998 
+14.2327 8.96712 12.8 7.1998 12.8C5.43249 12.8 3.9998 14.2327 3.9998 16C3.9998 17.7673 5.43249 19.2 7.1998 
+19.2ZM26.3998 16C26.3998 17.7673 24.9671 19.2 23.1998 19.2C21.4325 19.2 19.9998 17.7673 19.9998 16C19.9998 14.2327 
+21.4325 12.8 23.1998 12.8C24.9671 12.8 26.3998 14.2327 26.3998 16ZM51.9998 25.6C51.9998 27.3673 50.5671 28.8 48.7998 
+28.8C47.0325 28.8 45.5998 27.3673 45.5998 25.6C45.5998 23.8327 47.0325 22.4 48.7998 22.4C50.5671 22.4 51.9998 23.8327 
+51.9998 25.6Z\"\n          fill=\"#EA4B71\"\n        />\n        <path\n          fill-rule=\"evenodd\"\n          
+clip-rule=\"evenodd\"\n          d=\"M100.004 13.8366V13.6841C101.121 13.1249 102.237 12.1591 102.237 10.2529C102.237 
+7.508 99.9791 5.85596 96.8579 5.85596C93.6606 5.85596 91.3768 7.60966 91.3768 10.3038C91.3768 12.1337 92.4426 13.1249 
+93.6099 13.6841V13.8366C92.3157 14.2941 90.7678 15.6665 90.7678 17.954C90.7678 20.7243 93.0516 22.656 96.8325 
+22.656C100.613 22.656 102.821 20.7243 102.821 17.954C102.821 15.6665 101.299 14.3195 100.004 13.8366ZM96.8325 
+8.19423C98.1013 8.19423 99.0402 9.00755 99.0402 10.38C99.0402 11.7525 98.0759 12.5658 96.8325 12.5658C95.5892 12.5658 
+94.5488 11.7525 94.5488 10.38C94.5488 8.98213 95.5384 8.19423 96.8325 8.19423ZM96.8325 20.216C95.3608 20.216 94.1681 
+19.2756 94.1681 17.6744C94.1681 16.2257 95.1578 15.1328 96.8072 15.1328C98.4312 15.1328 99.4208 16.2003 99.4208 
+17.7252C99.4208 19.2756 98.2789 20.216 96.8325 20.216Z\"\n          fill=\"#101330\"\n        />\n        <path\n      
+    d=\"M106.736 22.4018H109.984V15.514C109.984 13.252 111.354 12.2608 112.902 12.2608C114.425 12.2608 115.617 13.2774 
+115.617 15.3616V22.4018H118.865V14.7007C118.865 11.3712 116.937 9.43962 113.917 9.43962C112.014 9.43962 110.948 
+10.2021 110.187 11.1933H109.984L109.705 9.69378H106.736V22.4018Z\"\n          fill=\"#101330\"\n        />\n        
+<path\n          d=\"M77.9839 22.4018H74.7358V9.69378H77.7048L77.9839 11.1933H78.1869C78.9481 10.2021 80.0139 9.43962 
+81.9171 9.43962C84.9367 9.43962 86.8653 11.3712 86.8653 14.7007V22.4018H83.6172V15.3616C83.6172 13.2774 82.4246 
+12.2608 80.9021 12.2608C79.3542 12.2608 77.9839 13.252 77.9839 15.514V22.4018Z\"\n          fill=\"#101330\"\n        
+/>\n      </svg>\n\n      <h1>No instance here</h1>\n      <h2><a href=\"https://app.n8n.cloud/magic-link\">Open Cloud 
+console</a></h2>\n      <h2></h2>\n      <p class=\"subheading\">\n        If the instance exists, the owner can 
+manage it from the Cloud console.\n      </p>\n    </div>\n  </body>\n</html>")
+2026-11-11T07:57:50.571868Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer 
+resource_metadata=\"https://huggingface.co/.well-known/oauth-protected-resource/mcp?login\"" })
+2026-11-11T07:57:50.580048Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_token\", error_description=\"No 
+authorization provided\", resource_metadata=\"https://mcp.vercel.com/.well-known/oauth-protected-resource\"" })
+2026-11-11T07:57:51.046736Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer 
+resource_metadata=\"https://mcp.context7.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T07:57:51.398742Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when 
+AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_request\", error_description=\"No 
+access token was provided in this request\", 
+resource_metadata=\"https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/\"" })
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart Failed
+hook: SessionStart Completed
+hook: SessionStart Completed
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+hook: UserPromptSubmit Failed
+codex
+## 1. E1 desk view
+
+**Borderline yes, if the paper is framed as a trace-grounded study of runtime information in carbon-aware 
+scheduling.** The gap is plausible and the data are public; the main desk risk is that “real runtimes” are not 
+necessarily runtimes the scheduler could have known or predicted. With older job logs randomly aligned to newer grid 
+traces, this is a replay study under an explicit synthetic calendar, not a contemporaneous production evaluation. 
+State that plainly.
+
+## 2. E6: strongest attack
+
+The central attack is that the runtime effect may measure **trace semantics and scheduler construction**, rather than 
+the value of runtime information. Requested walltime may be a kill limit, a conservative cap, or a user-set value; 
+actual runtime may include failed or retried jobs. If jobs end early, a planner that reserves their full requested 
+duration can appear badly misinformed even though the real system would release capacity and admit another job. 
+Conversely, using final observed runtime in the oracle gives the oracle information unavailable at submission.
+
+Before analysis, verify the exact SWF schema and status codes, and report how many records are successful, killed, 
+failed, or otherwise excluded. Check whether job arrays or repeated workloads let you construct a legitimate 
+history-based prediction without leakage. If not, the claim that a two-run user-history mean recovers most runtime 
+loss is especially vulnerable: “user” may not identify a stable workload, and two prior completions may be too few or 
+too selective.
+
+The **2–5× overestimation** claim needs trace-specific evidence, not HPC folklore. Report the requested/actual ratio 
+distribution for eligible successful jobs, including medians, tails, and shares at or near the requested limit. If 
+many jobs terminate at the limit, or if the effect vanishes after excluding questionable records, the result is an 
+artefact. If job lengths are systematically overestimated but the chosen start is unchanged because carbon intensity 
+is flat within the slack window, the runtime term may also be practically trivial.
+
+Randomly aligning historical jobs to modern grid years is a major external-validity limitation. It can support a 
+controlled replay, but cannot show what actual operators would have saved. Pre-register the alignment and repeat over 
+multiple offsets; don’t select one that produces a large effect.
+
+## 3. E3: estimands and scheduler
+
+Define jobs as eligible, successful, non-interruptible jobs with a valid arrival and requested walltime. The decision 
+is a start time within a fixed **slack window** after arrival; define whether slack means latest allowable start or 
+latest allowable completion. I recommend latest allowable start, with the same deadline constraint in every arm.
+
+At each arrival, the planner sees only the carbon forecast available then and either requested walltime or a runtime 
+prediction trained only on prior records. It chooses the feasible start minimizing forecasted emissions over the 
+**predicted execution interval**. Evaluation uses realized start, actual runtime, and held-out production-based carbon 
+intensity integrated over actual execution. Keep job energy constant per unit time in the main design; otherwise 
+runtime and energy uncertainty are confounded. Specify whether the workload’s power is constant or estimated from 
+trace data.
+
+Estimands:
+
+1. **Realized savings:** percent emissions reduction versus run-now, per eligible workload replay.
+2. **Runtime-information penalty:** change in realized emissions when using requested walltime rather than a 
+leakage-free runtime prediction, holding forecast and constraints fixed.
+3. **Forecast penalty:** change when replacing the oracle signal with a past-only forecast, holding runtime 
+information fixed.
+4. **Interaction:** whether the combined loss differs from the sum of the two single-information losses.
+
+Confirmatory hypotheses (one-sided only if preregistered):
+
+- Forecast-aware scheduling reduces emissions versus run-now.
+- Runtime prediction reduces emissions versus requested walltime.
+- Forecast and runtime information have a nonzero interaction.
+- Runtime-information benefit is larger for short jobs or larger slack (choose one primary interaction; treat the 
+other as exploratory).
+
+Use paired replays. Bootstrap contiguous day blocks within balancing authorities, then aggregate at the BA level; do 
+not treat every job-hour as independent. Apply Holm to the confirmatory family. Report per-BA effects and uncertainty, 
+alongside pooled estimates.
+
+At hourly resolution for 1–48 h ahead, the minimum credible forecast set is **persistence**, **seasonal naive** (same 
+hour of prior day/week where available), and **one past-only learned model** such as gradient boosting. Compare 
+against the oracle and non-forecast policies as bounds/baselines, not forecasters. Fit and tune without held-out data. 
+Report forecast performance by lead time; overall MAE alone may hide wrong within-window rankings.
+
+## 4. Attribution
+
+The 2×2 Shapley decomposition is defensible as an **accounting attribution**, not causal identification. It allocates 
+the interaction symmetrically between forecast and runtime information, but that convention is not uniquely “correct.” 
+Show all four cells and the interaction directly; label Shapley shares as a summary convention. Use the same job set 
+and paired replays in every cell.
+
+## 5. Four-day cuts and recommendation
+
+Cut capacity-constrained replay, MAE-versus-ranking analysis, marginal factors, and extra power modeling. Keep the 
+prespecified runtime predictor only if trace history supports it; otherwise compare requested runtime with oracle 
+actual runtime and present the latter strictly as an upper bound. Limit the headline to one primary runtime contrast 
+and one held-out grid year.
+
+**Recommendation: proceed with C8 only after the trace audit. Confidence it is the best choice: 0.68.** The novelty 
+case is stronger than C2’s, given the supplied scout findings, but the runtime result depends on semantics and 
+censoring checks that could invalidate the headline. If those checks fail, C8 should be reframed as an upper-bound 
+sensitivity study rather than a claim that history-based prediction recovers savings.
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Failed
+tokens used
+37,085
+## 1. E1 desk view
+
+**Borderline yes, if the paper is framed as a trace-grounded study of runtime information in carbon-aware scheduling.** The gap is plausible and the data are public; the main desk risk is that “real runtimes” are not necessarily runtimes the scheduler could have known or predicted. With older job logs randomly aligned to newer grid traces, this is a replay study under an explicit synthetic calendar, not a contemporaneous production evaluation. State that plainly.
+
+## 2. E6: strongest attack
+
+The central attack is that the runtime effect may measure **trace semantics and scheduler construction**, rather than the value of runtime information. Requested walltime may be a kill limit, a conservative cap, or a user-set value; actual runtime may include failed or retried jobs. If jobs end early, a planner that reserves their full requested duration can appear badly misinformed even though the real system would release capacity and admit another job. Conversely, using final observed runtime in the oracle gives the oracle information unavailable at submission.
+
+Before analysis, verify the exact SWF schema and status codes, and report how many records are successful, killed, failed, or otherwise excluded. Check whether job arrays or repeated workloads let you construct a legitimate history-based prediction without leakage. If not, the claim that a two-run user-history mean recovers most runtime loss is especially vulnerable: “user” may not identify a stable workload, and two prior completions may be too few or too selective.
+
+The **2–5× overestimation** claim needs trace-specific evidence, not HPC folklore. Report the requested/actual ratio distribution for eligible successful jobs, including medians, tails, and shares at or near the requested limit. If many jobs terminate at the limit, or if the effect vanishes after excluding questionable records, the result is an artefact. If job lengths are systematically overestimated but the chosen start is unchanged because carbon intensity is flat within the slack window, the runtime term may also be practically trivial.
+
+Randomly aligning historical jobs to modern grid years is a major external-validity limitation. It can support a controlled replay, but cannot show what actual operators would have saved. Pre-register the alignment and repeat over multiple offsets; don’t select one that produces a large effect.
+
+## 3. E3: estimands and scheduler
+
+Define jobs as eligible, successful, non-interruptible jobs with a valid arrival and requested walltime. The decision is a start time within a fixed **slack window** after arrival; define whether slack means latest allowable start or latest allowable completion. I recommend latest allowable start, with the same deadline constraint in every arm.
+
+At each arrival, the planner sees only the carbon forecast available then and either requested walltime or a runtime prediction trained only on prior records. It chooses the feasible start minimizing forecasted emissions over the **predicted execution interval**. Evaluation uses realized start, actual runtime, and held-out production-based carbon intensity integrated over actual execution. Keep job energy constant per unit time in the main design; otherwise runtime and energy uncertainty are confounded. Specify whether the workload’s power is constant or estimated from trace data.
+
+Estimands:
+
+1. **Realized savings:** percent emissions reduction versus run-now, per eligible workload replay.
+2. **Runtime-information penalty:** change in realized emissions when using requested walltime rather than a leakage-free runtime prediction, holding forecast and constraints fixed.
+3. **Forecast penalty:** change when replacing the oracle signal with a past-only forecast, holding runtime information fixed.
+4. **Interaction:** whether the combined loss differs from the sum of the two single-information losses.
+
+Confirmatory hypotheses (one-sided only if preregistered):
+
+- Forecast-aware scheduling reduces emissions versus run-now.
+- Runtime prediction reduces emissions versus requested walltime.
+- Forecast and runtime information have a nonzero interaction.
+- Runtime-information benefit is larger for short jobs or larger slack (choose one primary interaction; treat the other as exploratory).
+
+Use paired replays. Bootstrap contiguous day blocks within balancing authorities, then aggregate at the BA level; do not treat every job-hour as independent. Apply Holm to the confirmatory family. Report per-BA effects and uncertainty, alongside pooled estimates.
+
+At hourly resolution for 1–48 h ahead, the minimum credible forecast set is **persistence**, **seasonal naive** (same hour of prior day/week where available), and **one past-only learned model** such as gradient boosting. Compare against the oracle and non-forecast policies as bounds/baselines, not forecasters. Fit and tune without held-out data. Report forecast performance by lead time; overall MAE alone may hide wrong within-window rankings.
+
+## 4. Attribution
+
+The 2×2 Shapley decomposition is defensible as an **accounting attribution**, not causal identification. It allocates the interaction symmetrically between forecast and runtime information, but that convention is not uniquely “correct.” Show all four cells and the interaction directly; label Shapley shares as a summary convention. Use the same job set and paired replays in every cell.
+
+## 5. Four-day cuts and recommendation
+
+Cut capacity-constrained replay, MAE-versus-ranking analysis, marginal factors, and extra power modeling. Keep the prespecified runtime predictor only if trace history supports it; otherwise compare requested runtime with oracle actual runtime and present the latter strictly as an upper bound. Limit the headline to one primary runtime contrast and one held-out grid year.
+
+**Recommendation: proceed with C8 only after the trace audit. Confidence it is the best choice: 0.68.** The novelty case is stronger than C2’s, given the supplied scout findings, but the runtime result depends on semantics and censoring checks that could invalidate the headline. If those checks fail, C8 should be reframed as an upper-bound sensitivity study rather than a claim that history-based prediction recovers savings.

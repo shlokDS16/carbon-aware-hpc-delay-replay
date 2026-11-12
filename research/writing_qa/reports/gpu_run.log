@@ -1,0 +1,7 @@
+Loading weights:   0%|          | 0/558 [00:00<?, ?it/s]Loading weights:  24%|██▍       | 136/558 [00:00<00:00, 1341.83it/s]Loading weights:  50%|█████     | 279/558 [00:00<00:00, 1388.48it/s]Loading weights:  75%|███████▍  | 418/558 [00:00<00:00, 1382.05it/s]Loading weights: 100%|█████████▉| 557/558 [00:00<00:00, 1245.62it/s]Loading weights: 100%|██████████| 558/558 [00:00<00:00, 1291.99it/s]
+The tied weights mapping and config for this model specifies to tie shared.weight to lm_head.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+coedit: 509 sentences in 99 s
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:  46%|████▌     | 156/338 [00:00<00:00, 1517.22it/s]Loading weights:  91%|█████████ | 308/338 [00:00<00:00, 1403.13it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1418.99it/s]
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 4399.08it/s]
+VERDICT run_qa: tools custom,lt,vale,checktext,coedit,bino,overlap; findings errors 27 clarity 68 style 114; filtered 378
+finished

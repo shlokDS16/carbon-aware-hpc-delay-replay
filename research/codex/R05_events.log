@@ -1,0 +1,621 @@
+2026-11-11T18:58:14.455381Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer realm=\"OAuth\", resource_metadata=\"https://mcp.canva.com/.well-known/oauth-protected-resource/mcp\", error=\"invalid_token\", error_description=\"Missing or invalid access token\"" })
+2026-11-11T18:58:14.507695Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.supabase.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T18:58:14.661864Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.figma.com/.well-known/oauth-protected-resource\",scope=\"mcp:connect\",authorization_uri=\"https://api.figma.com/.well-known/oauth-authorization-server\"" })
+2026-11-11T18:58:14.711973Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://huggingface.co/.well-known/oauth-protected-resource/mcp?login\"" })
+2026-11-11T18:58:14.753257Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_token\", error_description=\"No authorization provided\", resource_metadata=\"https://mcp.vercel.com/.well-known/oauth-protected-resource\"" })
+OpenAI Codex v0.162.1
+--------
+workdir: C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a1c984-6168-7730-8ae5-b2171a72333b
+--------
+user
+Round R05 (Paper A). Multi-expert review of the post-freeze sensitivity plan. Read-only.
+
+Play three roles in turn and label each answer: [METHODS] a carbon-aware computing referee; [STATS] a statistics and
+reproducibility referee; [EDITOR] the SUSCOM handling editor.
+
+Context since R04: the PREREG was frozen (research/PREREG.md) and TEST was scored once. TEST, PM100, energy-weighted,
+S = 12 h (tables/ledger_TEST.csv): oracle|act 5.75 %, lgbm|req (D) 1.90 % [1.81, 1.99] fixed-BA bootstrap, [1.45, 2.39]
+two-stage; H1 1.90, H2 2.18, H3 1.03 pp, all Holm p 0.0015; Shapley gap 3.86 = forecast 1.56 + runtime 2.30;
+lgbm|pred 2.93 %. Same direction on F-DATA and KIT FH2. An internal audit (research/A08_AUDIT_P3.md) found three major
+threats: (1) intervals hold the job sample and alignment fixed, so they are too tight; (2) EIA-930 data are revised
+and published with a delay, and the average signal excludes imports and storage; (3) Italian, Japanese and German
+traces are placed on US grids. Owner rule: research-grade HPO; the frozen LightGBM is one untuned configuration
+(research/A05_FORECASTS.md). Topic-close SUSCOM papers (research/JOURNAL_PROFILE_A.md section 4) assume runtimes are
+known and use noise-injected forecasts.
+
+Read research/P4_PLAN.md (S1-S6), research/PREREG_DEVIATIONS.md, and src/simulate.py, src/analyze.py as needed.
+
+Questions (at most 4 lines per role per question):
+1. Is each of S1-S5 the right response to its threat? Give exact design changes (seeds, k values, trial budget,
+   which arms, which traces). For S1, how should job-sample and alignment uncertainty be combined with the block
+   bootstrap so a referee accepts the interval?
+2. S3: LightGBM forecasts lifecycle intensity. Is an oracle-only run under direct factors enough, or must the
+   forecaster be refit? What is the minimum credible version?
+3. S5: is "Optuna TPE, 60 trials, TRAIN-only, same validation window as frozen" research-grade? What budget and search
+   space? Should profile7 and snaive also get a tuned rival, for fairness?
+4. What will a SUSCOM referee attack first in this paper as it stands, and which single extra analysis buys the most?
+5. Anything in the plan that would look like post-hoc result shopping, and how to word it so it does not.
+End with: VERDICT: RUN AS PLANNED | RUN WITH CHANGES (list) | RETHINK (reason); confidence 0-1.
+
+warning: clamping SessionEnd hook timeout to 3s in C:\Users\Shlok\.codex\plugins\cache\openai-codex\codex\1.0.6\hooks\hooks.json
+2026-11-11T18:58:15.252299Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.context7.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T18:58:15.353185Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer realm=\"OAuth\", resource_metadata=\"https://mcp.canva.com/.well-known/oauth-protected-resource/mcp\", error=\"invalid_token\", error_description=\"Missing or invalid access token\"" })
+2026-11-11T18:58:15.488866Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.supabase.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T18:58:15.572502Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://huggingface.co/.well-known/oauth-protected-resource/mcp?login\"" })
+2026-11-11T18:58:15.595052Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_request\", error_description=\"No access token was provided in this request\", resource_metadata=\"https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/\"" })
+2026-11-11T18:58:15.658141Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_token\", error_description=\"No authorization provided\", resource_metadata=\"https://mcp.vercel.com/.well-known/oauth-protected-resource\"" })
+2026-11-11T18:58:15.670077Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.figma.com/.well-known/oauth-protected-resource\",scope=\"mcp:connect\",authorization_uri=\"https://api.figma.com/.well-known/oauth-authorization-server\"" })
+2026-11-11T18:58:16.881239Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when UnexpectedServerResponse("HTTP 404: \n<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>404 - No instance here</title>\n    <link\n      href=\"https://fonts.googleapis.com/css?family=Open Sans\"\n      rel=\"stylesheet\"\n    />\n    <style>\n      html {\n        width: 100%;\n        height: 100%;\n      }\n\n      body {\n        height: 100%;\n        width: 100%;\n        background-color: #fbfcfe;\n        font-family: \"Open Sans\";\n        font-style: normal;\n        text-align: center;\n        color: #555555;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        font-weight: 400;\n      }\n\n      body * {\n        margin-block-start: 0;\n        margin-block-end: 5px;\n      }\n\n      .container {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        height: 100%;\n        max-width: 350px;\n        margin-top: 48px;\n      }\n\n      h1 {\n        font-weight: 400;\n        font-size: 28px;\n        line-height: 35px;\n        color: #555555;\n        margin-top: 64px;\n      }\n\n      h2 {\n        font-weight: 400;\n        font-size: 20px;\n        line-height: 26px;\n      }\n\n      p {\n        font-size: 14px;\n        line-height: normal;\n        color: #7d7d87;\n      }\n\n      a {\n        color: #fd4d21;\n        text-decoration: none;\n        text-align: center;\n        font-weight: 400px;\n      }\n\n      .subheading {\n        margin-top: 24px;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width=\"120\"\n        height=\"32\"\n        viewBox=\"0 0 120 32\"\n        fill=\"none\"\n      >\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M55.1998 12.8C52.2177 12.8 49.7119 10.7604 49.0014 8H41.666C40.1017 8 38.7667 9.13092 38.5096 10.6739L38.2465 12.2522C37.9968 13.7506 37.2388 15.0548 36.1668 16C37.2388 16.9452 37.9968 18.2494 38.2465 19.7478L38.5096 21.3261C38.7667 22.8691 40.1017 24 41.666 24H42.6014C43.3119 21.2396 45.8177 19.2 48.7998 19.2C52.3344 19.2 55.1998 22.0654 55.1998 25.6C55.1998 29.1346 52.3344 32 48.7998 32C45.8177 32 43.3119 29.9604 42.6014 27.2H41.666C38.5374 27.2 35.8674 24.9382 35.3531 21.8522L35.0901 20.2739C34.8329 18.7309 33.4979 17.6 31.9336 17.6H29.3982C28.6877 20.3604 26.1819 22.4 23.1998 22.4C20.2177 22.4 17.7119 20.3604 17.0014 17.6H13.3982C12.6877 20.3604 10.1819 22.4 7.1998 22.4C3.66518 22.4 0.799805 19.5346 0.799805 16C0.799805 12.4654 3.66518 9.6 7.1998 9.6C10.1819 9.6 12.6877 11.6396 13.3982 14.4H17.0014C17.7119 11.6396 20.2177 9.6 23.1998 9.6C26.1819 9.6 28.6877 11.6396 29.3982 14.4H31.9336C33.4979 14.4 34.8329 13.2691 35.0901 11.7261L35.3531 10.1478C35.8674 7.06184 38.5374 4.8 41.666 4.8L49.0014 4.8C49.7119 2.03964 52.2177 0 55.1998 0C58.7344 0 61.5998 2.86538 61.5998 6.4C61.5998 9.93462 58.7344 12.8 55.1998 12.8ZM55.1998 9.6C56.9671 9.6 58.3998 8.16731 58.3998 6.4C58.3998 4.63269 56.9671 3.2 55.1998 3.2C53.4325 3.2 51.9998 4.63269 51.9998 6.4C51.9998 8.16731 53.4325 9.6 55.1998 9.6ZM7.1998 19.2C8.96712 19.2 10.3998 17.7673 10.3998 16C10.3998 14.2327 8.96712 12.8 7.1998 12.8C5.43249 12.8 3.9998 14.2327 3.9998 16C3.9998 17.7673 5.43249 19.2 7.1998 19.2ZM26.3998 16C26.3998 17.7673 24.9671 19.2 23.1998 19.2C21.4325 19.2 19.9998 17.7673 19.9998 16C19.9998 14.2327 21.4325 12.8 23.1998 12.8C24.9671 12.8 26.3998 14.2327 26.3998 16ZM51.9998 25.6C51.9998 27.3673 50.5671 28.8 48.7998 28.8C47.0325 28.8 45.5998 27.3673 45.5998 25.6C45.5998 23.8327 47.0325 22.4 48.7998 22.4C50.5671 22.4 51.9998 23.8327 51.9998 25.6Z\"\n          fill=\"#EA4B71\"\n        />\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M100.004 13.8366V13.6841C101.121 13.1249 102.237 12.1591 102.237 10.2529C102.237 7.508 99.9791 5.85596 96.8579 5.85596C93.6606 5.85596 91.3768 7.60966 91.3768 10.3038C91.3768 12.1337 92.4426 13.1249 93.6099 13.6841V13.8366C92.3157 14.2941 90.7678 15.6665 90.7678 17.954C90.7678 20.7243 93.0516 22.656 96.8325 22.656C100.613 22.656 102.821 20.7243 102.821 17.954C102.821 15.6665 101.299 14.3195 100.004 13.8366ZM96.8325 8.19423C98.1013 8.19423 99.0402 9.00755 99.0402 10.38C99.0402 11.7525 98.0759 12.5658 96.8325 12.5658C95.5892 12.5658 94.5488 11.7525 94.5488 10.38C94.5488 8.98213 95.5384 8.19423 96.8325 8.19423ZM96.8325 20.216C95.3608 20.216 94.1681 19.2756 94.1681 17.6744C94.1681 16.2257 95.1578 15.1328 96.8072 15.1328C98.4312 15.1328 99.4208 16.2003 99.4208 17.7252C99.4208 19.2756 98.2789 20.216 96.8325 20.216Z\"\n          fill=\"#101330\"\n        />\n        <path\n          d=\"M106.736 22.4018H109.984V15.514C109.984 13.252 111.354 12.2608 112.902 12.2608C114.425 12.2608 115.617 13.2774 115.617 15.3616V22.4018H118.865V14.7007C118.865 11.3712 116.937 9.43962 113.917 9.43962C112.014 9.43962 110.948 10.2021 110.187 11.1933H109.984L109.705 9.69378H106.736V22.4018Z\"\n          fill=\"#101330\"\n        />\n        <path\n          d=\"M77.9839 22.4018H74.7358V9.69378H77.7048L77.9839 11.1933H78.1869C78.9481 10.2021 80.0139 9.43962 81.9171 9.43962C84.9367 9.43962 86.8653 11.3712 86.8653 14.7007V22.4018H83.6172V15.3616C83.6172 13.2774 82.4246 12.2608 80.9021 12.2608C79.3542 12.2608 77.9839 13.252 77.9839 15.514V22.4018Z\"\n          fill=\"#101330\"\n        />\n      </svg>\n\n      <h1>No instance here</h1>\n      <h2><a href=\"https://app.n8n.cloud/magic-link\">Open Cloud console</a></h2>\n      <h2></h2>\n      <p class=\"subheading\">\n        If the instance exists, the owner can manage it from the Cloud console.\n      </p>\n    </div>\n  </body>\n</html>")
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart Failed
+hook: SessionStart Completed
+hook: SessionStart Completed
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+hook: UserPromptSubmit Completed
+codex
+I’ll read the post-freeze plan, deviation record, audit, and the relevant simulation/analysis paths. I’ll distinguish robustness analyses that clarify scope from any that could look like selecting a more favorable result after TEST.
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content research/P4_PLAN.md; Get-Content research/PREREG_DEVIATIONS.md; Get-Content research/A08_AUDIT_P3.md; Get-Content research/JOURNAL_PROFILE_A.md; Get-Content research/A05_FORECASTS.md; rg -n "def |FC_MODELS|RUNTIMES|MAX_REQ|states|exclude|fc_window|plan_start|bootstrap|p_holm|random|seed|trial" src/simulate.py src/analyze.py' in C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+ succeeded in 1824ms:
+# P4 plan, Paper A (2026-11-12 01:30 IST): post-freeze exploratory sensitivities
+
+All items are post-freeze and EXPLORATORY: confirmatory H1-H3 stay as frozen (tables/ledger_TEST.csv). Frozen files
+(src/simcore.py, simulate.py, analyze.py, forecast.py, prep_jobs.py) are NOT edited; new code goes in new files
+(src/sens_*.py) that import them. Every item gets a row in research/PREREG_DEVIATIONS.md (time, change, reason) and
+writes its own ledger tables/ledger_TEST_sens_<item>.csv (key,value,source; keys prefixed `sens.<item>.`).
+Result dirs use the `--tag _sens_<item>` pattern. Report each item beside the frozen value (PM100, energy-weighted,
+S = 12 h first; then F-DATA, KIT FH2).
+
+RESOURCE GATE: before each heavy run, at least 6 GB physical RAM free and commit below 85 % (2026-11-12 01:30: 2.5 GB
+free, commit 96.3/97.6 GB, held mostly by two patent training runs PIDs 60460, 77520 and Paper B's queued HPO). Add a
+row to _shared/GPU_SCHEDULE.md; one heavy job at a time across both papers. Never kill other projects' processes.
+
+| id | A08 threat / rule | item | method | cost |
+|---|---|---|---|---|
+| S1 | intervals too tight (job sample fixed) | sampling-inclusive uncertainty | (a) spread of D, H2, H3 across the 3 alignment replicates (already in npz?); (b) rerun TEST with new job-sample and alignment seeds (5 extra seeds, lgbm/oracle x act/req/pred arms only), report the across-seed SD and a combined interval (bootstrap over seeds x blocks) | CPU, ~1-2 h, ~2 GB |
+| S2 | EIA publication delay | data-latency sensitivity | planner sees only data up to floor(a) - k for k in {1, 3, 6} h: use the LightGBM forecast issued at floor(a) - k with leads shifted by k (forecast table already holds those issues); oracle unchanged | CPU, light |
+| S3 | average signal, factors | emission-factor sensitivity | rebuild intensity with direct (combustion) factors and with the oil factor 1116 vs 650 g/kWh; rerun oracle and lgbm arms (lgbm forecasts are of lifecycle intensity: forecast must be refit or the run limited to oracle arms; decide in code review) | CPU, medium |
+| S4 | PREREG secondary 6 not run (deviation 2) | TIMEOUT-included jobs | `--states COMPLETED,TIMEOUT`, PM100 only, all arms | CPU, ~30 min |
+| S5 | owner rule 12 (research-grade HPO) | tuned forecaster | Optuna TPE on TRAIN only (time-split validation = last 6 months of TRAIN, as frozen), fixed trial budget (e.g. 60 trials), objective 1-24 h MAE; refit; regenerate TEST forecasts; rerun lgbm arms; report D, H2, H3, Shapley split and MAE beside frozen | CPU 24 threads, ~1-2 h, ~2-3 GB |
+| S6 | foreign traces on US grids | limitation text only | state plainly; note PM100/F-DATA/KIT arrivals placed in BA local time; results by trace already reported | none |
+
+Order: S4, S2 (light) when RAM allows; then S1, S5; S3 last. Codex round R05 (single thread) on the S1-S5 design
+before running; panel review (SUSCOM editor, domain referee, statistics referee persona agents) after the journal
+PDFs are analysed.
+
+Owner-rule items to carry into P5-P8 (D0012): AI use only in the AI-declaration section; writers' room; blue DOI
+links; private GitHub (owner gives link); manual Zenodo guide; position against SUSCOM A1-A5
+(_shared/PAYWALLED_SUSCOM_LANE_A.md); Elsevier template exactly; author placeholders.
+# Deviations and clarifications after the PREREG freeze (md5 cfe984017ef7c790d851bfa2f519fde3)
+
+PREREG.md itself stays byte-identical to the frozen file; its section 9 points here in spirit. Each row: time, item, change, reason.
+
+| # | time (IST) | item | change or clarification | reason |
+|---|---|---|---|---|
+| 1 | 2026-11-11 20:30 | sec. 5, "unweighted variant (each job 1 kW)" | The code's unweighted outcome (`e_u`) is the per-job mean realised intensity, so every job has equal weight regardless of runtime (as if each job used 1 kWh), not 1 kW. Reported under this correct description. | A08 audit; wording error, code unchanged, no re-run |
+| 2 | 2026-11-11 20:30 | sec. 7 item 6, "TIMEOUT jobs included" | Not yet run; to be run as a TEST sensitivity with `--states COMPLETED,TIMEOUT` (PM100 is the only trace with TIMEOUT). | A08 audit |
+| 3 | 2026-11-11 20:30 | secondary code | `src/secondary.py` (A09) was written after the TEST run; it only reads saved results. Its md5 is recorded at the time of use. | A08 audit |
+| 4 | 2026-11-11 20:30 | TEST span | Arrivals effectively fall between 2025-07-07 and 2026-06-14 because of whole-week placement and the 100 h end margin. | A08 audit; stated in the paper |
+VERDICT: PASS WITH ISSUES; 0 blocking issues (3 MAJOR threats to state or supplement in the paper, 7 MINOR)
+
+# A08 research audit, Paper A (SUSCOM), P3/TEST gate (2026-11-11)
+
+Scope: frozen PREREG, the TEST run (`results/sim_TEST`, `results/sim_TEST_nearlimit`) and the TEST analysis (`results/analysis_TEST_*.json`, `tables/ledger_TEST.csv`). Read only; `src/simulate.py` was not run. My own checks used only cheap numpy and pandas reads of cleaned inputs, forecast files and result files (scripts in the session scratchpad). All paths are relative to `paper_A`. Nothing below suggests re-scoring TEST under changed rules; anything added goes into PREREG section 9 as post hoc.
+
+## 1. Table of checks
+
+| # | Check | Result | Evidence |
+|---|---|---|---|
+| 1a | PREREG md5 equals frozen md5 | PASS | `md5sum research/PREREG.md` = cfe984017ef7c790d851bfa2f519fde3 = `research/PREREG.md5`; `simulate.check_prereg` (src/simulate.py:34-42) enforces it for TEST |
+| 1b | Code md5 in PREREG status line | PASS (5 of 5 match) | simcore e1032a51..., simulate 1ede0089..., analyze 8178e63f..., forecast 3cc0e9ca..., prep_jobs 6a1fc5cb... all equal current files. mtimes: the three sim files 16:10:52, PREREG 16:12:24, TEST run finished 16:33; no code edited after the freeze |
+| 1c | Input hashes in PREREG | PASS | ci_clean a77ee038..., jobs 95c96a33..., emission_factors 8c5c21e7..., ba_eligibility 8fe037d0... all recomputed and equal |
+| 1d | Forecaster training, tuning, early stopping use TRAIN only | PASS | src/forecast.py:211-213 (targets < 2024-07-01, training targets < 2024-01-01, validation window 2024-01..06, purged); hyperparameters are command-line defaults, fixed; `skill_for_ba` (l.271-277) scores DEV only, TEST skill never computed in forecast.py |
+| 1e | Forecast causality and time alignment with the simulator | PASS | `causal_input` (forecast.py:60-71); A05 future-perturbation test 0 of 150. My own check: for 300 random TEST arrivals in CISO, PJM, ERCO, persistence lead 1 equals ci[floor(a)-1] (97.7 to 100 %) and never ci[floor(a)]; snaive_day lead 1 equals ci[k-24]; so no look-ahead of the current hour, and `fc_window` (simulate.py:117-122) indexes the correct issue row |
+| 1f | Historical profile uses TRAIN only | PASS | `hist_profile` (simulate.py:78-84) filters `utc` in TRAIN before the groupby; profile is then indexed by month and local hour only |
+| 1g | Runtime predictor uses only the user's jobs that ended before submission | PASS | `history_predict` (src/prep_jobs.py:169-190, searchsorted on end < submit, states COMPLETED or TIMEOUT, two most recent, cap at R_req); naive recomputation assertion on 1,000 jobs per trace (l.193-209); the predictor is computed at trace time and does not depend on the random calendar placement |
+| 1h | BA eligibility and cleaning thresholds free of outcome information | PASS with note | Rules are constants (clean_ci.py:31-39) set on data quality before any outcome. Note (MINOR M1): eligibility requires at least 90 % valid hours in TEST and data up to 2026-06-30 (clean_ci.py:161-168), so the 42 BAs are conditioned on TEST availability, not on TEST outcomes |
+| 1i | Design choices (D = lgbm\|req, S = 12 h, k = 2 for pred2) fixed before TEST | PASS | D justified on DEV skill (38 of 42, 41 of 42; `tables/forecast_skill.csv`, recomputed: lgbm beats snaive_day 38, profile7 41, persistence 41, snaive_week 41 of 42); PREREG section 5; no TEST number enters any rule |
+| 1j | Cleaning look-ahead | PASS with note | Outlier detection uses a centred 30-day window (clean_ci.py:73-76) so which hours are outliers depends on up to 15 later days; the forecaster inputs replace such hours by an earlier value (forecast.py:60-71), so only the flag, not a future value, leaks. Effect is negligible (MINOR M3) |
+| 2a | Arms, slack set, deployable arm, job filter, seeds, reps, job count | PASS | RUN.txt: reps=3, n_jobs=20000, seed=20261111, states=COMPLETED, 42 BAs, all 3 traces; simulate.py:24-31, 229-231 (COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h); rng key [seed, rep, crc(ba), crc(trace)] l.139 |
+| 2b | Bootstrap mode, B, seeds, p-formula, Holm | PASS | analyze.py:159 seed 7+S; l.60-77 fixed-BA blocks of 7 days within BA, remainder kept; l.167-172 null-centred one-sided p = (1+#{T*-T >= T})/(B+1); l.96-104 Holm; l.149 Holm only over H1-H3; H4 two-sided and unadjusted; JSON: B=2000, boot=fixed, n_ba=42; two-stage files separate |
+| 2c | Near-limit secondary applied | PASS | `sim_TEST_nearlimit` RUN.txt lacks the flag text but results differ (oracle\|act 6.36 vs 5.75 %, PM100 S12), counts per (BA, rep) identical because the 20,000 sample is drawn after the filter |
+| 2d | Section 7 secondaries all done | PARTIAL (not blocking) | Item 6 "TIMEOUT jobs included" has no run (no `sim_TEST_*` with `--states COMPLETED,TIMEOUT`). `src/secondary.py` was written at 16:56, after the TEST run, and is not in PREREG's hash list; it is descriptive and covers section 7, so list it in progress.md as post-freeze code. Section 9 of PREREG is empty and needs no entry unless a rule changes |
+| 3a | Planner and realised emissions | PASS | simcore.py:38-65 (cumulative-sum integral, candidates every 0.25 h, ties earliest, window clipped at 98), 68-70; selftest incl. brute force; 98 >= 1+24+72 = 97 so no clipping for any scored job; `assert r_act <= 72` (simulate.py:231). e_w = kW x g/kWh x h (l.168) |
+| 3b | Random calendar alignment | PASS with note | simulate.py:87-105: weekday and clock time kept, standard-time offset from a January file (`tables/ba_utc_offset.csv`: 15 BAs at -5, 13 at -8, 8 at -7, 6 at -6, all 42 present). Arrival weeks run 2025-07-07 to 2026-06-14, so about 16 days of the TEST year never receive arrivals (MINOR M2). Trace wall-clock hours include the site's DST (prep_jobs.py:223-225) while placement uses BA standard time, a one-hour summer shift (MINOR M2) |
+| 3c | Exclusion of jobs whose 98 h window touches unusable hours | PASS but vacuous in TEST | simulate.py:99-104 (cumulative count of unusable hours over [floor(a), floor(a)+98)); I measured: unusable-day share in TEST = 0.0, scored jobs = 840,000 of 840,000 per trace (rep 0, S12). TRAIN has 0.38 % unusable |
+| 3d | Replicate alignment in analysis | PASS | analyze.py:36-45 adds replicates by calendar-day index; key matching `_S{S}__e_w` cannot confuse S2 with S12 |
+| 3e | Ledger equals JSON | PASS | 40 randomly chosen keys of 4,221 (savings, CIs, tests, p, p_holm, shapley, per-BA counts, 9 JSON sources): 0 mismatches at 1e-9. A second ledger `ledger_TEST_secondary.csv` comes from secondary.py and was not spot-checked |
+| 3f | Headline numbers internally consistent | PASS | PM100 weighted S12: oracle\|act 5.75, oracle\|req 3.33, lgbm\|act 4.08, lgbm\|req 1.90, lgbm\|pred 2.93, night 0.29 %; Shapley 2.30 runtime vs 1.56 forecast pp; H1 to H3 estimates 1.90, 2.18, 1.03 pp, p at the floor 1/2001 = 0.0005, Holm 0.0015 (report "p < 0.0005", not "p = 0.0005"); per-BA H2: 41 of 42 positive |
+| 4a | CI definition matches sources | PASS with caveats | build_ci.py:49-60 (sum of clipped fuel generation x lifecycle factor / sum); six factors equal AR5 WGIII Annex III Table A.III.2 medians (coal 820, gas CC 490, nuclear 12, hydro 24, solar PV 48, wind 11); oil 650, other 230, unknown 700 are unverified judgement values (CSV `verified = no`; oil, other small; unknown share 0). Check against EIA's own CO2 file for one BA only (ERCO: hourly r 0.98, bias -0.9 g/kWh overall but TRAIN -3.2, DEV +4.0, TEST +7.8, i.e. drifts) |
+| 4b | Battery storage and interchange | Caveat | EIA-930 2026 files carry "Battery Storage", "Other Energy Storage", "Unknown Energy Storage" columns (header check) that are not in `emission_factors.csv`, so discharge is outside both numerator and denominator; imports are ignored (production-based). Must be stated |
+| 4c | Requested versus actual runtime semantics | PASS | A07: PM100 `time_limit` (min) vs `run_time`; F-DATA `elpl` vs `duration` (seconds; `elpl` unit inferred, not documented); KIT SWF requested vs run. PM100: 92.2 % of TIMEOUT jobs end within 2 % of the limit; KIT FH2: all 114,355 jobs carry status 1, so time-outs cannot be identified and 7.3 % of jobs sit within 2 % of the limit; F-DATA has no TIMEOUT state. Scored jobs are COMPLETED only, so scored r_act < r_req for all but 1 PM100 and about 0.001 % F-DATA jobs. The near-limit secondary addresses censoring. Median r_act/r_req 0.028 / 0.232 / 0.148, so the "requested walltime" arm is a very loose bound on PM100 |
+| 4d | Power semantics | PASS with note | PM100 and F-DATA whole-job mean power, constant over run; KIT FH2 1 kW. The PREREG "unweighted variant (each job 1 kW)" does not match the code: `e_u` (simulate.py:169) is the mean intensity per job (job-count weighting), whereas 1 kW per job would be runtime weighting (MINOR M4) |
+
+## 2. Reviewer threat list, ranked (not yet in PREREG or progress.md except where noted)
+
+### MAJOR (must be stated; one needs an added analysis if time allows)
+
+T1. Inference is conditional on one job sample and the bootstrap resamples only arrival-week blocks. PM100 is one machine, 477 users, 5 months of 2020 (COVID year); 20,000 jobs of 180,310 sampled and the same pool reused across all 42 BAs and 3 replicates; energy weighting makes a few long, high-power jobs dominate (PM100: jobs over 24 h are 14.1 % of energy). Intervals of plus or minus 0.1 pp and p at the floor are therefore precision about the placement and grid weeks, not about the workload. BAs are also resampled independently, ignoring same-week weather correlation (defensible because placements are independent). State: "intervals condition on the observed job sample"; add the three-trace agreement as the external check. Extra analysis (post hoc, section 9, primary unchanged): a user-cluster or job-level bootstrap, or 5 to 10 additional seeds of the same simulation, reporting how the S12 estimates move. This needs a re-run (job ids are not kept in the per-day sums), so label it a robustness replication, not a re-score.
+
+T2. Data vintage and publication delay. The six-month EIA-930 files are revised and "Adjusted" series, and the forecasters (and the oracle) see them as if available at hour floor(a). Real-time feeds arrive with a delay of hours and are revised later. PREREG section 3 already states the availability assumption but not the revised-versus-real-time point. Must be a stated limitation, in the abstract-level caveats. Optional extra analysis: a delay-d sensitivity (forecast issued from data up to floor(a) - d, d = 3 and 6 h, for persistence, snaive_day and lgbm without refit); it affects short slack most. Persistence already loses (about -0.2 % at S12) so the headline is about lgbm and day-seasonal signals.
+
+T3. Average (production-based, no imports or storage) versus marginal or consumption-based signals. The arm "saving" is a saving in the average signal's lifecycle intensity; the marginal effect of moving load may be smaller, larger or of another sign, and the interchange-aware consumption mix differs by BA. Also an hour-ending convention and lifecycle factors (three of nine unverified, ERCO-only validation, bias drift +7.8 g/kWh in TEST) apply. Must be stated; no extra analysis can fix it with the current data (a direct-factor sensitivity would need a full rebuild and forecast retrain; if done, report as post hoc).
+
+T4. Cross-system pairing. Italian (PM100), Japanese (F-DATA) and German (KIT FH2) workloads from 2016 to 2023 are placed on 42 US grids in 2025-26 with the trace's local weekday and clock time; a US centre's submit behaviour, queue discipline and job mix differ. This is a "what-if the trace ran there" design. State plainly; the three-trace concordance (retained share, signs) is the support; Kestrel was not obtained, so there is no US trace.
+
+### MODERATE (state in limitations)
+
+T5. No queueing, capacity or backfilling interaction: jobs start at the planned time with free nodes, delay costs only start delay (reported in secondary item 8), delays shift load into low-carbon hours of all users at once (no feedback), no PUE or cooling, constant job power (no idle power, power phases or DVFS), no checkpoint and no interruptible jobs. All savings are bounds under free capacity.
+
+T6. Pooled saving is emission-weighted, so dirtier BAs weigh more than clean ones; the estimand is "this fixed set of 42 BAs, the pooled sum" (PREREG section 5). Report per-BA and unweighted-over-BA means beside it (per-BA counts exist). Selection of BAs on coverage and TEST availability is a limitation of generality (US only, 42 of 70).
+
+T7. The planner is a delay-to-lowest-integral heuristic; the oracle is the planner with perfect inputs on the same heuristic, not a global optimum. "Retained share" is relative to this oracle.
+
+### MINOR
+
+M1. BA eligibility conditions on TEST data completeness (>= 90 % valid in TEST, data through 2026-06-30).
+M2. About 16 days of the TEST year (2025-07-01 to 07-06, 2026-06-15 to 06-30) receive no arrivals (weeks 0 to 48, p1 = period end minus 100 h); the BA standard-time placement versus the trace's DST wall-clock shifts summer starts by one hour.
+M3. Realised outcomes use cleaned values: in TEST 0.04 % of hours interpolated (flag 1), 0.78 % outlier-replaced (flag 2) and 0.15 % copied from the previous week (flag 3); flag 3 copies favour week-lag forecasters at those hours. Negligible in magnitude (under 1 % of hours); state the counts. The outlier flag uses a centred window (clean_ci.py:73-76).
+M4. "Unweighted" outcome is job-count weighted mean intensity, not 1 kW per job; fix the wording (do not recode).
+M5. LightGBM is trained once on TRAIN and never refit, so TEST uses a model up to 2 years stale (conservative); at lead 1 persistence can be more accurate than lgbm (CISO MAE 12.9 vs 14.9 g/kWh on 300 TEST arrivals), which does not change the S >= 2 h arms materially.
+M6. Secondary item 6 (TIMEOUT included) not run; `secondary.py` and its ledger are post-freeze code, unhashed; record in progress.md and in the paper's methods as descriptive.
+M7. F-DATA power (`avgpcon`, documented as "average node power") is interpreted as whole-job power from the energy identity econ = avgpcon x duration / 3600; KIT FH2 has no power; `elpl` unit inferred. Secondary traces only.
+
+## 3. Must be in the paper (limitations paragraph or methods)
+T1, T2 (including revised data and publication delay), T3, T4, T5, T6, M1, M2, M3 counts, M4 wording, KIT FH2 status field limits, and that p-values sit at the bootstrap floor.
+
+## 4. Optional extra analyses (all post hoc, section 9, primary result untouched)
+1. Re-simulation of PM100 S12 with 5 to 10 other seeds or a user-cluster bootstrap (T1).
+2. Information-delay sensitivity for 3 and 6 h (T2).
+3. Per-BA and BA-unweighted summaries (T6) from existing results (no re-run).
+4. TIMEOUT-included run (PREREG 7.6), which also bears on the censoring concern.
+
+## 5. Reproducibility
+Scripts, seeds, hashes and run settings are recorded (RUN.txt, PREREG hash lines, SHA-256 for raw EIA files, trace md5 in A07). Missing: package versions and the exact commands used for `analyze.py --boot twostage` and for the near-limit run (the near-limit RUN.txt does not record the flag); add them to progress.md.
+
+VERDICT: PASS WITH ISSUES; 0 blocking issues
+VERDICT: A10 done; 2 full texts read, 7 abstract-only (abstract read), 13 listed for daytime (11 of them with no abstract retrieved); SUSCOM has few open-access topic-close papers, so the evidence base is thin
+
+Agent A10, 2026-11-12. Scope: SUSCOM (ISSN 2210-5379) papers closest to Paper A. Method: Crossref journal-filtered queries (15 topic queries, 2021-2026), OpenAlex per-DOI lookup (open-access status, abstract), Semantic Scholar (abstract), Exa fetch for full text. ScienceDirect and the SSRN landing pages gave no full text to scripts; none was forced.
+
+Honest limit: only two papers could be read in full (both Elsevier gold/hybrid open access). Recommendations below that rest on one or two papers are marked "thin". Do not treat them as a journal norm; JOURNAL_BASICS.md and Paper B's profile cover the norm.
+
+Citation counts differ by source. Shown as Crossref / OpenAlex, both pulled 2026-11-12.
+
+## 1. Table of papers
+
+| # | DOI | Year | Cites (CR/OA) | Full text | Source / status |
+|---|---|---|---|---|---|
+| 1 | 10.1016/j.suscom.2026.101498 (Attenni, Moawad, Bartolini, Thamsen: spatio-temporal shifting, carbon, water, land use) | 2026 | 0 / 2 | YES (read) | https://doi.org/10.1016/j.suscom.2026.101498 (Elsevier hybrid OA, fetched via Exa) |
+| 2 | 10.1016/j.suscom.2025.101106 (hardware and application aware performance, power, energy models for HPC servers with DVFS) | 2025 | 3 / 3 | YES (read) | https://doi.org/10.1016/j.suscom.2025.101106 (hybrid OA) |
+| 3 | 10.1016/j.suscom.2025.101216 (F2S-WSS, forecast-driven two-stage scheduling, wind, carbon-aware geo-distributed DCs) | 2025 | 2 / 2 | abstract only; PDF from owner pending | https://www.sciencedirect.com/science/article/pii/S2210537925001374 |
+| 4 | 10.1016/j.suscom.2026.101470 (ReBase, prediction-driven scheduling, baseline-guided online correction) | 2026 | 0 / 0 | abstract + highlights + contribution list; PDF from owner pending | https://www.sciencedirect.com/science/article/abs/pii/S2210537926001800 |
+| 5 | 10.1016/j.suscom.2026.101407 (CARA, carbon-efficient workload orchestration) | 2026 | 1 / 1 | abstract only (SSRN preprint abstract; SSRN full text not retrievable); PDF from owner pending | https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6363035 |
+| 6 | 10.1016/j.suscom.2026.101398 (carbon-aware federated orchestration, edge-cloud) | 2026 | 0 / not checked | abstract + highlights + gaps/contributions text; PDF from owner pending | https://www.sciencedirect.com/science/article/abs/pii/S2210537926001083 |
+| 7 | 10.1016/j.suscom.2026.101429 (PV-BESS data centres, workload flexibility, thermal-aware cost) | 2026 | 0 / 0 | abstract only; PDF from owner pending | https://avesis.mcbu.edu.tr/yayin/fcdb9ee1-312c-4aef-91ad-008e7b782bb2/ (institutional abstract) |
+| 8 | 10.1016/j.suscom.2026.101333 (forecasting perception layer, LLM serving on HPC clusters) | 2026 | 1 / 1 | abstract only; PDF from owner pending | https://scienceportal.tecnalia.com/en/publications/a-forecasting-based-perception-layer-for-energy-aware-resource-ma/ |
+| 9 | 10.1016/j.suscom.2023.100950 (Chen et al., spatio-temporal management of renewables, carbon, cost in DCs) | 2024 | 11 / 24 | no abstract found anywhere (Crossref, OpenAlex, Semantic Scholar, researchr all empty); PDF from owner pending | https://doi.org/10.1016/j.suscom.2023.100950 |
+| 10 | 10.1016/j.suscom.2021.100592 (Sharma, Rao: scheduling computing loads for solar energy) | 2021 | 4 / 10 | no abstract (publisher elided); PDF from owner pending | https://doi.org/10.1016/j.suscom.2021.100592 |
+| 11 | 10.1016/j.suscom.2020.100461 (blockchain-based workload and energy management, geo-distributed DCs) | 2021 | 12 / 27 | abstract only (Semantic Scholar) | https://doi.org/10.1016/j.suscom.2020.100461 |
+| 12 | 10.1016/j.suscom.2023.100888 (energy and carbon-aware initial VM placement) | 2023 | 7 / 13 | no abstract; SSRN preprint and PolyPublie record exist (https://publications.polymtl.ca/54700/), full text not retrieved | https://doi.org/10.2139/ssrn.4032444 |
+| 13 | 10.1016/j.suscom.2021.100649 (LECC, VM placement geo-distributed DCs) | 2022 | 5 / 16 | no usable abstract (the one found describes a different method, VMP-TLBO, and was discarded) | https://www.sciencedirect.com/science/article/pii/S2210537921001323 |
+| 14 | 10.1016/j.suscom.2021.100590 (green power aware scheduling of independent tasks, multi-core) | 2021 | 7 / 13 | no abstract; OpenAlex lists an accepted-manuscript URL, fetch returned HTTP 400 | https://www.sciencedirect.com/science/article/am/pii/S2210537921000792 |
+| 15 | 10.1016/j.suscom.2023.100903 (data-centre operations with onsite renewables and GHG) | 2023 | 4 / 11 | no abstract | https://doi.org/10.1016/j.suscom.2023.100903 |
+| 16 | 10.1016/j.suscom.2021.100627 (standalone DC renewable power supply, offline optimisation) | 2021 | 4 / 11 | no abstract | https://www.sciencedirect.com/science/article/am/pii/S2210537921001116 |
+| 17 | 10.1016/j.suscom.2023.100942 (priority-based job scheduling using gaps) | 2023 | 17 / 25 | no abstract; in the shared owner list | https://doi.org/10.1016/j.suscom.2023.100942 |
+| 18 | 10.1016/j.suscom.2024.100989 (systematic review, green-aware DC management) | 2024 | 16 / 40 | review, no abstract; in the shared owner list | https://doi.org/10.1016/j.suscom.2024.100989 |
+| 19 | 10.1016/j.suscom.2025.101088 (energy and workload prediction, edge nodes) | 2025 | 3 / 5 | hybrid OA; text fetched to disk but not analysed (lower topic closeness) | https://doi.org/10.1016/j.suscom.2025.101088 |
+| 20 | 10.1016/j.suscom.2025.101286 (carbon footprint vs performance, recommender systems benchmark) | 2026 | 3 / 3 | hybrid OA; text fetched to disk but not analysed (lower topic closeness) | https://doi.org/10.1016/j.suscom.2025.101286 |
+
+Not found in SUSCOM by the 15 queries: any paper on carbon-intensity forecasting for computing, HPC or batch walltime/runtime prediction for carbon-aware scheduling, or EIA-930 grid data. Crossref returned only wind, solar and load-forecasting papers for the forecasting queries, none tied to computing. This is itself a finding: Paper A sits in an empty niche inside the journal (source: the Crossref result lists for these queries, 2026-11-12).
+
+## 2. Per-paper extraction (full texts)
+
+### 2.1 Attenni et al. 2026, 10.1016/j.suscom.2026.101498 (read in full)
+- Title: descriptive noun phrase, 15 words, no colon, no finding. Names three objects (carbon, water, land use) and the lever (spatio-temporal shifting).
+- Abstract: 135 words, 6 sentences, single paragraph. Moves: scope ("we investigate"), method with data named (AWS and Azure, FaaS and big-data traces), headline numbers (20% to 85% reduction), secondary finding (temporal less than spatial), robustness (prediction error, seasons). No gap sentence, no implication sentence.
+- Sections in order: Introduction; II Background (data-centre impacts); III System model and problem formulation; Methodology (Evaluating environmental footprints, Scheduling methods, Experiment design, Simulation overview, Algorithm 1); Results (Scenario 1 Azure and FaaS, Sensitivity analysis, Scenario 2 AWS and big data); Discussion (two scenarios, comparison, trade-off analysis, Threats to validity); Related work (carbon-aware computing, beyond carbon-aware computing); Conclusion. The roadmap paragraph at the end of the Introduction lists sections by number.
+- Figures and tables: 7 figures referenced, 9 tables (I to IX): notation, data per region, VM types, grid-mix sources, impact coefficients, two sensitivity tables, one migration table. Figure captions not extracted (the text render had none), so caption style: not read.
+- Results tables: sensitivity tables give the improvement versus the Local baseline as mean and std per season and per forecast-error level (MAE 0.05 to 0.2), for carbon, water, land use. Signs matter (some negative). No confidence intervals, no tests. Bold best: not visible in the text render.
+- Contribution wording: three bullets; "We propose a holistic formulation...", "We provide a systematic evaluation...", and "We release all code and data from this study" (quote). First person plural, active.
+- Baseline: one, the Local (run where requested) baseline. No oracle. No simple-policy ladder.
+- Forecast and runtime handling: forecasts "mimicked using historical data and applying an arbitrary noise distribution"; application runtimes "assumed available to the schedulers"; arrival patterns in the AWS trace synthetically randomised. All three are stated in Threats to validity, item c and b.
+- Threats to validity: inside Discussion, lettered a) to d) (resource availability, generality, input data quality, spatial constraints), about 400 words, plain admissions. No separate Limitations section.
+- Statistics: mean and std over repeated runs only. Reference count: highest numbered citation is [36] (reference list not in the render).
+- Code and data: released (stated in the contributions; footnote link not extracted).
+
+### 2.2 DVFS models for HPC servers, 10.1016/j.suscom.2025.101106 (read in full; authors not extracted, the dataset record names Georges Da Costa)
+- Title: descriptive noun phrase, 14 words.
+- Abstract: 153 words, 8 sentences. Moves: context (energy in HPC), gap-ish ("bridge theory and practice"), method, validation scale (18 clusters, 9 benchmarks), use case (energy-to-solution). No percentage result in the abstract.
+- Sections: Introduction; State of the art (early); Approach; Classical model; Power; Application related power model; Application related performance model; Evaluation methodology; Reproducibility; Evaluation of model quality; Heterogeneity of the error; Naive models; Fluid model; Online detection of constants; Accuracy of online models; Overhead; Conclusion. A dedicated Reproducibility heading is the notable move.
+- Figures and tables: about 13 figures detected in the text render (numbered up to 17, so some captions were lost), 5 tables. Caption style: descriptive (what is plotted, which cluster), they do not state findings.
+- Metric and baselines: MAPE against measured values; baselines are named naive models (Naive rand, Naive all app) beside the proposed Fluid model; measurement precision given as standard deviation per cluster. No bootstrap, no tests.
+- Limitations: a short paragraph inside the Conclusion (single-server scope, need for micro-architecture values); no separate section.
+- Data: Zenodo dataset DOI 10.5281/zenodo.10982238 cited in the references. Reference count: not counted.
+
+## 3. Per-paper extraction (abstract only)
+
+- 101216 F2S-WSS (Zhai et al. 2025). Title: Name-colon method title. Abstract about 190 words, moves context, gap (RES intermittency plus stochastic arrivals), method (LSTM variants with EMD then VMD), numbers (MAE down 3.41 to 69.46%, RES use up 17.73 to 40.40%, 8.55 to 16.27 t CO2 saved, latency down 81.3%), implication. Forecasts workload and wind, not grid carbon intensity. Source: https://www.booksci.cn/literaturecn/145267158.htm (Chinese-language record with the English abstract). Rest: not read.
+- 101470 ReBase (Zhai et al. 2026). Title: Name-colon method title. Abstract about 230 words; four-bullet highlights list; four-bullet contribution list in the passive ("is proposed", "is developed"). Has an Oracle benchmark (wind-utilisation gap as low as 1.03%) and a "joint forecasting-scheduling evaluation to quantify the impact of prediction quality". Compares against E2E-RL (12.58 to 23.08% lower carbon). Rest: not read.
+- 101407 CARA (Liow et al. 2026). Title: acronym-colon. Abstract: marginal-emissions-rate forecasts from the ElectricityMap API feed a multi-objective engine; AWS prototype; 75.7% carbon cut versus "baseline schedulers"; 0.54 s overhead; no intervals mentioned. The 75.7% is a single headline number without a stated uncertainty. Rest: not read. (Abstract is the SSRN preprint's; the journal abstract may differ.)
+- 101398 federated orchestration (Al-Shammaa, Al-Hadrawi 2026). Title: descriptive with colon subtitle. Abstract about 250 words. Highlights box with five bullets. Three numbered gaps G1 to G3 map to four numbered contributions with section pointers. Simulation (MATLAB R2020a): 3,969 workloads, 7 days, 3 DCs, 9 edge nodes; reports p<0.001 for 10.2% carbon, 15.7% cost, 60% SLA-violation reductions. A limitations section is mentioned in the text ("noted in our limitations section"). Rest: not read.
+- 101429 PV-BESS data centres (Cam et al. 2026). Abstract about 230 words with a results-led close (cost 658 to 492 USD per day; CUE 0.455 to 0.349; avoided emissions 2,574 to 3,325 kgCO2). Three workload classes: short deferrable, long continuous, long interruptible. The "long-running continuous (non-interruptible)" class is the closest wording to our job model. Rest: not read.
+- 101333 LLM-serving forecasting (Aguirre-Usandizaga et al. 2026). Abstract about 190 words; GPU power telemetry from a real HPC cluster; compares SNN, RNN, Transformer, SSSM; GRU best, MAE 7.97 W at 30 s. A forecaster-comparison paper with no scheduler outcome. Rest: not read.
+- 100461 blockchain workload and energy management (2021). Abstract: cost minimisation across geo-distributed DCs with a blockchain layer; no numbers visible in the part retrieved. Rest: not read.
+
+## 4. Overlap with Paper A (A1 to A4 read as the first four of the controller's Part A list: 101498, 101216, 101470, 101407)
+
+| Paper | Real job runtimes or requested walltime? | Carbon forecast vs oracle? | Decomposes the deployable-vs-perfect gap? |
+|---|---|---|---|
+| A1 101498 | No real HPC trace. Real FaaS and AWS big-data traces (arrivals synthetic). Runtimes assumed known to the scheduler; authors say so. | No oracle. "Forecast" is history plus arbitrary noise at four MAE levels. | No. Sensitivity to noise only. |
+| A2 101216 | Workload is forecast (LSTM variants), not job runtimes. No walltime. | Compares its own forecasters; no stated perfect-information scheduler in the abstract. A real-time-only variant is the contrast. | No (abstract only). |
+| A3 101470 | Workload sequence forecast, not per-job runtime. | Yes: an Oracle benchmark and a joint forecasting-scheduling evaluation. Wind power, not grid carbon intensity. | Partly: the Oracle gap and the prediction-quality study point at the forecast part only; no runtime factor, no 2x2. |
+| A4 101407 | Unknown (abstract only). Marginal-emissions forecasts used live. | No oracle mentioned. | No. |
+
+Conclusion: none of the four reads real requested-versus-actual job runtimes, and none separates the forecast cost from the runtime-estimate cost. A3 is the only one with an oracle. Paper A's 2x2 is not matched by any SUSCOM paper in this set (evidence: the above; full texts of A2 to A4 not read, so this is stated for what the abstracts show).
+
+## 5. Synthesis
+
+What the closest SUSCOM papers do that we should match
+1. Descriptive titles. Titles of 101498 (15 words), 101106 (14), 101398 (colon subtitle), 101216 and 101470 (Name-colon) all name the object or method; none is finding-led. Match: a title that names the object (carbon-aware delay scheduling, HPC batch jobs, US grids). A finding-led clause would stand out; keep it under 18 words (101498, 101106, 101398; thin).
+2. One-paragraph abstracts that name the data and give headline numbers: 135 and 153 words in the two full-text papers; 190 to 250 in the abstract-only set (101216, 101470, 101398, 101429). Our 220 to 250 words sits inside the range of the topic-close set, above the two fully read papers.
+3. A numbered or bulleted contribution list of 3 to 4 items that ends with a code and data release (101498 releases code and data; 101398 maps contributions to gaps and sections; 101470 four bullets). Match: 3 to 4 bullets, active "we", the last one the release.
+4. A roadmap sentence listing the sections by number at the end of the Introduction (101498; thin).
+5. A named reproducibility element: either a Zenodo data DOI (101106) or a release statement (101498). Match: Zenodo DOI plus a Reproducibility subsection.
+6. A highlights block of 3 to 5 bullets (101470 and 101398 show five and four; SUSCOM is on Elsevier, which asks for highlights; check JOURNAL_BASICS.md).
+7. Section order: Introduction, Background or State of the art, Model or Methodology, Results, Discussion, Related work or Conclusion. Related work is early in 101106 and late in 101498, so either placement is accepted.
+
+What we can do better (evidence level in brackets)
+1. Uncertainty. 101498 reports mean and std from repeated noise runs; 101398 reports p values; 101106 reports std of measurement; none reports bootstrap intervals or a preregistered held-out period (full texts of 2; abstracts of 2). Our block-bootstrap intervals, preregistration and held-out year are above this bar [moderate: two full texts].
+2. Forecast and runtime realism. 101498 states that its forecasts are history plus noise and that runtimes are assumed known; our real LightGBM forecast and runtime estimates remove both admitted threats [strong for 101498, weak for the others].
+3. Oracle comparison. Only 101470 has an oracle (abstract). A 2x2 with an oracle on both axes goes further [moderate].
+4. Multiple baselines. 101498 uses one baseline (Local). Our simple-policy ladder and best-simple-policy test is stronger [thin: one full text].
+5. Real HPC traces. None of the four reads PM100, F-DATA or KIT FH2 style traces [from abstracts and one full text].
+
+Concrete recommendations
+- Title: descriptive object plus finding clause under 18 words; no Name-colon (supports: 101498, 101106, 101398, 101216, 101470).
+- Abstract: single paragraph, six to eight sentences, data named, three or four numbers with intervals, one sentence on the implication that the two other topic-close abstracts lack (supports: 101498 lacks implication; 101429 ends on implication).
+- Sections: Introduction (with roadmap sentence), Related work (with the comparison table), Data, Method, Results, Discussion (with trade-offs and a Threats-to-validity subsection), Reproducibility, Conclusion (supports: 101498, 101106).
+- Figures: 7 to 13 appear in the two read papers; the owner's 13 to 14 is above both [thin]; captions in 101106 are descriptive; ours should state the finding, because no topic-close paper does and the owner wants it.
+- Results tables: improvement versus the run-now baseline, relative and absolute, with interval; one row per policy; named baselines (101106 names its naive models; 101498 uses one baseline) [thin].
+- Contribution list: three or four bullets, "We ...", last bullet the release (supports: 101498, 101398, 101470).
+- Limitations: a lettered Threats-to-validity list of four to five items inside Discussion, plain admissions, about 300 to 400 words (supports: 101498; 101106 puts limits in the Conclusion). State our own assumptions (non-interruptible, no capacity limit, no migration) in the same plain way.
+- Related work: cite 101498 as the paper that itself names forecast noise and known runtimes as threats, which motivates our 2x2; cite 101470 for the oracle idea (abstract-level claim only).
+
+## 6. Sources
+Crossref API: https://api.crossref.org/journals/2210-5379/works (15 queries, 2026-11-12) and per-DOI works; OpenAlex per-DOI lookups https://api.openalex.org/works/doi:<DOI>; Semantic Scholar https://api.semanticscholar.org/graph/v1/paper/DOI:<DOI>; full texts via https://doi.org/10.1016/j.suscom.2026.101498 and https://doi.org/10.1016/j.suscom.2025.101106; abstracts from the URLs in the table. Local files from fetches are in the session scratchpad and tool-results folders (not part of the deliverables).
+
+## 7. Note on the arXiv title search
+An arXiv API title search for the 22 candidate titles hit HTTP 429 (rate limit) for 12 of 22 and a network drop for one; the 9 that completed returned no match (100942, 101333, 101214, 101088, 101286, 100596, 100989, 100957 and none others). So "no arXiv preprint" is established only for those 9. For the 13 that failed (100950, 100888, 100649, 100592, 100590, 100461, 101216, 101498, 101470, 101407, 101429, 100903, 101106, 100627) the arXiv check is inconclusive and should be repeated later; 101498 and 101106 were read through the Elsevier open-access page, so they do not need it.
+# A05 Final run (supersedes the _v0 results below)
+
+VERDICT: A05 final done; 42 BAs; DEV MAE lgbm vs snaive_day 24.5 vs 29.6 g/kWh (pooled 1-24 h)
+
+Command: `python src/forecast.py --input data/derived/ci_clean.parquet --tag "" --shares data/derived/ci_hourly.parquet` (log `logs/a05_forecast_final.log`, run time 478 s). Outputs: `data/derived/forecasts/<model>/<BA>.npz` (42 BAs x 5 models; `fc` float32 [17520, 96], no NaN in lgbm), `data/derived/forecasts/lgbm_model.txt`, `tables/forecast_skill.csv` (DEV only, 1050 rows), `tables/forecast_skill_summary.csv` (pooled MAE). The `_v0` files are kept.
+
+Changes versus the _v0 run
+1. Input: `ci_clean.parquet` and `ba_eligibility.csv` (42 eligible BAs); fuel shares from `ci_hourly.parquet`.
+2. Causal model input (closes the caveat). Every model input (lags, rolling stats, persistence, snaive_day, snaive_week, profile7, lgbm features) is built from a series in which hours with flag 1 or 2 are replaced by the last earlier unflagged value (forward fill, at most 6 h, else NaN). Flag 3 (same hour previous week, taken from an earlier time) is causal and kept. Flag 4 stays NaN (no forecast when C at the issue hour is NaN; none occurred in the stored lgbm output at lead 1). Targets (lgbm fitting, early stopping, DEV skill) stay `ci_clean` as is. Function `causal_input` in `src/forecast.py`.
+3. Same hyperparameters and seed. Stride 10 (2,418,567 training rows, 217,931 validation rows), best iteration 777, validation residual MAE 31.80; fit 34 s.
+
+Leakage checks on the final run (`src/forecast_leakcheck.py`, 5 BAs: CISO, PJM, ERCO, AECI, DUK)
+- Future perturbation: 6 random DEV+TEST issue hours per BA x 5 models = 150 tests, with every value after the issue hour replaced by noise; 0 failed.
+- Flagged-value test: the stored values at all 1049 flag 1/2 hours were replaced by random numbers; the model input series was bit-identical (0 failures), and each replaced hour equals an earlier unflagged value within 6 h or NaN.
+- TRAIN-only fitting, purged validation window, DEV-only scoring with targets before 2025-07-01, and identical cell sets across models: unchanged (209,940 cells per BA at 1-24 h). No TEST skill computed.
+- Remaining note: skill targets include A06-flagged hours (interpolated or outlier-replaced values) as they stand in ci_clean, as instructed. `usable_day` was not applied to scoring.
+
+DEV MAE (g/kWh), 42 BAs. Pooled (cell-weighted):
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 19.1 | 26.3 | 24.5 | 30.4 | 33.4 |
+| profile7 | 31.1 | 31.1 | 31.1 | 33.4 | 35.7 |
+| snaive_day | 29.6 | 29.6 | 29.6 | 35.4 | 39.1 |
+| snaive_week | 43.2 | 43.2 | 43.2 | 43.2 | 43.2 |
+| persistence | 28.4 | 46.2 | 41.8 | 48.9 | 52.4 |
+
+Median over BAs:
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 16.8 | 20.7 | 19.7 | 23.8 | 28.1 |
+| profile7 | 24.3 | 24.4 | 24.4 | 27.3 | 30.5 |
+| snaive_day | 23.1 | 23.1 | 23.1 | 27.9 | 30.7 |
+| snaive_week | 36.0 | 36.0 | 36.0 | 36.0 | 36.1 |
+| persistence | 26.0 | 40.9 | 36.9 | 43.4 | 45.4 |
+
+Median MAPE (1-24 h): lgbm 0.073, snaive_day 0.086, profile7 0.087, persistence 0.121, snaive_week 0.123. Mean rank skill (windows 1-24, 25-48, 49-96): lgbm 0.598, 0.564, 0.552; profile7 0.570, 0.560, 0.551; snaive_day 0.511, 0.480, 0.466; snaive_week 0.468; persistence 0 by definition.
+Per BA (1-24 h MAE): lgbm beats snaive_day in 38 of 42 BAs and profile7 in 41 of 42. Gain over snaive_day at 1-24 h pooled: 17 %; at 49-96 h lgbm and profile7 are close in rank skill (0.552 vs 0.551), so lgbm adds little ranking information at long leads.
+
+---
+# Earlier _v0 run (37 BAs, uncorrected flag-1/2 inputs; kept for the record)
+
+# A05 Past-only carbon-intensity forecasters
+
+VERDICT (superseded by the Final run section below, which is the file set to use): A05 done; 37 BAs; DEV MAE lgbm vs snaive_day 25.7 vs 31.3 g/kWh (pooled 1-24 h)
+
+Code: `src/forecast.py` (run: `python src/forecast.py --input data/derived/ci_clean_v0.parquet --tag _v0 --models persistence,snaive_day,snaive_week,profile7,lgbm`), leakage test `src/forecast_leakcheck.py`. Log: `logs/a05_forecast_v0.log`.
+Outputs: `data/derived/forecasts_v0/<model>/<BA>.npz` (37 BAs x 5 models, 224 MB; arrays `issue_utc` int64 ns, `fc` float32 [17520, 96]; issue hours 2024-07-01 00:00 to 2026-06-30 23:00 UTC), `data/derived/forecasts_v0/lgbm_model.txt`, `tables/forecast_skill_v0.csv` (model, ba, period=DEV, lead_bucket, MAE, RMSE, MAPE, rank_skill, n), `tables/forecast_skill_summary_v0.csv` (pooled MAE).
+Note: the forecast folder is `forecasts_v0` (the tag is appended), not `forecasts`. Rename or point `simulate.py` at it when the final run is frozen.
+
+## Input
+`ci_clean_v0.parquet` (A06; 37 eligible BAs per `ba_eligibility_v0.csv`). Shares come from `ci_hourly_v0.parquet` (forward-filled, causal). Development was first done on CISO, PJM, ERCO from `ci_hourly_v0.parquet` with forward fill; those test files were deleted.
+
+## Method
+- Hour index grid from 2018-07-01 00:00 UTC. Forecast for issue hour t, lead h targets the hour labelled t+h (the series value at t is known at issue).
+- persistence: C(t). snaive_day: C(t+h-24*ceil(h/24)). snaive_week: C(t+h-168*ceil(h/168)).
+- profile7: mean of the 7 most recent same-hour-of-day values at or before t, i.e. C(t+h-24*(k+j)), k=ceil(h/24), j=0..6. (Reading of "7 days before the issue hour" that keeps all leads past-only.)
+- lgbm: one global LightGBM (objective L1, target = actual minus a base, base = profile7 with fallback to snaive_day then C(t), prediction clipped at 0). Features (34): lead h; CI at lags 0,1,2,3,6,12,24,48,72,168 h; rolling 24 h and 168 h mean and std (trailing, min 12 and 84 obs); target-hour hour-of-day, day-of-week, month (UTC); issue-hour hour-of-day and day-of-week; snaive_day, snaive_week and profile7 values for the target hour; 9 fuel shares at the issue hour; BA as categorical code.
+- Training set: TRAIN issues with stride 9 h (stride chosen so rows stay below 3 M), 12 random leads per issue (seed 42): 2,369,216 training rows, 213,276 validation rows. Early stopping (patience 50) on the last 6 months of TRAIN (issues from 2024-01-01, targets before 2024-07-01). Best iteration 506 (max 1500), validation residual MAE 33.06.
+- Hyperparameters (logged): learning_rate 0.08, num_leaves 63, min_data_in_leaf 200, feature_fraction 0.8, bagging_fraction 0.7 (freq 1), lambda_l2 1, max_bin 255, seed 42 (all seeds), deterministic, 20 threads. No tuning beyond this single configuration. No refit on the full TRAIN after early stopping.
+- Top gain features: s168 (0.48), s24, ba_code, lag0, m168, profile7, h.
+- Inference one BA at a time, float32, chunks of 1200 issues; peak RAM well under 3 GB. Rows with NaN C(t) (BA has no data yet) get NaN forecasts; none for lgbm in the 37 BAs.
+
+## Leakage checks (each stated)
+1. Future-perturbation test (`forecast_leakcheck.py`): for 3 BAs x 5 random issue hours in DEV+TEST x all 5 models, every CI and share value after the issue hour was replaced by random noise; forecasts at that issue hour were identical (tolerance 1e-4). 0 of 75 failures. This covers lags, rolling windows, snaive/profile, shares and the model inference path.
+2. lgbm fitted on TRAIN only: training-target hour < 2024-01-01 (purged so no training target falls in the validation window), validation rows have issue >= 2024-01-01 and target < 2024-07-01. Code asserts target < TRAIN_END; DEV and TEST values never enter fitting, scaling (no scaling is used), feature selection or early stopping.
+3. No normalisation or statistics are computed over the whole series; rolling statistics are trailing.
+4. Calendar features of the target hour are known at issue time (deterministic), not leakage.
+5. Skill scored on DEV only: issues in 2024-07-01..2025-06-30 and target hours before 2025-07-01 (leads that would reach into TEST are excluded). No TEST skill was computed or looked at. Stored forecasts cover TEST issue hours but they were not scored.
+6. All models are scored on the identical cell set (a cell counts only if actual and all five forecasts are finite): 209,940 cells per BA for 1-24 h.
+Caveat: the A06 clean series for DEV/TEST uses flag 3 (previous-week fill) and interpolation; both are past-only for the fill value, but interpolated short gaps (flag 1) use the next observation. Features at issue hour use whatever the clean series holds at times <= t, so a flag-1 value at t or earlier may contain information from up to 3 h later. This is a property of A06 cleaning, affects <1 % of hours, and is not fixed here; the controller should know it.
+
+## Run time
+Whole run 295 s (data 5 s, LightGBM fit 28 s on 20 threads, inference plus skill about 7.5 s per BA). Reproducible with fixed seed.
+
+## DEV MAE (g/kWh), lead buckets, 37 BAs
+Pooled (cell-weighted over BAs):
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 19.9 | 27.6 | 25.7 | 32.0 | 35.2 |
+| profile7 | 32.8 | 32.8 | 32.8 | 35.2 | 37.6 |
+| snaive_day | 31.3 | 31.3 | 31.3 | 37.4 | 41.2 |
+| snaive_week | 45.4 | 45.4 | 45.4 | 45.4 | 45.4 |
+| persistence | 28.9 | 47.0 | 42.5 | 50.0 | 53.6 |
+
+Median over BAs:
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 17.3 | 22.7 | 21.7 | 26.1 | 29.6 |
+| profile7 | 28.3 | 28.3 | 28.3 | 30.0 | 32.4 |
+| snaive_day | 23.8 | 23.8 | 23.8 | 29.9 | 35.7 |
+| snaive_week | 37.8 | 37.8 | 37.8 | 37.9 | 37.8 |
+| persistence | 26.8 | 39.1 | 35.5 | 44.6 | 47.0 |
+
+Median MAPE (1-24 h): lgbm 0.074, profile7 0.095, snaive_day 0.089, persistence 0.129, snaive_week 0.135. RMSE and MAPE per BA and bucket are in the table.
+Mean within-window rank skill (Spearman over each 24 h window; windows 1-24, 25-48, 49-96 = mean of 49-72 and 73-96): lgbm 0.593, 0.555, 0.543; profile7 0.561, 0.551, 0.542; snaive_day 0.502, 0.470, 0.455; snaive_week 0.458 throughout; persistence defined as 0 (constant window). Rank skill is NaN for buckets 1-6 and 7-24 (shorter than a window).
+Per BA (1-24 h MAE): lgbm beats snaive_day in 32 of 37 BAs and profile7 in 36 of 37.
+
+Honest reading: lgbm gains over the best simple baseline (snaive_day) are 18 % at 1-24 h pooled, mostly from leads 1-6 (36 %) where it uses current state; at 49-96 h the gain over profile7 is only 6 %, and rank skill of lgbm and profile7 is nearly equal there (0.543 vs 0.542). Persistence is poor beyond 6 h, as expected.
+
+## Items for the controller
+- Skill table has extra bucket "1-24" and column `n` (cells) so pooled values can be rebuilt as sum(MAE*n)/sum(n).
+- If A06 re-issues `ci_clean`/eligibility, rerun the same command (about 5 minutes).
+- Dev-mode run on `ci_hourly_v0` should not be used for results.
+src/analyze.py:1:"""Savings, contrasts, two-stage block bootstrap and Holm correction from results/sim_<period><tag>/.
+src/analyze.py:4:Primary bootstrap ("fixed"): the 42 BAs are a fixed set; within each BA, resample 7-day blocks of arrival days with
+src/analyze.py:25:def load(period, tag, trace, weight):
+src/analyze.py:50:def weekly(m):
+src/analyze.py:56:def savings_from(tot, idx):
+src/analyze.py:60:def bootstrap(arms, data, S, B, seed, mode="fixed"):
+src/analyze.py:65:    rng = np.random.default_rng(seed)
+src/analyze.py:80:def per_ba_boot(W_ba, idx, B, seed):
+src/analyze.py:82:    rng = np.random.default_rng(seed)
+src/analyze.py:90:def contrast(vec, idx, plus, minus):
+src/analyze.py:96:def holm(pvals):
+src/analyze.py:107:def write_ledger(out, args):
+src/analyze.py:121:            if t["p_holm"] is not None:
+src/analyze.py:122:                rows.append((f"{k0}.{n}.p_holm", t["p_holm"]))
+src/analyze.py:135:def main():
+src/analyze.py:142:    ap.add_argument("--seed", type=int, default=7)
+src/analyze.py:159:        idx, point, boot, per_ba, W = bootstrap(arms, data, S, args.B, args.seed + S, args.boot)
+src/analyze.py:167:            dev = bc - est                                            # null-centred bootstrap statistic
+src/analyze.py:175:            tres[n]["p_holm"] = None
+src/analyze.py:177:            tres[n]["p_holm"] = float(a)
+src/analyze.py:187:        # per-BA H2 with within-BA bootstrap
+src/analyze.py:191:            bb = per_ba_boot(w, idx, 500, args.seed + 100 + j)
+src/analyze.py:218:        ph = "-" if t["p_holm"] is None else f"{t['p_holm']:.4f}"
+src/simulate.py:25:FC_MODELS = ("persistence", "snaive_day", "snaive_week", "profile7", "lgbm")
+src/simulate.py:26:SIGNALS = ("oracle",) + FC_MODELS + ("histprofile",)
+src/simulate.py:27:RUNTIMES = ("act", "req", "pred", "pred2")   # pred2 = min(req, 2 x pred), secondary
+src/simulate.py:28:ARMS = ["runnow", "night"] + [f"{s}|{r}" for s in SIGNALS for r in RUNTIMES]
+src/simulate.py:30:MAX_REQ_H = 72.0
+src/simulate.py:34:def check_prereg():
+src/simulate.py:45:def ba_offsets():
+src/simulate.py:64:def load_ba(ba, tag):
+src/simulate.py:72:    # NaN (long gaps) only on unusable hours; jobs whose 96 h window touches one are excluded in place_jobs,
+src/simulate.py:78:def hist_profile(ci, utc, offset):
+src/simulate.py:87:def place_jobs(jobs, period, origin, offset, rng, usable):
+src/simulate.py:88:    """Random alignment: each job gets a random week of the period, keeping its local weekday and clock time."""
+src/simulate.py:108:def load_fc(fc_dir, model, ba, origin):
+src/simulate.py:117:def fc_window(first_k, fc, a):
+src/simulate.py:125:def run_ba(ba, args, jobs_by_trace, offsets, outdir):
+src/simulate.py:131:    fcs = {m: load_fc(args.fc_dir, m, ba, origin) for m in FC_MODELS}
+src/simulate.py:139:            rng = np.random.default_rng([args.seed, rep, zlib.crc32(ba.encode()), zlib.crc32(trace.encode())])
+src/simulate.py:153:            for m in FC_MODELS:
+src/simulate.py:154:                sig[m] = fc_window(*fcs[m], a)
+src/simulate.py:167:                        starts[f"{s_name}|{r_name}"] = sc.plan_start(sg, a, rh, slack)
+src/simulate.py:184:def aggregate(res):
+src/simulate.py:207:def main():
+src/simulate.py:216:    ap.add_argument("--seed", type=int, default=20261111)
+src/simulate.py:218:    ap.add_argument("--states", default="COMPLETED")
+src/simulate.py:221:    ap.add_argument("--exclude-near-limit", action="store_true")
+src/simulate.py:229:    jobs = jobs[jobs["state"].isin(args.states.split(","))]
+src/simulate.py:230:    jobs = jobs[(jobs["r_act_h"] >= 1 / 60) & (jobs["r_req_h"] <= MAX_REQ_H) & (jobs["r_req_h"] > 0)]
+src/simulate.py:231:    assert jobs["r_act_h"].max() <= MAX_REQ_H, "actual runtime beyond 72 h would leave the 98 h checked window"
+src/simulate.py:232:    if args.exclude_near_limit:   # sensitivity: drop jobs that ran to within 2 % of the request
+src/simulate.py:246:                f"seed={args.seed} states={args.states} traces={traces} bas={len(bas)} seconds={time.time()-t0:.0f}\n")
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+codex
+[ METHODS]
+
+1. **S1–S5 responses**
+- **S1:** Current five seed reruns estimate simulation variation, but don’t establish user/job-sample uncertainty. For PM100, run at least **30 user-cluster resamples** (477 users sampled with replacement; then sample 20,000 eligible jobs per BA/trace) with distinct recorded seeds `20261112–20261141`; rerun the six arms needed for D/H2/H3/Shapley (`lgbm|req, act, pred`; `oracle|act, req`) on all three traces.
+- **S2:** Use fixed lags **k=1, 3, 6 h**; evaluate `lgbm|req` and `lgbm|pred` (plus `snaive_day|req` as a simple policy) on all three traces. Keep current-data oracle as an upper bound, clearly labeled.
+- **S3:** Do not compare lifecycle-trained forecasts against direct-factor outcomes as the deployable result; refit as below. **S4:** PM100 only, `COMPLETED,TIMEOUT`, all arms, same seeds/settings; label descriptive because timeout runtimes are limit-censored. **S6:** limitation text is right.
+
+2. **S3 direct factors**
+- An oracle-only run answers only how the *oracle policy* changes under direct factors; it does not test the deployable forecast policy. Minimum credible version: rebuild direct-factor CI, retrain the same LightGBM pipeline with **unchanged hyperparameters/splits/seeds**, regenerate forecasts, and rerun `lgbm|req` plus `oracle|act` for all traces.
+- Prespecify direct coal/gas/oil factors and the oil-factor alternative as separate sensitivities; don’t select whichever preserves the headline. State imports/storage remain excluded.
+
+3. **S5 HPO**
+- “60 TPE trials, TRAIN-only” is a reasonable exploratory start, but the plan needs a search space, seed, and selection/refit rule; repeated tuning on the same six-month validation window risks overfitting that window.
+- Use **100 trials**, fixed Optuna seed, MAE at 1–24 h, and a bounded space: leaves 15–127, depth 3–10, learning rate 0.01–0.15 log, min leaf 50–1000 log, feature/bagging fractions 0.6–1, L1/L2 1e-4–10 log, max-bin 63–255. Select iteration count on the same TRAIN validation, then refit with selected settings on full TRAIN.
+- Give `profile7` a tuned window-length rival (1, 3, 7, 14, 28 days) and compare day/week seasonal-naive variants on that same validation. Keep all tuned results exploratory; frozen D stays the headline.
+
+4. **First attack / highest-value analysis**
+- First attack: external validity—the workload traces are Italian, Japanese, and German, placed on US grids; the evaluation is a counterfactual replay, not a measured US deployment. Revised EIA data and excluded imports/storage further limit the operational carbon claim.
+- The highest-value extra analysis is S1 with **user-cluster sampling uncertainty combined with calendar-block uncertainty**; it directly tests whether the narrow headline intervals survive workload variation. S2 is the strongest operational sensitivity, but cannot resolve data revision or cross-system pairing.
+
+5. **Post-hoc shopping**
+- S2–S5 are post-freeze sensitivities: report **all prespecified settings and traces**, alongside the frozen TEST estimates, without changing H1–H3, D, or the abstract headline. Don’t tune choices or omit unfavorable factor/lag/trace results.
+- State that HPO is a post-hoc robustness check—not a corrected confirmatory model—and disclose every new seed, code hash, deviation, and run command.
+
+[STATS]
+
+1. **S1–S5 responses**
+- **S1:** Across-seed SD alone is not a confidence interval. For a referee-defensible combined interval, bootstrap the **477 PM100 users** as clusters, draw 20,000 jobs from each resulting sample, then resample aligned 7-day arrival blocks within each BA; repeat **at least 30 outer samples**, seeds `20261112–20261141`, and carry all stages through the same paired contrasts.
+- Use the six arms `lgbm|req, act, pred; oracle|act, req` for D/H2/H3/Shapley, all three traces; keep traces’ intervals separate. If 30 outer runs exceed budget, report seed spread as sensitivity, not as a corrected CI.
+- **S2:** fixed lags **1/3/6 h**, all three traces, `lgbm|req/pred` and `snaive_day|req`; report each lag. **S3:** retrain direct-target forecaster. **S4:** PM100 `COMPLETED,TIMEOUT`, all arms, descriptive only.
+
+2. **S3 direct factors**
+- Oracle-only is inadequate for the deployable-policy question; a lifecycle-targeted LightGBM forecast is not calibrated to direct-factor CI. Minimum: rebuild direct CI and refit the unchanged frozen model pipeline on TRAIN, score on held-out TEST, and rerun both `lgbm|req` and `oracle|act`.
+- Keep fuel-factor alternatives separate and report all; no selecting the factor set with the best saving.
+
+3. **S5 HPO**
+- TPE 60 is not inherently research-grade; a fixed budget is reproducible, but one six-month validation window can be overfit by 60 adaptive trials. Use **100 trials**, fixed seed, bounded space as METHODS specifies, with the same objective and no TEST use.
+- Give profile7 a tuned lookback rival; day/week naive have no tunable parameters. Compare tuned LightGBM against both frozen and tuned-simple baselines, label the whole exercise exploratory.
+
+4. **First attack / highest-value analysis**
+- First attack: the reported intervals condition on one observed job sample and one alignment design, so they understate uncertainty for workload populations; p-values at the bootstrap floor reinforce that impression.
+- Highest value: user-cluster outer bootstrap crossed with calendar blocks. Fixed BA is appropriate for the chosen estimand; do not bootstrap BAs as if randomly sampled.
+
+5. **Post-hoc shopping**
+- Prespecify and disclose all S2 lags, S3 factor sets, S4 state filters, S5 search space/trials and all seeds before running; publish unfavorable cases and identify results as exploratory.
+- Keep the frozen TEST headline and confirmatory p-values untouched; do not call the sensitivity interval a replacement primary interval unless its method was specified before observing TEST.
+
+[EDITOR]
+
+1. **S1–S5 responses**
+- **S1:** Yes to addressing uncertainty, but five extra seeds and an “across-seed SD” are not enough to claim job-population uncertainty; target **30 user-cluster resamples** with calendar blocks nested, or call the result Monte Carlo sensitivity only.
+- **S2:** Use predeclared **1/3/6 h** delays and show all; include `lgbm|req`, `lgbm|pred`, and seasonal-naive day, all traces. **S3:** refit; **S4:** include timeouts as descriptive; **S5:** HPO and comparator details need freezing in the plan before execution. **S6:** explicit limitation is necessary.
+
+2. **S3 direct factors**
+- Oracle-only is not enough to support a claim about deployable carbon-aware scheduling. Minimum is the same forecaster pipeline trained on direct intensity with unchanged TRAIN/DEV rules and fixed hyperparameters, then TEST scoring for deployable and oracle arms.
+- Frame it as an accounting-signal sensitivity, not proof of marginal avoided emissions; keep all specified factor choices visible.
+
+3. **S5 HPO**
+- Sixty trials could be acceptable for a small exploratory tuning run, but absent a search space and refit rule it is not auditable. Prefer **100 fixed-seed trials** with a compact documented space and TRAIN-only validation.
+- Tune a profile7 window rival and show both frozen simple baselines and tuned rivals, so the tuning comparison doesn’t privilege LightGBM.
+
+4. **First attack / highest-value analysis**
+- First desk concern: title/abstract may overstate real-world carbon reduction when this is a synthetic placement of non-US workloads on revised historical average US grid signals, without queue capacity or imports/storage.
+- The most valuable addition is S1 if it widens uncertainty materially; if time only permits one operational check, S2 at 3 and 6 hours is the clearest test of whether the forecast result survives realistic information delay.
+
+5. **Post-hoc shopping**
+- Call these “post-freeze exploratory sensitivities”; state the frozen result first, enumerate every attempted setting, and don’t promote the best sensitivity to the headline or suppress a negative one.
+- Add each run’s code/input hash, command, seed, and deviation record; no new confirmatory claims from these analyses.
+
+**VERDICT: RUN WITH CHANGES (S1 must separate user-sample uncertainty from seed spread; S3 refit the forecaster; define complete S2/S4/S5 settings and retain all outcomes as exploratory); confidence 0.91.**
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Failed
+tokens used
+216,010
+[ METHODS]
+
+1. **S1–S5 responses**
+- **S1:** Current five seed reruns estimate simulation variation, but don’t establish user/job-sample uncertainty. For PM100, run at least **30 user-cluster resamples** (477 users sampled with replacement; then sample 20,000 eligible jobs per BA/trace) with distinct recorded seeds `20261112–20261141`; rerun the six arms needed for D/H2/H3/Shapley (`lgbm|req, act, pred`; `oracle|act, req`) on all three traces.
+- **S2:** Use fixed lags **k=1, 3, 6 h**; evaluate `lgbm|req` and `lgbm|pred` (plus `snaive_day|req` as a simple policy) on all three traces. Keep current-data oracle as an upper bound, clearly labeled.
+- **S3:** Do not compare lifecycle-trained forecasts against direct-factor outcomes as the deployable result; refit as below. **S4:** PM100 only, `COMPLETED,TIMEOUT`, all arms, same seeds/settings; label descriptive because timeout runtimes are limit-censored. **S6:** limitation text is right.
+
+2. **S3 direct factors**
+- An oracle-only run answers only how the *oracle policy* changes under direct factors; it does not test the deployable forecast policy. Minimum credible version: rebuild direct-factor CI, retrain the same LightGBM pipeline with **unchanged hyperparameters/splits/seeds**, regenerate forecasts, and rerun `lgbm|req` plus `oracle|act` for all traces.
+- Prespecify direct coal/gas/oil factors and the oil-factor alternative as separate sensitivities; don’t select whichever preserves the headline. State imports/storage remain excluded.
+
+3. **S5 HPO**
+- “60 TPE trials, TRAIN-only” is a reasonable exploratory start, but the plan needs a search space, seed, and selection/refit rule; repeated tuning on the same six-month validation window risks overfitting that window.
+- Use **100 trials**, fixed Optuna seed, MAE at 1–24 h, and a bounded space: leaves 15–127, depth 3–10, learning rate 0.01–0.15 log, min leaf 50–1000 log, feature/bagging fractions 0.6–1, L1/L2 1e-4–10 log, max-bin 63–255. Select iteration count on the same TRAIN validation, then refit with selected settings on full TRAIN.
+- Give `profile7` a tuned window-length rival (1, 3, 7, 14, 28 days) and compare day/week seasonal-naive variants on that same validation. Keep all tuned results exploratory; frozen D stays the headline.
+
+4. **First attack / highest-value analysis**
+- First attack: external validity—the workload traces are Italian, Japanese, and German, placed on US grids; the evaluation is a counterfactual replay, not a measured US deployment. Revised EIA data and excluded imports/storage further limit the operational carbon claim.
+- The highest-value extra analysis is S1 with **user-cluster sampling uncertainty combined with calendar-block uncertainty**; it directly tests whether the narrow headline intervals survive workload variation. S2 is the strongest operational sensitivity, but cannot resolve data revision or cross-system pairing.
+
+5. **Post-hoc shopping**
+- S2–S5 are post-freeze sensitivities: report **all prespecified settings and traces**, alongside the frozen TEST estimates, without changing H1–H3, D, or the abstract headline. Don’t tune choices or omit unfavorable factor/lag/trace results.
+- State that HPO is a post-hoc robustness check—not a corrected confirmatory model—and disclose every new seed, code hash, deviation, and run command.
+
+[STATS]
+
+1. **S1–S5 responses**
+- **S1:** Across-seed SD alone is not a confidence interval. For a referee-defensible combined interval, bootstrap the **477 PM100 users** as clusters, draw 20,000 jobs from each resulting sample, then resample aligned 7-day arrival blocks within each BA; repeat **at least 30 outer samples**, seeds `20261112–20261141`, and carry all stages through the same paired contrasts.
+- Use the six arms `lgbm|req, act, pred; oracle|act, req` for D/H2/H3/Shapley, all three traces; keep traces’ intervals separate. If 30 outer runs exceed budget, report seed spread as sensitivity, not as a corrected CI.
+- **S2:** fixed lags **1/3/6 h**, all three traces, `lgbm|req/pred` and `snaive_day|req`; report each lag. **S3:** retrain direct-target forecaster. **S4:** PM100 `COMPLETED,TIMEOUT`, all arms, descriptive only.
+
+2. **S3 direct factors**
+- Oracle-only is inadequate for the deployable-policy question; a lifecycle-targeted LightGBM forecast is not calibrated to direct-factor CI. Minimum: rebuild direct CI and refit the unchanged frozen model pipeline on TRAIN, score on held-out TEST, and rerun both `lgbm|req` and `oracle|act`.
+- Keep fuel-factor alternatives separate and report all; no selecting the factor set with the best saving.
+
+3. **S5 HPO**
+- TPE 60 is not inherently research-grade; a fixed budget is reproducible, but one six-month validation window can be overfit by 60 adaptive trials. Use **100 trials**, fixed seed, bounded space as METHODS specifies, with the same objective and no TEST use.
+- Give profile7 a tuned lookback rival; day/week naive have no tunable parameters. Compare tuned LightGBM against both frozen and tuned-simple baselines, label the whole exercise exploratory.
+
+4. **First attack / highest-value analysis**
+- First attack: the reported intervals condition on one observed job sample and one alignment design, so they understate uncertainty for workload populations; p-values at the bootstrap floor reinforce that impression.
+- Highest value: user-cluster outer bootstrap crossed with calendar blocks. Fixed BA is appropriate for the chosen estimand; do not bootstrap BAs as if randomly sampled.
+
+5. **Post-hoc shopping**
+- Prespecify and disclose all S2 lags, S3 factor sets, S4 state filters, S5 search space/trials and all seeds before running; publish unfavorable cases and identify results as exploratory.
+- Keep the frozen TEST headline and confirmatory p-values untouched; do not call the sensitivity interval a replacement primary interval unless its method was specified before observing TEST.
+
+[EDITOR]
+
+1. **S1–S5 responses**
+- **S1:** Yes to addressing uncertainty, but five extra seeds and an “across-seed SD” are not enough to claim job-population uncertainty; target **30 user-cluster resamples** with calendar blocks nested, or call the result Monte Carlo sensitivity only.
+- **S2:** Use predeclared **1/3/6 h** delays and show all; include `lgbm|req`, `lgbm|pred`, and seasonal-naive day, all traces. **S3:** refit; **S4:** include timeouts as descriptive; **S5:** HPO and comparator details need freezing in the plan before execution. **S6:** explicit limitation is necessary.
+
+2. **S3 direct factors**
+- Oracle-only is not enough to support a claim about deployable carbon-aware scheduling. Minimum is the same forecaster pipeline trained on direct intensity with unchanged TRAIN/DEV rules and fixed hyperparameters, then TEST scoring for deployable and oracle arms.
+- Frame it as an accounting-signal sensitivity, not proof of marginal avoided emissions; keep all specified factor choices visible.
+
+3. **S5 HPO**
+- Sixty trials could be acceptable for a small exploratory tuning run, but absent a search space and refit rule it is not auditable. Prefer **100 fixed-seed trials** with a compact documented space and TRAIN-only validation.
+- Tune a profile7 window rival and show both frozen simple baselines and tuned rivals, so the tuning comparison doesn’t privilege LightGBM.
+
+4. **First attack / highest-value analysis**
+- First desk concern: title/abstract may overstate real-world carbon reduction when this is a synthetic placement of non-US workloads on revised historical average US grid signals, without queue capacity or imports/storage.
+- The most valuable addition is S1 if it widens uncertainty materially; if time only permits one operational check, S2 at 3 and 6 hours is the clearest test of whether the forecast result survives realistic information delay.
+
+5. **Post-hoc shopping**
+- Call these “post-freeze exploratory sensitivities”; state the frozen result first, enumerate every attempted setting, and don’t promote the best sensitivity to the headline or suppress a negative one.
+- Add each run’s code/input hash, command, seed, and deviation record; no new confirmatory claims from these analyses.
+
+**VERDICT: RUN WITH CHANGES (S1 must separate user-sample uncertainty from seed spread; S3 refit the forecaster; define complete S2/S4/S5 settings and retain all outcomes as exploratory); confidence 0.91.**
+exit 0

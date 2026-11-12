@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "History-based runtime estimates raise the modeled carbon savings of forecast-guided HPC batch scheduling (code and result ledgers)"
+type: software
+authors:
+  - family-names: "Goenka"
+    given-names: "Shlok Kumar"
+    affiliation: "School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, India"
+  - family-names: "N"
+    given-names: "Balaji"
+    affiliation: "School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, India"
+  - family-names: "G N"
+    given-names: "Balaji"
+    affiliation: "School of Computer Science and Engineering, Vellore Institute of Technology, Vellore, India"
+version: "1.0.0"
+date-released: "2026-11-12"
+doi: "10.5281/zenodo.24152932"
+license: MIT
+repository-code: "https://github.com/shlokDS16/carbon-aware-hpc-delay-replay"

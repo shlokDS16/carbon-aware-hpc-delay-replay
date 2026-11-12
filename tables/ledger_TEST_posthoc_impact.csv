@@ -1,0 +1,532 @@
+key,value,source
+posthoc.B2.train_quartile.n_top,11.0,TRAIN ci_clean
+posthoc.B2.train_quartile.min_range_in_top,126.84684753417969,TRAIN ci_clean
+posthoc.B2.train_quartile.median_range_all,77.30953979492188,TRAIN ci_clean
+posthoc.B1.PM100.w.S12.D.g_per_kwh.est,6.637931222845531,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|req.g_per_kwh.est
+posthoc.B1.PM100.w.S12.D.t_per_MW_year.est,58.14827751212685,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|req.g_per_kwh.est x 8.76
+posthoc.B1.PM100.w.S12.D.g_per_kwh.lo,6.323163335110853,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|req.g_per_kwh.lo
+posthoc.B1.PM100.w.S12.D.t_per_MW_year.lo,55.39091081557107,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|req.g_per_kwh.lo x 8.76
+posthoc.B1.PM100.w.S12.D.g_per_kwh.hi,6.965826070659976,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|req.g_per_kwh.hi
+posthoc.B1.PM100.w.S12.D.t_per_MW_year.hi,61.02063637898139,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|req.g_per_kwh.hi x 8.76
+posthoc.B1.PM100.w.S12.lgbm|pred.g_per_kwh.est,10.252883181523853,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|pred.g_per_kwh.est
+posthoc.B1.PM100.w.S12.lgbm|pred.t_per_MW_year.est,89.81525667014894,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|pred.g_per_kwh.est x 8.76
+posthoc.B1.PM100.w.S12.lgbm|pred.g_per_kwh.lo,9.923392193124132,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|pred.g_per_kwh.lo
+posthoc.B1.PM100.w.S12.lgbm|pred.t_per_MW_year.lo,86.9289156117674,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|pred.g_per_kwh.lo x 8.76
+posthoc.B1.PM100.w.S12.lgbm|pred.g_per_kwh.hi,10.576478781750469,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|pred.g_per_kwh.hi
+posthoc.B1.PM100.w.S12.lgbm|pred.t_per_MW_year.hi,92.6499541281341,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.lgbm|pred.g_per_kwh.hi x 8.76
+posthoc.B1.PM100.w.S12.oracle|act.g_per_kwh.est,20.144569168108127,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.oracle|act.g_per_kwh.est
+posthoc.B1.PM100.w.S12.oracle|act.t_per_MW_year.est,176.4664259126272,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.oracle|act.g_per_kwh.est x 8.76
+posthoc.B1.PM100.w.S12.oracle|act.g_per_kwh.lo,19.777932967305187,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.oracle|act.g_per_kwh.lo
+posthoc.B1.PM100.w.S12.oracle|act.t_per_MW_year.lo,173.25469279359342,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.oracle|act.g_per_kwh.lo x 8.76
+posthoc.B1.PM100.w.S12.oracle|act.g_per_kwh.hi,20.52680782621816,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.oracle|act.g_per_kwh.hi
+posthoc.B1.PM100.w.S12.oracle|act.t_per_MW_year.hi,179.81483655767107,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.oracle|act.g_per_kwh.hi x 8.76
+posthoc.B1.PM100.w.S12.runnow_mean_intensity_g_per_kwh,350.08474313940667,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S12.runnow_g_per_kwh.est
+posthoc.B1.PM100.w.S24.D.g_per_kwh.est,9.36971204808795,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|req.g_per_kwh.est
+posthoc.B1.PM100.w.S24.D.t_per_MW_year.est,82.07867754125043,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|req.g_per_kwh.est x 8.76
+posthoc.B1.PM100.w.S24.D.g_per_kwh.lo,8.9777683181028,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|req.g_per_kwh.lo
+posthoc.B1.PM100.w.S24.D.t_per_MW_year.lo,78.64525046658053,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|req.g_per_kwh.lo x 8.76
+posthoc.B1.PM100.w.S24.D.g_per_kwh.hi,9.742465611170848,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|req.g_per_kwh.hi
+posthoc.B1.PM100.w.S24.D.t_per_MW_year.hi,85.34399875385662,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|req.g_per_kwh.hi x 8.76
+posthoc.B1.PM100.w.S24.lgbm|pred.g_per_kwh.est,14.91515253545467,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|pred.g_per_kwh.est
+posthoc.B1.PM100.w.S24.lgbm|pred.t_per_MW_year.est,130.6567362105829,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|pred.g_per_kwh.est x 8.76
+posthoc.B1.PM100.w.S24.lgbm|pred.g_per_kwh.lo,14.470075583165434,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|pred.g_per_kwh.lo
+posthoc.B1.PM100.w.S24.lgbm|pred.t_per_MW_year.lo,126.7578621085292,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|pred.g_per_kwh.lo x 8.76
+posthoc.B1.PM100.w.S24.lgbm|pred.g_per_kwh.hi,15.377101791570462,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|pred.g_per_kwh.hi
+posthoc.B1.PM100.w.S24.lgbm|pred.t_per_MW_year.hi,134.70341169415724,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.lgbm|pred.g_per_kwh.hi x 8.76
+posthoc.B1.PM100.w.S24.oracle|act.g_per_kwh.est,30.17289549536223,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.oracle|act.g_per_kwh.est
+posthoc.B1.PM100.w.S24.oracle|act.t_per_MW_year.est,264.3145645393731,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.oracle|act.g_per_kwh.est x 8.76
+posthoc.B1.PM100.w.S24.oracle|act.g_per_kwh.lo,29.6339457385034,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.oracle|act.g_per_kwh.lo
+posthoc.B1.PM100.w.S24.oracle|act.t_per_MW_year.lo,259.59336466928977,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.oracle|act.g_per_kwh.lo x 8.76
+posthoc.B1.PM100.w.S24.oracle|act.g_per_kwh.hi,30.70124678116872,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.oracle|act.g_per_kwh.hi
+posthoc.B1.PM100.w.S24.oracle|act.t_per_MW_year.hi,268.94292180303796,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.oracle|act.g_per_kwh.hi x 8.76
+posthoc.B1.PM100.w.S24.runnow_mean_intensity_g_per_kwh,350.08474313940667,ledger_TEST_posthoc.csv:posthoc.PH4.PM100.w.S24.runnow_g_per_kwh.est
+posthoc.B1.FDATA.w.S12.D.g_per_kwh.est,13.204494044449236,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|req.g_per_kwh.est
+posthoc.B1.FDATA.w.S12.D.t_per_MW_year.est,115.6713678293753,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|req.g_per_kwh.est x 8.76
+posthoc.B1.FDATA.w.S12.D.g_per_kwh.lo,12.088243498772965,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|req.g_per_kwh.lo
+posthoc.B1.FDATA.w.S12.D.t_per_MW_year.lo,105.89301304925117,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|req.g_per_kwh.lo x 8.76
+posthoc.B1.FDATA.w.S12.D.g_per_kwh.hi,14.274924738095766,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|req.g_per_kwh.hi
+posthoc.B1.FDATA.w.S12.D.t_per_MW_year.hi,125.04834070571891,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|req.g_per_kwh.hi x 8.76
+posthoc.B1.FDATA.w.S12.lgbm|pred.g_per_kwh.est,15.058085066021604,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|pred.g_per_kwh.est
+posthoc.B1.FDATA.w.S12.lgbm|pred.t_per_MW_year.est,131.90882517834925,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|pred.g_per_kwh.est x 8.76
+posthoc.B1.FDATA.w.S12.lgbm|pred.g_per_kwh.lo,14.088356505991868,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|pred.g_per_kwh.lo
+posthoc.B1.FDATA.w.S12.lgbm|pred.t_per_MW_year.lo,123.41400299248876,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|pred.g_per_kwh.lo x 8.76
+posthoc.B1.FDATA.w.S12.lgbm|pred.g_per_kwh.hi,15.998340007650992,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|pred.g_per_kwh.hi
+posthoc.B1.FDATA.w.S12.lgbm|pred.t_per_MW_year.hi,140.14545846702268,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.lgbm|pred.g_per_kwh.hi x 8.76
+posthoc.B1.FDATA.w.S12.oracle|act.g_per_kwh.est,25.029667752633788,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.oracle|act.g_per_kwh.est
+posthoc.B1.FDATA.w.S12.oracle|act.t_per_MW_year.est,219.25988951307198,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.oracle|act.g_per_kwh.est x 8.76
+posthoc.B1.FDATA.w.S12.oracle|act.g_per_kwh.lo,24.05790023514913,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.oracle|act.g_per_kwh.lo
+posthoc.B1.FDATA.w.S12.oracle|act.t_per_MW_year.lo,210.74720605990638,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.oracle|act.g_per_kwh.lo x 8.76
+posthoc.B1.FDATA.w.S12.oracle|act.g_per_kwh.hi,26.00147271980321,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.oracle|act.g_per_kwh.hi
+posthoc.B1.FDATA.w.S12.oracle|act.t_per_MW_year.hi,227.77290102547613,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.oracle|act.g_per_kwh.hi x 8.76
+posthoc.B1.FDATA.w.S12.runnow_mean_intensity_g_per_kwh,346.5991705138755,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S12.runnow_g_per_kwh.est
+posthoc.B1.FDATA.w.S24.D.g_per_kwh.est,19.6484841868895,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|req.g_per_kwh.est
+posthoc.B1.FDATA.w.S24.D.t_per_MW_year.est,172.12072147715202,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|req.g_per_kwh.est x 8.76
+posthoc.B1.FDATA.w.S24.D.g_per_kwh.lo,18.48843236557845,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|req.g_per_kwh.lo
+posthoc.B1.FDATA.w.S24.D.t_per_MW_year.lo,161.9586675224672,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|req.g_per_kwh.lo x 8.76
+posthoc.B1.FDATA.w.S24.D.g_per_kwh.hi,20.785872540403947,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|req.g_per_kwh.hi
+posthoc.B1.FDATA.w.S24.D.t_per_MW_year.hi,182.08424345393857,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|req.g_per_kwh.hi x 8.76
+posthoc.B1.FDATA.w.S24.lgbm|pred.g_per_kwh.est,22.823234187468127,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|pred.g_per_kwh.est
+posthoc.B1.FDATA.w.S24.lgbm|pred.t_per_MW_year.est,199.9315314822208,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|pred.g_per_kwh.est x 8.76
+posthoc.B1.FDATA.w.S24.lgbm|pred.g_per_kwh.lo,21.67637826627716,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|pred.g_per_kwh.lo
+posthoc.B1.FDATA.w.S24.lgbm|pred.t_per_MW_year.lo,189.8850736125879,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|pred.g_per_kwh.lo x 8.76
+posthoc.B1.FDATA.w.S24.lgbm|pred.g_per_kwh.hi,23.999012235161675,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|pred.g_per_kwh.hi
+posthoc.B1.FDATA.w.S24.lgbm|pred.t_per_MW_year.hi,210.2313471800163,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.lgbm|pred.g_per_kwh.hi x 8.76
+posthoc.B1.FDATA.w.S24.oracle|act.g_per_kwh.est,38.33452025544412,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.oracle|act.g_per_kwh.est
+posthoc.B1.FDATA.w.S24.oracle|act.t_per_MW_year.est,335.8103974376905,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.oracle|act.g_per_kwh.est x 8.76
+posthoc.B1.FDATA.w.S24.oracle|act.g_per_kwh.lo,37.03404104593781,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.oracle|act.g_per_kwh.lo
+posthoc.B1.FDATA.w.S24.oracle|act.t_per_MW_year.lo,324.4181995624152,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.oracle|act.g_per_kwh.lo x 8.76
+posthoc.B1.FDATA.w.S24.oracle|act.g_per_kwh.hi,39.57098474638573,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.oracle|act.g_per_kwh.hi
+posthoc.B1.FDATA.w.S24.oracle|act.t_per_MW_year.hi,346.64182637833903,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.oracle|act.g_per_kwh.hi x 8.76
+posthoc.B1.FDATA.w.S24.runnow_mean_intensity_g_per_kwh,346.5991705138755,ledger_TEST_posthoc.csv:posthoc.PH4.FDATA.w.S24.runnow_g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S12.D.g_per_kwh.est,5.268345216896701,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|req.g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S12.D.t_per_MW_year.est,46.1507041000151,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|req.g_per_kwh.est x 8.76
+posthoc.B1.KIT_FH2.w.S12.D.g_per_kwh.lo,5.135322155572717,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|req.g_per_kwh.lo
+posthoc.B1.KIT_FH2.w.S12.D.t_per_MW_year.lo,44.985422082816996,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|req.g_per_kwh.lo x 8.76
+posthoc.B1.KIT_FH2.w.S12.D.g_per_kwh.hi,5.4066417291392,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|req.g_per_kwh.hi
+posthoc.B1.KIT_FH2.w.S12.D.t_per_MW_year.hi,47.36218154725939,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|req.g_per_kwh.hi x 8.76
+posthoc.B1.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.est,6.496083304636318,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S12.lgbm|pred.t_per_MW_year.est,56.905689748614144,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.est x 8.76
+posthoc.B1.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.lo,6.350797437891833,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.lo
+posthoc.B1.KIT_FH2.w.S12.lgbm|pred.t_per_MW_year.lo,55.63298555593246,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.lo x 8.76
+posthoc.B1.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.hi,6.6407512164558895,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.hi
+posthoc.B1.KIT_FH2.w.S12.lgbm|pred.t_per_MW_year.hi,58.17298065615359,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.lgbm|pred.g_per_kwh.hi x 8.76
+posthoc.B1.KIT_FH2.w.S12.oracle|act.g_per_kwh.est,14.023556243852484,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.oracle|act.g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S12.oracle|act.t_per_MW_year.est,122.84635269614776,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.oracle|act.g_per_kwh.est x 8.76
+posthoc.B1.KIT_FH2.w.S12.oracle|act.g_per_kwh.lo,13.823431921546836,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.oracle|act.g_per_kwh.lo
+posthoc.B1.KIT_FH2.w.S12.oracle|act.t_per_MW_year.lo,121.09326363275028,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.oracle|act.g_per_kwh.lo x 8.76
+posthoc.B1.KIT_FH2.w.S12.oracle|act.g_per_kwh.hi,14.233596060965231,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.oracle|act.g_per_kwh.hi
+posthoc.B1.KIT_FH2.w.S12.oracle|act.t_per_MW_year.hi,124.68630149405543,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.oracle|act.g_per_kwh.hi x 8.76
+posthoc.B1.KIT_FH2.w.S12.runnow_mean_intensity_g_per_kwh,349.2264152091711,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S12.runnow_g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S24.D.g_per_kwh.est,7.68180726929786,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|req.g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S24.D.t_per_MW_year.est,67.29263167904925,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|req.g_per_kwh.est x 8.76
+posthoc.B1.KIT_FH2.w.S24.D.g_per_kwh.lo,7.44801967315206,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|req.g_per_kwh.lo
+posthoc.B1.KIT_FH2.w.S24.D.t_per_MW_year.lo,65.24465233681204,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|req.g_per_kwh.lo x 8.76
+posthoc.B1.KIT_FH2.w.S24.D.g_per_kwh.hi,7.904897057530961,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|req.g_per_kwh.hi
+posthoc.B1.KIT_FH2.w.S24.D.t_per_MW_year.hi,69.24689822397121,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|req.g_per_kwh.hi x 8.76
+posthoc.B1.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.est,10.28477915810279,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S24.lgbm|pred.t_per_MW_year.est,90.09466542498043,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.est x 8.76
+posthoc.B1.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.lo,10.044206463660592,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.lo
+posthoc.B1.KIT_FH2.w.S24.lgbm|pred.t_per_MW_year.lo,87.98724862166678,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.lo x 8.76
+posthoc.B1.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.hi,10.525380937214642,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.hi
+posthoc.B1.KIT_FH2.w.S24.lgbm|pred.t_per_MW_year.hi,92.20233701000026,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.lgbm|pred.g_per_kwh.hi x 8.76
+posthoc.B1.KIT_FH2.w.S24.oracle|act.g_per_kwh.est,21.716606444568253,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.oracle|act.g_per_kwh.est
+posthoc.B1.KIT_FH2.w.S24.oracle|act.t_per_MW_year.est,190.23747245441788,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.oracle|act.g_per_kwh.est x 8.76
+posthoc.B1.KIT_FH2.w.S24.oracle|act.g_per_kwh.lo,21.39303579684072,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.oracle|act.g_per_kwh.lo
+posthoc.B1.KIT_FH2.w.S24.oracle|act.t_per_MW_year.lo,187.4029935803247,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.oracle|act.g_per_kwh.lo x 8.76
+posthoc.B1.KIT_FH2.w.S24.oracle|act.g_per_kwh.hi,22.021059421014154,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.oracle|act.g_per_kwh.hi
+posthoc.B1.KIT_FH2.w.S24.oracle|act.t_per_MW_year.hi,192.90448052808398,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.oracle|act.g_per_kwh.hi x 8.76
+posthoc.B1.KIT_FH2.w.S24.runnow_mean_intensity_g_per_kwh,349.2264152091711,ledger_TEST_posthoc.csv:posthoc.PH4.KIT_FH2.w.S24.runnow_g_per_kwh.est
+posthoc.B2.PM100.w.S12.top.n_ba,11.0,TRAIN quartile
+posthoc.B2.PM100.w.S12.top.saving_D.est,0.0345337961130977,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_D.lo,0.03174447848190003,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_D.hi,0.037445523636528984,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_pred.est,0.05809848268754303,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_pred.lo,0.05500696137347266,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_pred.hi,0.06106995655696014,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_oracle_act.est,0.10611676591566321,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_oracle_act.lo,0.1025607175057342,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.saving_oracle_act.hi,0.10958265319427027,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.share_D.est,0.3254320447396936,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.share_D.lo,0.3048246207449256,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.share_D.hi,0.34653121464480435,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.share_pred.est,0.5474957909452034,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.share_pred.lo,0.5308224931115179,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.top.share_pred.hi,0.5630215981996725,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.n_ba,31.0,TRAIN quartile
+posthoc.B2.PM100.w.S12.rest.saving_D.est,0.013876708705747975,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_D.lo,0.013049041795542334,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_D.hi,0.014710697988862504,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_pred.est,0.01988046511820918,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_pred.lo,0.019093285192951993,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_pred.hi,0.020679301417542244,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_oracle_act.est,0.041683321334349155,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_oracle_act.lo,0.040677175001747355,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.saving_oracle_act.hi,0.04272700450093451,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.share_D.est,0.3329079416306701,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.share_D.lo,0.31736530959990117,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.share_D.hi,0.3472861605143424,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.share_pred.est,0.4769405239746736,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.share_pred.lo,0.46583261598928033,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.rest.share_pred.hi,0.4878929397593092,frozen bootstrap restricted
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_D.est,0.020657087407349728,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_D.lo,0.017724128065454457,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_D.hi,0.023694402411812504,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_pred.est,0.03821801756933385,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_pred.lo,0.03519313927455054,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_pred.hi,0.04130570698513746,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_oracle_act.est,0.06443344458131406,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_oracle_act.lo,0.06070774518606986,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.saving_oracle_act.hi,0.06809102352439815,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.share_D.est,-0.007475896890976497,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.share_D.lo,-0.034065898988976814,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.share_D.hi,0.018474403539398408,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.share_pred.est,0.07055526697052977,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.share_pred.lo,0.05091611702175161,"independent group draws, paired by index"
+posthoc.B2.PM100.w.S12.diff_top_minus_rest.share_pred.hi,0.08917717512619541,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.top.n_ba,11.0,TRAIN quartile
+posthoc.B2.PM100.u.S12.top.saving_D.est,0.06508117809198144,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_D.lo,0.062230339755386194,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_D.hi,0.06781744684213656,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_pred.est,0.12167950478827416,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_pred.lo,0.11750992106942083,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_pred.hi,0.1258627815183607,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_oracle_act.est,0.17343943914029802,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_oracle_act.lo,0.16921008732921658,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.saving_oracle_act.hi,0.1776679995834195,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.share_D.est,0.37523863323460244,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.share_D.lo,0.3655905576019337,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.share_D.hi,0.38527134974586114,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.share_pred.est,0.7015676791358025,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.share_pred.lo,0.6908325988651548,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.top.share_pred.hi,0.7119728823272923,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.n_ba,31.0,TRAIN quartile
+posthoc.B2.PM100.u.S12.rest.saving_D.est,0.026061699266866634,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_D.lo,0.02526411614896041,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_D.hi,0.026884725778235467,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_pred.est,0.0430590491833327,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_pred.lo,0.04197586641671763,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_pred.hi,0.04415302289360497,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_oracle_act.est,0.07325748127005183,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_oracle_act.lo,0.07190123753591698,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.saving_oracle_act.hi,0.07461225825917765,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.share_D.est,0.3557547818330582,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.share_D.lo,0.34854027204587185,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.share_D.hi,0.36310874483962835,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.share_pred.est,0.5877768172864488,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.share_pred.lo,0.5791223758312648,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.rest.share_pred.hi,0.5967666155027925,frozen bootstrap restricted
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_D.est,0.039019478825114806,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_D.lo,0.03613823068653717,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_D.hi,0.041846221606242066,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_pred.est,0.07862045560494146,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_pred.lo,0.07439237061692931,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_pred.hi,0.0828534774010346,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_oracle_act.est,0.1001819578702462,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_oracle_act.lo,0.09563915597980492,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.saving_oracle_act.hi,0.10466445015097722,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.share_D.est,0.01948385140154424,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.share_D.lo,0.006940319513988196,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.share_D.hi,0.031115003951463965,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.share_pred.est,0.11379086184935372,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.share_pred.lo,0.09961780632195393,"independent group draws, paired by index"
+posthoc.B2.PM100.u.S12.diff_top_minus_rest.share_pred.hi,0.1267300572744836,"independent group draws, paired by index"
+posthoc.B3.PM100.w.S12.H2.g_per_job.est,54.25737378463102,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H2.g_per_job.lo,52.30246165823621,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H2.g_per_job.hi,56.22278482827486,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H2.g_per_kwh.est,7.644186724725308,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H2.g_per_kwh.lo,7.378664003835793,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H2.g_per_kwh.hi,7.910182542827581,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H3.g_per_job.est,25.658426029950476,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H3.g_per_job.lo,23.85075444854326,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H3.g_per_job.hi,27.47796064165622,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H3.g_per_kwh.est,3.614951958678321,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H3.g_per_kwh.lo,3.3671725683024407,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.H3.g_per_kwh.hi,3.8674879968087956,frozen bootstrap draws
+posthoc.B3.PM100.w.S12.total_energy_kwh,17886609.375333317,saved arrays
+posthoc.B3.PM100.w.S12.n_jobs,2520000.0,saved arrays
+posthoc.B4.PM100.w.S12.D_positive_share_ba_weeks,0.8561904761904762,saved per-BA weekly arrays
+posthoc.B4.PM100.w.S12.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.PM100.w.S12.D_positive_share_median_over_ba,0.92,saved per-BA weekly arrays
+posthoc.B4.PM100.w.S12.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B3.PM100.w.S24.H2.g_per_job.est,72.32489536692869,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H2.g_per_job.lo,70.14005766445636,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H2.g_per_job.hi,74.44835703803759,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H2.g_per_kwh.est,10.189674996537118,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H2.g_per_kwh.lo,9.887885910063993,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H2.g_per_kwh.hi,10.489626761281693,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H3.g_per_job.est,39.36076500463751,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H3.g_per_job.lo,37.29769156162977,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H3.g_per_job.hi,41.498522203509154,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H3.g_per_kwh.est,5.54544048736672,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H3.g_per_kwh.lo,5.255692087648099,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.H3.g_per_kwh.hi,5.845272619593689,frozen bootstrap draws
+posthoc.B3.PM100.w.S24.total_energy_kwh,17886609.375333317,saved arrays
+posthoc.B3.PM100.w.S24.n_jobs,2520000.0,saved arrays
+posthoc.B4.PM100.w.S24.D_positive_share_ba_weeks,0.8685714285714285,saved per-BA weekly arrays
+posthoc.B4.PM100.w.S24.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.PM100.w.S24.D_positive_share_median_over_ba,0.91,saved per-BA weekly arrays
+posthoc.B4.PM100.w.S24.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S12.D_positive_share_ba_weeks,0.9333333333333333,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S12.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S12.D_positive_share_median_over_ba,0.98,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S12.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S24.D_positive_share_ba_weeks,0.9333333333333333,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S24.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S24.D_positive_share_median_over_ba,0.98,saved per-BA weekly arrays
+posthoc.B4.PM100.u.S24.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B2.FDATA.w.S12.top.n_ba,11.0,TRAIN quartile
+posthoc.B2.FDATA.w.S12.top.saving_D.est,0.07222216496942413,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_D.lo,0.0613296273075605,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_D.hi,0.08179161874820524,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_pred.est,0.08691818631823289,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_pred.lo,0.0791956590076783,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_pred.hi,0.09456900304253664,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_oracle_act.est,0.13120008756661583,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_oracle_act.lo,0.12272175847432779,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.saving_oracle_act.hi,0.1391268040846328,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.share_D.est,0.5504734509628576,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.share_D.lo,0.49352291268164294,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.share_D.hi,0.5980257045814116,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.share_pred.est,0.6624857340442006,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.share_pred.lo,0.6292905804845683,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.top.share_pred.hi,0.6915027697237107,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.n_ba,31.0,TRAIN quartile
+posthoc.B2.FDATA.w.S12.rest.saving_D.est,0.027065371820746642,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_D.lo,0.02447584620846094,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_D.hi,0.0298197504541572,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_pred.est,0.02939124900406509,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_pred.lo,0.02660954522482758,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_pred.hi,0.03216869147725363,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_oracle_act.est,0.05314625195256528,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_oracle_act.lo,0.05054654675795266,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.saving_oracle_act.hi,0.05595041474888015,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.share_D.est,0.5092620989510859,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.share_D.lo,0.47811486586090024,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.share_D.hi,0.5391617945301695,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.share_pred.est,0.5530258094267441,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.share_pred.lo,0.5217399778783246,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.rest.share_pred.hi,0.580486195058698,frozen bootstrap restricted
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_D.est,0.04515679314867749,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_D.lo,0.03366156055369476,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_D.hi,0.05532764284784558,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_pred.est,0.0575269373141678,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_pred.lo,0.04957540810909991,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_pred.hi,0.06550532271966879,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_oracle_act.est,0.07805383561405055,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_oracle_act.lo,0.06897244958244202,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.saving_oracle_act.hi,0.08665120031233549,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.share_D.est,0.04121135201177173,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.share_D.lo,-0.02131288482058906,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.share_D.hi,0.09896287638423253,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.share_pred.est,0.10945992461745657,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.share_pred.lo,0.06657675322266547,"independent group draws, paired by index"
+posthoc.B2.FDATA.w.S12.diff_top_minus_rest.share_pred.hi,0.15268991674793336,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.top.n_ba,11.0,TRAIN quartile
+posthoc.B2.FDATA.u.S12.top.saving_D.est,0.11555393236865952,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_D.lo,0.11169561349118828,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_D.hi,0.11920513844090196,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_pred.est,0.14234643752785847,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_pred.lo,0.1378079477103003,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_pred.hi,0.14670245732104376,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_oracle_act.est,0.19472381654824522,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_oracle_act.lo,0.18989112326614827,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.saving_oracle_act.hi,0.19943330493621253,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.share_D.est,0.5934247511014125,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.share_D.lo,0.5858820179555516,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.share_D.hi,0.6009913992996045,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.share_pred.est,0.7310170889783808,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.share_pred.lo,0.7227770499539974,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.top.share_pred.hi,0.7389159387972449,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.n_ba,31.0,TRAIN quartile
+posthoc.B2.FDATA.u.S12.rest.saving_D.est,0.03989091415797119,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_D.lo,0.0389884565085383,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_D.hi,0.040862632918488975,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_pred.est,0.04760391247478102,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_pred.lo,0.04653389835165761,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_pred.hi,0.048738219311193966,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_oracle_act.est,0.07780746994370702,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_oracle_act.lo,0.07646011522292381,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.saving_oracle_act.hi,0.07921145868345626,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.share_D.est,0.5126874603021008,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.share_D.lo,0.5059853674386389,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.share_D.hi,0.51917316501297,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.share_pred.est,0.6118167382800392,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.share_pred.lo,0.6045153762310952,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.rest.share_pred.hi,0.6192832183785499,frozen bootstrap restricted
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_D.est,0.07566301821068833,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_D.lo,0.0717765016118812,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_D.hi,0.0794910859383375,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_pred.est,0.09474252505307745,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_pred.lo,0.09016808654329565,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_pred.hi,0.09923899667189676,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_oracle_act.est,0.1169163466045382,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_oracle_act.lo,0.11198510054115289,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.saving_oracle_act.hi,0.12170912674046087,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.share_D.est,0.08073729079931169,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.share_D.lo,0.07079264210398507,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.share_D.hi,0.09051728264461734,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.share_pred.est,0.11920035069834156,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.share_pred.lo,0.10779176148548089,"independent group draws, paired by index"
+posthoc.B2.FDATA.u.S12.diff_top_minus_rest.share_pred.hi,0.12998036079447745,"independent group draws, paired by index"
+posthoc.B3.FDATA.w.S12.H2.g_per_job.est,49.911475176463426,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H2.g_per_job.lo,43.56491916299175,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H2.g_per_job.hi,56.75464948207795,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H2.g_per_kwh.est,5.211098089140487,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H2.g_per_kwh.lo,4.557843545323872,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H2.g_per_kwh.hi,5.8995822724833085,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H3.g_per_job.est,17.753544584647056,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H3.g_per_job.lo,11.61345521412097,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H3.g_per_job.hi,24.49327617202404,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H3.g_per_kwh.est,1.8535910215723677,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H3.g_per_kwh.lo,1.2135350948565,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.H3.g_per_kwh.hi,2.5430553978226977,frozen bootstrap draws
+posthoc.B3.FDATA.w.S12.total_energy_kwh,24136355.77246126,saved arrays
+posthoc.B3.FDATA.w.S12.n_jobs,2520000.0,saved arrays
+posthoc.B4.FDATA.w.S12.D_positive_share_ba_weeks,0.8519047619047619,saved per-BA weekly arrays
+posthoc.B4.FDATA.w.S12.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.w.S12.D_positive_share_median_over_ba,0.88,saved per-BA weekly arrays
+posthoc.B4.FDATA.w.S12.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B3.FDATA.w.S24.H2.g_per_job.est,73.57629551417904,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H2.g_per_job.lo,64.82901056945005,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H2.g_per_job.hi,83.91957952071853,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H2.g_per_kwh.est,7.681866576862447,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H2.g_per_kwh.lo,6.785624179926597,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H2.g_per_kwh.hi,8.766869065114932,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H3.g_per_job.est,30.40749821531243,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H3.g_per_job.lo,23.656528824211193,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H3.g_per_job.hi,37.711502293499585,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H3.g_per_kwh.est,3.174750000578626,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H3.g_per_kwh.lo,2.473122451870621,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.H3.g_per_kwh.hi,3.9329637826388093,frozen bootstrap draws
+posthoc.B3.FDATA.w.S24.total_energy_kwh,24136355.77246126,saved arrays
+posthoc.B3.FDATA.w.S24.n_jobs,2520000.0,saved arrays
+posthoc.B4.FDATA.w.S24.D_positive_share_ba_weeks,0.871904761904762,saved per-BA weekly arrays
+posthoc.B4.FDATA.w.S24.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.w.S24.D_positive_share_median_over_ba,0.9,saved per-BA weekly arrays
+posthoc.B4.FDATA.w.S24.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S12.D_positive_share_ba_weeks,0.949047619047619,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S12.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S12.D_positive_share_median_over_ba,1.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S12.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S24.D_positive_share_ba_weeks,0.9395238095238095,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S24.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S24.D_positive_share_median_over_ba,0.98,saved per-BA weekly arrays
+posthoc.B4.FDATA.u.S24.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B2.KIT_FH2.w.S12.top.n_ba,11.0,TRAIN quartile
+posthoc.B2.KIT_FH2.w.S12.top.saving_D.est,0.028634184619291903,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_D.lo,0.027431066479707528,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_D.hi,0.0297620166080513,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_pred.est,0.03642254958464586,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_pred.lo,0.03502469902981546,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_pred.hi,0.03775037229264022,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_oracle_act.est,0.0739479370527002,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_oracle_act.lo,0.07189353647062047,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.saving_oracle_act.hi,0.07592026926671003,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.share_D.est,0.387220871339322,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.share_D.lo,0.3778117519970569,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.share_D.hi,0.3964695141502207,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.share_pred.est,0.4925431463853919,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.share_pred.lo,0.48391482006356956,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.top.share_pred.hi,0.5010379301988185,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.n_ba,31.0,TRAIN quartile
+posthoc.B2.KIT_FH2.w.S12.rest.saving_D.est,0.01069919727615043,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_D.lo,0.010308130191993389,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_D.hi,0.01111033993830329,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_pred.est,0.012831399632716178,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_pred.lo,0.01244953852148616,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_pred.hi,0.013227048144258962,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_oracle_act.est,0.02921529459139749,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_oracle_act.lo,0.028605814597662687,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.saving_oracle_act.hi,0.029854447386115097,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.share_D.est,0.3662190447088914,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.share_D.lo,0.3573548838296645,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.share_D.hi,0.37574306364113974,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.share_pred.est,0.4392014460978399,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.share_pred.lo,0.4312097196914466,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.rest.share_pred.hi,0.44710365467070523,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_D.est,0.017934987343141473,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_D.lo,0.016678480444186083,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_D.hi,0.019126942222507565,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_pred.est,0.02359114995192968,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_pred.lo,0.02213956816508262,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_pred.hi,0.024983291332792673,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_oracle_act.est,0.04473264246130271,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_oracle_act.lo,0.042616017820982226,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.saving_oracle_act.hi,0.04684980945246975,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.share_D.est,0.021001826630430598,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.share_D.lo,0.007638157429781395,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.share_D.hi,0.03394467316439821,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.share_pred.est,0.053341700287551974,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.share_pred.lo,0.041263593718007925,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.w.S12.diff_top_minus_rest.share_pred.hi,0.06460411750782721,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.top.n_ba,11.0,TRAIN quartile
+posthoc.B2.KIT_FH2.u.S12.top.saving_D.est,0.06296994548598711,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_D.lo,0.060133938577371024,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_D.hi,0.06573026970427194,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_pred.est,0.09283627652371684,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_pred.lo,0.0893777535258467,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_pred.hi,0.09614522833118486,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_oracle_act.est,0.14869486346026406,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_oracle_act.lo,0.14508634274795867,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.saving_oracle_act.hi,0.15246662484044296,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.share_D.est,0.4234843357774403,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.share_D.lo,0.41213829811678515,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.share_D.hi,0.4348926121698409,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.share_pred.est,0.6243408438148612,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.share_pred.lo,0.612738908245883,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.top.share_pred.hi,0.6358801567897253,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.n_ba,31.0,TRAIN quartile
+posthoc.B2.KIT_FH2.u.S12.rest.saving_D.est,0.02462528168922762,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_D.lo,0.02377298559859242,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_D.hi,0.02548856063959747,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_pred.est,0.034477874309644774,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_pred.lo,0.033516987995017684,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_pred.hi,0.0354684489688466,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_oracle_act.est,0.06455738811178058,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_oracle_act.lo,0.06331388585413328,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.saving_oracle_act.hi,0.0658477508351384,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.share_D.est,0.381447924234313,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.share_D.lo,0.37257753344242456,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.share_D.hi,0.3905530461668965,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.share_pred.est,0.5340655085045669,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.share_pred.lo,0.5250353963880316,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.rest.share_pred.hi,0.5435925512169153,frozen bootstrap restricted
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_D.est,0.03834466379675949,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_D.lo,0.03535858724216913,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_D.hi,0.04118356302502378,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_pred.est,0.05835840221407207,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_pred.lo,0.05479535166020776,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_pred.hi,0.06182692648587345,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_oracle_act.est,0.08413747534848348,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_oracle_act.lo,0.0802211801338253,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.saving_oracle_act.hi,0.08812844696133329,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.share_D.est,0.04203641154312732,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.share_D.lo,0.02778593354546836,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.share_D.hi,0.055859776461646395,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.share_pred.est,0.0902753353102943,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.share_pred.lo,0.0753332646783675,"independent group draws, paired by index"
+posthoc.B2.KIT_FH2.u.S12.diff_top_minus_rest.share_pred.hi,0.10424975541565805,"independent group draws, paired by index"
+posthoc.B3.KIT_FH2.w.S12.H2.g_per_job.est,23.848914280873633,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H2.g_per_job.lo,23.27017252301778,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H2.g_per_job.hi,24.385822247514596,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H2.g_per_kwh.est,4.579381272598066,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H2.g_per_kwh.lo,4.469852463852408,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H2.g_per_kwh.hi,4.683842213334653,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H3.g_per_job.est,6.393925002286169,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H3.g_per_job.lo,6.001358527490871,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H3.g_per_job.hi,6.787622056011241,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H3.g_per_kwh.est,1.2277380877396167,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H3.g_per_kwh.lo,1.1520744508456364,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.H3.g_per_kwh.hi,1.3037533679523845,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S12.total_energy_kwh,13123882.9899186,saved arrays
+posthoc.B3.KIT_FH2.w.S12.n_jobs,2520000.0,saved arrays
+posthoc.B4.KIT_FH2.w.S12.D_positive_share_ba_weeks,0.9085714285714286,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.w.S12.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.w.S12.D_positive_share_median_over_ba,0.96,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.w.S12.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B3.KIT_FH2.w.S24.H2.g_per_job.est,32.84136311244359,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H2.g_per_job.lo,32.17441477621142,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H2.g_per_job.hi,33.50940730713928,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H2.g_per_kwh.est,6.306078399733672,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H2.g_per_kwh.lo,6.17705450064882,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H2.g_per_kwh.hi,6.4383694005717915,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H3.g_per_job.est,13.555991466160048,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H3.g_per_job.lo,12.975480004043115,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H3.g_per_job.hi,14.169403577524548,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H3.g_per_kwh.est,2.6029718888049307,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H3.g_per_kwh.lo,2.492300932271424,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.H3.g_per_kwh.hi,2.720559212931091,frozen bootstrap draws
+posthoc.B3.KIT_FH2.w.S24.total_energy_kwh,13123882.9899186,saved arrays
+posthoc.B3.KIT_FH2.w.S24.n_jobs,2520000.0,saved arrays
+posthoc.B4.KIT_FH2.w.S24.D_positive_share_ba_weeks,0.8904761904761904,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.w.S24.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.w.S24.D_positive_share_median_over_ba,0.94,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.w.S24.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S12.D_positive_share_ba_weeks,0.9228571428571428,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S12.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S12.D_positive_share_median_over_ba,0.98,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S12.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S24.D_positive_share_ba_weeks,0.9328571428571428,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S24.n_ba_weeks,2100.0,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S24.D_positive_share_median_over_ba,0.98,saved per-BA weekly arrays
+posthoc.B4.KIT_FH2.u.S24.D_positive_share_min_over_ba,0.0,saved per-BA weekly arrays

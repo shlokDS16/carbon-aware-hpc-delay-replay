@@ -1,0 +1,33 @@
+# Paper A repository: code, plans, ledgers and small results only
+__pycache__/
+*.pyc
+*.pkl
+*.npz
+*.parquet
+# raw and derived data (re-created by src/download_eia930.sh and src/prep_jobs.py)
+data/raw/
+data/derived/
+data/scratch_a06/
+# simulation outputs (several hundred MB each)
+results/sim_*/
+results/_secondary_cache.pkl
+# build artefacts of the paper
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.spl
+paper/main_draft*.pdf
+paper/*.synctex.gz
+logs/
+graphify-out/
+submission/
+figures/*.pdf.bak
+# publisher PDFs and agent scratch folders are copyrighted or noisy: never publish them
+research/sources/
+research/agents/
+research/team/
+*.gz
+*.pdf.bak
+# smoke-test outputs
+results/_smoke_sens/

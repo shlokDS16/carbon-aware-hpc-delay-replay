@@ -1,0 +1,3 @@
+I can’t produce a reliable R08 review because the workspace shell failed to initialize twice (`setup refresh had errors`). I therefore couldn’t read draft3 or the requested ledgers, and shouldn’t infer their current results from earlier rounds.
+
+Please retry R08 when workspace reads are available; the sensitivity results and overlap/licence audit are essential to assess acceptance risk without guessing.

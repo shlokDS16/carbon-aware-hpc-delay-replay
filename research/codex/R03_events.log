@@ -1,0 +1,1689 @@
+2026-11-11T09:54:19.121566Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.supabase.com/.well-known/oauth-protected-resource/mcp\"" })
+OpenAI Codex v0.162.1
+--------
+workdir: C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a1c984-6168-7730-8ae5-b2171a72333b
+--------
+user
+Round R03 (Paper A, SUSCOM). Role: E1 methods reviewer and E6 adversarial referee. Read-only.
+
+We are about to freeze the pre-registration and then score the held-out TEST year (2025-07 to 2026-06) once.
+Files in the current folder (read them; do not edit):
+- research/PREREG.md (the draft to freeze)
+- src/simcore.py, src/simulate.py (scheduler and arms), src/analyze.py (bootstrap, Holm, Shapley, ledger)
+- research/A07_JOBS.md (trace audit: state counts, r_act/r_req, TIMEOUT share, power semantics)
+- research/A06_DATA_AUDIT.md, research/A05_FORECASTS.md (grid cleaning, forecasters, leakage tests)
+
+DEV pilot (2024-07 to 2025-06, 42 BAs, 3 alignment replicates x 20,000 jobs, energy-weighted, S = 12 h), savings vs run-now:
+- PM100: oracle|act 5.23 %, oracle|req 3.02, lgbm|act 3.68, lgbm|req 1.73 [1.33, 2.19], lgbm|pred 2.69, night 0.27,
+  histprofile|req 0.76, profile7|req 1.05, persistence|req -0.16. H2 1.95 pp [1.34, 2.66]; H3 0.96 pp; H4 0.26 pp
+  [0.08, 0.45]. Shapley of gap 3.50 pp: forecast 1.42, runtime 2.08, interaction 0.26; retained share 0.33. Per-BA H2:
+  41 of 42 positive, 39 with 95 % interval above 0.
+- F-DATA: oracle|act 6.54, lgbm|req 3.56, lgbm|pred 3.87, profile7|req 3.13, histprofile|req 2.39; H3 0.31 pp
+  [0.07, 0.59]; retained share 0.54.
+- KIT FH2 (no power, 1 kW per job): oracle|act 3.63, lgbm|req 1.38, lgbm|pred 1.69; retained share 0.38.
+- Slack trend PM100 lgbm|req: 0.24 (2 h), 0.71 (6 h), 1.73 (12 h).
+
+Questions. Answer each in at most 4 lines:
+1. Is anything in PREREG.md ambiguous enough that a referee could say the analysis was chosen after seeing TEST?
+   Give the exact wording fix.
+2. Any bug or bias you can find in simcore/simulate/analyze that would change these numbers (planning window, ties,
+   alignment, exclusion of jobs near unusable hours, replicate alignment, bootstrap, Holm, p-value floor)?
+3. Is the two-stage bootstrap (BAs, then weekly blocks within BA) the right unit for a claim about "these 42 US
+   grids"? Should H1-H4 be claimed for the population of BAs or for this fixed set?
+4. H4 (interaction) is significant on DEV on all traces. Keep it confirmatory, or demote to secondary?
+5. Missing baselines or secondary analyses a SUSCOM referee would demand (for example a padded or quantile runtime
+   estimate, a "req capped at k x pred" heuristic, or a carbon-aware scheduler from prior work)? Name at most 3 and say
+   whether each belongs before the freeze.
+6. Anything that should block the freeze.
+
+End with one line: VERDICT: FREEZE | FREEZE AFTER FIXES (list) | DO NOT FREEZE (reason); confidence 0-1.
+
+warning: clamping SessionEnd hook timeout to 3s in C:\Users\Shlok\.codex\plugins\cache\openai-codex\codex\1.0.6\hooks\hooks.json
+2026-11-11T09:54:19.259472Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_token\", error_description=\"No authorization provided\", resource_metadata=\"https://mcp.vercel.com/.well-known/oauth-protected-resource\"" })
+2026-11-11T09:54:19.273334Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer realm=\"OAuth\", resource_metadata=\"https://mcp.canva.com/.well-known/oauth-protected-resource/mcp\", error=\"invalid_token\", error_description=\"Missing or invalid access token\"" })
+2026-11-11T09:54:19.353420Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://huggingface.co/.well-known/oauth-protected-resource/mcp?login\"" })
+2026-11-11T09:54:19.420647Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.figma.com/.well-known/oauth-protected-resource\",scope=\"mcp:connect\",authorization_uri=\"https://api.figma.com/.well-known/oauth-authorization-server\"" })
+2026-11-11T09:54:19.540043Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.supabase.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T09:54:19.914995Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer resource_metadata=\"https://mcp.context7.com/.well-known/oauth-protected-resource/mcp\"" })
+2026-11-11T09:54:19.945990Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when AuthRequired(AuthRequiredError { www_authenticate_header: "Bearer error=\"invalid_request\", error_description=\"No access token was provided in this request\", resource_metadata=\"https://api.githubcopilot.com/.well-known/oauth-protected-resource/mcp/\"" })
+2026-11-11T09:54:20.339721Z ERROR rmcp::transport::worker: worker quit with fatal: Transport channel closed, when UnexpectedServerResponse("HTTP 404: \n<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>404 - No instance here</title>\n    <link\n      href=\"https://fonts.googleapis.com/css?family=Open Sans\"\n      rel=\"stylesheet\"\n    />\n    <style>\n      html {\n        width: 100%;\n        height: 100%;\n      }\n\n      body {\n        height: 100%;\n        width: 100%;\n        background-color: #fbfcfe;\n        font-family: \"Open Sans\";\n        font-style: normal;\n        text-align: center;\n        color: #555555;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        font-weight: 400;\n      }\n\n      body * {\n        margin-block-start: 0;\n        margin-block-end: 5px;\n      }\n\n      .container {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        height: 100%;\n        max-width: 350px;\n        margin-top: 48px;\n      }\n\n      h1 {\n        font-weight: 400;\n        font-size: 28px;\n        line-height: 35px;\n        color: #555555;\n        margin-top: 64px;\n      }\n\n      h2 {\n        font-weight: 400;\n        font-size: 20px;\n        line-height: 26px;\n      }\n\n      p {\n        font-size: 14px;\n        line-height: normal;\n        color: #7d7d87;\n      }\n\n      a {\n        color: #fd4d21;\n        text-decoration: none;\n        text-align: center;\n        font-weight: 400px;\n      }\n\n      .subheading {\n        margin-top: 24px;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"container\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width=\"120\"\n        height=\"32\"\n        viewBox=\"0 0 120 32\"\n        fill=\"none\"\n      >\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M55.1998 12.8C52.2177 12.8 49.7119 10.7604 49.0014 8H41.666C40.1017 8 38.7667 9.13092 38.5096 10.6739L38.2465 12.2522C37.9968 13.7506 37.2388 15.0548 36.1668 16C37.2388 16.9452 37.9968 18.2494 38.2465 19.7478L38.5096 21.3261C38.7667 22.8691 40.1017 24 41.666 24H42.6014C43.3119 21.2396 45.8177 19.2 48.7998 19.2C52.3344 19.2 55.1998 22.0654 55.1998 25.6C55.1998 29.1346 52.3344 32 48.7998 32C45.8177 32 43.3119 29.9604 42.6014 27.2H41.666C38.5374 27.2 35.8674 24.9382 35.3531 21.8522L35.0901 20.2739C34.8329 18.7309 33.4979 17.6 31.9336 17.6H29.3982C28.6877 20.3604 26.1819 22.4 23.1998 22.4C20.2177 22.4 17.7119 20.3604 17.0014 17.6H13.3982C12.6877 20.3604 10.1819 22.4 7.1998 22.4C3.66518 22.4 0.799805 19.5346 0.799805 16C0.799805 12.4654 3.66518 9.6 7.1998 9.6C10.1819 9.6 12.6877 11.6396 13.3982 14.4H17.0014C17.7119 11.6396 20.2177 9.6 23.1998 9.6C26.1819 9.6 28.6877 11.6396 29.3982 14.4H31.9336C33.4979 14.4 34.8329 13.2691 35.0901 11.7261L35.3531 10.1478C35.8674 7.06184 38.5374 4.8 41.666 4.8L49.0014 4.8C49.7119 2.03964 52.2177 0 55.1998 0C58.7344 0 61.5998 2.86538 61.5998 6.4C61.5998 9.93462 58.7344 12.8 55.1998 12.8ZM55.1998 9.6C56.9671 9.6 58.3998 8.16731 58.3998 6.4C58.3998 4.63269 56.9671 3.2 55.1998 3.2C53.4325 3.2 51.9998 4.63269 51.9998 6.4C51.9998 8.16731 53.4325 9.6 55.1998 9.6ZM7.1998 19.2C8.96712 19.2 10.3998 17.7673 10.3998 16C10.3998 14.2327 8.96712 12.8 7.1998 12.8C5.43249 12.8 3.9998 14.2327 3.9998 16C3.9998 17.7673 5.43249 19.2 7.1998 19.2ZM26.3998 16C26.3998 17.7673 24.9671 19.2 23.1998 19.2C21.4325 19.2 19.9998 17.7673 19.9998 16C19.9998 14.2327 21.4325 12.8 23.1998 12.8C24.9671 12.8 26.3998 14.2327 26.3998 16ZM51.9998 25.6C51.9998 27.3673 50.5671 28.8 48.7998 28.8C47.0325 28.8 45.5998 27.3673 45.5998 25.6C45.5998 23.8327 47.0325 22.4 48.7998 22.4C50.5671 22.4 51.9998 23.8327 51.9998 25.6Z\"\n          fill=\"#EA4B71\"\n        />\n        <path\n          fill-rule=\"evenodd\"\n          clip-rule=\"evenodd\"\n          d=\"M100.004 13.8366V13.6841C101.121 13.1249 102.237 12.1591 102.237 10.2529C102.237 7.508 99.9791 5.85596 96.8579 5.85596C93.6606 5.85596 91.3768 7.60966 91.3768 10.3038C91.3768 12.1337 92.4426 13.1249 93.6099 13.6841V13.8366C92.3157 14.2941 90.7678 15.6665 90.7678 17.954C90.7678 20.7243 93.0516 22.656 96.8325 22.656C100.613 22.656 102.821 20.7243 102.821 17.954C102.821 15.6665 101.299 14.3195 100.004 13.8366ZM96.8325 8.19423C98.1013 8.19423 99.0402 9.00755 99.0402 10.38C99.0402 11.7525 98.0759 12.5658 96.8325 12.5658C95.5892 12.5658 94.5488 11.7525 94.5488 10.38C94.5488 8.98213 95.5384 8.19423 96.8325 8.19423ZM96.8325 20.216C95.3608 20.216 94.1681 19.2756 94.1681 17.6744C94.1681 16.2257 95.1578 15.1328 96.8072 15.1328C98.4312 15.1328 99.4208 16.2003 99.4208 17.7252C99.4208 19.2756 98.2789 20.216 96.8325 20.216Z\"\n          fill=\"#101330\"\n        />\n        <path\n          d=\"M106.736 22.4018H109.984V15.514C109.984 13.252 111.354 12.2608 112.902 12.2608C114.425 12.2608 115.617 13.2774 115.617 15.3616V22.4018H118.865V14.7007C118.865 11.3712 116.937 9.43962 113.917 9.43962C112.014 9.43962 110.948 10.2021 110.187 11.1933H109.984L109.705 9.69378H106.736V22.4018Z\"\n          fill=\"#101330\"\n        />\n        <path\n          d=\"M77.9839 22.4018H74.7358V9.69378H77.7048L77.9839 11.1933H78.1869C78.9481 10.2021 80.0139 9.43962 81.9171 9.43962C84.9367 9.43962 86.8653 11.3712 86.8653 14.7007V22.4018H83.6172V15.3616C83.6172 13.2774 82.4246 12.2608 80.9021 12.2608C79.3542 12.2608 77.9839 13.252 77.9839 15.514V22.4018Z\"\n          fill=\"#101330\"\n        />\n      </svg>\n\n      <h1>No instance here</h1>\n      <h2><a href=\"https://app.n8n.cloud/magic-link\">Open Cloud console</a></h2>\n      <h2></h2>\n      <p class=\"subheading\">\n        If the instance exists, the owner can manage it from the Cloud console.\n      </p>\n    </div>\n  </body>\n</html>")
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart
+hook: SessionStart Failed
+hook: SessionStart Completed
+hook: SessionStart Completed
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+hook: UserPromptSubmit Completed
+codex
+I’ll inspect the preregistration and the cited implementation/audit files read-only, then check the specific protocol and statistical edge cases against the pilot claims.
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content research/PREREG.md; Get-Content src/simcore.py; Get-Content src/simulate.py; Get-Content src/analyze.py; Get-Content research/A07_JOBS.md; Get-Content research/A06_DATA_AUDIT.md; Get-Content research/A05_FORECASTS.md' in C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+ succeeded in 622ms:
+# Pre-registration, Paper A (SUSCOM): realised carbon saving of carbon-aware batch scheduling
+
+Status: DRAFT (not frozen). Freezing writes `research/PREREG.md5`; `src/simulate.py` refuses the TEST period until the
+md5 matches. Any change after the freeze goes into the deviations table at the end, with reason and time.
+
+## 1. Question
+For non-interruptible batch jobs that a scheduler may delay within a slack window to lower-carbon hours, how much of
+the perfect-information carbon saving is realised when the scheduler uses (a) a past-only forecast of grid carbon
+intensity and (b) the user's requested walltime, or a history-based runtime prediction, instead of the actual runtime?
+
+## 2. Data
+- Grid: EIA-930 six-month BALANCE files 2018 H2 to 2026 H1 (public domain), SHA-256 in
+  `data/raw/eia930/SHA256SUMS.txt`. Hourly production-based average intensity per balancing authority (BA) with the
+  lifecycle factors in `src/emission_factors.csv` (IPCC AR5 WGIII Annex III Table A.III.2 medians; oil, other and
+  unknown are documented judgement values, generation share small). Built by `src/build_ci.py`, cleaned by
+  `src/clean_ci.py` (rules in `research/A06_DATA_AUDIT.md`). Eligible BAs: the 42 in `tables/ba_eligibility.csv`
+  (full span, >= 90 % valid hours in each period, mean generation >= 100 MW, non-constant series).
+- Jobs: PM100 (Marconi100, CC-BY-4.0, doi 10.5281/zenodo.10127767), primary; F-DATA (Fugaku, CC-BY-4.0, months
+  2021-04, 2023-01, 2023-04, 2023-07, 2023-10) and KIT FH2 (Parallel Workloads Archive), secondary. KIT FH2 has no
+  power data, so its jobs carry 1 kW each (energy weight proportional to runtime). Trace audit:
+  `research/A07_JOBS.md`. Standardised by `src/prep_jobs.py`
+  (`data/derived/jobs.parquet`). NLR Kestrel enters as a secondary trace only if obtained and licence-checked before the
+  freeze.
+- Job filter (main): state COMPLETED; actual runtime >= 1 min; requested walltime <= 72 h and > 0.
+
+## 3. Periods and leakage rules
+- TRAIN 2018-07-01 to 2024-06-30: forecaster fitting, tuning, early stopping, historical profile.
+- DEV 2024-07-01 to 2025-06-30: all design choices and pilots.
+- TEST 2025-07-01 to 2026-06-30: scored once, after the freeze.
+- Forecasts at arrival time a use only data up to the hour ending floor(a) (causal inputs; future-perturbation test
+  in `research/A05_FORECASTS.md`). Runtime prediction for a job uses only the same user's jobs that ended before its
+  submission (assertion in `src/prep_jobs.py`).
+- Assumption stated as a limitation: grid data for the hour ending floor(a) is available at time a (EIA-930 publishes
+  with a delay of hours in practice).
+
+## 4. Scheduler and arms (`src/simcore.py`, `src/simulate.py`)
+- Job: arrival a, requested walltime R_req, actual runtime R_act, mean power P. Slack S in {2, 6, 12, 24} h: the start
+  s may be any of a, a + 0.25 h, ..., a + S. The planner minimises the integral of its signal over [s, s + R_hat],
+  seeing the 96 hourly intervals from floor(a) (same horizon for every signal). Ties go to the earliest start.
+  Realised emissions = P x integral of the actual intensity over [s, s + R_act].
+- Signals: oracle (actual intensity), persistence, seasonal naive day, seasonal naive week, profile7, LightGBM (global,
+  horizon as feature), historical profile (TRAIN mean by month and local hour).
+- Runtime estimates: act (R_act, oracle), req (R_req), pred (mean actual runtime of the user's two most recent jobs
+  that ended before this job's submission with state COMPLETED or TIMEOUT, capped at R_req; R_req if no history).
+- Non-forecast baselines: run-now (s = a); night rule (earliest start in local hours 00:00-03:59 within slack, else
+  now).
+- Random calendar alignment: each sampled job is placed in a random week of the period with its own local weekday and
+  clock time, in the BA's standard local time. 3 alignment replicates x 20,000 jobs per BA per trace (or all jobs if
+  fewer), fixed seed 20261111. Jobs whose 96 h window touches an unusable grid hour are excluded.
+
+## 5. Outcomes and estimands
+- saving(arm) = 1 - sum E_arm / sum E_runnow, pooled over BAs, days and replicates; E energy-weighted with measured
+  job power (PM100). Unweighted variant (each job 1 kW) secondary.
+- Deployable arm D = lgbm|req (fixed a priori: lowest DEV MAE in 32 of 37 BAs in the v0 run).
+- Primary slack S = 12 h; others secondary.
+
+## 6. Confirmatory hypotheses (TEST, PM100, energy-weighted, S = 12 h, 42 BAs)
+- H1: saving(lgbm|req) > 0.
+- H2 (runtime penalty): saving(lgbm|act) - saving(lgbm|req) > 0.
+- H3 (prediction recovery): saving(lgbm|pred) - saving(lgbm|req) > 0.
+- H4 (interaction): [saving(oracle|act) - saving(oracle|req)] - [saving(lgbm|act) - saving(lgbm|req)] != 0.
+Test: two-stage bootstrap (BAs with replacement, then weekly blocks of days within BA), B = 2000, seed 7 + S;
+one-sided p for H1-H3, two-sided for H4; Holm over the four at alpha = 0.05. A hypothesis is supported when its
+Holm-adjusted p < 0.05; the 95 % percentile interval is reported for every estimate.
+
+## 7. Secondary analyses (descriptive, no confirmatory claim)
+1. Shapley decomposition of the gap saving(oracle|act) - saving(lgbm|req) into forecast and runtime terms (2x2,
+   symmetric allocation of the interaction; all four cells reported).
+2. Retained share saving(lgbm|req) / saving(oracle|act) and the same for pred, by BA, slack and job-length class
+   (< 1 h, 1-4 h, 4-12 h, >= 12 h).
+3. Per-BA H2 counts: estimate > 0, and 95 % within-BA interval above 0.
+4. Cross-BA association of the oracle saving and of the runtime penalty with BA character (median daily intensity
+   range, solar share, wind share, fossil share): Spearman correlations.
+5. Every forecaster and the non-forecast baselines under each runtime estimate; best simple policy vs D.
+6. Secondary traces (F-DATA, KIT FH2; Kestrel if present), unweighted outcome, slacks 2, 6, 24 h, and TIMEOUT jobs
+   included.
+7. Forecast skill on TEST (MAE by lead, within-window rank skill) and its association with realised saving across BAs.
+8. Delay cost: mean start delay per arm.
+
+## 8. What counts as a negative result
+- If H1 fails, deployable carbon-aware delay scheduling gives no significant saving on these grids at 12 h slack; this
+  is reported as the main finding.
+- If H2 fails, requested walltime costs no significant saving; the paper reports the size bound.
+- If H3 fails, the history predictor does not recover saving; reported plainly.
+- Results that hold on DEV but not on TEST are reported as not confirmed.
+
+## 9. Deviations after freeze
+| # | time | change | reason |
+|---|---|---|---|
+"""Core of the carbon-aware delay scheduler (vectorised, one balancing authority at a time).
+
+Time axis: hours since the grid origin; interval k covers [k, k+1) and carries ci[k] (EIA hour ending origin+k+1).
+A job arriving at time a may start at s in {a, a+d, ..., a+S}. The planner chooses s to minimise the integral of its
+signal over [s, s + R_hat], seeing only the 96 hourly intervals floor(a) .. floor(a)+95 (the same horizon for every
+signal, so that arms differ only in the signal or the runtime estimate). Realised emissions use the actual ci over
+[s, s + R_act]. Ties go to the earliest start.
+"""
+import numpy as np
+
+H = 96          # planning horizon in hourly intervals (forecast leads 1..96)
+STEP = 0.25     # candidate start spacing in hours
+
+
+def cum_hours(ci):
+    """cum[k] = integral of ci over [0, k)."""
+    c = np.zeros(len(ci) + 1)
+    np.cumsum(ci, out=c[1:])
+    return c
+
+
+def integral_abs(cum, ci, x):
+    """Integral of the actual ci over [0, x] for arrays of x (hours)."""
+    k = np.floor(x).astype(np.int64)
+    k = np.clip(k, 0, len(ci) - 1)
+    return cum[k] + (x - k) * ci[k]
+
+
+def window_signal_actual(ci, a):
+    """Actual ci for the planner window: rows = jobs, cols = intervals floor(a)+j, j=0..H-1."""
+    base = np.floor(a).astype(np.int64)
+    idx = base[:, None] + np.arange(H)[None, :]
+    return ci[np.clip(idx, 0, len(ci) - 1)]
+
+
+def plan_start(signal, a, r_hat, slack):
+    """Choose start times.
+
+    signal: [n, H] planner signal for intervals floor(a)+j.
+    a, r_hat, slack: [n] arrays in hours.
+    Returns s [n].
+    """
+    n = len(a)
+    cumf = np.zeros((n, H + 1))
+    np.cumsum(signal, axis=1, out=cumf[:, 1:])
+    k_max = int(np.ceil(np.max(slack) / STEP)) if n else 0
+    offs = np.arange(k_max + 1) * STEP                       # [K]
+    x0 = (a - np.floor(a))[:, None] + offs[None, :]          # start, relative to floor(a)
+    x1 = x0 + r_hat[:, None]
+    x1 = np.minimum(x1, float(H))                            # planner sees only the horizon
+    x0c = np.minimum(x0, float(H))
+
+    def eval_cum(x):
+        k = np.clip(np.floor(x).astype(np.int64), 0, H - 1)
+        rows = np.arange(n)[:, None]
+        return cumf[rows, k] + (x - k) * signal[rows, k]
+
+    cost = eval_cum(x1) - eval_cum(x0c)
+    feasible = offs[None, :] <= slack[:, None] + 1e-9
+    cost = np.where(feasible, cost, np.inf)
+    best = np.argmin(cost, axis=1)                           # first minimum = earliest start
+    return a + offs[best]
+
+
+def realised(cum, ci, s, r_act):
+    """Realised emissions integral (g/kWh x h) over [s, s + r_act]."""
+    return integral_abs(cum, ci, s + r_act) - integral_abs(cum, ci, s)
+
+
+def _selftest():
+    rng = np.random.default_rng(0)
+    t = np.arange(24 * 30)
+    ci = 300 + 100 * np.sin(2 * np.pi * (t % 24) / 24) + rng.normal(0, 5, len(t))
+    cum = cum_hours(ci)
+    # analytic check of the integral
+    assert abs(realised(cum, ci, np.array([2.5]), np.array([1.0]))[0] - (0.5 * ci[2] + 0.5 * ci[3])) < 1e-9
+    n = 2000
+    a = rng.uniform(0, 24 * 25, n)
+    r = rng.uniform(0.5, 10, n)
+    S = np.full(n, 12.0)
+    sig = window_signal_actual(ci, a)
+    s_or = plan_start(sig, a, r, S)
+    assert np.all(s_or >= a - 1e-9) and np.all(s_or <= a + S + 1e-9)
+    e_now = realised(cum, ci, a, r)
+    e_or = realised(cum, ci, s_or, r)
+    assert np.all(e_or <= e_now + 1e-6), "oracle with exact runtime must never lose to run-now"
+    # brute force check on 50 jobs
+    for j in range(50):
+        cands = a[j] + np.arange(0, 12.0 + 1e-9, STEP)
+        e = realised(cum, ci, cands, np.full(len(cands), r[j]))
+        assert abs(e.min() - e_or[j]) < 1e-6
+    # a long requested runtime should not beat the exact one on average
+    s_req = plan_start(sig, a, r * 3, S)
+    e_req = realised(cum, ci, s_req, r)
+    print("selftest ok; saving exact %.4f, saving with 3x runtime %.4f" %
+          (1 - e_or.sum() / e_now.sum(), 1 - e_req.sum() / e_now.sum()))
+
+
+if __name__ == "__main__":
+    _selftest()
+"""Replay of carbon-aware delay scheduling for every eligible BA (see research/PIPELINE_SPEC.md).
+
+Usage:
+  python src/simulate.py --period DEV  [--tag _v0] [--fc-dir data/derived/forecasts_v0] [--reps 3] [--n-jobs 20000]
+  python src/simulate.py --period TEST ...   (refused unless research/PREREG.md matches research/PREREG.md5)
+Output: results/sim_<period><tag>/<trace>/<BA>.npz with per-day sums for every arm, slack, replicate and length class.
+"""
+import argparse
+import hashlib
+import os
+import sys
+import time
+import zlib
+
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import simcore as sc  # noqa: E402
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PERIODS = {"DEV": ("2024-07-01", "2025-07-01"), "TEST": ("2025-07-01", "2026-07-01")}
+TRAIN = ("2018-07-01", "2024-07-01")
+SLACKS = (2.0, 6.0, 12.0, 24.0)
+FC_MODELS = ("persistence", "snaive_day", "snaive_week", "profile7", "lgbm")
+SIGNALS = ("oracle",) + FC_MODELS + ("histprofile",)
+RUNTIMES = ("act", "req", "pred")
+ARMS = ["runnow", "night"] + [f"{s}|{r}" for s in SIGNALS for r in RUNTIMES]
+LEN_EDGES = np.array([0.0, 1.0, 4.0, 12.0, np.inf])      # length classes on actual runtime (h)
+MAX_REQ_H = 72.0
+MARGIN_H = 96.0
+
+
+def check_prereg():
+    p = os.path.join(ROOT, "research", "PREREG.md")
+    m = os.path.join(ROOT, "research", "PREREG.md5")
+    if not (os.path.exists(p) and os.path.exists(m)):
+        sys.exit("TEST refused: PREREG.md and PREREG.md5 must exist (freeze first)")
+    want = open(m, encoding="utf-8").read().split()[0]
+    got = hashlib.md5(open(p, "rb").read()).hexdigest()
+    if want != got:
+        sys.exit("TEST refused: PREREG.md changed after freeze")
+
+
+def ba_offsets():
+    """Standard-time UTC offset (hours) per BA, from EIA's local and UTC columns in a January file."""
+    out = os.path.join(ROOT, "tables", "ba_utc_offset.csv")
+    if os.path.exists(out):
+        return pd.read_csv(out).set_index("ba")["offset_h"].to_dict()
+    f = os.path.join(ROOT, "data", "raw", "eia930", "EIA930_BALANCE_2025_Jan_Jun.csv")
+    d = pd.read_csv(f, usecols=["Balancing Authority", "Local Time at End of Hour", "UTC Time at End of Hour"],
+                    nrows=None)
+    d = d.iloc[::24]
+    loc = pd.to_datetime(d["Local Time at End of Hour"], format="%m/%d/%Y %I:%M:%S %p")
+    utc = pd.to_datetime(d["UTC Time at End of Hour"], format="%m/%d/%Y %I:%M:%S %p")
+    d = d.assign(off=((loc - utc).dt.total_seconds() / 3600).round())
+    jan = d[utc.dt.month == 1]
+    res = jan.groupby("Balancing Authority")["off"].agg(lambda x: x.mode().iloc[0]).rename("offset_h")
+    res.index.name = "ba"
+    res.reset_index().to_csv(out, index=False)
+    return res.to_dict()
+
+
+def load_ba(ba, tag):
+    d = pd.read_parquet(os.path.join(ROOT, "data", "derived", f"ci_clean{tag}.parquet"),
+                        filters=[("ba", "==", ba)], columns=["utc", "ci_clean", "usable_day"])
+    d = d.sort_values("utc").reset_index(drop=True)
+    # interval k covers [utc_k - 1h, utc_k); origin = start of the first interval
+    origin = d["utc"].iloc[0] - pd.Timedelta(hours=1)
+    ci = d["ci_clean"].to_numpy(dtype="float64")
+    usable = d["usable_day"].to_numpy(dtype=bool) & np.isfinite(ci)
+    # NaN (long gaps) only on unusable hours; jobs whose 96 h window touches one are excluded in place_jobs,
+    # so the fill below is never read by a scored job (it only keeps the arithmetic finite)
+    ci = pd.Series(ci).ffill().bfill().to_numpy()
+    return origin, ci, usable, d["utc"]
+
+
+def hist_profile(ci, utc, offset):
+    """TRAIN mean CI by (month, local hour); returned as a function of interval indices."""
+    loc = utc + pd.Timedelta(hours=offset) - pd.Timedelta(hours=1)   # local start of interval
+    tr = (utc >= pd.Timestamp(TRAIN[0], tz="UTC")) & (utc < pd.Timestamp(TRAIN[1], tz="UTC"))
+    tab = pd.DataFrame({"m": loc.dt.month, "h": loc.dt.hour, "ci": ci})[tr.to_numpy()].groupby(["m", "h"])["ci"].mean()
+    prof = tab.reindex(pd.MultiIndex.from_product([range(1, 13), range(24)])).to_numpy().reshape(12, 24)
+    return prof[loc.dt.month.to_numpy() - 1, loc.dt.hour.to_numpy()]   # value per interval
+
+
+def place_jobs(jobs, period, origin, offset, rng, usable):
+    """Random alignment: each job gets a random week of the period, keeping its local weekday and clock time."""
+    p0 = pd.Timestamp(PERIODS[period][0], tz="UTC")
+    p1 = pd.Timestamp(PERIODS[period][1], tz="UTC") - pd.Timedelta(hours=MARGIN_H)
+    # Monday 00:00 local of the first full week
+    first_local = (p0 + pd.Timedelta(hours=offset)).normalize()
+    first_monday = first_local + pd.Timedelta(days=(7 - first_local.weekday()) % 7)
+    n_weeks = int(((p1 + pd.Timedelta(hours=offset)) - first_monday) / pd.Timedelta(days=7)) - 1
+    w = rng.integers(0, n_weeks, len(jobs["r_act_h"]))
+    local = first_monday + pd.to_timedelta(w * 7 + jobs["submit_local_dow"], unit="D") \
+        + pd.to_timedelta(jobs["submit_local_hour"], unit="h")
+    a = ((local - pd.Timedelta(hours=offset)) - origin) / pd.Timedelta(hours=1)
+    a = np.asarray(a, dtype="float64")
+    hour_idx = np.floor(a).astype(np.int64)
+    bad = np.concatenate([[0], np.cumsum(~usable)])          # unusable hours before index k
+    lo = np.clip(hour_idx, 0, len(usable))
+    hi = np.clip(hour_idx + sc.H, 0, len(usable))
+    ok = (hour_idx >= 0) & (hour_idx + sc.H <= len(usable)) & (bad[hi] - bad[lo] == 0)
+    return a, ok
+
+
+def load_fc(fc_dir, model, ba, origin):
+    z = np.load(os.path.join(ROOT, fc_dir, model, f"{ba}.npz"))
+    issue = pd.to_datetime(z["issue_utc"], utc=True)
+    first_k = int(round((issue[0] - origin) / pd.Timedelta(hours=1)))   # issue at origin + first_k hours
+    step = np.diff(z["issue_utc"].astype("int64"))
+    assert (step == 3_600_000_000_000).all(), "forecast issues must be hourly"
+    return first_k, z["fc"]
+
+
+def fc_window(first_k, fc, a):
+    rows = np.floor(a).astype(np.int64) - first_k
+    assert rows.min() >= 0 and rows.max() < len(fc), "arrival outside forecast span"
+    return fc[rows].astype("float64")
+
+
+def run_ba(ba, args, jobs_by_trace, offsets, outdir):
+    """Simulate one BA for every trace; aggregate and write results/<...>/<trace>/<BA>.npz inside the worker."""
+    origin, ci, usable, utc = load_ba(ba, args.tag)
+    cum = sc.cum_hours(ci)
+    off = offsets[ba]
+    prof = hist_profile(ci, utc, off)
+    fcs = {m: load_fc(args.fc_dir, m, ba, origin) for m in FC_MODELS}
+    # local clock hour of every interval start, for the night-window rule
+    loc_hour = ((utc + pd.Timedelta(hours=off) - pd.Timedelta(hours=1)).dt.hour).to_numpy()
+    # usable flag is per hour row; convert to per-interval day usability
+    out = {}
+    for trace, jobs in jobs_by_trace.items():
+        res = {}
+        for rep in range(args.reps):
+            rng = np.random.default_rng([args.seed, rep, zlib.crc32(ba.encode()), zlib.crc32(trace.encode())])
+            nj = len(jobs["r_act_h"])
+            idx = np.sort(rng.choice(nj, size=min(args.n_jobs, nj), replace=False))
+            J = {k: np.asarray(v[idx]) for k, v in jobs.items()}
+            a, ok = place_jobs(J, args.period, origin, off, rng, usable)
+            J, a = {k: v[ok] for k, v in J.items()}, a[ok]
+            r_act = J["r_act_h"]
+            r_est = {"act": r_act, "req": J["r_req_h"], "pred": J["r_pred_h"]}
+            p_kw = J["power_kw"]
+            day = np.floor(a / 24.0).astype(np.int64)
+            lcls = np.searchsorted(LEN_EDGES, r_act, side="right") - 1
+            sig = {"oracle": sc.window_signal_actual(ci, a),
+                   "histprofile": sc.window_signal_actual(prof, a)}
+            for m in FC_MODELS:
+                sig[m] = fc_window(*fcs[m], a)
+            for S in SLACKS:
+                slack = np.full(len(a), S)
+                starts = {"runnow": a}
+                # night rule: earliest candidate start whose local hour is 0-3, else now
+                offs = np.arange(int(S / sc.STEP) + 1) * sc.STEP
+                cand = a[:, None] + offs[None, :]
+                hrs = loc_hour[np.clip(np.floor(cand).astype(np.int64), 0, len(loc_hour) - 1)]
+                night = hrs < 4
+                first = np.where(night.any(axis=1), night.argmax(axis=1), 0)
+                starts["night"] = a + offs[first]
+                for s_name, sg in sig.items():
+                    for r_name, rh in r_est.items():
+                        starts[f"{s_name}|{r_name}"] = sc.plan_start(sg, a, rh, slack)
+                e_w = np.stack([p_kw * sc.realised(cum, ci, starts[k], r_act) for k in ARMS])   # g CO2
+                e_u = np.stack([sc.realised(cum, ci, starts[k], r_act) / r_act for k in ARMS])  # g/kWh per job
+                delay = np.stack([starts[k] - a for k in ARMS])
+                key = (rep, S)
+                res[key] = {"day": day, "lcls": lcls, "e_w": e_w.astype("float32"), "e_u": e_u.astype("float32"),
+                            "delay": delay.astype("float32"), "energy_kwh": (p_kw * r_act).astype("float32")}
+        os.makedirs(os.path.join(outdir, trace), exist_ok=True)
+        flat = {}
+        for k, v in aggregate(res).items():
+            for kk, vv in v.items():
+                flat[f"{k}__{kk}"] = vv
+        np.savez_compressed(os.path.join(outdir, trace, f"{ba}.npz"), arms=np.array(ARMS), **flat)
+        del res
+    return ba
+
+
+def aggregate(res):
+    """Per (rep, S): per-day sums by length class -> arrays [n_arms, n_days, n_classes]."""
+    agg = {}
+    for (rep, S), r in res.items():
+        d0 = r["day"].min()
+        nd = r["day"].max() - d0 + 1
+        nc = len(LEN_EDGES) - 1
+        flat = (r["day"] - d0) * nc + r["lcls"]
+        ew = np.zeros((len(ARMS), nd * nc))
+        eu = np.zeros((len(ARMS), nd * nc))
+        dl = np.zeros((len(ARMS), nd * nc))
+        for i in range(len(ARMS)):
+            ew[i] = np.bincount(flat, weights=r["e_w"][i], minlength=nd * nc)
+            eu[i] = np.bincount(flat, weights=r["e_u"][i], minlength=nd * nc)
+            dl[i] = np.bincount(flat, weights=r["delay"][i], minlength=nd * nc)
+        cnt = np.bincount(flat, minlength=nd * nc)
+        en = np.bincount(flat, weights=r["energy_kwh"], minlength=nd * nc)
+        agg[f"r{rep}_S{int(S)}"] = dict(day0=d0, e_w=ew.reshape(len(ARMS), nd, nc), e_u=eu.reshape(len(ARMS), nd, nc),
+                                       delay=dl.reshape(len(ARMS), nd, nc), n=cnt.reshape(nd, nc),
+                                       energy=en.reshape(nd, nc))
+    return agg
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--period", required=True, choices=list(PERIODS))
+    ap.add_argument("--tag", default="")
+    ap.add_argument("--fc-dir", default="data/derived/forecasts")
+    ap.add_argument("--traces", default="")
+    ap.add_argument("--bas", default="")
+    ap.add_argument("--reps", type=int, default=3)
+    ap.add_argument("--n-jobs", type=int, default=20000)
+    ap.add_argument("--seed", type=int, default=20261111)
+    ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--states", default="COMPLETED")
+    ap.add_argument("--jobs", default="data/derived/jobs.parquet")
+    ap.add_argument("--out-suffix", default="")
+    args = ap.parse_args()
+    if args.period == "TEST":
+        check_prereg()
+    el = pd.read_csv(os.path.join(ROOT, "tables", f"ba_eligibility{args.tag}.csv"))
+    bas = sorted(el[el["eligible"]]["ba"]) if not args.bas else args.bas.split(",")
+    offsets = ba_offsets()
+    jobs = pd.read_parquet(os.path.join(ROOT, args.jobs))
+    jobs = jobs[jobs["state"].isin(args.states.split(","))]
+    jobs = jobs[(jobs["r_act_h"] >= 1 / 60) & (jobs["r_req_h"] <= MAX_REQ_H) & (jobs["r_req_h"] > 0)]
+    jobs = jobs.assign(power_kw=(jobs["power_w"] / 1000.0).fillna(1.0))   # traces without power: 1 kW per job
+    traces = args.traces.split(",") if args.traces else sorted(jobs["trace"].unique())
+    cols = ["r_act_h", "r_req_h", "r_pred_h", "power_kw", "submit_local_dow", "submit_local_hour"]
+    jobs_by_trace = {t: {c: jobs.loc[jobs["trace"] == t, c].to_numpy() for c in cols} for t in traces}  # numpy: memmapped
+    del jobs
+    outdir = os.path.join(ROOT, "results", f"sim_{args.period}{args.tag}{args.out_suffix}")
+    t0 = time.time()
+    from joblib import Parallel, delayed
+    Parallel(n_jobs=args.workers, verbose=5)(
+        delayed(run_ba)(ba, args, jobs_by_trace, offsets, outdir) for ba in bas)
+    with open(os.path.join(outdir, "RUN.txt"), "w", encoding="utf-8") as f:
+        f.write(f"period={args.period} tag={args.tag} fc_dir={args.fc_dir} reps={args.reps} n_jobs={args.n_jobs} "
+                f"seed={args.seed} states={args.states} traces={traces} bas={len(bas)} seconds={time.time()-t0:.0f}\n")
+    print("done", outdir, f"{time.time()-t0:.0f}s")
+
+
+if __name__ == "__main__":
+    main()
+"""Savings, contrasts, two-stage block bootstrap and Holm correction from results/sim_<period><tag>/.
+
+saving(arm) = 1 - sum E_arm / sum E_runnow, pooled over BAs, days, length classes and alignment replicates.
+Bootstrap: resample BAs with replacement, then within each BA resample weekly blocks of days with replacement.
+Usage: python src/analyze.py --period DEV [--tag _v0] [--trace PM100] [--weight w|u] [--B 2000]
+Writes results/analysis_<period><tag>_<trace>_<weight>.json and appends ledger rows to tables/ledger_<period><tag>.csv.
+"""
+import argparse
+import glob
+import json
+import os
+
+import numpy as np
+import pandas as pd
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SLACKS = (2, 6, 12, 24)
+
+
+def load(period, tag, trace, weight):
+    files = sorted(glob.glob(os.path.join(ROOT, "results", f"sim_{period}{tag}", trace, "*.npz")))
+    data = {}
+    arms = None
+    for f in files:
+        z = np.load(f)
+        arms = list(z["arms"])
+        ba = os.path.basename(f)[:-4]
+        per_s = {}
+        for S in SLACKS:
+            mats = []
+            for k in z.files:
+                if k.endswith(f"_S{S}__e_{weight}"):
+                    pre = k[: -len(f"__e_{weight}")]
+                    mats.append((int(z[pre + "__day0"]), z[k].sum(axis=2)))   # (first day, [arms, days])
+            d_min = min(d0 for d0, _ in mats)
+            d_max = max(d0 + m.shape[1] for d0, m in mats)
+            acc = np.zeros((mats[0][1].shape[0], d_max - d_min))
+            for d0, m in mats:                                 # align replicates on the calendar day index
+                acc[:, d0 - d_min: d0 - d_min + m.shape[1]] += m
+            per_s[S] = acc
+        data[ba] = per_s
+    return arms, data
+
+
+def weekly(m):
+    nd = m.shape[1] // 7 * 7
+    return m[:, :nd].reshape(m.shape[0], -1, 7).sum(axis=2)    # [arms, weeks]
+
+
+def savings_from(tot, idx):
+    return 1.0 - tot / tot[idx["runnow"]]
+
+
+def bootstrap(arms, data, S, B, seed):
+    idx = {a: i for i, a in enumerate(arms)}
+    bas = sorted(data)
+    W = [weekly(data[b][S]) for b in bas]                     # list of [arms, weeks]
+    point = savings_from(sum(w.sum(axis=1) for w in W), idx)
+    rng = np.random.default_rng(seed)
+    boot = np.empty((B, len(arms)))
+    for b in range(B):
+        pick = rng.integers(0, len(bas), len(bas))
+        tot = np.zeros(len(arms))
+        for p in pick:
+            w = W[p]
+            tot += w[:, rng.integers(0, w.shape[1], w.shape[1])].sum(axis=1)
+        boot[b] = savings_from(tot, idx)
+    per_ba = {}
+    for b, w in zip(bas, W):
+        per_ba[b] = savings_from(w.sum(axis=1), idx)
+    return idx, point, boot, per_ba, W
+
+
+def per_ba_boot(W_ba, idx, B, seed):
+    rng = np.random.default_rng(seed)
+    nw = W_ba.shape[1]
+    out = np.empty((B, W_ba.shape[0]))
+    for b in range(B):
+        out[b] = savings_from(W_ba[:, rng.integers(0, nw, nw)].sum(axis=1), idx)
+    return out
+
+
+def contrast(vec, idx, plus, minus):
+    """Linear contrast of savings: sum(plus) - sum(minus); vec may be [arms] or [B, arms]."""
+    c = sum(vec[..., idx[a]] for a in plus) - sum(vec[..., idx[a]] for a in minus)
+    return c
+
+
+def holm(pvals):
+    order = np.argsort(pvals)
+    m = len(pvals)
+    adj = np.empty(m)
+    run = 0.0
+    for r, i in enumerate(order):
+        run = max(run, (m - r) * pvals[i])
+        adj[i] = min(1.0, run)
+    return adj
+
+
+def write_ledger(out, args):
+    """One row per number: key, value, source. Rows of this period/tag/trace/weight are replaced on re-run."""
+    pre = f"{args.period}{args.tag}.{args.trace}.{args.weight}"
+    src = f"results/analysis_{args.period}{args.tag}_{args.trace}_{args.weight}.json"
+    rows = [(f"{pre}.n_ba", out["n_ba"])]
+    for S, r in out["slacks"].items():
+        k0 = f"{pre}.S{S}"
+        for a, v in r["savings"].items():
+            lo, hi = r["savings_ci95"][a]
+            rows += [(f"{k0}.saving.{a}", v), (f"{k0}.saving_lo.{a}", lo), (f"{k0}.saving_hi.{a}", hi)]
+        for n, t in r["tests"].items():
+            rows += [(f"{k0}.{n}.est", t["est"]), (f"{k0}.{n}.lo", t["ci95"][0]), (f"{k0}.{n}.hi", t["ci95"][1]),
+                     (f"{k0}.{n}.p", t["p"]), (f"{k0}.{n}.p_holm", t["p_holm"])]
+        for k, v in r["shapley"].items():
+            rows.append((f"{k0}.shapley.{k}", v))
+        for k, v in r["per_ba_H2_counts"].items():
+            rows.append((f"{k0}.perba_H2.{k}", v))
+    new = pd.DataFrame(rows, columns=["key", "value"]).assign(source=src)
+    fn = os.path.join(ROOT, "tables", f"ledger_{args.period}{args.tag}.csv")
+    if os.path.exists(fn):
+        old = pd.read_csv(fn)
+        new = pd.concat([old[~old["key"].str.startswith(pre + ".")], new], ignore_index=True)
+    new.to_csv(fn, index=False)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--period", required=True)
+    ap.add_argument("--tag", default="")
+    ap.add_argument("--trace", default="PM100")
+    ap.add_argument("--weight", default="w", choices=["w", "u"])
+    ap.add_argument("--B", type=int, default=2000)
+    ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--fc", default="lgbm")
+    ap.add_argument("--primary-slack", type=int, default=12)
+    args = ap.parse_args()
+    arms, data = load(args.period, args.tag, args.trace, args.weight)
+    F = args.fc
+    tests = {   # name: (plus arms, minus arms, sidedness)
+        "H1_deployable_saving": ([f"{F}|req"], ["runnow"], "greater"),
+        "H2_runtime_penalty": ([f"{F}|act"], [f"{F}|req"], "greater"),
+        "H3_prediction_recovery": ([f"{F}|pred"], [f"{F}|req"], "greater"),
+        "H4_interaction": (["oracle|act", f"{F}|req"], ["oracle|req", f"{F}|act"], "two"),
+    }
+    out = {"period": args.period, "trace": args.trace, "weight": args.weight, "n_ba": len(data), "B": args.B,
+           "slacks": {}}
+    for S in SLACKS:
+        idx, point, boot, per_ba, W = bootstrap(arms, data, S, args.B, args.seed + S)
+        rs = {"savings": {a: float(point[idx[a]]) for a in arms},
+              "savings_ci95": {a: [float(np.quantile(boot[:, idx[a]], 0.025)), float(np.quantile(boot[:, idx[a]], 0.975))]
+                               for a in arms}}
+        tres = {}
+        for name, (pl, mi, side) in tests.items():
+            est = float(contrast(point, idx, pl, mi))
+            bc = contrast(boot, idx, pl, mi)
+            if side == "greater":
+                p = (1 + np.sum(bc <= 0)) / (1 + len(bc))
+            else:
+                p = min(1.0, 2 * min((1 + np.sum(bc <= 0)) / (1 + len(bc)), (1 + np.sum(bc >= 0)) / (1 + len(bc))))
+            tres[name] = {"est": est, "ci95": [float(np.quantile(bc, 0.025)), float(np.quantile(bc, 0.975))], "p": float(p)}
+        adj = holm(np.array([tres[n]["p"] for n in tests]))
+        for n, a in zip(tests, adj):
+            tres[n]["p_holm"] = float(a)
+        # Shapley 2x2 of the gap oracle|act -> F|req
+        o_a, o_r, f_a, f_r = (point[idx[k]] for k in ("oracle|act", "oracle|req", f"{F}|act", f"{F}|req"))
+        gap = o_a - f_r
+        phi_fc = 0.5 * ((o_a - f_a) + (o_r - f_r))
+        phi_rt = 0.5 * ((o_a - o_r) + (f_a - f_r))
+        rs["shapley"] = {"gap": float(gap), "forecast": float(phi_fc), "runtime": float(phi_rt),
+                         "interaction": float((o_a - o_r) - (f_a - f_r)),
+                         "retained_share": float(f_r / o_a) if o_a else None}
+        rs["tests"] = tres
+        # per-BA H2 with within-BA bootstrap
+        cnt = {"n": 0, "pos": 0, "sig": 0}
+        per = {}
+        for j, (b, w) in enumerate(zip(sorted(data), W)):
+            bb = per_ba_boot(w, idx, 500, args.seed + 100 + j)
+            d = contrast(bb, idx, [f"{F}|act"], [f"{F}|req"])
+            e = float(contrast(per_ba[b], idx, [f"{F}|act"], [f"{F}|req"]))
+            per[b] = {"saving_" + k.replace("|", "_"): float(per_ba[b][idx[k]]) for k in
+                      ("oracle|act", "oracle|req", f"{F}|act", f"{F}|req", f"{F}|pred", "night", "histprofile|req")}
+            per[b]["H2_est"] = e
+            per[b]["H2_lo"] = float(np.quantile(d, 0.025))
+            cnt["n"] += 1
+            cnt["pos"] += int(e > 0)
+            cnt["sig"] += int(np.quantile(d, 0.025) > 0)
+        rs["per_ba_H2_counts"] = cnt
+        rs["per_ba"] = per
+        out["slacks"][str(S)] = rs
+    os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
+    fn = os.path.join(ROOT, "results", f"analysis_{args.period}{args.tag}_{args.trace}_{args.weight}.json")
+    with open(fn, "w", encoding="utf-8") as fh:
+        json.dump(out, fh, indent=1)
+    write_ledger(out, args)
+    S = str(args.primary_slack)
+    r = out["slacks"][S]
+    print(f"{args.trace} {args.weight} S={S}h n_ba={out['n_ba']}")
+    for a in ["night", "histprofile|req", "oracle|act", "oracle|req", "oracle|pred", f"{F}|act", f"{F}|req", f"{F}|pred",
+              "snaive_day|req", "profile7|req", "persistence|req"]:
+        lo, hi = r["savings_ci95"][a]
+        print(f"  saving {a:18s} {100*r['savings'][a]:6.2f} %  [{100*lo:5.2f}, {100*hi:5.2f}]")
+    for n, t in r["tests"].items():
+        print(f"  {n:24s} est {100*t['est']:6.2f} pp  CI [{100*t['ci95'][0]:5.2f}, {100*t['ci95'][1]:5.2f}]  p {t['p']:.4f}  holm {t['p_holm']:.4f}")
+    print("  shapley", {k: (round(100 * v, 2) if isinstance(v, float) and k != "retained_share" else v) for k, v in r["shapley"].items()})
+    print("  per-BA H2", r["per_ba_H2_counts"])
+    for S2 in SLACKS:
+        rr = out["slacks"][str(S2)]
+        print(f"  S={S2:2d}h oracle|act {100*rr['savings']['oracle|act']:5.2f}  {F}|act {100*rr['savings'][f'{F}|act']:5.2f}  "
+              f"{F}|req {100*rr['savings'][f'{F}|req']:5.2f}  {F}|pred {100*rr['savings'][f'{F}|pred']:5.2f}  night {100*rr['savings']['night']:5.2f}")
+
+
+if __name__ == "__main__":
+    main()
+# A07 job table (Paper A)
+
+VERDICT: A07 done; traces PM100 (180,310 completed jobs of 231,238), F-DATA/Fugaku (2,998,737 completed of 3,399,278; months 21_04, 23_01, 23_04, 23_07, 23_10), KIT FH2 (114,355 completed of 114,355; every SWF status is 1, so no TIMEOUT can be identified); median r_act/r_req 0.028 (PM100), 0.232 (F-DATA), 0.148 (KIT FH2); NLR Kestrel NOT obtained (HTTP 503 at 13:48 IST and again at 15:04 IST); see USER STEPS NEEDED.
+
+Output: `data/derived/jobs.parquet` (3,744,871 rows, exactly the 14 requested columns; dtypes string, timestamp[ns, UTC], double, int64). Intermediate per-trace files `data/derived/jobs_<TRACE>.parquet` are kept (the script merges them). Code: `src/prep_jobs.py` (one loader per trace: `load_pm100`, `load_fdata`, `load_kit_fh2`, `load_kestrel`; `finalise()` shared). Numbers below come from `tables/jobs_trace_stats.json`, written by the script. Run: `PYTHONIOENCODING=utf-8 python src/prep_jobs.py` (takes about 1.5 minutes). Free disk before work 115 GB, after 80 GB (limit 15 GB).
+
+## Definitions applied (all three traces)
+- `r_req_h`, `r_act_h` in hours; `nodes` = allocated nodes (falls back to requested if allocated is 0).
+- `state` mapping: COMPLETED, TIMEOUT, CANCELLED, FAILED stay; PM100 OUT_OF_MEMORY (1,011) and NODE_FAIL (170) are mapped to FAILED; anything else OTHER (none occurred). SWF status 1 = COMPLETED, 0 = FAILED, 5 = CANCELLED, other = OTHER. F-DATA `exit state`: completed / failed only.
+- `submit_local_hour` = local clock hour + minutes/60 + seconds/3600 at the site (zoneinfo, so DST is handled); `submit_local_dow` 0 = Monday.
+- `r_pred_h` and `n_hist` exactly as specified: the user's jobs with END strictly before this job's submit and state COMPLETED or TIMEOUT; mean `r_act_h` of the two most recent by end time (one job: that job's value); none: `r_req_h`; then capped at `r_req_h`. `n_hist` = min(number of such jobs, 2). Implemented with sorted keys and `searchsorted` (vectorised). Ties in end time break by row order (rows sorted by submit time).
+- Leakage check: for every trace, 1,000 random jobs were recomputed naively (pandas filter on user, `end < submit`, state, last two by end) and compared with the vectorised result; the assertion on `n_hist`, `r_pred_h` and on end < submit passed for all three traces (it runs inside `finalise()`, so any rerun re-asserts).
+- No row was dropped: validity filter (submit present, `r_req_h` > 0, `r_act_h` >= 0 and finite, nodes >= 1) removed 0 rows in each trace. Jobs with `r_act_h` = 0 are kept (PM100 0.03 %, others none); the simulator should filter them if it needs a positive length.
+
+## 1. PM100 (Marconi100, CINECA Bologna, Europe/Rome)
+Source `data/raw/pm100/job_table.parquet`, md5 cf85f171a5ed5ff1d951d93f9bcbc6ef (equals the Zenodo md5, https://zenodo.org/records/10127767), sha256 6be954098d9bd6bfdef6881c6d8a3260170b00d16839509700e1b6976da3a7eb.
+
+Timestamps: UTC. Evidence: (1) the parquet columns are `timestamp[us, tz=UTC]`, produced from Slurm epoch times; (2) the weekday submit profile converted with Europe/Rome has the shape of an Italian working day: ramp 2.0 % (07h) to 3.4 % (08h) to 6.2 % (09h), a lunch dip at 14h (5.0 % against 6.0 % at 13h and 7.1 % at 15h) and a dinner dip at 20h (2.8 %); read as already-local it would put the dinner dip at 18h and the ramp at 07h. UTC hour histogram of all jobs (hours 0 to 23): 4920, 4028, 3923, 3901, 4739, 4933, 7522, 13454, 15391, 14624, 13490, 13463, 10879, 15931, 17075, 12826, 10597, 10361, 6088, 10718, 7547, 8593, 8506, 7729. Residual uncertainty about a 1 to 2 hour offset is small relative to the simulator's 2 h minimum slack but not zero.
+
+Power: `node_power_consumption` is a list of 20 s samples of whole-job power in W (sum over all the job's nodes and both power supplies). Source: the field table (https://github.com/francescoantici/PM100-data/blob/main/documentation/job_features.md) says only "Power consumption of the job, recorded at Node level"; the generating script https://raw.githubusercontent.com/francescoantici/PM100-data/main/extract_data.py (`extract_job_power`) selects the job's nodes, does `groupby(timestamp).sum()` over nodes for `ps0` and for `ps1` and adds them. Empirical check: median per-job mean power scales linearly with `num_nodes_alloc` (1 node 690 W, 2 nodes 1,398 W, 4: 2,678 W, 8: 5,070 W, 16: 9,943 W, 32: 18,875 W; about 700 W per node). So `power_w` = mean of the series, with NO multiplication by nodes. All 231,238 jobs have a series (none empty). The mean was computed batch by batch (4,000 rows per batch). `energy_kwh` = power_w * r_act_h / 1000 (derived; PM100 has no measured energy).
+
+Rows: in 231,238 (Zenodo text says 231,116; unchanged from A04); raw states COMPLETED 180,310, FAILED 29,840, CANCELLED 11,218, TIMEOUT 8,689, OUT_OF_MEMORY 1,011, NODE_FAIL 170; normalised COMPLETED 180,310, FAILED 31,021, CANCELLED 11,218, TIMEOUT 8,689; rows out 231,238; 477 users; submit 2020-05-05 15:55 to 2020-10-13 04:44 UTC; job_id unique.
+
+- Fraction r_act > r_req: all rows 3.70 %; COMPLETED 0.0006 % (1 job).
+- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 0.833 / 9 / 24 / 24; r_act_h 0.000278 / 0.0025 / 0.0528 / 0.487 / 11.4; r_act/r_req 1.2e-05 / 0.00063 / 0.0281 / 0.215 / 0.737.
+- TIMEOUT: 8,689 rows; share with r_act within 2 % of r_req 92.2 % (all rows within 2 %: 4.7 %).
+- r_pred_h / r_act_h (COMPLETED, r_act > 0): 0.089 / 0.685 / 1.008 / 2.00 / 23.4. r_pred_h / r_req_h median 0.0287.
+- n_hist = 0: 1.04 % of all rows (0.48 % of COMPLETED).
+- power_w quantiles (W): 522 / 588 / 819 / 1,330 / 11,410 (no NaN).
+- Total energy 1.228e6 kWh; share from jobs longer than 24 h: 14.1 %.
+
+## 2. F-DATA / Fugaku (Kobe, Asia/Tokyo)
+Licence CC-BY-4.0 (Zenodo API `metadata.license.id = cc-by-4.0`), record https://zenodo.org/records/11467483 (DOI 10.5281/zenodo.11467483), paper Antici et al., Scientific Data 12:1321 (2025), DOI 10.1038/s41597-025-05633-1. Downloaded to `data/raw/fdata/` with browser headers (a plain User-Agent hit a Zenodo 403 rate limit at first, as in A04). Months kept: 21_04 (existing) plus 23_01, 23_04, 23_07, 23_10 (all under 1.5 GB; the brief's example set). All five file md5 values equal the Zenodo checksums:
+
+| File | Bytes | md5 (= Zenodo) | sha256 |
+|---|---|---|---|
+| 21_04.parquet | 150,514,262 | 3178b7481f639511a74b2be85f5079ba | a92259eb100339998a6ae5c7452200ef06a765500c50adbe42d66e43aff5068d |
+| 23_01.parquet | 981,864,234 | 681603aba504a37da6c19d0cc173980a | ea4e39944f4b38e7d0aabe6f185d40bdb680aa4d426a841521ddc4395a84d2af |
+| 23_04.parquet | 575,431,429 | 261dce6e2bdba46820186229d727b600 | 7213182439a75bd58607efb850e81dbadbe24be2144921338eccb0a4cb37d593 |
+| 23_07.parquet | 968,169,044 | 9cd9e0aa7ebc418e0e5c8c2d977fe969 | eaed73c23bae77d51901bd946d7c7f1c80b17403305dab72f8e9435acb87a31f |
+| 23_10.parquet | 885,571,255 | eb1d96b17237f15f29371ddf40ad9e38 | e04b97ba97519ca557cdfec739dfaec606f18fab3102801b5328c1b44e2642d7 |
+
+(23_01 was first corrupted by two curl processes writing the same file; the md5 check caught it, the file was deleted and fetched again in six byte ranges; the md5 above is of the clean file. `logs/fdata_checksums.txt` still contains the line of the discarded bad copy, 985,726,762 B.)
+
+Units (confirmed, with quotes):
+- `duration`: seconds. Check: `edt - sdt` equals `duration` within 1 s for all rows of 21_04; the feature list says "Duration of the job execution in seconds" (`data/raw/fdata/feature_list.csv`).
+- `elpl`: seconds. feature_list.csv: "Elapsed time limit (the time limit set to the job duration)", no unit; seconds inferred from values (a 1 s job has elpl 10, median 21,600 = 6 h, maximum 259,200 s in 21_04) and `duration <= elpl` for every 21_04 row.
+- `econ`: Wh. Paper (https://www.nature.com/articles/s41597-025-05633-1): "each job data contains the econ feature giving the energy consumption in Watt-Hours". Check: `econ / (avgpcon * duration)` = 1/3600 (0.000278 median) in 21_04.
+- `avgpcon` (also `minpcon`, `maxpcon`): W. The feature list calls it "Average node power consuption", but the paper states "The power consumption is the sum of the minimum, average, or maximum power consumption of the resources allocated to the job during its execution", and `econ = avgpcon * duration / 3600` with no node factor, so it is a whole-job power. Median `power_w / nodes` is about 93 to 102 W per node in five of six node-count bins (47.6 W in the 17 to 64 node bin; the cause was not investigated, possibly allocated nodes above used nodes, since 21_04 has jobs with `nnuma` 12 and `nnumu` 1); therefore `power_w` = `avgpcon` as is, `energy_kwh` = `econ` / 1000 (measured). 
+- Timestamps carry an explicit +09 offset (JST), parsed to UTC.
+- `nodes` = `nnuma` (allocated), fallback `nnumr`.
+
+Rows: in 3,399,278 (per month of submit time: 21_04 116,977, 22_12 4,711, 23_01 889,780, 23_04 618,335, 23_06 3,220, 23_07 957,831, 23_09 12,299, 23_10 796,125; the 22_12, 23_06 and 23_09 rows are jobs whose `adt` lies in the month before the file's month); 1,410 users; submit 2021-04-01 to 2023-10-31 UTC. States: only `completed` 2,998,737 and `failed` 400,541; no TIMEOUT state exists in F-DATA, so the TIMEOUT rule has no rows and the history predictor uses COMPLETED jobs only. Rows out 3,399,278. In 21_04, 46,602 of 116,977 rows (40 %) repeat a `jid` (presumably array or bulk sub-jobs; the share over all months was not measured); all rows are kept and a repeated `jid` is made unique with a ".k" suffix, so job_id is unique. The history of a user runs across all five months (months are not contiguous, so the first jobs of each month use history from up to three months earlier, or none).
+
+- Fraction r_act > r_req: all 0.0008 %; COMPLETED 0.0009 %.
+- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 1 / 4 / 17 / 72; r_act_h 0.00417 / 0.0658 / 0.544 / 2.5 / 18; r_act/r_req 0.00228 / 0.0422 / 0.232 / 0.573 / 0.873.
+- TIMEOUT: none. As a proxy, FAILED rows within 2 % of r_req: 0.28 %; all rows within 2 %: 0.99 %.
+- r_pred_h / r_act_h (COMPLETED, r_act > 0): 0.031 / 0.801 / 1.05 / 1.88 / 22.3. r_pred_h / r_req_h median 0.294.
+- n_hist = 0: 1.91 % of all rows (1.45 % of COMPLETED).
+- power_w quantiles (W): 42 / 85 / 113 / 536 / 7,110 (no NaN).
+- Total energy 2.89e7 kWh; share from jobs longer than 24 h: 7.7 %.
+
+## 3. KIT FH2 (ForHLR II, Karlsruhe, Europe/Berlin)
+Source: Parallel Workloads Archive https://www.cs.huji.ac.il/labs/parallel/workload/l_kit_fh2/index.html, file `KIT-FH2-2016-1.swf.gz` (1,194,167 B), md5 4c136801c2728ad46f30e903544846c8, sha256 e1a4b12185dae1d2666f66649274883f85ae611b553edbc22726a5edec6239f5 (no published checksum). The archive offers only the original log "as received"; there is no cleaned version for this machine (the brief said cleaned). A request with only a short User-Agent got an error page; full browser headers and a Referer worked.
+
+Header: UnixStartTime 1464739965 (= 2016-06-01 00:12:45 UTC = 02:12:45 CEST, equals the header's StartTime), TimeZoneString Europe/Berlin, 114,355 jobs, MaxProcs 24,048. Fields used: 2 submit (s after UnixStartTime), 3 wait, 4 run time, 5 allocated processors (fallback 8), 9 requested time, 11 status, 12 user, 15 queue. `nodes` = ceil(processors / 20) for queue 1 (thin nodes, whole nodes always allocated per the header) and / 48 for queue 2 (visualisation nodes). End time = submit + wait + run. `power_w` and `energy_kwh` = NaN (no power).
+
+Status: all 114,355 rows have SWF status 1, so every job is COMPLETED and no TIMEOUT can be identified, although many jobs run to the limit (see below). The log does not hold the full workload of the machine (header disclaimer: special campaigns, privacy removals, no interactive jobs).
+
+Rows in 114,355, out 114,355; 166 users; submit 2016-06-01 to 2018-01-04 UTC.
+- Fraction r_act > r_req: 0 (run time is capped by the limit). Fraction within 2 % of r_req (all rows): 7.3 %; this is the best available proxy for time-outs.
+- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 0.333 / 4 / 24 / 72; r_act_h 0.015 / 0.0289 / 0.167 / 3.88 / 25.8; r_act/r_req 0.00118 / 0.0356 / 0.148 / 0.468 / 1.
+- TIMEOUT share within 2 %: not defined (no TIMEOUT rows).
+- r_pred_h / r_act_h: 0.0157 / 0.509 / 1.00 / 2.31 / 51.6. r_pred_h / r_req_h median 0.158.
+- n_hist = 0: 0.20 %.
+- power_w: all NaN. Energy: n/a.
+- Median r_act/r_req 0.148 agrees with A04.
+
+## Checks and caveats
+- The three medians equal the A04 values (PM100 0.028, KIT 0.148; F-DATA 21_04 0.139 in A04 against 0.232 across five months here).
+- F-DATA `power_w` per node varies by node-count bin (above); use `power_w` as given (whole job), not times nodes. PM100 likewise: never multiply by nodes.
+- PM100 TIMEOUT jobs are the only strong evidence of limit-bound behaviour: 8,689 jobs, 92.2 % within 2 % of the limit. The predictor treats TIMEOUT runs as history, as specified (their `r_act_h` is the limit, so a user with time-outs gets a long prediction).
+- F-DATA covers 2021 and 2023, PM100 2020, KIT 2016-2018: calendar alignment to EIA-930 years is needed by the simulator, as noted in A04.
+- Nothing downloaded was executed; parquet and gz text were only read. Scripts live in `src/`, raw files in `data/raw/<trace>/`.
+
+## USER STEPS NEEDED
+1. NLR HPC Kestrel Jobs Data (DOI 10.7799/3023270, https://data.nlr.gov/submissions/302; the DOI redirects to https://www.osti.gov/servlets/purl/3023270 and then to the same page). Used for: the only job trace whose years (Aug 2023 to Dec 2025) and country (US, Golden CO, America/Denver) match EIA-930, with measured job energy. Status: HTTP 503 "Site under maintenance" on 2026-11-11 08:18 UTC (13:48 IST) and again at 09:34 UTC (15:04 IST), so the licence text ("View License") was not read and nothing was downloaded. DataCite (https://api.datacite.org/dois/10.7799/3023270) has an empty `rightsList`. What to do: when the site is back, open the page, read the licence under "View License", and tell me "kestrel ok" only if it is an open licence allowing research use with no login or click-through; then rerun the download (697 MB zip, md5 8f1d3be1cbe6345ef45e658a783c2aa0 per A04) into `data/raw/kestrel/`. Without it the job table has no US-site trace and no trace from the EIA-930 years with measured energy; PM100 and F-DATA remain the power-bearing traces and the paper can say so. `load_kestrel()` is a stub that raises until the schema and licence are checked (field names from A04: `submit_time`, `end_time`, `wallclock_req`, `wallclock_used`, `state_simple`, `consumed_energy_raw_watt_hours`, hashed `user`).
+VERDICT: A06 done; 37 eligible BAs; factors verified 6/9; EIA emissions validation yes (ERCO only)
+
+# A06 data audit, cleaning and emission-factor verification (2026-11-11)
+
+Files written: `src/clean_ci.py`, `src/schema_check_ci.py`, `src/extract_eia_co2.py`, `src/validate_eia_ci.py`, `src/emission_factors.csv` (updated),
+`data/derived/ci_clean_v0.parquet`, `tables/ba_eligibility_v0.csv`, `tables/cleaning_counts_v0.csv`, `tables/schema_break_check_v0.csv`,
+`tables/schema_break_windows_v0.csv`, `tables/eia_co2_validation_ERCO_v0.csv`, `data/raw/eia930_emissions/ERCO.xlsx` (75.3 MB) and `ERCO_co2_hourly.csv`.
+Everything uses the provisional `ci_hourly_v0.parquet` (built with oil 650, other 700, unknown 700). The final build must be re-run with the new CSV (`other` is now 230); then `python src/clean_ci.py --final` and `python src/schema_check_ci.py --final`.
+
+## Part 1. Emission factors
+
+### (a) AR5 table confirmed
+Source: IPCC AR5 WGIII Annex III, Table A.III.2 "Emissions of selected electricity supply technologies (gCO2eq/kWh)"
+(https://www.ipcc.ch/site/assets/uploads/2018/02/ipcc_wg3_ar5_annex-iii.pdf, read in full; chapter DOI 10.1017/cbo9781107415416.025, resolved on Crossref).
+Columns: direct emissions min/median/max; infrastructure and supply chain; biogenic CO2; methane; lifecycle min/median/max.
+
+| Technology | Direct (min / median / max) | Lifecycle (min / median / max) | CSV lifecycle | CSV direct |
+|---|---|---|---|---|
+| Coal PC | 670 / 760 / 870 | 740 / 820 / 910 | 820 | 760 |
+| Gas combined cycle | 350 / 370 / 490 | 410 / 490 / 650 | 490 | 370 |
+| Nuclear | 0 | 3.7 / 12 / 110 | 12 | 0 |
+| Hydropower | 0 | 1.0 / 24 / 2200 | 24 | 0 |
+| Solar PV utility | 0 | 18 / 48 / 180 | 48 | 0 |
+| Wind onshore | 0 | 7.0 / 11 / 56 | 11 | 0 |
+| Biomass dedicated (used for "other") | n.a. (note ii) | 130 / 230 / 420 | 230 | 0 |
+| Geothermal | 0 | 6.0 / 38 / 79 | (folded into other) | 0 |
+
+All six medians already in the CSV (820, 490, 12, 24, 48, 11) match the table. verified = yes for these six.
+
+### (b) Oil, other, unknown
+- **Oil**: AR5 Table A.III.2 has no oil row. Lifecycle 650 = Electricity Maps default (`config/defaults.yaml` in electricitymaps-contrib, source "UK POST 2014", comment cites the UK Parliamentary Office of Science and Technology 2006 "Carbon footprint of electricity generation"; same table on their wiki "Default emission factors"). I read their config, not the POSTnote, so verified = no. Direct 1116 g/kWh = EIA FAQ 74 (https://www.eia.gov/tools/faqs/faq.php?id=74&t=11), US 2023 petroleum 2.46 lb CO2/kWh x 453.592. EIA's own BA factor for petroleum in ERCO is 2.03 lb/kWh = 941 g/kWh (from the EIA-930 ERCO workbook, see (c)). Electricity Maps' direct 406 (EIA 2020 / BEIS 2021 US-UK blend) is not used: it is far below the EIA US figure. The lifecycle 650 is lower than the US direct 1116, an inconsistency inherited from the UK source. It is harmless here: oil share in eligible BAs is at most 2.7 % (NWMT) and 2.1 % (NYIS), so switching oil lifecycle from 650 to 1116 moves a BA mean CI by at most 12.6 g/kWh (NWMT), 9.9 (NYIS), 2.9 (ISNE), under 2 elsewhere. Report as a sensitivity.
+- **Other**: lifecycle 230 (AR5 biomass dedicated median), direct 0 (biogenic CO2 not counted, AR5 note ii; EIA FAQ 74 treats biomass as carbon neutral). Same as Electricity Maps' biomass default. Geothermal (38) is folded into "other" by the schema map and is rare. EIA's "Other" is a mixed category (the EIA-930 About page says BAs may mask generation under OTH), so this is a judgement mapping: verified = no. It matters: the pilot value 700 was wrong for biomass-heavy BAs. Mean "other" share is 25.7 % in GVL and 18.3 % in SPA; moving 700 to 230 lowers their mean CI by 121 and 86 g/kWh, and CPLE 58, AVA 56, LDWP 40, FPL 39 g/kWh. Rerun everything with the new value.
+- **Unknown**: lifecycle 700, direct 575 (Electricity Maps "assumes thermal"). Assumption only, verified = no. Unknown share is 0 in all eligible BAs, so no effect on the study.
+- de Chalendar et al. 2019 (doi 10.1073/pnas.1912950116, resolved on Crossref; text read on PMC6926065) uses direct (combustion) emissions and states it does not account for life-cycle emissions, so it is not a source for lifecycle oil, other or unknown. It supports using a direct-emissions variant as a sensitivity.
+- Result: **verified 6/9** (coal, gas, nuclear, hydro, solar, wind). Oil, other, unknown = no (reasons above). `eia_columns` untouched; column names unchanged. The `source` field in the CSV now carries the DOI/URL and table for each row.
+
+### (c) EIA hourly CO2: yes, but not in the six-month CSV files
+- The six-month files (`https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_<BALANCE|INTERCHANGE|SUBREGION>_<YYYY>_<Jan_Jun|Jul_Dec>.csv`, listed in `.../sixMonthFiles/EIA930_File_List_Meta.csv`) contain no CO2 column (checked the 65-column header). There is no emissions six-month file (the grid-monitor site answers HTTP 200 with an HTML page for any filename, so a 200 status proves nothing).
+- CO2 is in the **per-BA Excel workbooks**: `https://www.eia.gov/electricity/gridmonitor/knownissues/xls/<BA>.xlsx` (region files `.../xls/Region_<REG>.xlsx`), found in the grid-monitor JavaScript (`respondentPath`), sheet "Published Hourly Data". Documented at https://www.eia.gov/electricity/930-content/about.html ("Estimated CO2 emissions ... beginning July 1, 2018") and in the PUDL docs (https://docs.catalyst.coop/pudl/en/stable/data_sources/eia930.html). Columns: `CO2 Factor: COL/NG/OIL` (lbs/kWh, BA fleet factors), `CO2 Emissions: COL/NG/OIL/Other/Generated/Imported/Exported/Consumed` (metric tons), `CO2 Emissions Intensity for Generated Electricity` and `for Consumed Electricity` (lbs/kWh). Timestamps are end-of-hour UTC. Method (About page): EPA kg/MMBtu factors times EIA-923 fuel use, BA fleet factors for coal, gas and petroleum, one US factor for other fuels, CHP excluded.
+- Files are large (CISO 98 MB, ERCO 75 MB). Downloaded ONE: `data/raw/eia930_emissions/ERCO.xlsx` (75,309,284 bytes, equal to the server Content-Length) with `curl -A "Mozilla/5.0" -C - --retry 5`. CO2 columns extracted to `ERCO_co2_hourly.csv` by `src/extract_eia_co2.py` (stream read, about 1 min).
+- Validation, ERCO only (70,008 matched valid hours, 2018-07 to 2026-06; `tables/eia_co2_validation_ERCO_v0.csv`; EIA intensity = lbs/kWh x 453.592; EIA mean 354 g/kWh):
+
+| Our series | hourly r | daily r | mean bias, ours minus EIA (g/kWh) | MAE |
+|---|---|---|---|---|
+| Lifecycle CI (AR5 medians, as in the paper) | 0.981 | 0.983 | -0.9 (TRAIN -3.2, DEV +4.0, TEST +7.8) | 10.8 |
+| Direct CI, AR5 direct medians (760, 370) | 0.997 | 0.998 | -70.3 | 70.3 |
+| Direct CI, EIA US 2023 factors (1048, 435, 1116) | 0.999 | 0.999 | +5.4 | 6.5 |
+
+  Reading: the temporal shape agrees with EIA almost perfectly (r 0.98 to 0.999), so the fuel-mix pipeline and the schema mapping are right. The near-zero mean bias of the lifecycle CI is partly coincidence: the lifecycle uplift roughly offsets the gap between ERCO's EIA fleet coal factor (about 1100 g/kWh) and the AR5 coal median. Level agreement in other BAs will differ; only ERCO was checked, so no per-BA bias is available for the others.
+
+## Part 2. Audit and cleaning (`src/clean_ci.py`; constants at the top of the file)
+
+Fixed rules (no tuning on DEV or TEST; a timestamp belongs to the period of its hour start, i.e. stamp minus 1 h):
+1. **Grid (R1)**: one complete hourly end-of-hour UTC grid per BA from 2018-07-01 09:00 to 2026-07-01 00:00 (70,108 h). Starting at 09:00 because every BA is reporting by 08:00 UTC on 2018-07-01; earlier hours cannot be repaired (no past value). Costs 8 h of TRAIN.
+2. **Invalid hour (R2)**: `gen_total_mw` missing or <= 0, or CI missing; CI set to NaN. (In the files all rows exist; invalid hours appear as generation 0.)
+3. **Outlier (R3)**: d_t = CI_t minus CI_{t-1}; robust z = |d_t - med| / max(1.4826 x MAD, 1 g/kWh), med and MAD over a centred 30-day window (721 h, at least 168 h); outlier if z > 8 or CI outside [0, 1100]. The 1 g/kWh scale floor stops constant-CI hydro BAs from giving infinite z. A one-hour spike flags both its up and down steps and both hours are repaired; a persistent step flags only its first hour.
+4. **Repair (R4)**: maximal run of NaN (invalid plus outlier) hours of length <= 3 h: linear interpolation (flag 1; flag 2 where the hour was an outlier). 4 to 168 h: same hour one week earlier from the already repaired series (flag 3). Longer runs, or runs whose week-earlier hour is itself missing: stay NaN (flag 4) and the whole UTC calendar day (hour-start date) is marked unusable. **Additive deviation from the spec**: flag value 4 and column `usable_day` were added to `ci_clean_v0.parquet` (columns: ba, utc, ci_clean, flag, usable_day); flags 0 to 3 are as in the spec. Downstream code must skip or handle NaN and unusable days.
+5. **Eligibility (R5)**: first valid hour on or before 2018-09-01 and last valid hour on or after 2026-06-30 23:00 UTC; at least 95 % valid (neither invalid nor outlier) hours in each of TRAIN, DEV, TEST; mean generation over valid hours >= 100 MW; std of ci_clean in TRAIN > 1 g/kWh. (My first draft demanded a valid hour on 2018-07-02, which wrongly dropped ERCO, SWPP, BANC and others over a few early-July 2018 gap days; relaxed once before looking at any DEV or TEST result.)
+
+### Counts per rule (37 eligible BAs together, 2,594,440 BA-hours; all 70 BAs are in `tables/cleaning_counts_v0.csv`)
+| Rule | Hours or runs |
+|---|---|
+| R2 invalid (generation <= 0 or missing) | 7,916 h |
+| R3 outliers (z > 8; none from the range test) | 10,151 h (0.39 %) |
+| R4 short runs, linear | 8,294 runs, 9,734 h |
+| R4 week-earlier fill | 191 runs, 2,579 h |
+| R4 long runs left NaN | 12 runs, 5,754 h; 252 unusable BA-days |
+| Output flags | 0: 2,576,373; 1: 115; 2: 9,619; 3: 2,579; 4: 5,754 |
+
+All 70 BAs: 218,294 invalid h, 59,350 outliers. Highest outlier rates among eligible BAs: SPA 2.5 %, SEC 1.6 %, CISO 1.3 %, PGE 1.0 %, GVL 0.9 %. Long gaps: PJM 1,680 h (71 days), SWPP 1,461 h, TEPC 1,012 h, SRP 575 h, FPL 504 h, BANC 263 h, LDWP 215 h, PACW 23 h, ERCO 21 h.
+Caution for the PREREG: the outlier rule also removes some genuine fast ramps (solar in CISO, hydro in PGE); interpolating those hours changes them slightly. A no-outlier-repair sensitivity is cheap.
+
+### Eligible BAs (37)
+AECI AVA AZPS BANC BPAT CISO CPLE DUK ERCO FMPP FPL GVL IPCO ISNE JEA LDWP LGEE MISO NWMT NYIS PACE PACW PGE PJM PNM PSCO PSEI SC SCEG SEC SOCO SPA SRP SWPP TEPC TVA WALC
+Some are small (GVL 213 MW, SPA 683 MW). The 100 MW floor is low; the controller may want a size cut for the main analysis (not applied here).
+
+### Dropped (33 of 70; reasons per BA in `ba_eligibility_v0.csv`)
+- Ended or started outside the span: AEC (ends 2021-09), EEI (2020-02), GLHB (2020-03 to 2022-09), GRIF (2023-11), HGMA (2025-06), OVEC (2018-12), WACM (ends 2026-04), WAUW (2026-04), WWA (2025-10), BHBA, SWPW, SIKE (start 2026 or mid-2025), NSB (no valid hour), HST (1.6 to 2.9 % valid).
+- Under 95 % valid in at least one period: AVRN, CPLW, DEAA, EPE, FPC (DEV 0.935), GRID (TRAIN 0.949), IID, NEVP, SEPA, TAL, TEC, TIDC (TEST 0.941), YAD, GWA.
+- Constant series (std of CI in TRAIN <= 1 g/kWh): CHPD, DOPD, GCPD, SCL, TPWR (all hydro, CI about 24).
+- Mean generation < 100 MW: GWA, HST, SIKE, WAUW, WWA (all also fail another rule).
+GRID and FPC fail narrowly; thresholds are fixed so they stay dropped.
+
+### Schema change 2024-07-01
+Code and tables: `src/schema_check_ci.py`, `tables/schema_break_windows_v0.csv` (and the coarser monthly `tables/schema_break_check_v0.csv`).
+1. **Coverage test (decisive)**: mapped-fuel generation divided by reported Net Generation (Adjusted), 14 days before vs after 1 July, 2022 to 2024. The before/after shift is within +-0.02 for every eligible BA in 2024 except CISO (-0.010), WALC (-0.036; 2023: -0.051, same sign and size, so not a break) and a handful at +-0.003. So the old-to-new column mapping (hydro = hydro excl. pumped + pumped storage, solar and wind without-battery columns, geothermal into other) preserves the total. Battery storage columns are not mapped (excluded by design in `build_ci.py`); WALC and CISO have coverage above 1 for that or another reason I did not trace.
+2. **Level test**: change in mean CI, 17-30 June vs 1-14 July, 2024 versus the mean and sd of the same difference in 2019-2023. Flags (|z| > 3 and |excess| > 15 g/kWh): 3 of 37, DUK (z -3.4), FMPP (-4.4), NWMT (+5.2). The mix itself moved in each (NWMT coal share 17 % to 54 % in the 2024 window as hydro and wind fell; FMPP and DUK shifted between coal and gas) with coverage unchanged, so these look physical rather than schema artefacts. The coarser monthly June-to-July comparison versus 2023 flags 14 BAs, but it is dominated by weather noise (jumps of 50 to 100 g/kWh in both directions); not used.
+3. Conclusion: **no BA shows a schema-induced jump; none dropped or flagged for it.**
+
+## Notes for the controller
+- `ci_clean_v0` ci_clean: float32, min 12, max 820.
+- Final build: updated CSV is ready; `python src/build_ci.py` (no `--pilot` needed, no TO_VERIFY left; the `PROVISIONAL` dict is now unused), then `python src/clean_ci.py --final` and `python src/schema_check_ci.py --final`. Eligibility may shift by a BA when `other` goes from 700 to 230.
+- `data/scratch_a06/` holds fetched pages, Electricity Maps config and the AR5 PDF (safe to delete after you copy the AR5 PDF if wanted).
+
+## USER STEPS NEEDED
+None. Optional: to validate more BAs, download `https://www.eia.gov/electricity/gridmonitor/knownissues/xls/<BA>.xlsx` (60 to 100 MB each) into `data\raw\eia930_emissions\`, then `python src\extract_eia_co2.py <BA>` and `python src\validate_eia_ci.py <BA>`.
+# A05 Final run (supersedes the _v0 results below)
+
+VERDICT: A05 final done; 42 BAs; DEV MAE lgbm vs snaive_day 24.5 vs 29.6 g/kWh (pooled 1-24 h)
+
+Command: `python src/forecast.py --input data/derived/ci_clean.parquet --tag "" --shares data/derived/ci_hourly.parquet` (log `logs/a05_forecast_final.log`, run time 478 s). Outputs: `data/derived/forecasts/<model>/<BA>.npz` (42 BAs x 5 models; `fc` float32 [17520, 96], no NaN in lgbm), `data/derived/forecasts/lgbm_model.txt`, `tables/forecast_skill.csv` (DEV only, 1050 rows), `tables/forecast_skill_summary.csv` (pooled MAE). The `_v0` files are kept.
+
+Changes versus the _v0 run
+1. Input: `ci_clean.parquet` and `ba_eligibility.csv` (42 eligible BAs); fuel shares from `ci_hourly.parquet`.
+2. Causal model input (closes the caveat). Every model input (lags, rolling stats, persistence, snaive_day, snaive_week, profile7, lgbm features) is built from a series in which hours with flag 1 or 2 are replaced by the last earlier unflagged value (forward fill, at most 6 h, else NaN). Flag 3 (same hour previous week, taken from an earlier time) is causal and kept. Flag 4 stays NaN (no forecast when C at the issue hour is NaN; none occurred in the stored lgbm output at lead 1). Targets (lgbm fitting, early stopping, DEV skill) stay `ci_clean` as is. Function `causal_input` in `src/forecast.py`.
+3. Same hyperparameters and seed. Stride 10 (2,418,567 training rows, 217,931 validation rows), best iteration 777, validation residual MAE 31.80; fit 34 s.
+
+Leakage checks on the final run (`src/forecast_leakcheck.py`, 5 BAs: CISO, PJM, ERCO, AECI, DUK)
+- Future perturbation: 6 random DEV+TEST issue hours per BA x 5 models = 150 tests, with every value after the issue hour replaced by noise; 0 failed.
+- Flagged-value test: the stored values at all 1049 flag 1/2 hours were replaced by random numbers; the model input series was bit-identical (0 failures), and each replaced hour equals an earlier unflagged value within 6 h or NaN.
+- TRAIN-only fitting, purged validation window, DEV-only scoring with targets before 2025-07-01, and identical cell sets across models: unchanged (209,940 cells per BA at 1-24 h). No TEST skill computed.
+- Remaining note: skill targets include A06-flagged hours (interpolated or outlier-replaced values) as they stand in ci_clean, as instructed. `usable_day` was not applied to scoring.
+
+DEV MAE (g/kWh), 42 BAs. Pooled (cell-weighted):
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 19.1 | 26.3 | 24.5 | 30.4 | 33.4 |
+| profile7 | 31.1 | 31.1 | 31.1 | 33.4 | 35.7 |
+| snaive_day | 29.6 | 29.6 | 29.6 | 35.4 | 39.1 |
+| snaive_week | 43.2 | 43.2 | 43.2 | 43.2 | 43.2 |
+| persistence | 28.4 | 46.2 | 41.8 | 48.9 | 52.4 |
+
+Median over BAs:
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 16.8 | 20.7 | 19.7 | 23.8 | 28.1 |
+| profile7 | 24.3 | 24.4 | 24.4 | 27.3 | 30.5 |
+| snaive_day | 23.1 | 23.1 | 23.1 | 27.9 | 30.7 |
+| snaive_week | 36.0 | 36.0 | 36.0 | 36.0 | 36.1 |
+| persistence | 26.0 | 40.9 | 36.9 | 43.4 | 45.4 |
+
+Median MAPE (1-24 h): lgbm 0.073, snaive_day 0.086, profile7 0.087, persistence 0.121, snaive_week 0.123. Mean rank skill (windows 1-24, 25-48, 49-96): lgbm 0.598, 0.564, 0.552; profile7 0.570, 0.560, 0.551; snaive_day 0.511, 0.480, 0.466; snaive_week 0.468; persistence 0 by definition.
+Per BA (1-24 h MAE): lgbm beats snaive_day in 38 of 42 BAs and profile7 in 41 of 42. Gain over snaive_day at 1-24 h pooled: 17 %; at 49-96 h lgbm and profile7 are close in rank skill (0.552 vs 0.551), so lgbm adds little ranking information at long leads.
+
+---
+# Earlier _v0 run (37 BAs, uncorrected flag-1/2 inputs; kept for the record)
+
+# A05 Past-only carbon-intensity forecasters
+
+VERDICT (superseded by the Final run section below, which is the file set to use): A05 done; 37 BAs; DEV MAE lgbm vs snaive_day 25.7 vs 31.3 g/kWh (pooled 1-24 h)
+
+Code: `src/forecast.py` (run: `python src/forecast.py --input data/derived/ci_clean_v0.parquet --tag _v0 --models persistence,snaive_day,snaive_week,profile7,lgbm`), leakage test `src/forecast_leakcheck.py`. Log: `logs/a05_forecast_v0.log`.
+Outputs: `data/derived/forecasts_v0/<model>/<BA>.npz` (37 BAs x 5 models, 224 MB; arrays `issue_utc` int64 ns, `fc` float32 [17520, 96]; issue hours 2024-07-01 00:00 to 2026-06-30 23:00 UTC), `data/derived/forecasts_v0/lgbm_model.txt`, `tables/forecast_skill_v0.csv` (model, ba, period=DEV, lead_bucket, MAE, RMSE, MAPE, rank_skill, n), `tables/forecast_skill_summary_v0.csv` (pooled MAE).
+Note: the forecast folder is `forecasts_v0` (the tag is appended), not `forecasts`. Rename or point `simulate.py` at it when the final run is frozen.
+
+## Input
+`ci_clean_v0.parquet` (A06; 37 eligible BAs per `ba_eligibility_v0.csv`). Shares come from `ci_hourly_v0.parquet` (forward-filled, causal). Development was first done on CISO, PJM, ERCO from `ci_hourly_v0.parquet` with forward fill; those test files were deleted.
+
+## Method
+- Hour index grid from 2018-07-01 00:00 UTC. Forecast for issue hour t, lead h targets the hour labelled t+h (the series value at t is known at issue).
+- persistence: C(t). snaive_day: C(t+h-24*ceil(h/24)). snaive_week: C(t+h-168*ceil(h/168)).
+- profile7: mean of the 7 most recent same-hour-of-day values at or before t, i.e. C(t+h-24*(k+j)), k=ceil(h/24), j=0..6. (Reading of "7 days before the issue hour" that keeps all leads past-only.)
+- lgbm: one global LightGBM (objective L1, target = actual minus a base, base = profile7 with fallback to snaive_day then C(t), prediction clipped at 0). Features (34): lead h; CI at lags 0,1,2,3,6,12,24,48,72,168 h; rolling 24 h and 168 h mean and std (trailing, min 12 and 84 obs); target-hour hour-of-day, day-of-week, month (UTC); issue-hour hour-of-day and day-of-week; snaive_day, snaive_week and profile7 values for the target hour; 9 fuel shares at the issue hour; BA as categorical code.
+- Training set: TRAIN issues with stride 9 h (stride chosen so rows stay below 3 M), 12 random leads per issue (seed 42): 2,369,216 training rows, 213,276 validation rows. Early stopping (patience 50) on the last 6 months of TRAIN (issues from 2024-01-01, targets before 2024-07-01). Best iteration 506 (max 1500), validation residual MAE 33.06.
+- Hyperparameters (logged): learning_rate 0.08, num_leaves 63, min_data_in_leaf 200, feature_fraction 0.8, bagging_fraction 0.7 (freq 1), lambda_l2 1, max_bin 255, seed 42 (all seeds), deterministic, 20 threads. No tuning beyond this single configuration. No refit on the full TRAIN after early stopping.
+- Top gain features: s168 (0.48), s24, ba_code, lag0, m168, profile7, h.
+- Inference one BA at a time, float32, chunks of 1200 issues; peak RAM well under 3 GB. Rows with NaN C(t) (BA has no data yet) get NaN forecasts; none for lgbm in the 37 BAs.
+
+## Leakage checks (each stated)
+1. Future-perturbation test (`forecast_leakcheck.py`): for 3 BAs x 5 random issue hours in DEV+TEST x all 5 models, every CI and share value after the issue hour was replaced by random noise; forecasts at that issue hour were identical (tolerance 1e-4). 0 of 75 failures. This covers lags, rolling windows, snaive/profile, shares and the model inference path.
+2. lgbm fitted on TRAIN only: training-target hour < 2024-01-01 (purged so no training target falls in the validation window), validation rows have issue >= 2024-01-01 and target < 2024-07-01. Code asserts target < TRAIN_END; DEV and TEST values never enter fitting, scaling (no scaling is used), feature selection or early stopping.
+3. No normalisation or statistics are computed over the whole series; rolling statistics are trailing.
+4. Calendar features of the target hour are known at issue time (deterministic), not leakage.
+5. Skill scored on DEV only: issues in 2024-07-01..2025-06-30 and target hours before 2025-07-01 (leads that would reach into TEST are excluded). No TEST skill was computed or looked at. Stored forecasts cover TEST issue hours but they were not scored.
+6. All models are scored on the identical cell set (a cell counts only if actual and all five forecasts are finite): 209,940 cells per BA for 1-24 h.
+Caveat: the A06 clean series for DEV/TEST uses flag 3 (previous-week fill) and interpolation; both are past-only for the fill value, but interpolated short gaps (flag 1) use the next observation. Features at issue hour use whatever the clean series holds at times <= t, so a flag-1 value at t or earlier may contain information from up to 3 h later. This is a property of A06 cleaning, affects <1 % of hours, and is not fixed here; the controller should know it.
+
+## Run time
+Whole run 295 s (data 5 s, LightGBM fit 28 s on 20 threads, inference plus skill about 7.5 s per BA). Reproducible with fixed seed.
+
+## DEV MAE (g/kWh), lead buckets, 37 BAs
+Pooled (cell-weighted over BAs):
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 19.9 | 27.6 | 25.7 | 32.0 | 35.2 |
+| profile7 | 32.8 | 32.8 | 32.8 | 35.2 | 37.6 |
+| snaive_day | 31.3 | 31.3 | 31.3 | 37.4 | 41.2 |
+| snaive_week | 45.4 | 45.4 | 45.4 | 45.4 | 45.4 |
+| persistence | 28.9 | 47.0 | 42.5 | 50.0 | 53.6 |
+
+Median over BAs:
+
+| model | 1-6 | 7-24 | 1-24 | 25-48 | 49-96 |
+|---|---|---|---|---|---|
+| lgbm | 17.3 | 22.7 | 21.7 | 26.1 | 29.6 |
+| profile7 | 28.3 | 28.3 | 28.3 | 30.0 | 32.4 |
+| snaive_day | 23.8 | 23.8 | 23.8 | 29.9 | 35.7 |
+| snaive_week | 37.8 | 37.8 | 37.8 | 37.9 | 37.8 |
+| persistence | 26.8 | 39.1 | 35.5 | 44.6 | 47.0 |
+
+Median MAPE (1-24 h): lgbm 0.074, profile7 0.095, snaive_day 0.089, persistence 0.129, snaive_week 0.135. RMSE and MAPE per BA and bucket are in the table.
+Mean within-window rank skill (Spearman over each 24 h window; windows 1-24, 25-48, 49-96 = mean of 49-72 and 73-96): lgbm 0.593, 0.555, 0.543; profile7 0.561, 0.551, 0.542; snaive_day 0.502, 0.470, 0.455; snaive_week 0.458 throughout; persistence defined as 0 (constant window). Rank skill is NaN for buckets 1-6 and 7-24 (shorter than a window).
+Per BA (1-24 h MAE): lgbm beats snaive_day in 32 of 37 BAs and profile7 in 36 of 37.
+
+Honest reading: lgbm gains over the best simple baseline (snaive_day) are 18 % at 1-24 h pooled, mostly from leads 1-6 (36 %) where it uses current state; at 49-96 h the gain over profile7 is only 6 %, and rank skill of lgbm and profile7 is nearly equal there (0.543 vs 0.542). Persistence is poor beyond 6 h, as expected.
+
+## Items for the controller
+- Skill table has extra bucket "1-24" and column `n` (cells) so pooled values can be rebuilt as sum(MAE*n)/sum(n).
+- If A06 re-issues `ci_clean`/eligibility, rerun the same command (about 5 minutes).
+- Dev-mode run on `ci_hourly_v0` should not be used for results.
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'rg -n "def |bootstrap|holm|pvalue|p_value|align|usable|exclude|Shapley|shapley|H[1-4]|r_req|TIMEOUT|state|power|timeout|R_req|walltime" research/PREREG.md src/simcore.py src/simulate.py src/analyze.py research/A07_JOBS.md' in C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+ succeeded in 315ms:
+src/analyze.py:1:"""Savings, contrasts, two-stage block bootstrap and Holm correction from results/sim_<period><tag>/.
+src/analyze.py:3:saving(arm) = 1 - sum E_arm / sum E_runnow, pooled over BAs, days, length classes and alignment replicates.
+src/analyze.py:20:def load(period, tag, trace, weight):
+src/analyze.py:38:            for d0, m in mats:                                 # align replicates on the calendar day index
+src/analyze.py:45:def weekly(m):
+src/analyze.py:50:def savings_from(tot, idx):
+src/analyze.py:54:def bootstrap(arms, data, S, B, seed):
+src/analyze.py:74:def per_ba_boot(W_ba, idx, B, seed):
+src/analyze.py:83:def contrast(vec, idx, plus, minus):
+src/analyze.py:89:def holm(pvals):
+src/analyze.py:100:def write_ledger(out, args):
+src/analyze.py:112:                     (f"{k0}.{n}.p", t["p"]), (f"{k0}.{n}.p_holm", t["p_holm"])]
+src/analyze.py:113:        for k, v in r["shapley"].items():
+src/analyze.py:114:            rows.append((f"{k0}.shapley.{k}", v))
+src/analyze.py:115:        for k, v in r["per_ba_H2_counts"].items():
+src/analyze.py:116:            rows.append((f"{k0}.perba_H2.{k}", v))
+src/analyze.py:125:def main():
+src/analyze.py:139:        "H1_deployable_saving": ([f"{F}|req"], ["runnow"], "greater"),
+src/analyze.py:140:        "H2_runtime_penalty": ([f"{F}|act"], [f"{F}|req"], "greater"),
+src/analyze.py:141:        "H3_prediction_recovery": ([f"{F}|pred"], [f"{F}|req"], "greater"),
+src/analyze.py:142:        "H4_interaction": (["oracle|act", f"{F}|req"], ["oracle|req", f"{F}|act"], "two"),
+src/analyze.py:147:        idx, point, boot, per_ba, W = bootstrap(arms, data, S, args.B, args.seed + S)
+src/analyze.py:160:        adj = holm(np.array([tres[n]["p"] for n in tests]))
+src/analyze.py:162:            tres[n]["p_holm"] = float(a)
+src/analyze.py:163:        # Shapley 2x2 of the gap oracle|act -> F|req
+src/analyze.py:168:        rs["shapley"] = {"gap": float(gap), "forecast": float(phi_fc), "runtime": float(phi_rt),
+src/analyze.py:172:        # per-BA H2 with within-BA bootstrap
+src/analyze.py:181:            per[b]["H2_est"] = e
+src/analyze.py:182:            per[b]["H2_lo"] = float(np.quantile(d, 0.025))
+src/analyze.py:186:        rs["per_ba_H2_counts"] = cnt
+src/analyze.py:202:        print(f"  {n:24s} est {100*t['est']:6.2f} pp  CI [{100*t['ci95'][0]:5.2f}, {100*t['ci95'][1]:5.2f}]  p {t['p']:.4f}  holm {t['p_holm']:.4f}")
+src/analyze.py:203:    print("  shapley", {k: (round(100 * v, 2) if isinstance(v, float) and k != "retained_share" else v) for k, v in r["shapley"].items()})
+src/analyze.py:204:    print("  per-BA H2", r["per_ba_H2_counts"])
+src/simcore.py:15:def cum_hours(ci):
+src/simcore.py:22:def integral_abs(cum, ci, x):
+src/simcore.py:29:def window_signal_actual(ci, a):
+src/simcore.py:36:def plan_start(signal, a, r_hat, slack):
+src/simcore.py:53:    def eval_cum(x):
+src/simcore.py:65:def realised(cum, ci, s, r_act):
+src/simcore.py:70:def _selftest():
+research/A07_JOBS.md:3:VERDICT: A07 done; traces PM100 (180,310 completed jobs of 231,238), F-DATA/Fugaku (2,998,737 completed of 3,399,278; months 21_04, 23_01, 23_04, 23_07, 23_10), KIT FH2 (114,355 completed of 114,355; every SWF status is 1, so no TIMEOUT can be identified); median r_act/r_req 0.028 (PM100), 0.232 (F-DATA), 0.148 (KIT FH2); NLR Kestrel NOT obtained (HTTP 503 at 13:48 IST and again at 15:04 IST); see USER STEPS NEEDED.
+research/A07_JOBS.md:8:- `r_req_h`, `r_act_h` in hours; `nodes` = allocated nodes (falls back to requested if allocated is 0).
+research/A07_JOBS.md:9:- `state` mapping: COMPLETED, TIMEOUT, CANCELLED, FAILED stay; PM100 OUT_OF_MEMORY (1,011) and NODE_FAIL (170) are mapped to FAILED; anything else OTHER (none occurred). SWF status 1 = COMPLETED, 0 = FAILED, 5 = CANCELLED, other = OTHER. F-DATA `exit state`: completed / failed only.
+research/A07_JOBS.md:11:- `r_pred_h` and `n_hist` exactly as specified: the user's jobs with END strictly before this job's submit and state COMPLETED or TIMEOUT; mean `r_act_h` of the two most recent by end time (one job: that job's value); none: `r_req_h`; then capped at `r_req_h`. `n_hist` = min(number of such jobs, 2). Implemented with sorted keys and `searchsorted` (vectorised). Ties in end time break by row order (rows sorted by submit time).
+research/A07_JOBS.md:12:- Leakage check: for every trace, 1,000 random jobs were recomputed naively (pandas filter on user, `end < submit`, state, last two by end) and compared with the vectorised result; the assertion on `n_hist`, `r_pred_h` and on end < submit passed for all three traces (it runs inside `finalise()`, so any rerun re-asserts).
+research/A07_JOBS.md:13:- No row was dropped: validity filter (submit present, `r_req_h` > 0, `r_act_h` >= 0 and finite, nodes >= 1) removed 0 rows in each trace. Jobs with `r_act_h` = 0 are kept (PM100 0.03 %, others none); the simulator should filter them if it needs a positive length.
+research/A07_JOBS.md:20:Power: `node_power_consumption` is a list of 20 s samples of whole-job power in W (sum over all the job's nodes and both power supplies). Source: the field table (https://github.com/francescoantici/PM100-data/blob/main/documentation/job_features.md) says only "Power consumption of the job, recorded at Node level"; the generating script https://raw.githubusercontent.com/francescoantici/PM100-data/main/extract_data.py (`extract_job_power`) selects the job's nodes, does `groupby(timestamp).sum()` over nodes for `ps0` and for `ps1` and adds them. Empirical check: median per-job mean power scales linearly with `num_nodes_alloc` (1 node 690 W, 2 nodes 1,398 W, 4: 2,678 W, 8: 5,070 W, 16: 9,943 W, 32: 18,875 W; about 700 W per node). So `power_w` = mean of the series, with NO multiplication by nodes. All 231,238 jobs have a series (none empty). The mean was computed batch by batch (4,000 rows per batch). `energy_kwh` = power_w * r_act_h / 1000 (derived; PM100 has no measured energy).
+research/A07_JOBS.md:22:Rows: in 231,238 (Zenodo text says 231,116; unchanged from A04); raw states COMPLETED 180,310, FAILED 29,840, CANCELLED 11,218, TIMEOUT 8,689, OUT_OF_MEMORY 1,011, NODE_FAIL 170; normalised COMPLETED 180,310, FAILED 31,021, CANCELLED 11,218, TIMEOUT 8,689; rows out 231,238; 477 users; submit 2020-05-05 15:55 to 2020-10-13 04:44 UTC; job_id unique.
+research/A07_JOBS.md:24:- Fraction r_act > r_req: all rows 3.70 %; COMPLETED 0.0006 % (1 job).
+research/A07_JOBS.md:25:- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 0.833 / 9 / 24 / 24; r_act_h 0.000278 / 0.0025 / 0.0528 / 0.487 / 11.4; r_act/r_req 1.2e-05 / 0.00063 / 0.0281 / 0.215 / 0.737.
+research/A07_JOBS.md:26:- TIMEOUT: 8,689 rows; share with r_act within 2 % of r_req 92.2 % (all rows within 2 %: 4.7 %).
+research/A07_JOBS.md:27:- r_pred_h / r_act_h (COMPLETED, r_act > 0): 0.089 / 0.685 / 1.008 / 2.00 / 23.4. r_pred_h / r_req_h median 0.0287.
+research/A07_JOBS.md:29:- power_w quantiles (W): 522 / 588 / 819 / 1,330 / 11,410 (no NaN).
+research/A07_JOBS.md:49:- `avgpcon` (also `minpcon`, `maxpcon`): W. The feature list calls it "Average node power consuption", but the paper states "The power consumption is the sum of the minimum, average, or maximum power consumption of the resources allocated to the job during its execution", and `econ = avgpcon * duration / 3600` with no node factor, so it is a whole-job power. Median `power_w / nodes` is about 93 to 102 W per node in five of six node-count bins (47.6 W in the 17 to 64 node bin; the cause was not investigated, possibly allocated nodes above used nodes, since 21_04 has jobs with `nnuma` 12 and `nnumu` 1); therefore `power_w` = `avgpcon` as is, `energy_kwh` = `econ` / 1000 (measured). 
+research/A07_JOBS.md:53:Rows: in 3,399,278 (per month of submit time: 21_04 116,977, 22_12 4,711, 23_01 889,780, 23_04 618,335, 23_06 3,220, 23_07 957,831, 23_09 12,299, 23_10 796,125; the 22_12, 23_06 and 23_09 rows are jobs whose `adt` lies in the month before the file's month); 1,410 users; submit 2021-04-01 to 2023-10-31 UTC. States: only `completed` 2,998,737 and `failed` 400,541; no TIMEOUT state exists in F-DATA, so the TIMEOUT rule has no rows and the history predictor uses COMPLETED jobs only. Rows out 3,399,278. In 21_04, 46,602 of 116,977 rows (40 %) repeat a `jid` (presumably array or bulk sub-jobs; the share over all months was not measured); all rows are kept and a repeated `jid` is made unique with a ".k" suffix, so job_id is unique. The history of a user runs across all five months (months are not contiguous, so the first jobs of each month use history from up to three months earlier, or none).
+research/A07_JOBS.md:55:- Fraction r_act > r_req: all 0.0008 %; COMPLETED 0.0009 %.
+research/A07_JOBS.md:56:- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 1 / 4 / 17 / 72; r_act_h 0.00417 / 0.0658 / 0.544 / 2.5 / 18; r_act/r_req 0.00228 / 0.0422 / 0.232 / 0.573 / 0.873.
+research/A07_JOBS.md:57:- TIMEOUT: none. As a proxy, FAILED rows within 2 % of r_req: 0.28 %; all rows within 2 %: 0.99 %.
+research/A07_JOBS.md:58:- r_pred_h / r_act_h (COMPLETED, r_act > 0): 0.031 / 0.801 / 1.05 / 1.88 / 22.3. r_pred_h / r_req_h median 0.294.
+research/A07_JOBS.md:60:- power_w quantiles (W): 42 / 85 / 113 / 536 / 7,110 (no NaN).
+research/A07_JOBS.md:63:## 3. KIT FH2 (ForHLR II, Karlsruhe, Europe/Berlin)
+research/A07_JOBS.md:64:Source: Parallel Workloads Archive https://www.cs.huji.ac.il/labs/parallel/workload/l_kit_fh2/index.html, file `KIT-FH2-2016-1.swf.gz` (1,194,167 B), md5 4c136801c2728ad46f30e903544846c8, sha256 e1a4b12185dae1d2666f66649274883f85ae611b553edbc22726a5edec6239f5 (no published checksum). The archive offers only the original log "as received"; there is no cleaned version for this machine (the brief said cleaned). A request with only a short User-Agent got an error page; full browser headers and a Referer worked.
+research/A07_JOBS.md:66:Header: UnixStartTime 1464739965 (= 2016-06-01 00:12:45 UTC = 02:12:45 CEST, equals the header's StartTime), TimeZoneString Europe/Berlin, 114,355 jobs, MaxProcs 24,048. Fields used: 2 submit (s after UnixStartTime), 3 wait, 4 run time, 5 allocated processors (fallback 8), 9 requested time, 11 status, 12 user, 15 queue. `nodes` = ceil(processors / 20) for queue 1 (thin nodes, whole nodes always allocated per the header) and / 48 for queue 2 (visualisation nodes). End time = submit + wait + run. `power_w` and `energy_kwh` = NaN (no power).
+research/A07_JOBS.md:68:Status: all 114,355 rows have SWF status 1, so every job is COMPLETED and no TIMEOUT can be identified, although many jobs run to the limit (see below). The log does not hold the full workload of the machine (header disclaimer: special campaigns, privacy removals, no interactive jobs).
+research/A07_JOBS.md:71:- Fraction r_act > r_req: 0 (run time is capped by the limit). Fraction within 2 % of r_req (all rows): 7.3 %; this is the best available proxy for time-outs.
+research/A07_JOBS.md:72:- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 0.333 / 4 / 24 / 72; r_act_h 0.015 / 0.0289 / 0.167 / 3.88 / 25.8; r_act/r_req 0.00118 / 0.0356 / 0.148 / 0.468 / 1.
+research/A07_JOBS.md:73:- TIMEOUT share within 2 %: not defined (no TIMEOUT rows).
+research/A07_JOBS.md:74:- r_pred_h / r_act_h: 0.0157 / 0.509 / 1.00 / 2.31 / 51.6. r_pred_h / r_req_h median 0.158.
+research/A07_JOBS.md:76:- power_w: all NaN. Energy: n/a.
+research/A07_JOBS.md:77:- Median r_act/r_req 0.148 agrees with A04.
+research/A07_JOBS.md:81:- F-DATA `power_w` per node varies by node-count bin (above); use `power_w` as given (whole job), not times nodes. PM100 likewise: never multiply by nodes.
+research/A07_JOBS.md:82:- PM100 TIMEOUT jobs are the only strong evidence of limit-bound behaviour: 8,689 jobs, 92.2 % within 2 % of the limit. The predictor treats TIMEOUT runs as history, as specified (their `r_act_h` is the limit, so a user with time-outs gets a long prediction).
+research/A07_JOBS.md:83:- F-DATA covers 2021 and 2023, PM100 2020, KIT 2016-2018: calendar alignment to EIA-930 years is needed by the simulator, as noted in A04.
+research/A07_JOBS.md:87:1. NLR HPC Kestrel Jobs Data (DOI 10.7799/3023270, https://data.nlr.gov/submissions/302; the DOI redirects to https://www.osti.gov/servlets/purl/3023270 and then to the same page). Used for: the only job trace whose years (Aug 2023 to Dec 2025) and country (US, Golden CO, America/Denver) match EIA-930, with measured job energy. Status: HTTP 503 "Site under maintenance" on 2026-11-11 08:18 UTC (13:48 IST) and again at 09:34 UTC (15:04 IST), so the licence text ("View License") was not read and nothing was downloaded. DataCite (https://api.datacite.org/dois/10.7799/3023270) has an empty `rightsList`. What to do: when the site is back, open the page, read the licence under "View License", and tell me "kestrel ok" only if it is an open licence allowing research use with no login or click-through; then rerun the download (697 MB zip, md5 8f1d3be1cbe6345ef45e658a783c2aa0 per A04) into `data/raw/kestrel/`. Without it the job table has no US-site trace and no trace from the EIA-930 years with measured energy; PM100 and F-DATA remain the power-bearing traces and the paper can say so. `load_kestrel()` is a stub that raises until the schema and licence are checked (field names from A04: `submit_time`, `end_time`, `wallclock_req`, `wallclock_used`, `state_simple`, `consumed_energy_raw_watt_hours`, hashed `user`).
+src/simulate.py:34:def check_prereg():
+src/simulate.py:45:def ba_offsets():
+src/simulate.py:64:def load_ba(ba, tag):
+src/simulate.py:66:                        filters=[("ba", "==", ba)], columns=["utc", "ci_clean", "usable_day"])
+src/simulate.py:71:    usable = d["usable_day"].to_numpy(dtype=bool) & np.isfinite(ci)
+src/simulate.py:72:    # NaN (long gaps) only on unusable hours; jobs whose 96 h window touches one are excluded in place_jobs,
+src/simulate.py:75:    return origin, ci, usable, d["utc"]
+src/simulate.py:78:def hist_profile(ci, utc, offset):
+src/simulate.py:87:def place_jobs(jobs, period, origin, offset, rng, usable):
+src/simulate.py:88:    """Random alignment: each job gets a random week of the period, keeping its local weekday and clock time."""
+src/simulate.py:101:    bad = np.concatenate([[0], np.cumsum(~usable)])          # unusable hours before index k
+src/simulate.py:102:    lo = np.clip(hour_idx, 0, len(usable))
+src/simulate.py:103:    hi = np.clip(hour_idx + sc.H, 0, len(usable))
+src/simulate.py:104:    ok = (hour_idx >= 0) & (hour_idx + sc.H <= len(usable)) & (bad[hi] - bad[lo] == 0)
+src/simulate.py:108:def load_fc(fc_dir, model, ba, origin):
+src/simulate.py:117:def fc_window(first_k, fc, a):
+src/simulate.py:123:def run_ba(ba, args, jobs_by_trace, offsets, outdir):
+src/simulate.py:125:    origin, ci, usable, utc = load_ba(ba, args.tag)
+src/simulate.py:132:    # usable flag is per hour row; convert to per-interval day usability
+src/simulate.py:141:            a, ok = place_jobs(J, args.period, origin, off, rng, usable)
+src/simulate.py:144:            r_est = {"act": r_act, "req": J["r_req_h"], "pred": J["r_pred_h"]}
+src/simulate.py:145:            p_kw = J["power_kw"]
+src/simulate.py:181:def aggregate(res):
+src/simulate.py:204:def main():
+src/simulate.py:215:    ap.add_argument("--states", default="COMPLETED")
+src/simulate.py:225:    jobs = jobs[jobs["state"].isin(args.states.split(","))]
+src/simulate.py:226:    jobs = jobs[(jobs["r_act_h"] >= 1 / 60) & (jobs["r_req_h"] <= MAX_REQ_H) & (jobs["r_req_h"] > 0)]
+src/simulate.py:227:    jobs = jobs.assign(power_kw=(jobs["power_w"] / 1000.0).fillna(1.0))   # traces without power: 1 kW per job
+src/simulate.py:229:    cols = ["r_act_h", "r_req_h", "r_pred_h", "power_kw", "submit_local_dow", "submit_local_hour"]
+src/simulate.py:239:                f"seed={args.seed} states={args.states} traces={traces} bas={len(bas)} seconds={time.time()-t0:.0f}\n")
+research/PREREG.md:9:intensity and (b) the user's requested walltime, or a history-based runtime prediction, instead of the actual runtime?
+research/PREREG.md:12:- Grid: EIA-930 six-month BALANCE files 2018 H2 to 2026 H1 (public domain), SHA-256 in
+research/PREREG.md:19:  2021-04, 2023-01, 2023-04, 2023-07, 2023-10) and KIT FH2 (Parallel Workloads Archive), secondary. KIT FH2 has no
+research/PREREG.md:20:  power data, so its jobs carry 1 kW each (energy weight proportional to runtime). Trace audit:
+research/PREREG.md:24:- Job filter (main): state COMPLETED; actual runtime >= 1 min; requested walltime <= 72 h and > 0.
+research/PREREG.md:33:- Assumption stated as a limitation: grid data for the hour ending floor(a) is available at time a (EIA-930 publishes
+research/PREREG.md:37:- Job: arrival a, requested walltime R_req, actual runtime R_act, mean power P. Slack S in {2, 6, 12, 24} h: the start
+research/PREREG.md:43:- Runtime estimates: act (R_act, oracle), req (R_req), pred (mean actual runtime of the user's two most recent jobs
+research/PREREG.md:44:  that ended before this job's submission with state COMPLETED or TIMEOUT, capped at R_req; R_req if no history).
+research/PREREG.md:47:- Random calendar alignment: each sampled job is placed in a random week of the period with its own local weekday and
+research/PREREG.md:48:  clock time, in the BA's standard local time. 3 alignment replicates x 20,000 jobs per BA per trace (or all jobs if
+research/PREREG.md:49:  fewer), fixed seed 20261111. Jobs whose 96 h window touches an unusable grid hour are excluded.
+research/PREREG.md:53:  job power (PM100). Unweighted variant (each job 1 kW) secondary.
+research/PREREG.md:58:- H1: saving(lgbm|req) > 0.
+research/PREREG.md:59:- H2 (runtime penalty): saving(lgbm|act) - saving(lgbm|req) > 0.
+research/PREREG.md:60:- H3 (prediction recovery): saving(lgbm|pred) - saving(lgbm|req) > 0.
+research/PREREG.md:61:- H4 (interaction): [saving(oracle|act) - saving(oracle|req)] - [saving(lgbm|act) - saving(lgbm|req)] != 0.
+research/PREREG.md:62:Test: two-stage bootstrap (BAs with replacement, then weekly blocks of days within BA), B = 2000, seed 7 + S;
+research/PREREG.md:63:one-sided p for H1-H3, two-sided for H4; Holm over the four at alpha = 0.05. A hypothesis is supported when its
+research/PREREG.md:67:1. Shapley decomposition of the gap saving(oracle|act) - saving(lgbm|req) into forecast and runtime terms (2x2,
+research/PREREG.md:71:3. Per-BA H2 counts: estimate > 0, and 95 % within-BA interval above 0.
+research/PREREG.md:75:6. Secondary traces (F-DATA, KIT FH2; Kestrel if present), unweighted outcome, slacks 2, 6, 24 h, and TIMEOUT jobs
+research/PREREG.md:81:- If H1 fails, deployable carbon-aware delay scheduling gives no significant saving on these grids at 12 h slack; this
+research/PREREG.md:83:- If H2 fails, requested walltime costs no significant saving; the paper reports the size bound.
+research/PREREG.md:84:- If H3 fails, the history predictor does not recover saving; reported plainly.
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Failed
+hook: PostToolUse Failed
+hook: PostToolUse Failed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-Content src/analyze.py | Select-Object -First 210; Get-Content src/simulate.py | Select-Object -Skip 130 -First 110; Get-Content research/A07_JOBS.md | Select-Object -First 35; Get-Content research/PREREG.md' in C:\Users\Shlok\Downloads\Sustainable Computing papers\paper_A
+ succeeded in 381ms:
+"""Savings, contrasts, two-stage block bootstrap and Holm correction from results/sim_<period><tag>/.
+
+saving(arm) = 1 - sum E_arm / sum E_runnow, pooled over BAs, days, length classes and alignment replicates.
+Bootstrap: resample BAs with replacement, then within each BA resample weekly blocks of days with replacement.
+Usage: python src/analyze.py --period DEV [--tag _v0] [--trace PM100] [--weight w|u] [--B 2000]
+Writes results/analysis_<period><tag>_<trace>_<weight>.json and appends ledger rows to tables/ledger_<period><tag>.csv.
+"""
+import argparse
+import glob
+import json
+import os
+
+import numpy as np
+import pandas as pd
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SLACKS = (2, 6, 12, 24)
+
+
+def load(period, tag, trace, weight):
+    files = sorted(glob.glob(os.path.join(ROOT, "results", f"sim_{period}{tag}", trace, "*.npz")))
+    data = {}
+    arms = None
+    for f in files:
+        z = np.load(f)
+        arms = list(z["arms"])
+        ba = os.path.basename(f)[:-4]
+        per_s = {}
+        for S in SLACKS:
+            mats = []
+            for k in z.files:
+                if k.endswith(f"_S{S}__e_{weight}"):
+                    pre = k[: -len(f"__e_{weight}")]
+                    mats.append((int(z[pre + "__day0"]), z[k].sum(axis=2)))   # (first day, [arms, days])
+            d_min = min(d0 for d0, _ in mats)
+            d_max = max(d0 + m.shape[1] for d0, m in mats)
+            acc = np.zeros((mats[0][1].shape[0], d_max - d_min))
+            for d0, m in mats:                                 # align replicates on the calendar day index
+                acc[:, d0 - d_min: d0 - d_min + m.shape[1]] += m
+            per_s[S] = acc
+        data[ba] = per_s
+    return arms, data
+
+
+def weekly(m):
+    nd = m.shape[1] // 7 * 7
+    return m[:, :nd].reshape(m.shape[0], -1, 7).sum(axis=2)    # [arms, weeks]
+
+
+def savings_from(tot, idx):
+    return 1.0 - tot / tot[idx["runnow"]]
+
+
+def bootstrap(arms, data, S, B, seed):
+    idx = {a: i for i, a in enumerate(arms)}
+    bas = sorted(data)
+    W = [weekly(data[b][S]) for b in bas]                     # list of [arms, weeks]
+    point = savings_from(sum(w.sum(axis=1) for w in W), idx)
+    rng = np.random.default_rng(seed)
+    boot = np.empty((B, len(arms)))
+    for b in range(B):
+        pick = rng.integers(0, len(bas), len(bas))
+        tot = np.zeros(len(arms))
+        for p in pick:
+            w = W[p]
+            tot += w[:, rng.integers(0, w.shape[1], w.shape[1])].sum(axis=1)
+        boot[b] = savings_from(tot, idx)
+    per_ba = {}
+    for b, w in zip(bas, W):
+        per_ba[b] = savings_from(w.sum(axis=1), idx)
+    return idx, point, boot, per_ba, W
+
+
+def per_ba_boot(W_ba, idx, B, seed):
+    rng = np.random.default_rng(seed)
+    nw = W_ba.shape[1]
+    out = np.empty((B, W_ba.shape[0]))
+    for b in range(B):
+        out[b] = savings_from(W_ba[:, rng.integers(0, nw, nw)].sum(axis=1), idx)
+    return out
+
+
+def contrast(vec, idx, plus, minus):
+    """Linear contrast of savings: sum(plus) - sum(minus); vec may be [arms] or [B, arms]."""
+    c = sum(vec[..., idx[a]] for a in plus) - sum(vec[..., idx[a]] for a in minus)
+    return c
+
+
+def holm(pvals):
+    order = np.argsort(pvals)
+    m = len(pvals)
+    adj = np.empty(m)
+    run = 0.0
+    for r, i in enumerate(order):
+        run = max(run, (m - r) * pvals[i])
+        adj[i] = min(1.0, run)
+    return adj
+
+
+def write_ledger(out, args):
+    """One row per number: key, value, source. Rows of this period/tag/trace/weight are replaced on re-run."""
+    pre = f"{args.period}{args.tag}.{args.trace}.{args.weight}"
+    src = f"results/analysis_{args.period}{args.tag}_{args.trace}_{args.weight}.json"
+    rows = [(f"{pre}.n_ba", out["n_ba"])]
+    for S, r in out["slacks"].items():
+        k0 = f"{pre}.S{S}"
+        for a, v in r["savings"].items():
+            lo, hi = r["savings_ci95"][a]
+            rows += [(f"{k0}.saving.{a}", v), (f"{k0}.saving_lo.{a}", lo), (f"{k0}.saving_hi.{a}", hi)]
+        for n, t in r["tests"].items():
+            rows += [(f"{k0}.{n}.est", t["est"]), (f"{k0}.{n}.lo", t["ci95"][0]), (f"{k0}.{n}.hi", t["ci95"][1]),
+                     (f"{k0}.{n}.p", t["p"]), (f"{k0}.{n}.p_holm", t["p_holm"])]
+        for k, v in r["shapley"].items():
+            rows.append((f"{k0}.shapley.{k}", v))
+        for k, v in r["per_ba_H2_counts"].items():
+            rows.append((f"{k0}.perba_H2.{k}", v))
+    new = pd.DataFrame(rows, columns=["key", "value"]).assign(source=src)
+    fn = os.path.join(ROOT, "tables", f"ledger_{args.period}{args.tag}.csv")
+    if os.path.exists(fn):
+        old = pd.read_csv(fn)
+        new = pd.concat([old[~old["key"].str.startswith(pre + ".")], new], ignore_index=True)
+    new.to_csv(fn, index=False)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--period", required=True)
+    ap.add_argument("--tag", default="")
+    ap.add_argument("--trace", default="PM100")
+    ap.add_argument("--weight", default="w", choices=["w", "u"])
+    ap.add_argument("--B", type=int, default=2000)
+    ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--fc", default="lgbm")
+    ap.add_argument("--primary-slack", type=int, default=12)
+    args = ap.parse_args()
+    arms, data = load(args.period, args.tag, args.trace, args.weight)
+    F = args.fc
+    tests = {   # name: (plus arms, minus arms, sidedness)
+        "H1_deployable_saving": ([f"{F}|req"], ["runnow"], "greater"),
+        "H2_runtime_penalty": ([f"{F}|act"], [f"{F}|req"], "greater"),
+        "H3_prediction_recovery": ([f"{F}|pred"], [f"{F}|req"], "greater"),
+        "H4_interaction": (["oracle|act", f"{F}|req"], ["oracle|req", f"{F}|act"], "two"),
+    }
+    out = {"period": args.period, "trace": args.trace, "weight": args.weight, "n_ba": len(data), "B": args.B,
+           "slacks": {}}
+    for S in SLACKS:
+        idx, point, boot, per_ba, W = bootstrap(arms, data, S, args.B, args.seed + S)
+        rs = {"savings": {a: float(point[idx[a]]) for a in arms},
+              "savings_ci95": {a: [float(np.quantile(boot[:, idx[a]], 0.025)), float(np.quantile(boot[:, idx[a]], 0.975))]
+                               for a in arms}}
+        tres = {}
+        for name, (pl, mi, side) in tests.items():
+            est = float(contrast(point, idx, pl, mi))
+            bc = contrast(boot, idx, pl, mi)
+            if side == "greater":
+                p = (1 + np.sum(bc <= 0)) / (1 + len(bc))
+            else:
+                p = min(1.0, 2 * min((1 + np.sum(bc <= 0)) / (1 + len(bc)), (1 + np.sum(bc >= 0)) / (1 + len(bc))))
+            tres[name] = {"est": est, "ci95": [float(np.quantile(bc, 0.025)), float(np.quantile(bc, 0.975))], "p": float(p)}
+        adj = holm(np.array([tres[n]["p"] for n in tests]))
+        for n, a in zip(tests, adj):
+            tres[n]["p_holm"] = float(a)
+        # Shapley 2x2 of the gap oracle|act -> F|req
+        o_a, o_r, f_a, f_r = (point[idx[k]] for k in ("oracle|act", "oracle|req", f"{F}|act", f"{F}|req"))
+        gap = o_a - f_r
+        phi_fc = 0.5 * ((o_a - f_a) + (o_r - f_r))
+        phi_rt = 0.5 * ((o_a - o_r) + (f_a - f_r))
+        rs["shapley"] = {"gap": float(gap), "forecast": float(phi_fc), "runtime": float(phi_rt),
+                         "interaction": float((o_a - o_r) - (f_a - f_r)),
+                         "retained_share": float(f_r / o_a) if o_a else None}
+        rs["tests"] = tres
+        # per-BA H2 with within-BA bootstrap
+        cnt = {"n": 0, "pos": 0, "sig": 0}
+        per = {}
+        for j, (b, w) in enumerate(zip(sorted(data), W)):
+            bb = per_ba_boot(w, idx, 500, args.seed + 100 + j)
+            d = contrast(bb, idx, [f"{F}|act"], [f"{F}|req"])
+            e = float(contrast(per_ba[b], idx, [f"{F}|act"], [f"{F}|req"]))
+            per[b] = {"saving_" + k.replace("|", "_"): float(per_ba[b][idx[k]]) for k in
+                      ("oracle|act", "oracle|req", f"{F}|act", f"{F}|req", f"{F}|pred", "night", "histprofile|req")}
+            per[b]["H2_est"] = e
+            per[b]["H2_lo"] = float(np.quantile(d, 0.025))
+            cnt["n"] += 1
+            cnt["pos"] += int(e > 0)
+            cnt["sig"] += int(np.quantile(d, 0.025) > 0)
+        rs["per_ba_H2_counts"] = cnt
+        rs["per_ba"] = per
+        out["slacks"][str(S)] = rs
+    os.makedirs(os.path.join(ROOT, "results"), exist_ok=True)
+    fn = os.path.join(ROOT, "results", f"analysis_{args.period}{args.tag}_{args.trace}_{args.weight}.json")
+    with open(fn, "w", encoding="utf-8") as fh:
+        json.dump(out, fh, indent=1)
+    write_ledger(out, args)
+    S = str(args.primary_slack)
+    r = out["slacks"][S]
+    print(f"{args.trace} {args.weight} S={S}h n_ba={out['n_ba']}")
+    for a in ["night", "histprofile|req", "oracle|act", "oracle|req", "oracle|pred", f"{F}|act", f"{F}|req", f"{F}|pred",
+              "snaive_day|req", "profile7|req", "persistence|req"]:
+        lo, hi = r["savings_ci95"][a]
+        print(f"  saving {a:18s} {100*r['savings'][a]:6.2f} %  [{100*lo:5.2f}, {100*hi:5.2f}]")
+    for n, t in r["tests"].items():
+        print(f"  {n:24s} est {100*t['est']:6.2f} pp  CI [{100*t['ci95'][0]:5.2f}, {100*t['ci95'][1]:5.2f}]  p {t['p']:.4f}  holm {t['p_holm']:.4f}")
+    print("  shapley", {k: (round(100 * v, 2) if isinstance(v, float) and k != "retained_share" else v) for k, v in r["shapley"].items()})
+    print("  per-BA H2", r["per_ba_H2_counts"])
+    for S2 in SLACKS:
+        rr = out["slacks"][str(S2)]
+        print(f"  S={S2:2d}h oracle|act {100*rr['savings']['oracle|act']:5.2f}  {F}|act {100*rr['savings'][f'{F}|act']:5.2f}  "
+              f"{F}|req {100*rr['savings'][f'{F}|req']:5.2f}  {F}|pred {100*rr['savings'][f'{F}|pred']:5.2f}  night {100*rr['savings']['night']:5.2f}")
+
+
+    loc_hour = ((utc + pd.Timedelta(hours=off) - pd.Timedelta(hours=1)).dt.hour).to_numpy()
+    # usable flag is per hour row; convert to per-interval day usability
+    out = {}
+    for trace, jobs in jobs_by_trace.items():
+        res = {}
+        for rep in range(args.reps):
+            rng = np.random.default_rng([args.seed, rep, zlib.crc32(ba.encode()), zlib.crc32(trace.encode())])
+            nj = len(jobs["r_act_h"])
+            idx = np.sort(rng.choice(nj, size=min(args.n_jobs, nj), replace=False))
+            J = {k: np.asarray(v[idx]) for k, v in jobs.items()}
+            a, ok = place_jobs(J, args.period, origin, off, rng, usable)
+            J, a = {k: v[ok] for k, v in J.items()}, a[ok]
+            r_act = J["r_act_h"]
+            r_est = {"act": r_act, "req": J["r_req_h"], "pred": J["r_pred_h"]}
+            p_kw = J["power_kw"]
+            day = np.floor(a / 24.0).astype(np.int64)
+            lcls = np.searchsorted(LEN_EDGES, r_act, side="right") - 1
+            sig = {"oracle": sc.window_signal_actual(ci, a),
+                   "histprofile": sc.window_signal_actual(prof, a)}
+            for m in FC_MODELS:
+                sig[m] = fc_window(*fcs[m], a)
+            for S in SLACKS:
+                slack = np.full(len(a), S)
+                starts = {"runnow": a}
+                # night rule: earliest candidate start whose local hour is 0-3, else now
+                offs = np.arange(int(S / sc.STEP) + 1) * sc.STEP
+                cand = a[:, None] + offs[None, :]
+                hrs = loc_hour[np.clip(np.floor(cand).astype(np.int64), 0, len(loc_hour) - 1)]
+                night = hrs < 4
+                first = np.where(night.any(axis=1), night.argmax(axis=1), 0)
+                starts["night"] = a + offs[first]
+                for s_name, sg in sig.items():
+                    for r_name, rh in r_est.items():
+                        starts[f"{s_name}|{r_name}"] = sc.plan_start(sg, a, rh, slack)
+                e_w = np.stack([p_kw * sc.realised(cum, ci, starts[k], r_act) for k in ARMS])   # g CO2
+                e_u = np.stack([sc.realised(cum, ci, starts[k], r_act) / r_act for k in ARMS])  # g/kWh per job
+                delay = np.stack([starts[k] - a for k in ARMS])
+                key = (rep, S)
+                res[key] = {"day": day, "lcls": lcls, "e_w": e_w.astype("float32"), "e_u": e_u.astype("float32"),
+                            "delay": delay.astype("float32"), "energy_kwh": (p_kw * r_act).astype("float32")}
+        os.makedirs(os.path.join(outdir, trace), exist_ok=True)
+        flat = {}
+        for k, v in aggregate(res).items():
+            for kk, vv in v.items():
+                flat[f"{k}__{kk}"] = vv
+        np.savez_compressed(os.path.join(outdir, trace, f"{ba}.npz"), arms=np.array(ARMS), **flat)
+        del res
+    return ba
+
+
+def aggregate(res):
+    """Per (rep, S): per-day sums by length class -> arrays [n_arms, n_days, n_classes]."""
+    agg = {}
+    for (rep, S), r in res.items():
+        d0 = r["day"].min()
+        nd = r["day"].max() - d0 + 1
+        nc = len(LEN_EDGES) - 1
+        flat = (r["day"] - d0) * nc + r["lcls"]
+        ew = np.zeros((len(ARMS), nd * nc))
+        eu = np.zeros((len(ARMS), nd * nc))
+        dl = np.zeros((len(ARMS), nd * nc))
+        for i in range(len(ARMS)):
+            ew[i] = np.bincount(flat, weights=r["e_w"][i], minlength=nd * nc)
+            eu[i] = np.bincount(flat, weights=r["e_u"][i], minlength=nd * nc)
+            dl[i] = np.bincount(flat, weights=r["delay"][i], minlength=nd * nc)
+        cnt = np.bincount(flat, minlength=nd * nc)
+        en = np.bincount(flat, weights=r["energy_kwh"], minlength=nd * nc)
+        agg[f"r{rep}_S{int(S)}"] = dict(day0=d0, e_w=ew.reshape(len(ARMS), nd, nc), e_u=eu.reshape(len(ARMS), nd, nc),
+                                       delay=dl.reshape(len(ARMS), nd, nc), n=cnt.reshape(nd, nc),
+                                       energy=en.reshape(nd, nc))
+    return agg
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--period", required=True, choices=list(PERIODS))
+    ap.add_argument("--tag", default="")
+    ap.add_argument("--fc-dir", default="data/derived/forecasts")
+    ap.add_argument("--traces", default="")
+    ap.add_argument("--bas", default="")
+    ap.add_argument("--reps", type=int, default=3)
+    ap.add_argument("--n-jobs", type=int, default=20000)
+    ap.add_argument("--seed", type=int, default=20261111)
+    ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--states", default="COMPLETED")
+    ap.add_argument("--jobs", default="data/derived/jobs.parquet")
+    ap.add_argument("--out-suffix", default="")
+    args = ap.parse_args()
+    if args.period == "TEST":
+        check_prereg()
+    el = pd.read_csv(os.path.join(ROOT, "tables", f"ba_eligibility{args.tag}.csv"))
+    bas = sorted(el[el["eligible"]]["ba"]) if not args.bas else args.bas.split(",")
+    offsets = ba_offsets()
+    jobs = pd.read_parquet(os.path.join(ROOT, args.jobs))
+    jobs = jobs[jobs["state"].isin(args.states.split(","))]
+    jobs = jobs[(jobs["r_act_h"] >= 1 / 60) & (jobs["r_req_h"] <= MAX_REQ_H) & (jobs["r_req_h"] > 0)]
+    jobs = jobs.assign(power_kw=(jobs["power_w"] / 1000.0).fillna(1.0))   # traces without power: 1 kW per job
+    traces = args.traces.split(",") if args.traces else sorted(jobs["trace"].unique())
+    cols = ["r_act_h", "r_req_h", "r_pred_h", "power_kw", "submit_local_dow", "submit_local_hour"]
+    jobs_by_trace = {t: {c: jobs.loc[jobs["trace"] == t, c].to_numpy() for c in cols} for t in traces}  # numpy: memmapped
+    del jobs
+    outdir = os.path.join(ROOT, "results", f"sim_{args.period}{args.tag}{args.out_suffix}")
+    t0 = time.time()
+    from joblib import Parallel, delayed
+    Parallel(n_jobs=args.workers, verbose=5)(
+        delayed(run_ba)(ba, args, jobs_by_trace, offsets, outdir) for ba in bas)
+    with open(os.path.join(outdir, "RUN.txt"), "w", encoding="utf-8") as f:
+        f.write(f"period={args.period} tag={args.tag} fc_dir={args.fc_dir} reps={args.reps} n_jobs={args.n_jobs} "
+                f"seed={args.seed} states={args.states} traces={traces} bas={len(bas)} seconds={time.time()-t0:.0f}\n")
+    print("done", outdir, f"{time.time()-t0:.0f}s")
+# A07 job table (Paper A)
+
+VERDICT: A07 done; traces PM100 (180,310 completed jobs of 231,238), F-DATA/Fugaku (2,998,737 completed of 3,399,278; months 21_04, 23_01, 23_04, 23_07, 23_10), KIT FH2 (114,355 completed of 114,355; every SWF status is 1, so no TIMEOUT can be identified); median r_act/r_req 0.028 (PM100), 0.232 (F-DATA), 0.148 (KIT FH2); NLR Kestrel NOT obtained (HTTP 503 at 13:48 IST and again at 15:04 IST); see USER STEPS NEEDED.
+
+Output: `data/derived/jobs.parquet` (3,744,871 rows, exactly the 14 requested columns; dtypes string, timestamp[ns, UTC], double, int64). Intermediate per-trace files `data/derived/jobs_<TRACE>.parquet` are kept (the script merges them). Code: `src/prep_jobs.py` (one loader per trace: `load_pm100`, `load_fdata`, `load_kit_fh2`, `load_kestrel`; `finalise()` shared). Numbers below come from `tables/jobs_trace_stats.json`, written by the script. Run: `PYTHONIOENCODING=utf-8 python src/prep_jobs.py` (takes about 1.5 minutes). Free disk before work 115 GB, after 80 GB (limit 15 GB).
+
+## Definitions applied (all three traces)
+- `r_req_h`, `r_act_h` in hours; `nodes` = allocated nodes (falls back to requested if allocated is 0).
+- `state` mapping: COMPLETED, TIMEOUT, CANCELLED, FAILED stay; PM100 OUT_OF_MEMORY (1,011) and NODE_FAIL (170) are mapped to FAILED; anything else OTHER (none occurred). SWF status 1 = COMPLETED, 0 = FAILED, 5 = CANCELLED, other = OTHER. F-DATA `exit state`: completed / failed only.
+- `submit_local_hour` = local clock hour + minutes/60 + seconds/3600 at the site (zoneinfo, so DST is handled); `submit_local_dow` 0 = Monday.
+- `r_pred_h` and `n_hist` exactly as specified: the user's jobs with END strictly before this job's submit and state COMPLETED or TIMEOUT; mean `r_act_h` of the two most recent by end time (one job: that job's value); none: `r_req_h`; then capped at `r_req_h`. `n_hist` = min(number of such jobs, 2). Implemented with sorted keys and `searchsorted` (vectorised). Ties in end time break by row order (rows sorted by submit time).
+- Leakage check: for every trace, 1,000 random jobs were recomputed naively (pandas filter on user, `end < submit`, state, last two by end) and compared with the vectorised result; the assertion on `n_hist`, `r_pred_h` and on end < submit passed for all three traces (it runs inside `finalise()`, so any rerun re-asserts).
+- No row was dropped: validity filter (submit present, `r_req_h` > 0, `r_act_h` >= 0 and finite, nodes >= 1) removed 0 rows in each trace. Jobs with `r_act_h` = 0 are kept (PM100 0.03 %, others none); the simulator should filter them if it needs a positive length.
+
+## 1. PM100 (Marconi100, CINECA Bologna, Europe/Rome)
+Source `data/raw/pm100/job_table.parquet`, md5 cf85f171a5ed5ff1d951d93f9bcbc6ef (equals the Zenodo md5, https://zenodo.org/records/10127767), sha256 6be954098d9bd6bfdef6881c6d8a3260170b00d16839509700e1b6976da3a7eb.
+
+Timestamps: UTC. Evidence: (1) the parquet columns are `timestamp[us, tz=UTC]`, produced from Slurm epoch times; (2) the weekday submit profile converted with Europe/Rome has the shape of an Italian working day: ramp 2.0 % (07h) to 3.4 % (08h) to 6.2 % (09h), a lunch dip at 14h (5.0 % against 6.0 % at 13h and 7.1 % at 15h) and a dinner dip at 20h (2.8 %); read as already-local it would put the dinner dip at 18h and the ramp at 07h. UTC hour histogram of all jobs (hours 0 to 23): 4920, 4028, 3923, 3901, 4739, 4933, 7522, 13454, 15391, 14624, 13490, 13463, 10879, 15931, 17075, 12826, 10597, 10361, 6088, 10718, 7547, 8593, 8506, 7729. Residual uncertainty about a 1 to 2 hour offset is small relative to the simulator's 2 h minimum slack but not zero.
+
+Power: `node_power_consumption` is a list of 20 s samples of whole-job power in W (sum over all the job's nodes and both power supplies). Source: the field table (https://github.com/francescoantici/PM100-data/blob/main/documentation/job_features.md) says only "Power consumption of the job, recorded at Node level"; the generating script https://raw.githubusercontent.com/francescoantici/PM100-data/main/extract_data.py (`extract_job_power`) selects the job's nodes, does `groupby(timestamp).sum()` over nodes for `ps0` and for `ps1` and adds them. Empirical check: median per-job mean power scales linearly with `num_nodes_alloc` (1 node 690 W, 2 nodes 1,398 W, 4: 2,678 W, 8: 5,070 W, 16: 9,943 W, 32: 18,875 W; about 700 W per node). So `power_w` = mean of the series, with NO multiplication by nodes. All 231,238 jobs have a series (none empty). The mean was computed batch by batch (4,000 rows per batch). `energy_kwh` = power_w * r_act_h / 1000 (derived; PM100 has no measured energy).
+
+Rows: in 231,238 (Zenodo text says 231,116; unchanged from A04); raw states COMPLETED 180,310, FAILED 29,840, CANCELLED 11,218, TIMEOUT 8,689, OUT_OF_MEMORY 1,011, NODE_FAIL 170; normalised COMPLETED 180,310, FAILED 31,021, CANCELLED 11,218, TIMEOUT 8,689; rows out 231,238; 477 users; submit 2020-05-05 15:55 to 2020-10-13 04:44 UTC; job_id unique.
+
+- Fraction r_act > r_req: all rows 3.70 %; COMPLETED 0.0006 % (1 job).
+- COMPLETED quantiles (5 / 25 / 50 / 75 / 95 %): r_req_h 0.167 / 0.833 / 9 / 24 / 24; r_act_h 0.000278 / 0.0025 / 0.0528 / 0.487 / 11.4; r_act/r_req 1.2e-05 / 0.00063 / 0.0281 / 0.215 / 0.737.
+- TIMEOUT: 8,689 rows; share with r_act within 2 % of r_req 92.2 % (all rows within 2 %: 4.7 %).
+- r_pred_h / r_act_h (COMPLETED, r_act > 0): 0.089 / 0.685 / 1.008 / 2.00 / 23.4. r_pred_h / r_req_h median 0.0287.
+- n_hist = 0: 1.04 % of all rows (0.48 % of COMPLETED).
+- power_w quantiles (W): 522 / 588 / 819 / 1,330 / 11,410 (no NaN).
+- Total energy 1.228e6 kWh; share from jobs longer than 24 h: 14.1 %.
+
+## 2. F-DATA / Fugaku (Kobe, Asia/Tokyo)
+Licence CC-BY-4.0 (Zenodo API `metadata.license.id = cc-by-4.0`), record https://zenodo.org/records/11467483 (DOI 10.5281/zenodo.11467483), paper Antici et al., Scientific Data 12:1321 (2025), DOI 10.1038/s41597-025-05633-1. Downloaded to `data/raw/fdata/` with browser headers (a plain User-Agent hit a Zenodo 403 rate limit at first, as in A04). Months kept: 21_04 (existing) plus 23_01, 23_04, 23_07, 23_10 (all under 1.5 GB; the brief's example set). All five file md5 values equal the Zenodo checksums:
+
+| File | Bytes | md5 (= Zenodo) | sha256 |
+# Pre-registration, Paper A (SUSCOM): realised carbon saving of carbon-aware batch scheduling
+
+Status: DRAFT (not frozen). Freezing writes `research/PREREG.md5`; `src/simulate.py` refuses the TEST period until the
+md5 matches. Any change after the freeze goes into the deviations table at the end, with reason and time.
+
+## 1. Question
+For non-interruptible batch jobs that a scheduler may delay within a slack window to lower-carbon hours, how much of
+the perfect-information carbon saving is realised when the scheduler uses (a) a past-only forecast of grid carbon
+intensity and (b) the user's requested walltime, or a history-based runtime prediction, instead of the actual runtime?
+
+## 2. Data
+- Grid: EIA-930 six-month BALANCE files 2018 H2 to 2026 H1 (public domain), SHA-256 in
+  `data/raw/eia930/SHA256SUMS.txt`. Hourly production-based average intensity per balancing authority (BA) with the
+  lifecycle factors in `src/emission_factors.csv` (IPCC AR5 WGIII Annex III Table A.III.2 medians; oil, other and
+  unknown are documented judgement values, generation share small). Built by `src/build_ci.py`, cleaned by
+  `src/clean_ci.py` (rules in `research/A06_DATA_AUDIT.md`). Eligible BAs: the 42 in `tables/ba_eligibility.csv`
+  (full span, >= 90 % valid hours in each period, mean generation >= 100 MW, non-constant series).
+- Jobs: PM100 (Marconi100, CC-BY-4.0, doi 10.5281/zenodo.10127767), primary; F-DATA (Fugaku, CC-BY-4.0, months
+  2021-04, 2023-01, 2023-04, 2023-07, 2023-10) and KIT FH2 (Parallel Workloads Archive), secondary. KIT FH2 has no
+  power data, so its jobs carry 1 kW each (energy weight proportional to runtime). Trace audit:
+  `research/A07_JOBS.md`. Standardised by `src/prep_jobs.py`
+  (`data/derived/jobs.parquet`). NLR Kestrel enters as a secondary trace only if obtained and licence-checked before the
+  freeze.
+- Job filter (main): state COMPLETED; actual runtime >= 1 min; requested walltime <= 72 h and > 0.
+
+## 3. Periods and leakage rules
+- TRAIN 2018-07-01 to 2024-06-30: forecaster fitting, tuning, early stopping, historical profile.
+- DEV 2024-07-01 to 2025-06-30: all design choices and pilots.
+- TEST 2025-07-01 to 2026-06-30: scored once, after the freeze.
+- Forecasts at arrival time a use only data up to the hour ending floor(a) (causal inputs; future-perturbation test
+  in `research/A05_FORECASTS.md`). Runtime prediction for a job uses only the same user's jobs that ended before its
+  submission (assertion in `src/prep_jobs.py`).
+- Assumption stated as a limitation: grid data for the hour ending floor(a) is available at time a (EIA-930 publishes
+  with a delay of hours in practice).
+
+## 4. Scheduler and arms (`src/simcore.py`, `src/simulate.py`)
+- Job: arrival a, requested walltime R_req, actual runtime R_act, mean power P. Slack S in {2, 6, 12, 24} h: the start
+  s may be any of a, a + 0.25 h, ..., a + S. The planner minimises the integral of its signal over [s, s + R_hat],
+  seeing the 96 hourly intervals from floor(a) (same horizon for every signal). Ties go to the earliest start.
+  Realised emissions = P x integral of the actual intensity over [s, s + R_act].
+- Signals: oracle (actual intensity), persistence, seasonal naive day, seasonal naive week, profile7, LightGBM (global,
+  horizon as feature), historical profile (TRAIN mean by month and local hour).
+- Runtime estimates: act (R_act, oracle), req (R_req), pred (mean actual runtime of the user's two most recent jobs
+  that ended before this job's submission with state COMPLETED or TIMEOUT, capped at R_req; R_req if no history).
+- Non-forecast baselines: run-now (s = a); night rule (earliest start in local hours 00:00-03:59 within slack, else
+  now).
+- Random calendar alignment: each sampled job is placed in a random week of the period with its own local weekday and
+  clock time, in the BA's standard local time. 3 alignment replicates x 20,000 jobs per BA per trace (or all jobs if
+  fewer), fixed seed 20261111. Jobs whose 96 h window touches an unusable grid hour are excluded.
+
+## 5. Outcomes and estimands
+- saving(arm) = 1 - sum E_arm / sum E_runnow, pooled over BAs, days and replicates; E energy-weighted with measured
+  job power (PM100). Unweighted variant (each job 1 kW) secondary.
+- Deployable arm D = lgbm|req (fixed a priori: lowest DEV MAE in 32 of 37 BAs in the v0 run).
+- Primary slack S = 12 h; others secondary.
+
+## 6. Confirmatory hypotheses (TEST, PM100, energy-weighted, S = 12 h, 42 BAs)
+- H1: saving(lgbm|req) > 0.
+- H2 (runtime penalty): saving(lgbm|act) - saving(lgbm|req) > 0.
+- H3 (prediction recovery): saving(lgbm|pred) - saving(lgbm|req) > 0.
+- H4 (interaction): [saving(oracle|act) - saving(oracle|req)] - [saving(lgbm|act) - saving(lgbm|req)] != 0.
+Test: two-stage bootstrap (BAs with replacement, then weekly blocks of days within BA), B = 2000, seed 7 + S;
+one-sided p for H1-H3, two-sided for H4; Holm over the four at alpha = 0.05. A hypothesis is supported when its
+Holm-adjusted p < 0.05; the 95 % percentile interval is reported for every estimate.
+
+## 7. Secondary analyses (descriptive, no confirmatory claim)
+1. Shapley decomposition of the gap saving(oracle|act) - saving(lgbm|req) into forecast and runtime terms (2x2,
+   symmetric allocation of the interaction; all four cells reported).
+2. Retained share saving(lgbm|req) / saving(oracle|act) and the same for pred, by BA, slack and job-length class
+   (< 1 h, 1-4 h, 4-12 h, >= 12 h).
+3. Per-BA H2 counts: estimate > 0, and 95 % within-BA interval above 0.
+4. Cross-BA association of the oracle saving and of the runtime penalty with BA character (median daily intensity
+   range, solar share, wind share, fossil share): Spearman correlations.
+5. Every forecaster and the non-forecast baselines under each runtime estimate; best simple policy vs D.
+6. Secondary traces (F-DATA, KIT FH2; Kestrel if present), unweighted outcome, slacks 2, 6, 24 h, and TIMEOUT jobs
+   included.
+7. Forecast skill on TEST (MAE by lead, within-window rank skill) and its association with realised saving across BAs.
+8. Delay cost: mean start delay per arm.
+
+## 8. What counts as a negative result
+- If H1 fails, deployable carbon-aware delay scheduling gives no significant saving on these grids at 12 h slack; this
+  is reported as the main finding.
+- If H2 fails, requested walltime costs no significant saving; the paper reports the size bound.
+- If H3 fails, the history predictor does not recover saving; reported plainly.
+- Results that hold on DEV but not on TEST are reported as not confirmed.
+
+## 9. Deviations after freeze
+| # | time | change | reason |
+|---|---|---|---|
+
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+hook: PostToolUse Completed
+codex
+1. **PREREG ambiguity / exact wording fix**
+
+- The “deployable arm” justification cites an obsolete v0 result (32/37 BAs), while the frozen design uses the final 42-BA forecast run. Replace it with: **“Deployable arm D = lgbm|req, selected on DEV because final-run LightGBM had lower 1–24 h MAE than seasonal-naive day in 38/42 BAs and lower MAE than profile7 in 41/42; no TEST skill or outcomes informed this choice.”**
+- Also reconcile the prereg’s **≥90%** BA validity threshold with A06’s final **≥95%** rule. State the exact frozen eligibility rule and identify the exact 42-BAs table/version.
+
+2. **Code or bias issues that could change results**
+
+- **Inference blocker:** `analyze.py` computes p-values from the uncentered bootstrap distribution’s fraction above/below zero. That distribution is centered near the observed effect, not the null; plus-one and Holm do not fix this. Use a null-centered bootstrap test (or prespecify interval-based decisions instead of p-values), then rerun DEV before freeze.
+- At S=24, a 72 h planning interval starting at a fractional hour can extend to nearly 97 h, but `plan_start` truncates costs at H=96; `place_jobs` checks unusable hours only through 96 h. This can alter secondary results. Extend/check the horizon or exclude affected jobs, and state that the primary S=12 horizon is unaffected for requested runtime ≤72 h.
+- Tie handling is correctly earliest-start. Replicate day totals are summed before bootstrap; `weekly()` then drops leftover days and forms arbitrary consecutive 7-day blocks, not calendar weeks. Clarify the block definition and handle the remainder explicitly. **Do not treat the pilot p-values as valid** until the p-value issue is corrected.
+
+3. **Inference target and resampling unit**
+
+- The BA bootstrap implies inference to a population of BAs, but these 42 are selected by coverage and generation criteria, not randomly sampled. The defensible primary claim is about **this fixed eligible set of 42**, with paired weekly-block resampling for temporal uncertainty; report BA heterogeneity descriptively.
+- If retaining BA resampling, label it a sensitivity analysis over a hypothetical population of eligible BAs, not the primary basis for a claim about all US grids.
+
+4. **H4**
+
+- **Demote H4 to secondary.** Its interaction was examined on DEV and is significant across the pilot traces, so promoting it into the confirmatory family at freeze invites a post-selection critique. Report the four cells and interaction estimate/interval descriptively; no confirmatory p-value.
+
+5. **Baselines / analyses**
+
+- **Requested walltime capped at \(k \times\) history prediction** (or a prespecified padded prediction): important operational comparator given the very large request/actual gap. Add before freeze only if \(k\) is fixed without TEST input; otherwise label exploratory.
+- **One established carbon-aware scheduler/policy baseline:** useful for SUSCOM novelty, but add before freeze only if a faithful implementation is already feasible and its information assumptions can be matched; otherwise explain the simpler policies’ scope.
+- **Completed-job sensitivity excluding runtimes near the request limit:** add before freeze. PM100’s 92.2% of TIMEOUT jobs are within 2% of requested walltime, and KIT has no TIMEOUT label, so this checks whether apparent runtime overestimation reflects censoring/status semantics.
+
+6. **Freeze blockers**
+
+- Fix the null p-value calculation and rerun DEV; resolve the eligibility-threshold/version mismatch; specify the actual weekly-block and remainder handling. Also remove “measured job power” for PM100: A07 says PM100 power is sampled/averaged and energy is derived, not directly measured.
+
+**VERDICT: DO NOT FREEZE (fix inference, eligibility/version, block handling, and PM100 power wording first); confidence 0.94.**
+hook: Stop
+hook: Stop
+hook: Stop Completed
+hook: Stop Failed
+tokens used
+105,511
+1. **PREREG ambiguity / exact wording fix**
+
+- The “deployable arm” justification cites an obsolete v0 result (32/37 BAs), while the frozen design uses the final 42-BA forecast run. Replace it with: **“Deployable arm D = lgbm|req, selected on DEV because final-run LightGBM had lower 1–24 h MAE than seasonal-naive day in 38/42 BAs and lower MAE than profile7 in 41/42; no TEST skill or outcomes informed this choice.”**
+- Also reconcile the prereg’s **≥90%** BA validity threshold with A06’s final **≥95%** rule. State the exact frozen eligibility rule and identify the exact 42-BAs table/version.
+
+2. **Code or bias issues that could change results**
+
+- **Inference blocker:** `analyze.py` computes p-values from the uncentered bootstrap distribution’s fraction above/below zero. That distribution is centered near the observed effect, not the null; plus-one and Holm do not fix this. Use a null-centered bootstrap test (or prespecify interval-based decisions instead of p-values), then rerun DEV before freeze.
+- At S=24, a 72 h planning interval starting at a fractional hour can extend to nearly 97 h, but `plan_start` truncates costs at H=96; `place_jobs` checks unusable hours only through 96 h. This can alter secondary results. Extend/check the horizon or exclude affected jobs, and state that the primary S=12 horizon is unaffected for requested runtime ≤72 h.
+- Tie handling is correctly earliest-start. Replicate day totals are summed before bootstrap; `weekly()` then drops leftover days and forms arbitrary consecutive 7-day blocks, not calendar weeks. Clarify the block definition and handle the remainder explicitly. **Do not treat the pilot p-values as valid** until the p-value issue is corrected.
+
+3. **Inference target and resampling unit**
+
+- The BA bootstrap implies inference to a population of BAs, but these 42 are selected by coverage and generation criteria, not randomly sampled. The defensible primary claim is about **this fixed eligible set of 42**, with paired weekly-block resampling for temporal uncertainty; report BA heterogeneity descriptively.
+- If retaining BA resampling, label it a sensitivity analysis over a hypothetical population of eligible BAs, not the primary basis for a claim about all US grids.
+
+4. **H4**
+
+- **Demote H4 to secondary.** Its interaction was examined on DEV and is significant across the pilot traces, so promoting it into the confirmatory family at freeze invites a post-selection critique. Report the four cells and interaction estimate/interval descriptively; no confirmatory p-value.
+
+5. **Baselines / analyses**
+
+- **Requested walltime capped at \(k \times\) history prediction** (or a prespecified padded prediction): important operational comparator given the very large request/actual gap. Add before freeze only if \(k\) is fixed without TEST input; otherwise label exploratory.
+- **One established carbon-aware scheduler/policy baseline:** useful for SUSCOM novelty, but add before freeze only if a faithful implementation is already feasible and its information assumptions can be matched; otherwise explain the simpler policies’ scope.
+- **Completed-job sensitivity excluding runtimes near the request limit:** add before freeze. PM100’s 92.2% of TIMEOUT jobs are within 2% of requested walltime, and KIT has no TIMEOUT label, so this checks whether apparent runtime overestimation reflects censoring/status semantics.
+
+6. **Freeze blockers**
+
+- Fix the null p-value calculation and rerun DEV; resolve the eligibility-threshold/version mismatch; specify the actual weekly-block and remainder handling. Also remove “measured job power” for PM100: A07 says PM100 power is sampled/averaged and energy is derived, not directly measured.
+
+**VERDICT: DO NOT FREEZE (fix inference, eligibility/version, block handling, and PM100 power wording first); confidence 0.94.**

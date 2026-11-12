@@ -1,0 +1,212 @@
+[
+ {
+  "id": 1,
+  "section": "08_declarations.tmpl",
+  "line": 8,
+  "sentence": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.",
+  "query": "\"The authors declare that they have no known competing financial interests or\""
+ },
+ {
+  "id": 2,
+  "section": "08_declarations.tmpl",
+  "line": 14,
+  "sentence": "After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.",
+  "query": "\"After using this tool, the authors reviewed and edited the content as\""
+ },
+ {
+  "id": 3,
+  "section": "08_declarations.tmpl",
+  "line": 11,
+  "sentence": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+  "query": "\"This research did not receive any specific grant from funding agencies in\""
+ },
+ {
+  "id": 4,
+  "section": "08_declarations.tmpl",
+  "line": 14,
+  "sentence": "During the preparation of this work the authors used [AI-DECLARATION SCOPE: owner to confirm: Claude (Anthropic) to draft and edit the text, to write analysis and plotting code under the authors' direction, and to check that every reported number matches the result files].",
+  "query": "\"During the preparation of this work the authors used [AI-DECLARATION SCOPE: owner\""
+ },
+ {
+  "id": 5,
+  "section": "05_results.tmpl",
+  "line": 35,
+  "sentence": "A grid with a large daily swing offers more to a shift, and a solar-heavy grid has a sharp midday minimum that a wrong runtime estimate can miss; the replay does not test either reading.",
+  "query": "\"A grid with a large daily swing offers more to a shift,\""
+ },
+ {
+  "id": 6,
+  "section": "08_declarations.tmpl",
+  "line": 5,
+  "sentence": "The Elsevier role names are Conceptualization; Data curation; Formal analysis; Funding acquisition; Investigation; Methodology; Project administration; Resources; Software; Supervision; Validation; Visualization; Writing - original draft; Writing - review and editing.",
+  "query": "\"The Elsevier role names are Conceptualization; Data curation; Formal analysis; Funding acquisition;\""
+ },
+ {
+  "id": 7,
+  "section": "04_method.tmpl",
+  "line": 70,
+  "sentence": "Inputs repaired by interpolation or outlier replacement are replaced by the last earlier unflagged value, so repairs cannot leak the future.",
+  "query": "\"Inputs repaired by interpolation or outlier replacement are replaced by the last\""
+ },
+ {
+  "id": 8,
+  "section": "06_discussion.tmpl",
+  "line": 31,
+  "sentence": "Each paragraph names one threat, says why the result may still hold, and points to the analysis that addresses it.",
+  "query": "\"Each paragraph names one threat, says why the result may still hold,\""
+ },
+ {
+  "id": 9,
+  "section": "04_method.tmpl",
+  "line": 6,
+  "sentence": "This section states the planner, the arms, the runtime estimates, the estimands, the inference and the registration in enough detail to re-implement them.",
+  "query": "\"This section states the planner, the arms, the runtime estimates, the estimands,\""
+ },
+ {
+  "id": 10,
+  "section": "02_related.tmpl",
+  "line": 21,
+  "sentence": "They note that inaccurate estimates need not harm a backfilling scheduler, so the requested-walltime arm here is a loss of planning information, not a defect of the scheduler.",
+  "query": "\"They note that inaccurate estimates need not harm a backfilling scheduler, so\""
+ },
+ {
+  "id": 11,
+  "section": "S_supplement.tmpl",
+  "line": 67,
+  "sentence": "The number of iterations came from early stopping on the same window, and the model was then refit on the full training period.",
+  "query": "\"The number of iterations came from early stopping on the same window,\""
+ },
+ {
+  "id": 12,
+  "section": "04_method.tmpl",
+  "line": 86,
+  "sentence": "For each trace, BA and alignment replicate r we draw without replacement N jobs from the filtered trace, or all jobs if fewer, with a generator seeded from the base seed N, r and the BA and trace names.",
+  "query": "\"For each trace, BA and alignment replicate r we draw without replacement\""
+ },
+ {
+  "id": 13,
+  "section": "04_method.tmpl",
+  "line": 167,
+  "sentence": "Because independent resampling lets weeks that are unusually clean in one BA be paired with weeks that are dirty in another, it can understate the variation of a pooled estimate that is driven by shared weather.",
+  "query": "\"Because independent resampling lets weeks that are unusually clean in one BA\""
+ },
+ {
+  "id": 14,
+  "section": "04_method.tmpl",
+  "line": 70,
+  "sentence": "Early stopping uses the last six months of TRAIN, with a purged boundary so that no training target falls in the validation window.",
+  "query": "\"Early stopping uses the last six months of TRAIN, with a purged\""
+ },
+ {
+  "id": 15,
+  "section": "05_results.tmpl",
+  "line": 23,
+  "sentence": "Because it is not zero, the size of each term depends on the symmetric allocation convention.",
+  "query": "\"Because it is not zero, the size of each term depends on\""
+ },
+ {
+  "id": 16,
+  "section": "04_method.tmpl",
+  "line": 70,
+  "sentence": "A future-perturbation test replaced every value after the issue hour by noise at randomly chosen issue hours: N tests, of which N failed.",
+  "query": "\"A future-perturbation test replaced every value after the issue hour by noise\""
+ },
+ {
+  "id": 17,
+  "section": "05_results.tmpl",
+  "line": 25,
+  "sentence": "A prediction from the user's past jobs narrows the distance between the believed and the actual runtime, which is the likely route to the recovery; the replay does not test the route directly.",
+  "query": "\"A prediction from the user's past jobs narrows the distance between the\""
+ },
+ {
+  "id": 18,
+  "section": "04_method.tmpl",
+  "line": 86,
+  "sentence": "Outcomes are summed per arrival day and per runtime class, and the replicates are added on a common calendar-day index.",
+  "query": "\"Outcomes are summed per arrival day and per runtime class, and the\""
+ },
+ {
+  "id": 19,
+  "section": "05_results.tmpl",
+  "line": 37,
+  "sentence": "Long jobs span many hours and average over the variation that a shift exploits, which is a plausible reason for their small saving.",
+  "query": "\"Long jobs span many hours and average over the variation that a\""
+ },
+ {
+  "id": 20,
+  "section": "04_method.tmpl",
+  "line": 65,
+  "sentence": "Its inputs are intensity lags and trailing means and deviations, calendar features of the target hour, the three simple forecasts for the target hour, the fuel shares at the issue hour, and a BA code.",
+  "query": "\"Its inputs are intensity lags and trailing means and deviations, calendar features\""
+ },
+ {
+  "id": 21,
+  "section": "03_data.tmpl",
+  "line": 10,
+  "sentence": "For ERCO, the only BA compared, the series correlates with EIA's own published COX intensity at an hourly r of N, with a mean bias of N g/kWh.",
+  "query": "\"For ERCO, the only BA compared, the series correlates with EIA's own\""
+ },
+ {
+  "id": 22,
+  "section": "04_method.tmpl",
+  "line": 179,
+  "sentence": "The original-users control (same seeds, users not resampled, one alignment replicate each) shows how much of the outer spread comes from the alignment draw alone; it is reported beside the total and is not subtracted from it, so the total interval is conservative.",
+  "query": "\"The original-users control (same seeds, users not resampled, one alignment replicate each)\""
+ },
+ {
+  "id": 23,
+  "section": "02_related.tmpl",
+  "line": 27,
+  "sentence": "Among the three outside works compared above, we did not find an evaluation that combines a past-only carbon forecast, requested walltimes and real HPC traces; this statement is limited to the papers reviewed.",
+  "query": "\"Among the three outside works compared above, we did not find an\""
+ },
+ {
+  "id": 24,
+  "section": "S_supplement.tmpl",
+  "line": 67,
+  "sentence": "The profile rival was tuned on the same window; its selected look-back was N day, which makes it the seasonal naive day.",
+  "query": "\"The profile rival was tuned on the same window; its selected look-back\""
+ },
+ {
+  "id": 25,
+  "section": "05_results.tmpl",
+  "line": 58,
+  "sentence": "They cover a tuned forecaster, injected forecast noise, a cap on the forecast lead, concentration of the runtime penalty, the timing of the saving, a fossil-only signal, three new arms and a clock shift of the arrivals.",
+  "query": "\"They cover a tuned forecaster, injected forecast noise, a cap on the\""
+ },
+ {
+  "id": 26,
+  "section": "06_discussion.tmpl",
+  "line": 39,
+  "sentence": "The replay has no queue, backfilling, idle power or interruptibility, and delayed jobs may concentrate load.",
+  "query": "\"The replay has no queue, backfilling, idle power or interruptibility, and delayed\""
+ },
+ {
+  "id": 27,
+  "section": "06_discussion.tmpl",
+  "line": 33,
+  "sentence": "The agreement of three foreign traces does not establish U.S. behavior, and a balancing authority's standard time set against trace daylight saving can shift summer arrivals by an hour.",
+  "query": "\"The agreement of three foreign traces does not establish U.S. behavior, and\""
+ },
+ {
+  "id": 28,
+  "section": "03_data.tmpl",
+  "line": 12,
+  "sentence": "In the test year, N %, N % and N % of hours are interpolated, outlier-replaced and week-filled.",
+  "query": "\"In the test year, N %, N % and N % of\""
+ },
+ {
+  "id": 29,
+  "section": "06_discussion.tmpl",
+  "line": 47,
+  "sentence": "The unweighted outcome (the u rows of the ledger) and the job-length classes address it.",
+  "query": "\"The unweighted outcome (the u rows of the ledger) and the job-length\""
+ },
+ {
+  "id": 30,
+  "section": "04_method.tmpl",
+  "line": 174,
+  "sentence": "It resamples users with replacement, draws a new job sample and alignment from the resampled pool, and then applies the frozen blocks, with N outer draws and N inner draws each, plus an original-users control.",
+  "query": "\"It resamples users with replacement, draws a new job sample and alignment\""
+ }
+]

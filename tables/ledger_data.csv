@@ -1,0 +1,56 @@
+key,value,source
+data.PM100.rows_in,231238,"data/derived/jobs_PM100.parquet row count (all states, before the main filter)"
+data.PM100.completed_rows,180310,"data/derived/jobs_PM100.parquet rows with state COMPLETED, before the size filter"
+data.PM100.users_filtered,394,"data/derived/jobs_PM100.parquet distinct user after the main filter (filter: state COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h (PREREG s2, as simulate.py))"
+data.PM100.n_filtered_jobs,108329,data/derived/jobs_PM100.parquet rows after the main filter
+data.PM100.median_ratio,0.14256944444444444,"data/derived/jobs_PM100.parquet median r_act/r_req over the main-filtered jobs (filter: state COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h (PREREG s2, as simulate.py))"
+data.PM100.median_ratio_completed_unfiltered,0.028055555555555556,data/derived/jobs_PM100.parquet median r_act/r_req over all COMPLETED rows (population of tables/jobs_trace_stats.json)
+data.PM100.n_timeout,8689,data/derived/jobs_PM100.parquet rows with state TIMEOUT (all rows)
+data.PM100.timeout_within2pct,0.9223155714121303,data/derived/jobs_PM100.parquet share of TIMEOUT rows with |r_act/r_req - 1| <= 0.02 (definition of src/prep_jobs.py)
+data.PM100.energy_share_gt24h,0.14111285326484782,"data/derived/jobs_PM100.parquet energy of rows with r_act > 24 h over total energy, all states (definition of src/prep_jobs.py)"
+data.PM100.energy_share_gt24h_filtered,0.0,data/derived/jobs_PM100.parquet same share over main-filtered jobs (check only)
+data.FDATA.rows_in,3399278,"data/derived/jobs_FDATA.parquet row count (all states, before the main filter)"
+data.FDATA.completed_rows,2998737,"data/derived/jobs_FDATA.parquet rows with state COMPLETED, before the size filter"
+data.FDATA.users_filtered,1257,"data/derived/jobs_FDATA.parquet distinct user after the main filter (filter: state COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h (PREREG s2, as simulate.py))"
+data.FDATA.n_filtered_jobs,2661645,data/derived/jobs_FDATA.parquet rows after the main filter
+data.FDATA.median_ratio,0.3055555555555556,"data/derived/jobs_FDATA.parquet median r_act/r_req over the main-filtered jobs (filter: state COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h (PREREG s2, as simulate.py))"
+data.FDATA.median_ratio_completed_unfiltered,0.23166666666666666,data/derived/jobs_FDATA.parquet median r_act/r_req over all COMPLETED rows (population of tables/jobs_trace_stats.json)
+data.KIT_FH2.rows_in,114355,"data/derived/jobs_KIT_FH2.parquet row count (all states, before the main filter)"
+data.KIT_FH2.completed_rows,114355,"data/derived/jobs_KIT_FH2.parquet rows with state COMPLETED, before the size filter"
+data.KIT_FH2.users_filtered,165,"data/derived/jobs_KIT_FH2.parquet distinct user after the main filter (filter: state COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h (PREREG s2, as simulate.py))"
+data.KIT_FH2.n_filtered_jobs,104622,data/derived/jobs_KIT_FH2.parquet rows after the main filter
+data.KIT_FH2.median_ratio,0.17833333333333334,"data/derived/jobs_KIT_FH2.parquet median r_act/r_req over the main-filtered jobs (filter: state COMPLETED, r_act >= 1 min, 0 < r_req <= 72 h (PREREG s2, as simulate.py))"
+data.KIT_FH2.median_ratio_completed_unfiltered,0.14833333333333334,data/derived/jobs_KIT_FH2.parquet median r_act/r_req over all COMPLETED rows (population of tables/jobs_trace_stats.json)
+data.KIT_FH2.within2pct_share,0.07334178654190897,data/derived/jobs_KIT_FH2.parquet share of all rows with |r_act/r_req - 1| <= 0.02 (all KIT FH2 rows are COMPLETED)
+data.KIT_FH2.within2pct_share_filtered,0.07930454397736614,data/derived/jobs_KIT_FH2.parquet same share over main-filtered jobs (check only)
+data.ci.n_candidate_ba,70,tables/ba_eligibility.csv row count (candidate BAs of the final build)
+data.ci.n_eligible_ba,42,tables/ba_eligibility.csv rows with eligible == True (check only)
+data.ci.n_invalid,10964,"tables/cleaning_counts.csv, eligible BAs: n_row_missing + n_gen_le0 + n_ci_nan_other (R2: generation missing or not positive, or CI missing)"
+data.ci.n_invalid_gen_le0_only,10964,"tables/cleaning_counts.csv, eligible BAs: n_gen_le0 only (A25 figure; check only)"
+data.ci.n_outlier,21543,"tables/cleaning_counts.csv, eligible BAs: n_outlier_total (R3)"
+data.ci.hours_short,21046,"tables/cleaning_counts.csv, eligible BAs: hours_short (R4, runs <= 3 h)"
+data.ci.hours_week,3635,"tables/cleaning_counts.csv, eligible BAs: hours_week (R4, runs 4 to 168 h)"
+data.ci.unusable_days,350,"data/derived/ci_clean.parquet distinct (BA, UTC hour-start day) with usable_day False; equals the sum in tables/cleaning_counts.csv (eligible BAs)"
+data.ci.test_flag1_pct,0.043215916503587734,data/derived/ci_clean.parquet: percent of the 367920 eligible-BA hours in the TEST year (hour start 2025-07-01 to 2026-06-30) with flag 1
+data.ci.test_flag2_pct,0.7789736899325941,data/derived/ci_clean.parquet: percent of the 367920 eligible-BA hours in the TEST year (hour start 2025-07-01 to 2026-06-30) with flag 2
+data.ci.test_flag3_pct,0.15247879973907372,data/derived/ci_clean.parquet: percent of the 367920 eligible-BA hours in the TEST year (hour start 2025-07-01 to 2026-06-30) with flag 3
+data.ci.test_flag4_pct,0.0,"same, flag 4 (check only)"
+data.ci.erco_r,0.9884698595126672,"data/derived/ci_clean.parquet (ERCO, flag-0 hours (unmodified valid hours)) vs EIA CO2 intensity x 453.592 g/lb, n=69951 matched hours; logic of src/validate_eia_ci.py"
+data.ci.erco_bias,-2.005454603304856,"same sample, mean of (ci_clean - EIA) in g/kWh"
+data.ci.erco_n,69951,matched hours of the ERCO validation sample
+data.ci.erco_r_allflags,0.9883798494508015,"data/derived/ci_clean.parquet (ERCO, all non-NaN hours incl. repaired (check only)) vs EIA CO2 intensity x 453.592 g/lb, n=70003 matched hours; logic of src/validate_eia_ci.py"
+data.ci.erco_bias_allflags,-2.00608069331784,"same sample, mean of (ci_clean - EIA) in g/kWh"
+data.fc.dev_beat_snaive,38,"tables/forecast_skill.csv: BAs (DEV, lead bucket 1-24) with lgbm MAE < snaive_day MAE"
+data.fc.dev_beat_profile7,41,"tables/forecast_skill.csv: BAs (DEV, lead bucket 1-24) with lgbm MAE < profile7 MAE"
+data.fc.n_ba,42,tables/forecast_skill.csv BAs in the DEV 1-24 h comparison
+data.fc.leak_tests,150,"logs/a26_forecast_leakcheck.txt (output of src/forecast_leakcheck.py, final run): future-perturbation tests"
+data.fc.leak_failed,0,logs/a26_forecast_leakcheck.txt: future-perturbation tests failed
+data.fc.leak_flag_failed,0,logs/a26_forecast_leakcheck.txt: flagged-input test failures (check only)
+design.B,2000,"src/analyze.py --B default (argparse, parsed); results/analysis_TEST_PM100_w.json field B agrees"
+design.reps,3,"src/simulate.py --reps default (argparse, parsed); equals results/sim_TEST/RUN.txt reps"
+design.jobs_per_ba,20000,"src/simulate.py --n-jobs default (argparse, parsed); equals results/sim_TEST/RUN.txt n_jobs"
+design.align_seed,20261111,"src/simulate.py --seed default (argparse, parsed); equals results/sim_TEST/RUN.txt seed"
+design.perba_B,500,src/analyze.py and src/posthoc_inference.py: draws argument of A.per_ba_boot (regex on the call)
+design.sync_weeks,50,"results/analysis_TEST_posthoc_<trace>.json sync_weeks (identical in all traces, weights and slacks; written by src/posthoc_inference.py)"
+design.s1_outer,30,src/run_p4_queue.ps1 S1 entry '--n-outer' (S1 has not run yet; equals the sens_s1.py --n-outer default)
+design.s1_inner,200,"src/sens_s1.py --B default (argparse, parsed); S1 has not run yet"

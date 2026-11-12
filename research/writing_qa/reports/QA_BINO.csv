@@ -1,0 +1,97 @@
+section,line,tokens,score,start
+00_frontmatter.tmpl,15,322,1.1429,In a counterfactual replay of three real high-performance computing (HPC) job traces on N 
+01_intro.tmpl,7,178,1.0454,Computing draws a notable share of electricity. Data-center energy use grew far more slowl
+01_intro.tmpl,9,160,1.1824,Temporal shifting of this kind is well studied. Simulation studies place delay-tolerant jo
+01_intro.tmpl,11,123,1.2077,A deployed HPC scheduler faces a different input set. Its forecast is built from past data
+01_intro.tmpl,13,95,1.2293,"Studies that vary forecast error inject synthetic noise or assume ideal job lengths, and s"
+01_intro.tmpl,15,330,1.0468,We measure that saving in a pre-registered replay of three real HPC job traces on N U.S. b
+01_intro.tmpl,17,264,1.1194,We use the following terms throughout. Run-now is the carbon-agnostic baseline that starts
+01_intro.tmpl,21,56,1.1688,"A pre-registered measurement, on real HPC batch-job traces and N U.S. BAs with a held-out "
+01_intro.tmpl,22,49,1.1883,A X design (signal by runtime estimate) with a descriptive Shapley allocation that divides
+01_intro.tmpl,27,69,1.0389,Section 1 places the study among earlier work. Section 1 describes the carbon-intensity da
+02_related.tmpl,6,165,1.1585,Wiesner et al. [1] delay nightly and machine-learning jobs against the carbon intensity of
+02_related.tmpl,8,184,1.1214,CarbonCast [1] forecasts grid carbon intensity several days ahead from source-level foreca
+02_related.tmpl,12,146,1.1805,"Attenni et al. [1] simulate spatial, temporal and spatio-temporal shifting of cloud worklo"
+02_related.tmpl,14,211,1.1522,The ReBase study [1] compares a forecast-driven mixed-integer baseline with learned correc
+02_related.tmpl,16,59,1.2394,Reviews and neighbors appear in one clause each: a systematic review of green-aware manage
+02_related.tmpl,21,215,1.1258,A requested walltime is an upper bound that users set above the expected runtime. Mu'alem 
+02_related.tmpl,23,144,1.1486,Three works outside this journal bound the runtime and real-trace claims. LACS [1] scales 
+02_related.tmpl,27,121,1.233,"Table 1 sets these studies side by side. The forecast-to-oracle gap is known, and the plan"
+03_data.tmpl,4,50,1.1079,"This section defines the grid signal, the three job traces, the study periods and the coun"
+03_data.tmpl,8,189,1.1576,The grid signal comes from the U.S. Energy Information Administration (EIA) Form EIA-930 H
+03_data.tmpl,10,140,1.2691,"The factors X are the lifecycle medians of the IPCC fifth assessment report [1] for coal, "
+03_data.tmpl,12,188,1.2347,"Cleaning follows four fixed rules, none tuned on development or test data. R1 builds a com"
+03_data.tmpl,14,118,1.1606,A BA is eligible if it reports from the start of the span to its end and has at least 90 %
+03_data.tmpl,16,132,1.2214,The planner needs data that a deployed scheduler would hold at arrival time a. The frozen 
+03_data.tmpl,20,222,1.0879,We replay three public traces of production supercomputers (Table 1). PM100 comes from the
+03_data.tmpl,22,158,1.1419,"Each trace is standardized to the same fields: submit time in local site time, requested w"
+03_data.tmpl,24,205,1.0958,"Requested walltime is a limit that users set with a margin, and its semantics differ by tr"
+03_data.tmpl,26,116,1.0462,"The standardization dropped no rows. A job table records completed work and not a queue, s"
+03_data.tmpl,30,155,1.1613,Three consecutive periods separate design from scoring. TRAIN (2018-07-01 to 2024-06-30) f
+03_data.tmpl,32,174,1.1784,"The traces were recorded in 2016 to 2018 (KIT FH2), 2020 (PM100) and 2021 and 2023 (F-DATA"
+04_method.tmpl,10,225,1.1545,"A job has arrival time a (hours), requested walltime X, actual runtime X and mean power P."
+04_method.tmpl,27,87,1.1252,This is the delay-to-lowest-integral policy of earlier temporal-shifting studies [1]. We p
+04_method.tmpl,59,128,1.2139,An arm pairs a signal with a runtime estimate and is written signal|estimate. The signals 
+04_method.tmpl,61,262,1.1164,"The deployable arm D is lgbm|req, a forecast-and-request policy under the data-availabilit"
+04_method.tmpl,65,251,1.1499,"The LightGBM forecaster is one global gradient-boosted model across BAs [1], with the fore"
+04_method.tmpl,72,131,1.1663,"On DEV, the forecaster had lower 1 to 24 h mean absolute error than the seasonal naive day"
+04_method.tmpl,76,200,1.1395,"The estimate act uses X and is an oracle input. The estimate req uses X, which a scheduler"
+04_method.tmpl,86,185,1.1733,"For each trace, BA and alignment replicate r we draw without replacement N jobs from the f"
+04_method.tmpl,122,170,1.2001,"The saving of an arm is one minus its emissions over the run-now emissions, pooled over BA"
+04_method.tmpl,136,201,1.114,The gap between perfect information and the deployable arm is X. We split it over the two 
+04_method.tmpl,162,190,1.1467,"Every interval and test uses a block bootstrap on arrival days. For each BA, the per-day s"
+04_method.tmpl,169,360,1.0444,Two post-freeze intervals complement it and are named in every table and caption. The sync
+04_method.tmpl,181,71,1.1071,"For H1 to H3 the one-sided p-value is null-centered: with estimate T and draws X, X so the"
+04_method.tmpl,192,96,1.1486,A hypothesis counts as supported when its adjusted value is below X; the adjusted floor is
+04_method.tmpl,224,204,1.1265,"The design was registered and frozen on 2026-11-11, before the test year was scored. The s"
+04_method.tmpl,226,212,1.1746,Everything after the freeze carries a status. Post-hoc items (PH1 to PH7) are descriptive 
+04_method.tmpl,228,182,1.2214,Every number in the paper is read from a ledger written by script from saved results. The 
+05_results.tmpl,9,157,1.2307,Every estimate is a replay: it states what a job trace would have emitted under each arm o
+05_results.tmpl,13,211,1.113,"Confirmatory on PM100 (H1); secondary replications on F-DATA and KIT FH2. Under run-now, t"
+05_results.tmpl,15,201,1.2501,"In relative terms, D saves N of run-now emissions on PM100 (calendar interval N to N; sync"
+05_results.tmpl,17,126,1.2269,"The baseline ladder is in Table 1, Panel D. On PM100 the night rule saves N, and persisten"
+05_results.tmpl,21,255,1.2064,"Secondary (forecast skill), post-hoc and descriptive (decomposition), confirmatory on PM10"
+05_results.tmpl,23,223,1.0184,"The saving lost between act and D is the gap G, N on PM100. The four corner savings are N,"
+05_results.tmpl,25,156,1.1498,History prediction recovers part of the runtime term. The prediction recovery H3 is N on P
+05_results.tmpl,29,193,1.0901,Secondary and descriptive. Saving rises with the slack for the deployable arm and for the 
+05_results.tmpl,33,167,1.1109,Post-hoc intervals for the per-BA counts; descriptive associations with no p-values. The r
+05_results.tmpl,35,149,1.1467,"Across the N BAs, the perfect-information saving on PM100 rises with the median daily rang"
+05_results.tmpl,37,111,1.1067,"By job length, the perfect-information saving on PM100 falls from N for jobs under 1 h to "
+05_results.tmpl,41,259,1.0469,"Secondary; replications in direction, never confirmations. On both other traces the three "
+05_results.tmpl,45,172,1.0895,Secondary (delay) and post-hoc (saving per hour of delay). Shifting starts costs waiting t
+05_results.tmpl,48,281,1.0601,"Frozen variants are secondary; the synchronized-week interval is post-hoc; S1 to S3, X1 an"
+05_results.tmpl,50,116,1.1571,The frozen variants change the size of the saving and not its direction (Figure 1). Exclud
+05_results.tmpl,52,208,1.1307,Data latency (S2) tests how far the planner's information can age. With the intensity dela
+05_results.tmpl,54,106,1.0987,"X1, exploratory. The runtime-estimate sweep scales the actual runtime by a factor m (Figur"
+05_results.tmpl,56,93,1.0485,"X4, exploratory. Shifting starts toward cleaner hours can concentrate load. On PM100, the "
+05_results.tmpl,58,58,1.124,Further exploratory checks are reported in the supplement with their status. They cover a 
+06_discussion.tmpl,7,98,1.2606,The design separates two inputs that a deployed scheduler lacks: the realized carbon signa
+06_discussion.tmpl,9,113,1.1627,The Shapley allocation (Eq. 1) assigns the remaining gap of D to a forecast term and a run
+06_discussion.tmpl,11,79,1.1714,"The runtime term is consistent with loose requests: the median analyzed job ran for N, N a"
+06_discussion.tmpl,15,71,1.2128,"The replay suggests several hypotheses for future evaluation. For operators, logging the r"
+06_discussion.tmpl,17,66,1.2131,"In this replay, planning with the requested rather than the actual runtime reduced the mod"
+06_discussion.tmpl,19,74,1.2404,"In the replay, the forecast and the runtime estimate act as separate inputs, and with the "
+06_discussion.tmpl,27,153,1.1969,A slack of 12 h on a single grid may give smaller savings than studies that move work acro
+06_discussion.tmpl,33,168,1.2224,"A. Counterfactual replay on foreign traces. Marconi100 (2020), Fugaku and KIT ForHLR II (2"
+06_discussion.tmpl,35,102,1.224,"B. Average, not marginal, intensity. The signal is production-average intensity from EIA-9"
+06_discussion.tmpl,37,61,1.1881,C. The oracle is not a global optimum. The oracle is the same heuristic with perfect input
+06_discussion.tmpl,39,79,1.2548,"D. No queue or capacity. The replay has no queue, backfilling, idle power or interruptibil"
+06_discussion.tmpl,41,101,1.1814,E. Interval scope. The calendar interval is conditional on the observed job sample and tre
+06_discussion.tmpl,45,74,1.2836,G. Data vintage. The planner assumes that the intensity of the hour ending at arrival is a
+06_discussion.tmpl,47,87,1.2158,"H. Constant per-job power. Power is a whole-job mean taken as constant, KIT FH2 carries 1 "
+06_discussion.tmpl,49,51,1.2546,"I. Calendar alignment. Each job lands in a random whole week of the test year, and the fir"
+06_discussion.tmpl,51,70,1.2241,J. Weak runtime baselines. The prediction (mean of the user's last two jobs) is a delibera
+06_discussion.tmpl,53,75,1.2941,K. Forecaster selection. D was chosen on development MAE (it beat the seasonal naive day o
+06_discussion.tmpl,57,69,1.2754,"M. Selection and status limits. The BA eligibility rule uses test-year availability, and K"
+06_discussion.tmpl,63,90,1.1594,A single script rebuilds every ledger from the stored result files and checks equality. Th
+07_conclusion.tmpl,4,195,1.1308,This study replayed three real HPC job traces on N U.S. balancing authorities over a held-
+07_conclusion.tmpl,6,63,1.3532,The replay suggests that logging runtimes and adding a runtime predictor may be worth eval
+07_conclusion.tmpl,8,116,1.1524,"Future work includes marginal-intensity signals, queue-aware simulation, a U.S. trace such"
+08_declarations.tmpl,5,130,1.081,"[USER: roles per author; names stay placeholders]. [AUTHOR_1]: Conceptualization, Data cur"
+08_declarations.tmpl,8,48,1.2272,[USER: complete the Elsevier declarations tool and upload its file separately.] The author
+08_declarations.tmpl,14,82,1.0564,During the preparation of this work the authors used [AI-DECLARATION SCOPE: owner to confi
+08_declarations.tmpl,17,198,1.1227,"Code, derived data and result ledgers are archived on Zenodo ([ZENODO DOI: owner to publis"
+S_supplement.tmpl,30,133,1.1838,"Table 1 lists every analysis with its status, plan file, script and ledger. The status cla"
+S_supplement.tmpl,67,339,1.038,"Exploratory (S5), run after the freeze; no p-values. The frozen LightGBM forecaster used f"
+S_supplement.tmpl,69,140,1.2035,"Table 1 gives the test-year forecast error, and Table 1 gives the replay outcomes at X h w"
+S_supplement.tmpl,108,109,1.1279,Tables starting with 1 (energy-weighted outcome) and 1 (equal-weight outcome) give the sav

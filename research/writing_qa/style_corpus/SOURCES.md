@@ -1,0 +1,21 @@
+# Style corpus sources (built by build_corpus.py)
+
+- 1-s2.0-S2210537924000349-main: EXCLUDED: survey (100989 / 101080), not an empirical-style exemplar
+- 1-s2.0-S2210537924001252-main: EXCLUDED: survey (100989 / 101080), not an empirical-style exemplar
+- SUSCOM_S2210537921000810: kept, 7273 usable words
+- SUSCOM_S221053792300104X: EXCLUDED: text quality (long-token share 0.043, gap-line share 0.22, mean token length 5.60)
+- SUSCOM_S2210537923001051: kept, 5211 usable words
+- SUSCOM_S2210537924000301: kept, 5366 usable words
+- SUSCOM_S2210537924000337: kept, 11212 usable words
+- SUSCOM_S2210537924000374: kept, 5399 usable words
+- SUSCOM_S2210537925000265: kept, 5892 usable words
+- SUSCOM_S2210537925001374: kept, 8123 usable words
+- SUSCOM_S2210537926000430: kept, 9297 usable words
+- SUSCOM_S2210537926001083: kept, 10233 usable words
+- SUSCOM_S2210537926001174: kept, 4946 usable words
+- SUSCOM_S2210537926001393: kept, 13027 usable words
+- SUSCOM_S2210537926001800: EXCLUDED: only 0 usable words after cleaning
+- SUSCOM_S2210537926002088: kept, 8925 usable words
+- EXEMPLAR_wiesner2021_arxiv2110.13234: kept, 8568 usable words
+- EXEMPLAR_sukprasert2024_arxiv2306.06502: kept, 8079 usable words
+- EXEMPLAR_carboncast2022_buildsys: kept, 6645 usable words
